@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "node_modules": true,
+    ".vscode": true,
+    ".nuxt": true,
+    ".editorconfig": true,
+    ".eslintrc.js": true,
+    "jsconfig.json": true
+  }
+}
