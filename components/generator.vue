@@ -1,6 +1,8 @@
 <template>
   <div class="generator">
     <input v-model="target" />
+    <font-awesome-icon icon="paste" class="secondary" title="Paste from clipboard" />
+    <font-awesome-icon icon="chevron-circle-right" title="Start the compacter" />
   </div>
 </template>
 
@@ -22,6 +24,24 @@ export default {
     margin: 0 auto;
     width: 90%;
     max-width: 800px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+
+    svg{
+      cursor: pointer;
+      font-size: 40px;
+      margin-left: 20px;
+
+      &.secondary{
+        color: gray;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
   }
 
   input {
@@ -32,5 +52,6 @@ export default {
     color: white;
     outline: 0;
     width: 100%;
+    flex-grow: 1;
   }
 </style>
