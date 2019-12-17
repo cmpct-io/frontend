@@ -62,6 +62,9 @@ export default {
     extend (config, ctx) {
     }
   },
+  server: {
+    host: '0.0.0.0'
+  },
   manifest: {
     name: 'Cmpct',
     short_name: "Cmpct",
