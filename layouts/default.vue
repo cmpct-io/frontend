@@ -28,6 +28,7 @@ html {
   font-size: 20px;
   word-spacing: 1px;
   box-sizing: border-box;
+  color: white;
 }
 
 *,

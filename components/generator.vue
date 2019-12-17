@@ -1,9 +1,9 @@
 <template>
-  <div class="generator">
-    <input v-model="target" />
+  <form v-on:submit.prevent="create" class="generator">
+    <input v-model="target">
     <font-awesome-icon icon="paste" class="secondary" title="Paste from clipboard" />
     <font-awesome-icon icon="chevron-circle-right" title="Start the compacter" />
-  </div>
+  </form>
 </template>
 
 <script>
@@ -11,6 +11,11 @@ export default {
   data () {
     return {
       target: ''
+    }
+  },
+  methods: {
+    create () {
+      this.$router.push({ name: 'share', query: { url: this.target } })
     }
   }
 }
