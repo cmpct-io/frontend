@@ -3,7 +3,7 @@
     <logo />
 
     <div class="links">
-      <router-link to="help">
+      <router-link to="about">
         <span>About</span>
       </router-link>
 
@@ -11,7 +11,7 @@
         <span>Help</span>
       </router-link>
 
-      <router-link to="help">
+      <router-link to="signin">
         <span>Sign In</span>
       </router-link>
     </div>
