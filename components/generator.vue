@@ -1,8 +1,8 @@
 <template>
   <form v-on:submit.prevent="create" class="generator">
     <input v-model="target">
-    <font-awesome-icon icon="paste" class="secondary" title="Paste from clipboard" />
-    <font-awesome-icon icon="chevron-circle-right" title="Start the compacter" />
+    <font-awesome-icon @click="paste" icon="paste" class="secondary" title="Paste from clipboard" />
+    <font-awesome-icon @click="create" icon="chevron-circle-right" title="Start the compacter" />
   </form>
 </template>
 
@@ -16,6 +16,9 @@ export default {
   methods: {
     create () {
       this.$router.push({ name: 'share', query: { url: this.target } })
+    },
+    paste () {
+      navigator.clipboard.readText().then(text => this.target = text)
     }
   }
 }

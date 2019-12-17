@@ -3,7 +3,6 @@
     ".vscode": true,
     ".nuxt": true,
     ".editorconfig": true,
-    ".eslintrc.js": true,
     "jsconfig.json": true,
     "assets": true,
     "node_modules": true,
