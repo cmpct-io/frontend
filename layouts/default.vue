@@ -1,5 +1,6 @@
 <template>
   <div class="layout">
+    <navigator />
     <background />
     <div class="content">
       <nuxt />
@@ -9,10 +10,12 @@
 
 <script>
 import background from '@/components/layout/background.vue'
+import navigator from '@/components/navigator/navigator.vue'
 
 export default {
   components: {
-    background
+    background,
+    navigator
   }
 }
 </script>
