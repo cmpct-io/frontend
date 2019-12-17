@@ -61,5 +61,14 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  manifest: {
+    name: 'Cmpct',
+    short_name: "Cmpct",
+    description: 'Make your links shorter ok',
+    lang: 'en',
+    display: 'standalone',
+    background_color: '#000000',
+    theme_color: '#000000'
+  },
 }
