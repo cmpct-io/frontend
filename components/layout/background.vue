@@ -8,30 +8,21 @@
 </template>
 
 <script>
-import randomiser from '@/services/randomiser.js'
+import { mapState, mapActions } from 'vuex'
 import animatedCircle from '@/components/layout/circle.vue'
 
 export default {
   components: {
     animatedCircle
   },
-  data () {
-    return {
-      elements: []
-    }
+  computed: {
+    ...mapState('background', ['elements'])
   },
   mounted () {
-    let elementCount = randomiser.generateRandomNumber(20, 50)
-
-    while (elementCount > 0) {
-      this.elements.push({
-        id: this.elements.length + 1
-      })
-
-      elementCount = elementCount - 1
-    }
-
-    console.log(this.elements)
+    this.setupBackground()
+  },
+  methods: {
+    ...mapActions('background', ['setupBackground'])
   }
 }
 </script>
@@ -41,14 +32,5 @@ export default {
     background-color: black;
     height: 100vh;
     overflow: hidden;
-  }
-
-  .content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    text-align: center;
   }
 </style>

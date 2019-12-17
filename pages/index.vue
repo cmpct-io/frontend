@@ -1,6 +1,6 @@
 <template>
   <section class="fill-screen">
-    <h1>Cmpct.io</h1>
+    <h1>cmpct.io</h1>
     <p>Paste a link into the box below to compact it</p>
     <generator />
   </section>
