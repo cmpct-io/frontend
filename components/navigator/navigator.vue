@@ -3,16 +3,9 @@
     <logo />
 
     <div class="links">
-      <router-link to="about">
-        <span>About</span>
-      </router-link>
-
       <router-link to="help">
+        <font-awesome-icon icon="question" />
         <span>Help</span>
-      </router-link>
-
-      <router-link to="signin">
-        <span>Sign In</span>
       </router-link>
     </div>
   </section>
@@ -45,6 +38,7 @@ export default {
       a {
         color: white;
         margin: 0 5px;
+        text-decoration: none;
       }
     }
   }

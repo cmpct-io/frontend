@@ -25,7 +25,7 @@ export default {
 
 html {
   font-family: 'Tomorrow', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   word-spacing: 1px;
   box-sizing: border-box;
   color: white;
@@ -48,16 +48,22 @@ html {
   text-align: center;
   display: flex;
   align-items: center;
+  user-select: none;
 }
 
 h1 {
   font-size: 50px;
   letter-spacing: 2px;
   margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 p {
   margin-bottom: 30px;
-  font-size: 24px;
+  font-size: 1rem;
 }
 </style>

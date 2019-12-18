@@ -70,6 +70,10 @@ export default {
     padding-top: 30px;
     max-width: 500px;
 
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
     h4 {
       margin: 30px 0 20px 0;
     }
