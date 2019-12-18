@@ -49,4 +49,15 @@ html {
   display: flex;
   align-items: center;
 }
+
+h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
 </style>

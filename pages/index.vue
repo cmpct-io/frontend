@@ -1,37 +1,19 @@
 <template>
-  <section class="fill-screen">
+  <container>
     <h1>cmpct.io</h1>
     <p>Paste a link into the box below to compact it</p>
     <generator />
-  </section>
+  </container>
 </template>
 
 <script>
+import container from '@/components/layout/container.vue'
 import generator from '@/components/generator.vue'
 
 export default {
   components: {
+    container,
     generator
   }
 }
 </script>
-
-<style scoped>
-  section.fill-screen{
-    position: relative;
-    z-index: 50;
-    flex-grow: 1;
-  }
-
-  h1 {
-    color: white;
-    font-size: 50px;
-    letter-spacing: 2px;
-  }
-
-  p {
-    color: white;
-    margin-bottom: 30px;
-    font-size: 24px;
-  }
-</style>
