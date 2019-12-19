@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
   props: {
     title: {
@@ -20,14 +22,16 @@ export default {
       required: true
     }
   },
-  data () {
-    return {
-      show: false
+  computed: {
+    ...mapState('help', ['openSpoilerText']),
+    show () {
+      return this.title === this.openSpoilerText
     }
   },
   methods: {
+    ...mapActions('help', ['setOpenSpoilerText']),
     toggle () {
-      this.show = !this.show
+      this.setOpenSpoilerText(this.title)
     }
   }
 }
