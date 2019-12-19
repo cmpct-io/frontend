@@ -1,6 +1,6 @@
 <template>
   <container>
-    <h1>cmpct.io</h1>
+    <h1>Get started</h1>
     <p>Paste a link into the box below to compact it</p>
     <generator />
   </container>

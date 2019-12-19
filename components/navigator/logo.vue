@@ -1,14 +1,19 @@
 <template>
   <router-link to="/" class="logo">
-    cmpct.io
+    <img src="/logo.png">
   </router-link>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   .logo {
     float: left;
     font-size: 35px;
     color: white;
     text-decoration: none;
+    user-select: none;
+
+    img {
+      height: 50px;
+    }
   }
 </style>

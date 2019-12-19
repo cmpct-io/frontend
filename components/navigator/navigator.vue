@@ -27,9 +27,10 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    padding: 5px 20px;
+    padding: 20px 30px;
     color: white;
     z-index: 50;
+    user-select: none;
 
     .links {
       float: right;
