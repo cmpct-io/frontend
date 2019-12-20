@@ -1,19 +1,64 @@
 <template>
-  <section class="share">
-    <p v-text="shareUrl" />
-  </section>
+  <container>
+    <h1>Your link is ready!</h1>
+    <p>You can share this link with your friends and colleagues now</p>
+    <share-link :link="shareUrl" />
+
+    <button @click="TestLink" class="secondary">
+      Try it out
+    </button>
+    <button @click="GoHome">
+      Create another link?
+    </button>
+  </container>
 </template>
 
 <script>
+import container from '@/components/layout/container.vue'
+import shareLink from '@/components/share/share-link.vue'
+
 export default {
+  components: {
+    container,
+    shareLink
+  },
   computed: {
     shareUrl () {
       return this.$route.query.url
+    }
+  },
+  mounted () {
+    if (!this.shareUrl) {
+      this.GoHome()
+    }
+  },
+  methods: {
+    GoHome () {
+      this.$router.push({ name: 'index' })
+    },
+    TestLink () {
+
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+button {
+  background-color: #660066;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  margin: 5px;
 
+  &.secondary {
+    background-color: #BA8B00;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 </style>

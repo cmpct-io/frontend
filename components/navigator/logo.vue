@@ -1,6 +1,7 @@
 <template>
   <router-link to="/" class="logo">
-    <img src="/logo.png">
+    <img class="large" src="/logo.png">
+    <img class="small" src="/logo-square.png">
   </router-link>
 </template>
 
@@ -14,6 +15,19 @@
 
     img {
       height: 50px;
+    }
+    img.small {
+      display: none
+    }
+
+    @media (max-width: 768px) {
+      img.large {
+        display: none;
+      }
+
+      img.small {
+        display: initial;
+      }
     }
   }
 </style>
