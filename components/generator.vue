@@ -1,6 +1,6 @@
 <template>
   <form v-on:submit.prevent="create" class="generator">
-    <input v-model="target">
+    <input v-model="target" placeholder="Where do you want to go?">
     <font-awesome-icon @click="paste" icon="paste" class="secondary" title="Paste from clipboard" />
     <font-awesome-icon @click="create" icon="chevron-circle-right" title="Start the compacter" />
   </form>
@@ -56,7 +56,7 @@ export default {
     background-color: transparent;
     padding: 20px 40px;
     border: 0;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     outline: 0;
     width: 100%;

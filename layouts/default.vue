@@ -2,9 +2,7 @@
   <div class="layout">
     <navigator />
     <background />
-    <div class="content">
-      <nuxt />
-    </div>
+    <nuxt />
   </div>
 </template>
 
@@ -31,24 +29,16 @@ html {
   color: white;
 }
 
+input, button {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 18px;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-.content {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  user-select: none;
 }
 
 h1 {
