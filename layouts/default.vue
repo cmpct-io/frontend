@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
 
 html {
@@ -55,5 +55,12 @@ h4 {
 p {
   margin-bottom: 30px;
   font-size: 1rem;
+}
+
+.with-hover {
+  &:hover {
+    background-color: #660066;
+    border: 1px solid white;
+  }
 }
 </style>

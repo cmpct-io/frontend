@@ -1,5 +1,5 @@
 <template>
-  <div class="share" title="Click to copy">
+  <div class="share with-hover" title="Click to copy">
     <p v-text="link" />
     <font-awesome-icon icon="copy" />
   </div>
@@ -18,22 +18,20 @@ export default {
 
 <style scoped lang="scss">
   .share {
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
+    display: inline-block;
     border: 1px dashed white;
     border-radius: 5px;
-    max-width: 500px;
-    padding: 10px 20px;
     margin: 0 auto;
-    text-align: left;
+    width: 90%;
+    max-width: 800px;
+    color: white;
     display: flex;
     align-items: center;
+    padding: 20px 30px;
+    text-align: left;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
     margin-bottom: 20px;
-
-    &:hover {
-      background-color: #660066;
-    }
 
     p {
       margin-bottom: 0;
