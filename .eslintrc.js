@@ -11,7 +11,6 @@ module.exports = {
     '@nuxtjs',
     'plugin:nuxt/recommended'
   ],
-  // add your custom rules here
   rules: {
     'no-return-assign': 'off',
   }

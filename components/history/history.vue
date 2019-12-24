@@ -1,34 +1,29 @@
 <template>
   <section class="history">
-    <div v-show="!show" class="history-link" title="View history">
+    <div v-show="!show" class="history-link animated slideInUp" title="View history">
       <div @click="toggle" class="button with-hover">
         <font-awesome-icon icon="chevron-up" />
       </div>
     </div>
 
+    <div v-show="show" class="history-link animated slideInDown" title="View history">
+      <div @click="toggle" class="button with-hover">
+        <font-awesome-icon icon="times" />
+      </div>
+    </div>
+
     <div v-show="show" class="history-content animated slideInUp">
-        <h1>
-          <span>Your history</span>
-          <font-awesome-icon @click="toggle" icon="times" />
-        </h1>
+      <h1>Your history</h1>
       <p>These are the links you have generated or visited recently</p>
     </div>
   </section>
 </template>
 
 <script>
+import showMixin from '@/mixins/show-mixin.vue'
+
 export default {
-  data () {
-    return {
-      show: false
-    }
-  },
-  methods: {
-    toggle () {
-      this.show = !this.show
-      this.$emit('toggled', this.show)
-    }
-  }
+  mixins: [showMixin]
 }
 </script>
 

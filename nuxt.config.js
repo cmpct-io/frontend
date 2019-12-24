@@ -1,9 +1,6 @@
 
 export default {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'cmpct',
     meta: [
@@ -17,51 +14,25 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Tomorrow&display=swap' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
     'animate.css/animate.min.css'
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
     '~/plugins/fontawesome.plugin.js',
+    '~/plugins/helper-components.js'
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
   axios: {
   },
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     extend (config, ctx) {
     }
   },
@@ -69,9 +40,9 @@ export default {
     host: '0.0.0.0'
   },
   manifest: {
-    name: 'Cmpct',
-    short_name: "Cmpct",
-    description: 'Make your links shorter ok',
+    name: 'cmpct',
+    short_name: "cmpct",
+    description: 'The better way to shorten long links',
     lang: 'en',
     display: 'standalone',
     background_color: '#000000',

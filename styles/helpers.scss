@@ -1,0 +1,42 @@
+html {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 22px;
+  word-spacing: 1px;
+  box-sizing: border-box;
+  color: white;
+}
+
+input, button {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 18px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.with-hover {
+  &:hover {
+    background-color: #660066;
+    border: 1px solid white;
+  }
+}

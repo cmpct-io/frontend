@@ -1,35 +1,30 @@
 <template>
   <container>
-    <div v-show="show" class="index">
+    <div v-show="show" class="animated fadeIn">
       <h1>Get started</h1>
       <p>Paste a link into the box below to compact it</p>
       <generator />
     </div>
 
-    <history-link v-on:toggled="toggle" />
+    <history v-on:toggled="toggle" />
   </container>
 </template>
 
 <script>
 import container from '@/components/layout/container.vue'
-import generator from '@/components/generator.vue'
-import historyLink from '@/components/generator/history-link.vue'
+import generator from '@/components/generator/generator.vue'
+import history from '@/components/history/history.vue'
+import showMixin from '@/mixins/show-mixin.vue'
 
 export default {
   components: {
     container,
     generator,
-    historyLink
+    history
   },
-  data () {
-    return {
-      show: true
-    }
-  },
-  methods: {
-    toggle (historyDisplayed) {
-      this.show = !historyDisplayed
-    }
+  mixins: [showMixin],
+  created () {
+    this.show = true
   }
 }
 </script>

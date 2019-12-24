@@ -1,8 +1,8 @@
 <template>
   <form v-on:submit.prevent="create" class="generator">
     <input v-model="target" placeholder="Where do you want to go?">
-    <font-awesome-icon @click="paste" icon="paste" class="secondary" title="Paste from clipboard" />
-    <font-awesome-icon @click="create" icon="chevron-circle-right" title="Start the compacter" />
+    <font-awesome-icon @click="paste" icon="paste" class="secondary animated fadeIn" title="Paste from clipboard" />
+    <font-awesome-icon @click="create" icon="chevron-circle-right" class="animated fadeIn" title="Start the compacter" />
   </form>
 </template>
 

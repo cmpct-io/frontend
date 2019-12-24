@@ -1,0 +1,47 @@
+@keyframes translocate_1 {
+  0% {
+    background-color: #FF0000;
+    margin-left: 100px;
+    opacity: .15;
+  }
+  33% {
+    background-color: #FFC000;
+    margin-left: 300px;
+    margin-top: 100px;
+    opacity: 0.4;
+  }
+  66% {
+    background-color:#FFFC00;
+    margin-left: 10px;
+    margin-top: 400px;
+    opacity: .15
+  }
+  100% {
+    background-color:#FF00FF;
+    opacity: 0;
+  }
+}
+
+@keyframes translocate_2 {
+  0% {
+    background-color: #FFFC00;
+    margin-left: -100px;
+    opacity: .15;
+  }
+  33% {
+    background-color: #FF00FF;
+    margin-left: -300px;
+    margin-top: -50px;
+    opacity: 0.4;
+  }
+  66% {
+    background-color:#FFC000;
+    margin-left: 100px;
+    margin-top: 150px;
+    opacity: .15
+  }
+  100% {
+    background-color:#FF0000;
+    opacity: 0;
+  }
+}
