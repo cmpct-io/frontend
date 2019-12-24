@@ -1,10 +1,12 @@
 <template>
   <container>
-    <h1>Get started</h1>
-    <p>Paste a link into the box below to compact it</p>
-    <generator />
+    <div v-show="show" class="index">
+      <h1>Get started</h1>
+      <p>Paste a link into the box below to compact it</p>
+      <generator />
+    </div>
 
-    <history-link />
+    <history-link v-on:toggled="toggle" />
   </container>
 </template>
 
@@ -18,6 +20,16 @@ export default {
     container,
     generator,
     historyLink
+  },
+  data () {
+    return {
+      show: true
+    }
+  },
+  methods: {
+    toggle (historyDisplayed) {
+      this.show = !historyDisplayed
+    }
   }
 }
 </script>

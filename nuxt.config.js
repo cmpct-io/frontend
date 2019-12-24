@@ -26,6 +26,7 @@ export default {
   */
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
+    'animate.css/animate.min.css'
   ],
   /*
   ** Plugins to load before mounting the App

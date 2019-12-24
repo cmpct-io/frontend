@@ -63,4 +63,8 @@ p {
     border: 1px solid white;
   }
 }
+
+.flex-grow {
+  flex-grow: 1;
+}
 </style>
