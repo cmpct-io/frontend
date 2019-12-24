@@ -1,7 +1,7 @@
 <template>
   <div class="share with-hover" title="Click to copy">
     <p v-text="link" />
-    <font-awesome-icon icon="copy" />
+    <font-awesome-icon icon="copy" class="no-margin" />
   </div>
 </template>
 

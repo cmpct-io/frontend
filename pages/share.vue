@@ -5,10 +5,12 @@
     <share-link :link="shareUrl" />
 
     <button @click="TestLink" class="secondary">
-      Try it out
+      <font-awesome-icon icon="link" />
+      <span>Try it out</span>
     </button>
     <button @click="GoHome">
-      Create another link?
+      <font-awesome-icon icon="plus" />
+      <span>Create another link?</span>
     </button>
   </container>
 </template>

@@ -34,9 +34,29 @@ p {
   font-size: 1rem;
 }
 
+svg {
+  margin-right: 5px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
 .with-hover {
+  transition: all 0.2s ease-in-out;
+
   &:hover {
     background-color: #660066;
     border: 1px solid white;
+    cursor: pointer;
   }
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }

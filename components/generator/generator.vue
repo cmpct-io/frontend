@@ -1,8 +1,8 @@
 <template>
   <form v-on:submit.prevent="create" class="generator">
     <input v-model="target" placeholder="Where do you want to go?">
-    <font-awesome-icon @click="paste" icon="paste" class="secondary animated fadeIn" title="Paste from clipboard" />
-    <font-awesome-icon @click="create" icon="chevron-circle-right" class="animated fadeIn" title="Start the compacter" />
+    <font-awesome-icon @click="paste" icon="paste" class="secondary no-margin" title="Paste from clipboard" />
+    <font-awesome-icon @click="create" icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
   </form>
 </template>
 
@@ -54,7 +54,7 @@ export default {
 
   input {
     background-color: transparent;
-    padding: 20px 40px;
+    padding: 20px 30px;
     border: 0;
     font-size: 25px;
     color: white;
