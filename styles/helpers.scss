@@ -1,6 +1,6 @@
 html {
   font-family: 'Tomorrow', sans-serif;
-  font-size: 22px;
+  font-size: 21px;
   word-spacing: 1px;
   box-sizing: border-box;
   color: white;
@@ -8,7 +8,7 @@ html {
 
 input, button {
   font-family: 'Tomorrow', sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 *,
@@ -54,7 +54,7 @@ p {
 
   p {
     margin-bottom: 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
     flex-grow: 1;
     padding: 20px 30px;
     text-align: left;

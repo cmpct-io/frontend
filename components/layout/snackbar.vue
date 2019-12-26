@@ -3,7 +3,7 @@
     v-if="showSnackbar"
     @click="dismiss"
     class="snackbar animated bounceInUp">
-    <font-awesome-icon icon="trophy" class="fa-fw mr" />
+    <font-awesome-icon icon="bell" class="fa-fw mr" />
     <p v-text="snackbarMessage" />
     <button>
       <font-awesome-icon icon="times" class="fa-fw" />

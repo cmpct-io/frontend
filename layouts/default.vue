@@ -11,7 +11,7 @@
 <script>
 import '@/styles/animations.scss'
 import '@/styles/helpers.scss'
-import background from '@/components/layout/background.vue'
+import background from '@/components/background/background.vue'
 import navigator from '@/components/navigator/navigator.vue'
 import snackbar from '@/components/layout/snackbar.vue'
 

@@ -9,7 +9,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import animatedCircle from '@/components/layout/circle.vue'
+import animatedCircle from '@/components/background/circle.vue'
 
 export default {
   components: {

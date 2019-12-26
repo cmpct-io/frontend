@@ -34,7 +34,7 @@ export default {
     background-color: transparent;
     padding: 20px 30px;
     border: 0;
-    font-size: 25px;
+    font-size: 1rem;
     color: white;
     outline: 0;
     width: 100%;
