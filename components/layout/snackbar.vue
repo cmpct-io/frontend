@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="showSnackbar"
+    v-show="showSnackbar"
     @click="dismiss"
     class="snackbar animated bounceInUp">
     <font-awesome-icon icon="bell" class="fa-fw mr" />
@@ -37,7 +37,6 @@ export default {
     max-width: 600px;
     z-index: 50;
     background-color: black;
-    border: 0.4px solid white;
     color: white;
     opacity: 0.7;
     margin: 0 auto;
