@@ -2,7 +2,12 @@
   <container>
     <h1>Ready to jump?</h1>
     <p>The link you visited is an alias for a website, do you want to visit it?</p>
-    <p v-text="parameter" />
+
+    <a :href="parameter" class="box with-hover" title="Click to navigate">
+      <font-awesome-icon icon="globe" class="no-margin" />
+      <p v-text="parameter" />
+      <font-awesome-icon icon="chevron-right" class="no-margin" />
+    </a>
 
     <drawers />
   </container>
