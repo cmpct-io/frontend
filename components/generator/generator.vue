@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   data () {
     return {
@@ -14,8 +16,11 @@ export default {
     }
   },
   methods: {
+    ...mapActions('generator', ['generate']),
     create () {
-      this.$router.push({ name: 'share', query: { url: this.target } })
+      this.generate(this.target).then(() => {
+        this.$router.push({ name: 'share' })
+      })
     },
     paste () {
       navigator.clipboard.readText().then((text) => {

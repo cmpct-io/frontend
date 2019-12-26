@@ -2,11 +2,12 @@
   <container>
     <h1>Your link is ready!</h1>
     <p>You can share this link with your friends and colleagues now</p>
-    <share-link :link="shareUrl" />
+    <share-link />
   </container>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import container from '@/components/layout/container.vue'
 import shareLink from '@/components/share/share-link.vue'
 
@@ -16,13 +17,13 @@ export default {
     shareLink
   },
   computed: {
-    shareUrl () {
-      return this.$route.query.url
-    }
+    ...mapState('generator', {
+      shareUrl: 'shortcut'
+    })
   },
   mounted () {
     if (!this.shareUrl) {
-      this.GoHome()
+      this.$router.push({ name: 'index' })
     }
   }
 }
