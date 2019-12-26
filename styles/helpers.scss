@@ -34,8 +34,45 @@ p {
   font-size: 1rem;
 }
 
-svg {
-  margin-right: 5px;
+.mr {
+  margin-right: 10px;
+}
+
+.box {
+  display: inline-block;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  width: 90%;
+  max-width: 800px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 20px;
+
+  p {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    flex-grow: 1;
+    padding: 20px 30px;
+    text-align: left;
+  }
+
+  svg{
+    cursor: pointer;
+    font-size: 35px;
+    margin-left: 20px;
+
+    &.secondary{
+      color: gray;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }
 
 .no-margin {
