@@ -1,15 +1,22 @@
 <template>
-  <div @click="copy" class="box with-hover" title="Click to copy">
-    <p v-text="qualifiedShortcut" />
-    <font-awesome-icon icon="copy" class="no-margin" />
-  </div>
+  <section class="share-link">
+    <div @click="copy" class="box with-hover" title="Click to copy">
+      <p v-text="qualifiedShortcut" />
+      <font-awesome-icon icon="copy" class="no-margin" />
+    </div>
+    <nuxt-link :to="shortcut">
+      <font-awesome-icon icon="link" />
+      <span>Would you like to visit it?</span>
+    </nuxt-link>
+  </section>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   computed: {
+    ...mapState('generator', ['shortcut']),
     ...mapGetters('generator', ['qualifiedShortcut'])
   },
   methods: {
