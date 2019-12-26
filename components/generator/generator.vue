@@ -1,8 +1,10 @@
 <template>
   <form v-on:submit.prevent="create" class="box">
-    <input v-model="target" placeholder="Where do you want to go?">
+    <input v-model="target" placeholder="Where do you want to go?" type="url" pattern="https?://.+" required>
     <font-awesome-icon @click="paste" icon="paste" class="secondary no-margin" title="Paste from clipboard" />
-    <font-awesome-icon @click="create" icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
+    <button class="no-button" type="submit">
+      <font-awesome-icon icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
+    </button>
   </form>
 </template>
 
@@ -44,5 +46,14 @@ export default {
     outline: 0;
     width: 100%;
     flex-grow: 1;
+  }
+
+  button.no-button {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: white;
+    cursor: pointer;
   }
 </style>
