@@ -2,8 +2,7 @@
   <div
     v-if="showSnackbar"
     @click="dismiss"
-    class="snackbar animated bounceInUp"
-  >
+    class="snackbar animated bounceInUp">
     <font-awesome-icon icon="trophy" class="fa-fw mr" />
     <p v-text="snackbarMessage" />
     <button>

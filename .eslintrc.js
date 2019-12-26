@@ -13,5 +13,6 @@ module.exports = {
   ],
   rules: {
     'no-return-assign': 'off',
+    'vue/html-closing-bracket-newline': 'off',
   }
 }
