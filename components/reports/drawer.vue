@@ -1,38 +1,29 @@
 <template>
   <section class="history">
-    <div v-show="!show" @click="toggle" class="drawer animated slideInUp">
+    <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="drawer animated slideInUp">
       <p>
         <font-awesome-icon icon="bell" class="mr" />
         <span class="mr">Reports</span>
       </p>
     </div>
 
-    <div v-show="show" class="history-link animated slideInDown" title="View history">
-      <div @click="toggle" class="button with-hover">
+    <div v-show="displayedPanel === 'reports'" class="history-link animated slideInDown" title="View history">
+      <div @click="showPanel('target')" class="button with-hover">
         <font-awesome-icon icon="times" />
       </div>
-    </div>
-
-    <div v-show="show" class="history-content animated slideInUp">
-      <h1>Reports</h1>
-      <p>Here you can see reports made by other users, or report the link yourself</p>
     </div>
   </section>
 </template>
 
 <script>
-import storageService from '@/services/storage-service.js'
-import showMixin from '@/mixins/show-mixin.vue'
+import { mapState, mapActions } from 'vuex'
 
 export default {
-  mixins: [showMixin],
-  data () {
-    return {
-      items: []
-    }
+  computed: {
+    ...mapState('landing', ['displayedPanel'])
   },
-  mounted () {
-    this.items = storageService.getHistory()
+  methods: {
+    ...mapActions('landing', ['showPanel'])
   }
 }
 </script>
