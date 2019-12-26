@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     parameter () {
-      return this.$route.query.o
+      return this.$router.currentRoute.path.slice(1)
     }
   },
   mounted () {

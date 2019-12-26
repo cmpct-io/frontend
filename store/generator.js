@@ -6,7 +6,7 @@ export const state = () => ({
 })
 
 export const getters = {
-  qualifiedShortcut: state => state.shortcut ? `cmpct.io/g?o=${state.shortcut}` : ''
+  qualifiedShortcut: state => state.shortcut ? `cmpct.io/${state.shortcut}` : ''
 }
 
 export const mutations = {
