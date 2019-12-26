@@ -18,7 +18,9 @@ export default {
   methods: {
     ...mapActions('snackbar', ['showSnackbar']),
     copy () {
-      this.showSnackbar('The link has been copied to your clipboard!')
+      navigator.clipboard.writeText(this.link).then(() =>
+        this.showSnackbar('Link copied to your clipboard!')
+      )
     }
   }
 }

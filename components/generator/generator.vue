@@ -18,7 +18,12 @@ export default {
       this.$router.push({ name: 'share', query: { url: this.target } })
     },
     paste () {
-      navigator.clipboard.readText().then(text => this.target = text)
+      navigator.clipboard.readText().then((text) => {
+        if (text) {
+          this.target = text
+          this.create()
+        }
+      })
     }
   }
 }
