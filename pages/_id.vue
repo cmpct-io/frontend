@@ -9,18 +9,25 @@
       <font-awesome-icon icon="chevron-right" class="no-margin" />
     </a>
 
-    <drawers />
+    <drawers>
+      <comments />
+      <reports />
+    </drawers>
   </container>
 </template>
 
 <script>
 import container from '@/components/layout/container.vue'
-import drawers from '@/components/drawers/wrapper.vue'
+import drawers from '@/components/layout/drawers.vue'
+import comments from '@/components/comments/comments.vue'
+import reports from '@/components/reports/reports.vue'
 
 export default {
   components: {
     container,
-    drawers
+    drawers,
+    comments,
+    reports
   },
   computed: {
     parameter () {
