@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     user-select: none;
+    padding: 0 10px;
   }
 
   section.container {

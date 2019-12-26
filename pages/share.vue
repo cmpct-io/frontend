@@ -1,6 +1,6 @@
 <template>
   <container>
-    <h1>Your link is ready!</h1>
+    <h1>Ready to Share</h1>
     <p>You can share this link with your friends and colleagues now</p>
     <share-link />
   </container>

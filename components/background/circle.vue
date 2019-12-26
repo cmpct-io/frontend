@@ -2,7 +2,6 @@
   <div
     v-if="isLoaded"
     :style="classOverrides"
-    v-on:click="resetSpeed()"
     class="circle"
   />
 </template>
@@ -45,7 +44,7 @@ export default {
       this.isLoaded = true
     },
     resetSpeed () {
-      this.speed = randomiser.generateRandomNumber(this.speed + 1, 70)
+      this.speed = randomiser.generateRandomNumber(this.speed + 1, 40)
     }
   }
 }

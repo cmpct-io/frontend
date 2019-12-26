@@ -1,6 +1,6 @@
 <template>
   <form v-on:submit.prevent="create" class="box">
-    <input v-model="target" placeholder="Where do you want to go?" type="url" pattern="https?://.+" required>
+    <input v-model="target" placeholder="Long URL?" type="url" pattern="https?://.+" required>
     <font-awesome-icon @click="paste" icon="paste" class="secondary no-margin" title="Paste from clipboard" />
     <button class="no-button" type="submit">
       <font-awesome-icon icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex'
+import storageService from '@/services/storage-service.js'
 
 export default {
   data () {
@@ -17,10 +18,14 @@ export default {
       target: ''
     }
   },
+  computed: {
+    ...mapState('generator', ['shortcut'])
+  },
   methods: {
     ...mapActions('generator', ['generate']),
     create () {
       this.generate(this.target).then(() => {
+        storageService.addToHistory(this.shortcut)
         this.$router.push({ name: 'share' })
       })
     },
