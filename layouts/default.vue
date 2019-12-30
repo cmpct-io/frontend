@@ -1,9 +1,8 @@
 <template>
-  <div class="layout">
+  <div>
     <navigator />
     <background />
     <nuxt />
-
     <snackbar />
   </div>
 </template>
