@@ -52,12 +52,17 @@ export default {
     }
   },
   mounted () {
+    this.reset()
     this.initialise(this.parameter)
 
     // Display Comments / Reports
   },
   methods: {
-    ...mapActions('landing', ['initialise', 'setPanel'])
+    ...mapActions('landing', [
+      'initialise',
+      'setPanel',
+      'reset'
+    ])
   }
 }
 </script>
