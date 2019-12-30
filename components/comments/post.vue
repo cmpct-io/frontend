@@ -1,15 +1,15 @@
 <template>
-  <div class="poster animated fadeIn">
+  <form @submit.prevent="addComment" class="poster animated fadeIn">
     <p>Let people know what you think about this link</p>
-    <input v-model="name" placeholder="Your name">
-    <textarea v-model="commentText" placeholder="Your comment" />
-    <button @click="addComment" class="with-hover" type="button">
+    <input v-model="name" placeholder="Your name" required>
+    <textarea v-model="commentText" placeholder="Your comment" required />
+    <button class="with-hover" type="submit">
       Add
     </button>
     <button @click="setIsCommenting(false)" class="with-hover" type="button">
       Cancel
     </button>
-  </div>
+  </form>
 </template>
 
 <script>
