@@ -1,8 +1,8 @@
 <template>
-  <router-link to="/" class="logo">
+  <a href="/" class="logo">
     <img class="large" src="/logo.png">
     <img class="small" src="/logo-square.png">
-  </router-link>
+  </a>
 </template>
 
 <style scoped lang="scss">

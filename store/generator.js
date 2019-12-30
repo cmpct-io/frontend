@@ -1,4 +1,5 @@
 import generator from 'shortid'
+import routesApi from '@/services/routes.api.js'
 
 export const state = () => ({
   target: null,
@@ -25,5 +26,10 @@ export const actions = {
 
     const shortcut = generator.generate()
     commit('setShortcut', shortcut)
+
+    routesApi.postRoute({
+      routeId: shortcut,
+      target
+    })
   }
 }
