@@ -19,6 +19,7 @@
     "@nuxtjs/axios": "^5.9.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "animate.css": "^3.7.2",
+    "moment": "^2.24.0",
     "nuxt": "^2.11.0",
     "shortid": "^2.2.15"
   },
