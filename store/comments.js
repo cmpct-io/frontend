@@ -1,12 +1,16 @@
 import commentsApi from '@/services/comments.api.js'
 
 export const state = () => ({
-  comments: []
+  comments: [],
+  isCommenting: false
 })
 
 export const mutations = {
   setComments: (state, comments) => {
     state.comments = comments
+  },
+  setIsCommenting: (state, value) => {
+    state.isCommenting = value
   }
 }
 
@@ -21,5 +25,10 @@ export const actions = {
       name,
       commentText
     })
+
+    commit('setIsCommenting', false)
+  },
+  setIsCommenting: ({ commit }, isCommenting) => {
+    commit('setIsCommenting', isCommenting)
   }
 }

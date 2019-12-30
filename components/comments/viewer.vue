@@ -1,13 +1,22 @@
 <template>
   <div v-show="displayedPanel === 'comments'" class="animated slideInUp">
     <h1>Comments</h1>
-    <comment v-for="(item, index) in comments" :key="index" v-bind="item" />
-    <post />
+
+    <div v-show="!isCommenting && comments.length > 0" class="animated fadeIn">
+      <p>Would you like to <span @click="setIsCommenting(true)" class="text-link">add a comment?</span></p>
+      <comment v-for="(item, index) in comments" :key="index" v-bind="item" />
+    </div>
+
+    <div v-show="!isCommenting && comments.length === 0">
+      <p>Nobody has left any comments on this link yet, <span @click="setIsCommenting(true)" class="text-link">why not be the first?</span></p>
+    </div>
+
+    <post v-show="isCommenting" />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import comment from '@/components/comments/comment.vue'
 import post from '@/components/comments/post.vue'
 
@@ -22,7 +31,13 @@ export default {
       'displayedPanel'
     ]),
     ...mapState('comments', [
-      'comments'
+      'comments',
+      'isCommenting'
+    ])
+  },
+  methods: {
+    ...mapActions('comments', [
+      'setIsCommenting'
     ])
   }
 }
