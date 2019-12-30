@@ -1,9 +1,9 @@
 <template>
   <form v-on:submit.prevent="create" class="box">
     <input v-model="target" placeholder="Long URL?" type="url" pattern="https?://.+" required>
-    <font-awesome-icon @click="paste" icon="paste" class="secondary no-margin" title="Paste from clipboard" />
+    <c-icon @click="paste" icon="paste" class="secondary no-margin" title="Paste from clipboard" />
     <button class="no-button" type="submit">
-      <font-awesome-icon icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
+      <c-icon icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
     </button>
   </form>
 </template>

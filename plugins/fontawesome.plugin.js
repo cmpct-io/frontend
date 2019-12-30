@@ -9,4 +9,4 @@ config.autoAddCss = false
 library.add(fas)
 library.add(fab)
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('c-icon', FontAwesomeIcon)

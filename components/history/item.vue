@@ -1,8 +1,8 @@
 <template>
   <nuxt-link :to="shortcut" class="item flex-container with-hover">
-    <font-awesome-icon icon="link" />
+    <c-icon icon="link" />
     <p v-text="qualifiedShortcut" class="flex-grow" />
-    <font-awesome-icon icon="chevron-right" class="arrow" />
+    <c-icon icon="chevron-right" class="arrow" />
   </nuxt-link>
 </template>
 

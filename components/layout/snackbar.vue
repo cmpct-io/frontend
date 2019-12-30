@@ -3,10 +3,10 @@
     v-show="showSnackbar"
     @click="dismiss"
     class="snackbar animated bounceInUp">
-    <font-awesome-icon icon="bell" class="fa-fw mr" />
+    <c-icon icon="bell" class="fa-fw mr" />
     <p v-text="snackbarMessage" />
     <button>
-      <font-awesome-icon icon="times" class="fa-fw" />
+      <c-icon icon="times" class="fa-fw" />
     </button>
   </div>
 </template>

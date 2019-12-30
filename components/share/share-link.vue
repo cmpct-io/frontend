@@ -2,10 +2,10 @@
   <section class="share-link">
     <div @click="copy" class="box with-hover" title="Click to copy">
       <p v-text="qualifiedShortcut" />
-      <font-awesome-icon icon="copy" class="no-margin" />
+      <c-icon icon="copy" class="no-margin" />
     </div>
     <nuxt-link :to="shortcut">
-      <font-awesome-icon icon="link" />
+      <c-icon icon="link" />
       <span>Would you like to visit it?</span>
     </nuxt-link>
   </section>

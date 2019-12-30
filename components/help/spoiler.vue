@@ -2,8 +2,8 @@
   <div @click.prevent="toggle" v-bind:class="[{ 'open': show }]" class="spoiler">
     <div class="inner">
       <p v-text="title" class="flex-grow-1 mb-0" />
-      <font-awesome-icon v-if="!show" icon="chevron-down" />
-      <font-awesome-icon v-if="show" icon="chevron-up" />
+      <c-icon v-if="!show" icon="chevron-down" />
+      <c-icon v-if="show" icon="chevron-up" />
     </div>
     <div v-show="show" class="body animated fadeIn">
       <hr>

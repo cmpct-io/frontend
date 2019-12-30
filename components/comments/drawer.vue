@@ -2,14 +2,14 @@
   <section class="history">
     <div v-show="displayedPanel === 'target'" @click="showPanel('comments')" class="drawer animated slideInUp">
       <p>
-        <font-awesome-icon icon="comment-alt" class="mr" />
+        <c-icon icon="comment-alt" class="mr" />
         <span class="mr">Comments</span>
       </p>
     </div>
 
     <div v-show="displayedPanel === 'comments'" class="history-link animated slideInDown" title="View history">
       <div @click="showPanel('target')" class="button with-hover">
-        <font-awesome-icon icon="times" />
+        <c-icon icon="times" />
       </div>
     </div>
   </section>

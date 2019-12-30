@@ -4,7 +4,7 @@
 
     <div class="links">
       <router-link to="help">
-        <font-awesome-icon icon="question" />
+        <c-icon icon="question" />
         <span>Help</span>
       </router-link>
     </div>

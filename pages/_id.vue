@@ -5,9 +5,9 @@
       <p>The link you visited is an alias for a website, do you want to visit it?</p>
 
       <a :href="target" class="box with-hover break-word" title="Click to navigate">
-        <font-awesome-icon icon="globe" class="no-margin" />
+        <c-icon icon="globe" class="no-margin" />
         <p v-text="target" />
-        <font-awesome-icon icon="chevron-right" class="no-margin" />
+        <c-icon icon="chevron-right" class="no-margin" />
       </a>
     </div>
 

@@ -2,13 +2,13 @@
   <section class="history">
     <div v-show="!show" class="history-link animated slideInUp" title="View history">
       <div @click="toggle" class="button with-hover">
-        <font-awesome-icon icon="chevron-up" />
+        <c-icon icon="chevron-up" />
       </div>
     </div>
 
     <div v-show="show" class="history-link animated slideInDown" title="View history">
       <div @click="toggle" class="button with-hover">
-        <font-awesome-icon icon="times" />
+        <c-icon icon="times" />
       </div>
     </div>
 

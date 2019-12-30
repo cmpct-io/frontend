@@ -1,6 +1,6 @@
 <template>
   <div class="comment">
-    <font-awesome-icon icon="user-circle" class="fa-fw mr" />
+    <c-icon icon="user-circle" class="fa-fw mr" />
     <div class="content">
       <p v-text="name" class="bold" />
       <p v-text="commentText" />

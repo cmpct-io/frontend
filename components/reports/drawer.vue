@@ -2,14 +2,14 @@
   <section class="history">
     <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="drawer animated slideInUp">
       <p>
-        <font-awesome-icon icon="bell" class="mr" />
+        <c-icon icon="bell" class="mr" />
         <span class="mr">Reports</span>
       </p>
     </div>
 
     <div v-show="displayedPanel === 'reports'" class="history-link animated slideInDown" title="View history">
       <div @click="showPanel('target')" class="button with-hover">
-        <font-awesome-icon icon="times" />
+        <c-icon icon="times" />
       </div>
     </div>
   </section>
