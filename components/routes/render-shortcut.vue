@@ -1,9 +1,10 @@
 <template>
-  <section class="share-link">
+  <section>
     <div @click="copy" class="box with-hover" title="Click to copy">
       <p v-text="qualifiedShortcut" />
       <c-icon icon="copy" class="no-margin" />
     </div>
+
     <nuxt-link :to="shortcut">
       <c-icon icon="link" />
       <span>Would you like to visit it?</span>

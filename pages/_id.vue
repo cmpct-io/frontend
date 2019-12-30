@@ -1,6 +1,6 @@
 <template>
   <container>
-    <render-link />
+    <render-target />
     <comments-viewer />
     <reports-viewer />
 
@@ -17,7 +17,7 @@ import container from '@/components/layout/container.vue'
 import drawers from '@/components/layout/drawers.vue'
 import comments from '@/components/comments/drawer.vue'
 import reports from '@/components/reports/drawer.vue'
-import renderLink from '@/components/routes/render.vue'
+import renderTarget from '@/components/routes/render-target.vue'
 import commentsViewer from '@/components/comments/viewer.vue'
 import reportsViewer from '@/components/reports/viewer.vue'
 
@@ -27,7 +27,7 @@ export default {
     drawers,
     comments,
     reports,
-    renderLink,
+    renderTarget,
     commentsViewer,
     reportsViewer
   },
