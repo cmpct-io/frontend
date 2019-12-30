@@ -4,9 +4,9 @@
     <p>This page is a redirect for another website, do you want to visit it?</p>
 
     <a :href="target" class="box with-hover break-word">
-      <c-icon icon="globe" class="no-margin" />
+      <c-icon icon="globe" class="no-margin hidden-mobile" />
       <p v-text="target" />
-      <c-icon icon="chevron-right" class="no-margin" />
+      <c-icon icon="chevron-right" class="no-margin hidden-mobile" />
     </a>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="addComment" class="poster animated fadeIn">
+  <form @submit.prevent="addComment" class="standard-width animated fadeIn">
     <p>Let people know what you think about this link</p>
     <input v-model="name" placeholder="Your name" required>
     <textarea v-model="commentText" placeholder="Your comment" required />
@@ -46,13 +46,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .poster {
-    width: 90%;
-    max-width: 500px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-
   input, textarea {
     width: 100%;
     margin-bottom: 10px;

@@ -40,6 +40,7 @@ export default {
 <style scoped lang="scss">
   .comment {
     width: 500px;
+    max-width: 95%;
     margin: 0 auto;
     border: 1px solid white;
     padding: 10px;

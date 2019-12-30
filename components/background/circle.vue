@@ -59,5 +59,6 @@ export default {
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
+    opacity: 0.3;
   }
 </style>

@@ -61,7 +61,7 @@ a {
   display: flex;
   align-items: center;
   padding-right: 20px;
-  width: 90%;
+  width: 95%;
   max-width: 800px;
   background: transparent;
   border: 1px solid white;
@@ -75,6 +75,10 @@ a {
     flex-grow: 1;
     padding: 20px 30px;
     text-align: left;
+
+    @media (max-width: 768px) {
+      padding: 15px 15px;
+    }
   }
 
   svg{
@@ -113,6 +117,7 @@ a {
 
 .flex-grow {
   flex-grow: 1;
+  max-width: 100%;
 }
 
 ::placeholder {
@@ -128,7 +133,7 @@ a {
   border-top-right-radius: 5px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  border: 0.5px solid white;
+  border: 0.75px solid white;
   border-bottom: 0;
 
   p {
@@ -155,4 +160,16 @@ a {
 
 .text-small {
   font-size: 0.75rem;
+}
+
+.standard-width {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hidden-mobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

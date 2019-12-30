@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="addReport" class="poster animated fadeIn">
+  <form @submit.prevent="addReport" class="standard-width animated fadeIn">
     <p>Please tell us why this link is unsafe</p>
     <input v-model="name" placeholder="Your name" required>
     <textarea v-model="reportType" placeholder="Your comment" required />
@@ -46,12 +46,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .poster {
-    width: 90%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
   input, textarea {
     width: 100%;
     margin-bottom: 10px;
