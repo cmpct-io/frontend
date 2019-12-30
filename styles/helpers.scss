@@ -47,6 +47,14 @@ a {
   margin-right: 10px;
 }
 
+.mr-s {
+  margin-right: 5px;
+}
+
+.mb {
+  margin-bottom: 5px;
+}
+
 .box {
   display: inline-block;
   margin: 0 auto;
@@ -114,13 +122,12 @@ a {
 
 .drawer {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background-color: transparent;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  margin-right: 10px;
   border: 0.5px solid white;
   border-bottom: 0;
 

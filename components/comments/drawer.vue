@@ -1,9 +1,10 @@
 <template>
-  <section class="history">
+  <section class="history mr">
     <div v-show="displayedPanel === 'target'" @click="showPanel('comments')" class="drawer animated slideInUp">
       <p>
-        <c-icon icon="comment-alt" class="mr" />
-        <span class="mr">Comments</span>
+        <c-icon icon="comment-alt" class="mr-s" />
+        <span class="mr-s">Comments</span>
+        <span v-text="comments.length" class="text-small" />
       </p>
     </div>
 
@@ -20,7 +21,12 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('landing', ['displayedPanel'])
+    ...mapState('landing', [
+      'displayedPanel'
+    ]),
+    ...mapState('comments', [
+      'comments'
+    ])
   },
   methods: {
     ...mapActions('landing', ['showPanel'])

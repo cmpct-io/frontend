@@ -2,8 +2,9 @@
   <section class="history">
     <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="drawer animated slideInUp">
       <p>
-        <c-icon icon="bell" class="mr" />
-        <span class="mr">Reports</span>
+        <c-icon icon="bell" class="mr-s" />
+        <span class="mr-s">Reports</span>
+        <span v-text="reports.length" class="text-small" />
       </p>
     </div>
 
@@ -20,7 +21,8 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('landing', ['displayedPanel'])
+    ...mapState('landing', ['displayedPanel']),
+    ...mapState('reports', ['reports'])
   },
   methods: {
     ...mapActions('landing', ['showPanel'])

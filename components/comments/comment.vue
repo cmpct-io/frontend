@@ -2,11 +2,11 @@
   <div class="comment flex-container">
     <c-icon icon="user-circle" class="fa-fw mr" />
     <div class="content flex-grow">
-      <p class="bold">
+      <p class="bold mb">
         <span v-text="name" class="mr" />
         <span v-text="timeSince" class="text-small" />
       </p>
-      <p v-text="commentText" />
+      <p v-text="commentText" class="no-margin" />
     </div>
   </div>
 </template>
@@ -52,10 +52,6 @@ export default {
 
     .content {
       text-align: left;
-
-      p {
-        margin: 0;
-      }
     }
   }
 </style>
