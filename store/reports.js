@@ -1,12 +1,16 @@
 import reportsApi from '@/services/reports.api.js'
 
 export const state = () => ({
-  reports: []
+  reports: [],
+  isReporting: false
 })
 
 export const mutations = {
   setReports: (state, reports) => {
     state.reports = reports
+  },
+  setIsReporting: (state, value) => {
+    state.isReporting = value
   }
 }
 
@@ -15,11 +19,16 @@ export const actions = {
     commit('setReports', [])
     commit('setReports', await reportsApi.getReports(routeId))
   },
-  submitReport: ({ commit }, { routeId, name, reportType }) => {
-    reportsApi.postReport({
+  submitReport: async ({ commit }, { routeId, name, reportType }) => {
+    await reportsApi.postReport({
       routeId,
       name,
       reportType
     })
+
+    commit('setIsReporting', false)
+  },
+  setIsReporting: ({ commit }, isReporting) => {
+    commit('setIsReporting', isReporting)
   }
 }
