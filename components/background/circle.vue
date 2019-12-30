@@ -44,7 +44,7 @@ export default {
       this.isLoaded = true
     },
     resetSpeed () {
-      this.speed = randomiser.generateRandomNumber(this.speed + 1, 40)
+      this.speed = randomiser.generateRandomNumber(5, 60)
     }
   }
 }

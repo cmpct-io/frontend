@@ -4,7 +4,7 @@
       <h1>Ready to jump?</h1>
       <p>The link you visited is an alias for a website, do you want to visit it?</p>
 
-      <a :href="target" class="box with-hover" title="Click to navigate">
+      <a :href="target" class="box with-hover break-word" title="Click to navigate">
         <font-awesome-icon icon="globe" class="no-margin" />
         <p v-text="target" />
         <font-awesome-icon icon="chevron-right" class="no-margin" />
@@ -45,9 +45,9 @@ export default {
       'target'
     ])
   },
-  mounted () {
+  async created () {
     this.reset()
-    this.initialise(this.$router.currentRoute.path.slice(1))
+    await this.initialise(this.$router.currentRoute.path.slice(1))
   },
   methods: {
     ...mapActions('landing', [
