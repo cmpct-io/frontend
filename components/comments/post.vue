@@ -47,9 +47,10 @@ export default {
 
 <style scoped lang="scss">
   .poster {
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
+    overflow: hidden;
     margin: 0 auto;
-    text-align: left;
   }
 
   input, textarea {

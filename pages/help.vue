@@ -50,7 +50,6 @@ export default {
     display: inline-block;
     width: 49%;
     padding: 10px;
-    padding-top: 30px;
     max-width: 500px;
 
     @media (max-width: 768px) {
@@ -58,7 +57,7 @@ export default {
     }
 
     h4 {
-      margin: 30px 0 20px 0;
+      margin-bottom: 10px;
     }
   }
 </style>
