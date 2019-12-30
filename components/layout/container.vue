@@ -1,6 +1,6 @@
 <template>
-  <div class="content">
-    <section class="container">
+  <div class="content flex-container">
+    <section class="container flex-grow">
       <slot />
     </section>
   </div>
@@ -15,8 +15,6 @@
     bottom: 0;
     margin: 0 auto;
     text-align: center;
-    display: flex;
-    align-items: center;
     user-select: none;
     padding: 0 10px;
   }
@@ -24,6 +22,5 @@
   section.container {
     position: relative;
     z-index: 50;
-    flex-grow: 1;
   }
 </style>

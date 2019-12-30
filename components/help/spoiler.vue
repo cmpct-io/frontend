@@ -1,7 +1,7 @@
 <template>
   <div @click.prevent="toggle" v-bind:class="[{ 'open': show }]" class="spoiler">
-    <div class="inner">
-      <p v-text="title" class="flex-grow-1 mb-0" />
+    <div class="flex-container">
+      <p v-text="title" class="flex-grow mb-0" />
       <c-icon v-if="!show" icon="chevron-down" />
       <c-icon v-if="show" icon="chevron-up" />
     </div>
@@ -53,14 +53,8 @@ export default {
     background-color: #660066;
   }
 
-  .inner {
-    display: flex;
-    align-items: center;
-  }
-
   p {
     margin-bottom: 0;
-    flex-grow: 1;
   }
 
   svg {

@@ -2,9 +2,9 @@
   <div
     v-show="showSnackbar"
     @click="dismiss"
-    class="snackbar animated bounceInUp">
+    class="snackbar flex-container animated bounceInUp">
     <c-icon icon="bell" class="fa-fw mr" />
-    <p v-text="snackbarMessage" />
+    <p v-text="snackbarMessage" class="flex-grow" />
     <button>
       <c-icon icon="times" class="fa-fw" />
     </button>
@@ -44,8 +44,6 @@ export default {
     border-radius: 5px;
     user-select: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
 
     @media (max-width: 768px) {
       left: 0;
@@ -53,7 +51,6 @@ export default {
 
     p {
       margin: 0;
-      flex-grow: 1;
     }
 
     button {

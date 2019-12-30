@@ -41,11 +41,11 @@ export default {
   },
   manifest: {
     name: 'cmpct',
-    short_name: "cmpct",
+    short_name: 'cmpct',
     description: 'The better way to shorten long links',
     lang: 'en',
     display: 'standalone',
     background_color: '#000000',
     theme_color: '#000000'
-  },
+  }
 }

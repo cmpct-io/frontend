@@ -1,7 +1,7 @@
 <template>
-  <div class="comment">
+  <div class="comment flex-container">
     <c-icon icon="user-circle" class="fa-fw mr" />
-    <div class="content">
+    <div class="content flex-grow">
       <p v-text="name" class="bold" />
       <p v-text="commentText" />
     </div>
@@ -25,8 +25,6 @@ export default {
 
 <style scoped lang="scss">
   .comment {
-    display: flex;
-    align-items: center;
     width: 500px;
     margin: 0 auto;
     border: 1px solid white;
@@ -39,7 +37,6 @@ export default {
     }
 
     .content {
-      flex-grow: 1;
       text-align: left;
 
       p {
