@@ -1,9 +1,6 @@
 <template>
   <section class="background">
-    <animated-circle
-      v-for="element in elements"
-      :key="element.id"
-    />
+    <animated-circle v-for="element in elements" :key="element.id" />
   </section>
 </template>
 

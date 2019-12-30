@@ -1,9 +1,8 @@
 <template>
   <div
-    v-if="isLoaded"
+    v-show="isLoaded"
     :style="classOverrides"
-    class="circle"
-  />
+    class="circle" />
 </template>
 
 <script>
@@ -36,21 +35,18 @@ export default {
       this.size = randomiser.generateRandomNumber(50, 300)
       this.startTop = randomiser.generateRandomNumber(-25, 125)
       this.startLeft = randomiser.generateRandomNumber(-25, 125)
-      this.resetSpeed()
+      this.speed = randomiser.generateRandomNumber(5, 60)
       const animationVariant = randomiser.generateRandomNumber(1, 10)
       this.animationVariant = animationVariant < 6
         ? 1
         : 2
       this.isLoaded = true
-    },
-    resetSpeed () {
-      this.speed = randomiser.generateRandomNumber(5, 60)
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
   .circle {
     position: fixed;
     top: 0;
