@@ -1,8 +1,6 @@
 <template>
   <div v-show="displayedPanel === 'comments'" class="animated slideInUp">
     <h1>Comments</h1>
-    <p>Here are some recent comments about this link</p>
-
     <comment v-for="(item, index) in comments" :key="index" v-bind="item" />
     <post />
   </div>

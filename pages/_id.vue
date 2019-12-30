@@ -36,6 +36,7 @@ export default {
     const routeId = this.$router.currentRoute.path.slice(1)
     await this.initialise(routeId)
     await this.loadComments(routeId)
+    await this.loadReports(routeId)
   },
   methods: {
     ...mapActions('landing', [
@@ -45,6 +46,9 @@ export default {
     ]),
     ...mapActions('comments', [
       'loadComments'
+    ]),
+    ...mapActions('reports', [
+      'loadReports'
     ])
   }
 }
