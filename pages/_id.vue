@@ -4,9 +4,9 @@
       <h1>Ready to jump?</h1>
       <p>The link you visited is an alias for a website, do you want to visit it?</p>
 
-      <a :href="parameter" class="box with-hover" title="Click to navigate">
+      <a :href="target" class="box with-hover" title="Click to navigate">
         <font-awesome-icon icon="globe" class="no-margin" />
-        <p v-text="parameter" />
+        <p v-text="target" />
         <font-awesome-icon icon="chevron-right" class="no-margin" />
       </a>
     </div>
@@ -43,18 +43,21 @@ export default {
     reports
   },
   computed: {
-    ...mapState('landing', ['displayedPanel']),
+    ...mapState('landing', [
+      'displayedPanel',
+      'target'
+    ]),
     parameter () {
       return this.$router.currentRoute.path.slice(1)
     }
   },
   mounted () {
-    this.setPanel('target')
+    this.initialise(this.parameter)
 
     // Display Comments / Reports
   },
   methods: {
-    ...mapActions('landing', ['setPanel'])
+    ...mapActions('landing', ['initialise', 'setPanel'])
   }
 }
 </script>
