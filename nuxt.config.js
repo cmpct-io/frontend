@@ -20,8 +20,7 @@ export default {
     'animate.css/animate.min.css'
   ],
   plugins: [
-    '~/plugins/fontawesome.plugin.js',
-    '~/plugins/helper-components.js'
+    '~/plugins/fontawesome.plugin.js'
   ],
   buildModules: [
     '@nuxtjs/eslint-module'
