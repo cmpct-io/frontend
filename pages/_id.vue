@@ -14,11 +14,23 @@
     <div v-show="displayedPanel === 'comments'" class="history-content animated slideInUp">
       <h1>Comments</h1>
       <p>Here are some recent comments about this link</p>
+
+      {{ comments }}
+
+      <button @click="addComment" type="button">
+        Add
+      </button>
     </div>
 
     <div v-show="displayedPanel === 'reports'" class="history-content animated slideInUp">
       <h1>Reports</h1>
       <p>Here you can see reports made by other users, or report the link yourself</p>
+
+      {{ reports }}
+
+      <button @click="addReport" type="button">
+        Add
+      </button>
     </div>
 
     <drawers>
@@ -45,7 +57,9 @@ export default {
   computed: {
     ...mapState('landing', [
       'displayedPanel',
-      'target'
+      'target',
+      'comments',
+      'reports'
     ]),
     parameter () {
       return this.$router.currentRoute.path.slice(1)
@@ -62,7 +76,23 @@ export default {
       'initialise',
       'setPanel',
       'reset'
-    ])
+    ]),
+    ...mapActions('reports', ['submitReport']),
+    ...mapActions('comments', ['submitComment']),
+    addReport () {
+      this.submitReport({
+        routeId: this.parameter,
+        name: 'Donald Duck',
+        reportType: 1
+      })
+    },
+    addComment () {
+      this.submitComment({
+        routeId: this.parameter,
+        name: 'Donald Duck',
+        commentText: 'This is a test'
+      })
+    }
   }
 }
 </script>

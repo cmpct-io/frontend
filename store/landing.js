@@ -35,7 +35,7 @@ export const actions = {
   },
   reset: ({ commit }) => {
     commit('showPanel', 'target')
-    commit('setrouteData', { routeId: null, target: null })
+    commit('setRouteData', { routeId: null, target: null })
     commit('setComments', [])
     commit('setReports', [])
   },
