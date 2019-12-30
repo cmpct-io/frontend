@@ -2,33 +2,30 @@
   <div v-show="displayedPanel === 'comments'" class="animated slideInUp">
     <h1>Comments</h1>
     <p>Here are some recent comments about this link</p>
-    {{ comments }}
 
-    <button @click="addComment" type="button">
-      Add
-    </button>
+    <comment v-for="(item, index) in comments" :key="index" v-bind="item" />
+    <post />
   </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
+import comment from '@/components/comments/comment.vue'
+import post from '@/components/comments/post.vue'
+
 export default {
+  components: {
+    comment,
+    post
+  },
   computed: {
     ...mapState('landing', [
       'routeId',
-      'displayedPanel',
+      'displayedPanel'
+    ]),
+    ...mapState('comments', [
       'comments'
     ])
-  },
-  methods: {
-    ...mapActions('comments', ['submitComment']),
-    addComment () {
-      this.submitComment({
-        routeId: this.routeId,
-        name: 'Donald Duck',
-        commentText: 'This is a test'
-      })
-    }
   }
 }
 </script>

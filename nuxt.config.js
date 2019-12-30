@@ -2,7 +2,7 @@
 export default {
   mode: 'universal',
   head: {
-    title: 'cmpct',
+    title: 'cmpct: The safer link shorterner',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

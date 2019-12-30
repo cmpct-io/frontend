@@ -47,13 +47,18 @@ export default {
   },
   async created () {
     this.reset()
-    await this.initialise(this.$router.currentRoute.path.slice(1))
+    const routeId = this.$router.currentRoute.path.slice(1)
+    await this.initialise(routeId)
+    await this.loadComments(routeId)
   },
   methods: {
     ...mapActions('landing', [
       'initialise',
       'setPanel',
       'reset'
+    ]),
+    ...mapActions('comments', [
+      'loadComments'
     ])
   }
 }
