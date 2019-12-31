@@ -56,13 +56,4 @@ export default {
     font-size: 1rem;
     border-radius: 5px;
   }
-
-  button {
-    margin-bottom: 10px;
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 5px;
-  }
 </style>
