@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 import container from '@/components/layout/container.vue'
 import drawers from '@/components/layout/drawers.vue'
 import comments from '@/components/comments/drawer.vue'
@@ -43,19 +42,6 @@ export default {
         message: 'The server successfully processed the request and is not returning any content.'
       })
     }
-  },
-  methods: {
-    ...mapActions('landing', [
-      'initialise',
-      'setPanel',
-      'reset'
-    ]),
-    ...mapActions('comments', [
-      'loadComments'
-    ]),
-    ...mapActions('reports', [
-      'loadReports'
-    ])
   }
 }
 </script>
