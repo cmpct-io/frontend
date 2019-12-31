@@ -2,7 +2,8 @@
   <container>
     <div v-show="show" class="animated fadeIn">
       <h1>Get started</h1>
-      <p>Paste a link into the box below to compact it</p>
+      <p class="mb">Create shorter, safer links you can share.</p>
+      <p>Paste your link into the box below to get started.</p>
       <generator />
     </div>
 

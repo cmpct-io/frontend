@@ -7,7 +7,7 @@
 
     <nuxt-link :to="shortcut">
       <c-icon icon="link" />
-      <span>Would you like to visit it?</span>
+      <span>Try it out</span>
     </nuxt-link>
   </section>
 </template>

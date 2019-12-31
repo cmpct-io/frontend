@@ -1,7 +1,7 @@
 <template>
   <container>
     <h1>Ready to Share</h1>
-    <p>You can share this link with your friends and colleagues now...</p>
+    <p>You can share your link now, simply click the box below to copy it.</p>
     <render-shortcut v-if="shortcut" />
   </container>
 </template>

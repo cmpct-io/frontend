@@ -1,8 +1,8 @@
 <template>
   <div>
     <form v-on:submit.prevent="create" class="box">
-      <input v-model="target" placeholder="Long URL?" required>
-      <c-icon @click="paste" icon="paste" class="secondary no-margin" title="Paste from clipboard" />
+      <input v-model="target" placeholder="Website address..." required>
+      <c-icon @click="paste" icon="clipboard" class="secondary no-margin" title="Paste from clipboard" />
       <button class="no-button" type="submit">
         <c-icon icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
       </button>

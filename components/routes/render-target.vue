@@ -1,13 +1,18 @@
 <template>
   <div v-show="displayedPanel === 'target'" class="animated fadeIn">
     <h1>Ready to jump?</h1>
-    <p>This page is a redirect for another website, do you want to visit it?</p>
+    <p>This page is a redirect for another website, click the link below if you want to visit it.</p>
 
     <a :href="target" class="box with-hover break-word">
       <img v-show="faviconUrl" :src="faviconUrl" class="favicon hidden-mobile animated bounceIn">
       <p v-text="target" class="text-small" />
       <c-icon icon="chevron-right" class="no-margin hidden-mobile" />
     </a>
+
+    <p v-show="reports.length > 0" class="text-warning animated fadeInDown">
+      <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
+      <span>Warning: somebody recently reported this link</span>
+    </p>
   </div>
 </template>
 
@@ -19,6 +24,9 @@ export default {
     ...mapState('landing', [
       'displayedPanel',
       'target'
+    ]),
+    ...mapState('reports', [
+      'reports'
     ])
   },
   data () {
