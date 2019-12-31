@@ -49,27 +49,4 @@ export default {
   section.history {
     padding: 0 10px;
   }
-
-  .history-link {
-    position: fixed;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
-    .button {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      border: 1px solid white;
-      font-size: 1rem;
-      cursor: pointer;
-      margin: 0 auto;
-      border-radius: 50%;
-
-        svg {
-          margin-top: 13px;
-        }
-    }
-  }
 </style>
