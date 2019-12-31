@@ -14,7 +14,7 @@
 
     <div v-show="show" class="history-content animated slideInUp">
       <h1>Your history</h1>
-      <div v-if="items">
+      <div v-if="items.length > 0">
         <p class="mb-l">
           These are the links you have generated or visited recently
         </p>
@@ -42,7 +42,11 @@ export default {
     }
   },
   mounted () {
-    this.items = storageService.getHistory().reverse().slice(0, 5)
+    const items = storageService.getHistory()
+
+    if (items) {
+      this.items = items.reverse().slice(0, 5)
+    }
   }
 }
 </script>
