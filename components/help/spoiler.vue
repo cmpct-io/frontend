@@ -53,10 +53,6 @@ export default {
     background-color: #660066;
   }
 
-  p {
-    margin-bottom: 0;
-  }
-
   svg {
     margin-top: 5px;
     margin-left: 10px;

@@ -3,7 +3,9 @@
     <h1>Comments</h1>
 
     <div v-show="!isCommenting && comments.length > 0" class="animated fadeIn">
-      <p>Would you like to <span @click="setIsCommenting(true)" class="text-link">add a comment?</span></p>
+      <p class="mb-l">
+        Would you like to <span @click="setIsCommenting(true)" class="text-link">add a comment?</span>
+      </p>
       <comment v-for="(item, index) in comments" :key="index" v-bind="item" />
     </div>
 

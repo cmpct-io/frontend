@@ -1,7 +1,6 @@
 html {
   font-family: 'Tomorrow', sans-serif;
   font-size: 21px;
-  word-spacing: 1px;
   box-sizing: border-box;
   color: white;
 
@@ -10,7 +9,7 @@ html {
   }
 }
 
-input, button {
+input, button, select {
   font-family: 'Tomorrow', sans-serif;
   font-size: 1rem;
 }
@@ -33,7 +32,6 @@ h4 {
 }
 
 p {
-  margin-bottom: 30px;
   font-size: 1rem;
 }
 
@@ -58,6 +56,10 @@ a {
   margin-bottom: 5px;
 }
 
+.mb-l {
+  margin-bottom: 30px;
+}
+
 .box {
   display: inline-block;
   margin: 0 auto;
@@ -73,7 +75,6 @@ a {
   margin-bottom: 20px;
 
   p {
-    margin-bottom: 0;
     font-size: 1rem;
     flex-grow: 1;
     padding: 20px 15px;

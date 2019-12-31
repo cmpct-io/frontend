@@ -3,7 +3,9 @@
     <h1>Reports</h1>
 
     <div v-show="!isReporting && reports.length > 0" class="animated fadeIn">
-      <p>If you think this link is unsafe, <span @click="setIsReporting(true)" class="text-link">please report it</span></p>
+      <p class="mb-l">
+        If you think this link is unsafe, <span @click="setIsReporting(true)" class="text-link">please report it</span>
+      </p>
       <report v-for="(item, index) in reports" :key="index" v-bind="item" />
     </div>
 

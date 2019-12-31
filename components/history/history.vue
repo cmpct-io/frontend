@@ -15,10 +15,12 @@
     <div v-show="show" class="history-content animated slideInUp">
       <h1>Your history</h1>
       <div v-if="items">
-        <p>These are the links you have generated or visited recently</p>
+        <p class="mb-l">
+          These are the links you have generated or visited recently
+        </p>
         <history-item v-for="(item, index) in items" :key="index" :shortcut="item" />
       </div>
-      <p v-else>
+      <p v-else class="mb-l">
         When you have created or visited a link, we will show you a list of them here
       </p>
     </div>

@@ -1,6 +1,8 @@
 <template>
   <form @submit.prevent="addComment" class="standard-width animated fadeIn">
-    <p>Let people know what you think about this link</p>
+    <p class="mb-l">
+      Let people know what you think about this link
+    </p>
     <input v-model="name" placeholder="Your name" required>
     <textarea v-model="commentText" placeholder="Your comment" required />
     <button class="with-hover" type="submit">

@@ -1,6 +1,8 @@
 <template>
   <form @submit.prevent="addReport" class="standard-width animated fadeIn">
-    <p>Please tell us why this link is unsafe</p>
+    <p class="mb-l">
+      Please tell us why this link is unsafe
+    </p>
     <input v-model="name" placeholder="Your name" required>
     <select v-model="reportType">
       <option value="0">

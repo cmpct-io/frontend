@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>Ready to Share</h1>
-    <p>You can share your link now, simply click the box below to copy it.</p>
+    <p class="mb-l">
+      You can share your link now, simply click the box below to copy it.
+    </p>
     <render-shortcut v-if="shortcut" />
   </div>
 </template>

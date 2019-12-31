@@ -1,7 +1,9 @@
 <template>
   <div v-show="displayedPanel === 'target'" class="animated fadeIn">
     <h1>Ready to jump?</h1>
-    <p>This page is a redirect for another website, click the link below if you want to visit it.</p>
+    <p class="mb-l">
+      This page is a redirect for another website, click the link below if you want to visit it.
+    </p>
 
     <a :href="target" class="box with-hover break-word">
       <img v-show="faviconUrl" :src="faviconUrl" class="favicon hidden-mobile animated bounceIn">

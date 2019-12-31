@@ -38,10 +38,6 @@ export default {
       transition: all 0.2s ease-in-out;
     }
 
-    p {
-      margin-bottom: 0;
-    }
-
     &:hover {
       svg.arrow {
         margin-right: 0;

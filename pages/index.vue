@@ -5,7 +5,7 @@
       <p class="mb">
         Create shorter, safer links you can share.
       </p>
-      <p>
+      <p class="mb-l">
         Paste your link into the box below to get started.
       </p>
       <generator />
