@@ -3,10 +3,18 @@
     <p>Please tell us why this link is unsafe</p>
     <input v-model="name" placeholder="Your name" required>
     <select v-model="reportType">
-      <option value="0">Scam</option>
-      <option value="1">Dead link</option>
-      <option value="2">Insecure</option>
-      <option value="3">Phishing (Fake)</option>
+      <option value="0">
+        Scam
+      </option>
+      <option value="1">
+        Dead link
+      </option>
+      <option value="2">
+        Insecure
+      </option>
+      <option value="3">
+        Phishing (Fake)
+      </option>
     </select>
 
     <button class="with-hover" type="submit">
