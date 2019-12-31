@@ -40,7 +40,7 @@ export default {
     }
   },
   mounted () {
-    this.items = storageService.getHistory()
+    this.items = storageService.getHistory().reverse().slice(0, 5)
   }
 }
 </script>
