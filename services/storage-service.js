@@ -7,9 +7,10 @@ const addToHistory = (item) => {
     history = []
   }
 
-  history.push(item)
-
-  localStorage.setItem('history', JSON.stringify(history))
+  if (!history.includes(item)) {
+    history.push(item)
+    localStorage.setItem('history', JSON.stringify(history))
+  }
 }
 
 export default {

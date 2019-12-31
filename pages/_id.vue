@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import storageService from '@/services/storage-service.js'
 import container from '@/components/layout/container.vue'
 import drawers from '@/components/layout/drawers.vue'
 import comments from '@/components/comments/drawer.vue'
@@ -29,6 +31,9 @@ export default {
     commentsViewer,
     reportsViewer
   },
+  computed: {
+    ...mapState('landing', ['routeId'])
+  },
   async fetch ({ store, route, router, error }) {
     const routeId = route.params.id
     const isValid = await store.dispatch('landing/initialise', routeId)
@@ -42,6 +47,9 @@ export default {
         message: 'The server successfully processed the request and is not returning any content.'
       })
     }
+  },
+  mounted () {
+    storageService.addToHistory(this.routeId)
   }
 }
 </script>
