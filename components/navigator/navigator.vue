@@ -3,6 +3,10 @@
     <logo />
 
     <div class="links">
+      <a href="https://github.com/tommcclean/cmpct.io" target="blank" class="mr">
+        <c-icon icon="code" />
+        <span>Github</span>
+      </a>
       <router-link to="help">
         <c-icon icon="question" />
         <span>Help</span>
@@ -38,8 +42,11 @@ export default {
 
       a {
         color: white;
-        margin: 0 5px;
         text-decoration: none;
+
+        &.mr {
+          margin-right: 15px;
+        }
       }
     }
   }

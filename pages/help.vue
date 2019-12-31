@@ -5,7 +5,7 @@
       <h4>What is cmpct.io</h4>
       <spoiler title="What is cmpct.io">
         <p>cmpct.io is a free service that enables you to create shorter links to websites.</p>
-        <p>We have features to protect the people you send the link to, so unlike other platforms which scammers use to trick people, user's see where the link goes before going there.</p>
+        <p>We have features to protect people you send the link too, so unlike other platforms which scammers use to trick people, users see where the link goes before clicking.</p>
       </spoiler>
       <spoiler title="How does it work?">
         <p>Its simple, if you want to share a link with others, but the link is super long; pop it into cmpct.io and we will give you a shorter link that goes to the same place!</p>
@@ -23,11 +23,12 @@
       </spoiler>
       <spoiler title="Is it safe?">
         <p>We believe our service is safer than other similiar websites because we operate slightly differently</p>
-        <p>When you navigate to a shortened link, you don't go straight to the website, but land on cmpct.io</p>
-        <p>On our landing page you can post comments and report unsafe links, we also show you where the link will go</p>
+        <p>When you navigate to our links, you don't go straight to the website, but land on cmpct.io</p>
+        <p>On cmpct.io you can post comments and report unsafe links, we also show you where the link will go</p>
       </spoiler>
       <spoiler title="What data do you collect?">
-        <p>We don't store any data showing who followed which links, we do store some anonymous analytics to show how popular a link is</p>
+        <p>We don't want your personal information, we don't collect any. We only store a history of the links you visited on your device (so you can see it), and that is never transmitted to our servers</p>
+        <p>cmpct.io is open source, you can review our code on our <a href="https://github.com/tommcclean/cmpct.io" target="blank">Github Repository</a></p>
       </spoiler>
     </div>
   </container>
