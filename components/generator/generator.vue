@@ -1,11 +1,17 @@
 <template>
-  <form v-on:submit.prevent="create" class="box">
-    <input v-model="target" placeholder="Long URL?" type="url" pattern="https?://.+" required>
-    <c-icon @click="paste" icon="paste" class="secondary no-margin" title="Paste from clipboard" />
-    <button class="no-button" type="submit">
-      <c-icon icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
-    </button>
-  </form>
+  <div>
+    <form v-on:submit.prevent="create" class="box">
+      <input v-model="target" placeholder="Long URL?" required>
+      <c-icon @click="paste" icon="paste" class="secondary no-margin" title="Paste from clipboard" />
+      <button class="no-button" type="submit">
+        <c-icon icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
+      </button>
+    </form>
+    <p v-show="showWarning" class="text-warning animated fadeInDown">
+      <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
+      <span>Please enter a valid website address</span>
+    </p>
+  </div>
 </template>
 
 <script>
@@ -15,7 +21,8 @@ import storageService from '@/services/storage-service.js'
 export default {
   data () {
     return {
-      target: ''
+      target: '',
+      showWarning: false
     }
   },
   computed: {
@@ -24,10 +31,14 @@ export default {
   methods: {
     ...mapActions('generator', ['generate']),
     create () {
-      this.generate(this.target).then(() => {
-        storageService.addToHistory(this.shortcut)
-        this.$router.push({ name: 'share' })
-      })
+      this.validateInput()
+
+      if (!this.showWarning) {
+        this.generate(this.target).then(() => {
+          storageService.addToHistory(this.shortcut)
+          this.$router.push({ name: 'share' })
+        })
+      }
     },
     paste () {
       navigator.clipboard.readText().then((text) => {
@@ -36,6 +47,12 @@ export default {
           this.create()
         }
       })
+    },
+    validateInput () {
+      const expression = /[-a-zA-Z0-9@:%._~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_.~#?&//=]*)?/gi
+      const regex = new RegExp(expression)
+
+      this.showWarning = !this.target.match(regex)
     }
   }
 }

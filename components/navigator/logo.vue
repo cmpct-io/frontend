@@ -1,8 +1,8 @@
 <template>
-  <a href="/" class="logo">
+  <nuxt-link to="/" class="logo">
     <img class="large" src="/logo.png">
     <img class="small" src="/logo-square.png">
-  </a>
+  </nuxt-link>
 </template>
 
 <style scoped lang="scss">

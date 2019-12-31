@@ -1,8 +1,8 @@
 <template>
   <section class="history">
     <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="drawer animated slideInUp">
-      <p>
-        <c-icon icon="bell" class="mr-s" />
+      <p v-bind:class="[{ 'text-warning': reports.length > 0 }]">
+        <c-icon v-bind:class="[{ 'animated shake': reports.length > 0 }]" icon="bell" class="mr-s" />
         <span class="mr-s">Reports</span>
         <span v-text="reports.length" class="text-small" />
       </p>
