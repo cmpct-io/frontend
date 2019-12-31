@@ -1,5 +1,5 @@
 <template>
-  <container>
+  <div>
     <render-target />
     <comments-viewer />
     <reports-viewer />
@@ -7,13 +7,12 @@
       <comments />
       <reports />
     </drawers>
-  </container>
+  </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import storageService from '@/services/storage-service.js'
-import container from '@/components/layout/container.vue'
 import drawers from '@/components/layout/drawers.vue'
 import comments from '@/components/comments/drawer.vue'
 import reports from '@/components/reports/drawer.vue'
@@ -22,8 +21,12 @@ import commentsViewer from '@/components/comments/viewer.vue'
 import reportsViewer from '@/components/reports/viewer.vue'
 
 export default {
+  head () {
+    return {
+      title: `cmpct.io: Jump`
+    }
+  },
   components: {
-    container,
     drawers,
     comments,
     reports,

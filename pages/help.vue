@@ -1,5 +1,5 @@
 <template>
-  <container>
+  <div>
     <h1>Help</h1>
     <div class="help-section">
       <h4>What is cmpct.io</h4>
@@ -31,16 +31,19 @@
         <p>cmpct.io is open source, you can review our code on our <a href="https://github.com/tommcclean/cmpct.io" target="blank">Github Repository</a></p>
       </spoiler>
     </div>
-  </container>
+  </div>
 </template>
 
 <script>
-import container from '@/components/layout/container.vue'
 import spoiler from '@/components/help/spoiler.vue'
 
 export default {
+  head () {
+    return {
+      title: `cmpct.io: Help`
+    }
+  },
   components: {
-    container,
     spoiler
   }
 }

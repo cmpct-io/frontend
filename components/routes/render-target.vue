@@ -20,6 +20,11 @@
 import { mapState } from 'vuex'
 
 export default {
+  data () {
+    return {
+      faviconUrl: ''
+    }
+  },
   computed: {
     ...mapState('landing', [
       'displayedPanel',
@@ -29,14 +34,13 @@ export default {
       'reports'
     ])
   },
-  data () {
-    return {
-      faviconUrl: ''
-    }
-  },
   mounted () {
-    const hostname = (new URL(this.target)).hostname
-    this.faviconUrl = `https://${hostname}/favicon.ico`
+    try {
+      const hostname = (new URL(this.target)).hostname
+      this.faviconUrl = `https://${hostname}/favicon.ico`
+    } catch (error) {
+      this.faviconUrl = ''
+    }
   }
 }
 </script>

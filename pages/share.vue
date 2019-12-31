@@ -1,19 +1,22 @@
 <template>
-  <container>
+  <div>
     <h1>Ready to Share</h1>
     <p>You can share your link now, simply click the box below to copy it.</p>
     <render-shortcut v-if="shortcut" />
-  </container>
+  </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import container from '@/components/layout/container.vue'
 import renderShortcut from '@/components/routes/render-shortcut.vue'
 
 export default {
+  head () {
+    return {
+      title: `cmpct.io: Share`
+    }
+  },
   components: {
-    container,
     renderShortcut
   },
   computed: {
