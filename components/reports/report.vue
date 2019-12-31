@@ -18,7 +18,7 @@ export default {
       required: true
     },
     reportType: {
-      type: String,
+      type: Number,
       required: true
     }
   },

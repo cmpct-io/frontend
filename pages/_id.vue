@@ -1,15 +1,12 @@
 <template>
   <container>
-    <loader v-show="isLoading" :is-loading="true"/>
-    <div v-show="!isLoading" class="animated fadeIn">
-      <render-target />
-      <comments-viewer />
-      <reports-viewer />
-      <drawers>
-        <comments />
-        <reports />
-      </drawers>
-    </div>
+    <render-target />
+    <comments-viewer />
+    <reports-viewer />
+    <drawers>
+      <comments />
+      <reports />
+    </drawers>
   </container>
 </template>
 
@@ -22,7 +19,6 @@ import reports from '@/components/reports/drawer.vue'
 import renderTarget from '@/components/routes/render-target.vue'
 import commentsViewer from '@/components/comments/viewer.vue'
 import reportsViewer from '@/components/reports/viewer.vue'
-import loader from '@/components/layout/loader.vue'
 
 export default {
   components: {
@@ -32,21 +28,21 @@ export default {
     reports,
     renderTarget,
     commentsViewer,
-    reportsViewer,
-    loader
+    reportsViewer
   },
-  data () {
-    return {
-      isLoading: true
+  async fetch ({ store, route, router, error }) {
+    const routeId = route.params.id
+    const isValid = await store.dispatch('landing/initialise', routeId)
+
+    if (isValid) {
+      await store.dispatch('comments/loadComments', routeId)
+      await store.dispatch('reports/loadReports', routeId)
+    } else {
+      error({
+        statusCode: 404,
+        message: 'The server successfully processed the request and is not returning any content.'
+      })
     }
-  },
-  async created () {
-    this.reset()
-    const routeId = this.$router.currentRoute.path.slice(1)
-    await this.initialise(routeId)
-    await this.loadComments(routeId)
-    await this.loadReports(routeId)
-    this.isLoading = false
   },
   methods: {
     ...mapActions('landing', [

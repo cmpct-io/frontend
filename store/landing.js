@@ -19,7 +19,14 @@ export const mutations = {
 export const actions = {
   initialise: async ({ commit }, routeId) => {
     commit('showPanel', 'target')
-    commit('setRouteData', await routesApi.getRoute(routeId))
+    const routeData = await routesApi.getRoute(routeId)
+
+    if (routeData) {
+      commit('setRouteData', routeData)
+      return true
+    } else {
+      return false
+    }
   },
   reset: ({ commit }) => {
     commit('showPanel', 'target')

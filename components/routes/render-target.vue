@@ -1,5 +1,5 @@
 <template>
-  <div v-show="displayedPanel === 'target'">
+  <div v-show="displayedPanel === 'target'" class="animated fadeIn">
     <h1>Ready to jump?</h1>
     <p>This page is a redirect for another website, do you want to visit it?</p>
 
