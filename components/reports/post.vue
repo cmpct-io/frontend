@@ -2,7 +2,13 @@
   <form @submit.prevent="addReport" class="standard-width animated fadeIn">
     <p>Please tell us why this link is unsafe</p>
     <input v-model="name" placeholder="Your name" required>
-    <textarea v-model="reportType" placeholder="Your comment" required />
+    <select v-model="reportType">
+      <option value="0">Scam</option>
+      <option value="1">Dead link</option>
+      <option value="2">Insecure</option>
+      <option value="3">Phishing (Fake)</option>
+    </select>
+
     <button class="with-hover" type="submit">
       Add
     </button>
@@ -35,7 +41,7 @@ export default {
       await this.submitReport({
         routeId: this.routeId,
         name: this.name,
-        reportType: this.reportType
+        reportType: parseInt(this.reportType)
       })
 
       await this.loadReports(this.routeId)
@@ -46,7 +52,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  input, textarea {
+  input, select {
     width: 100%;
     margin-bottom: 10px;
     background-color: transparent;
@@ -55,5 +61,10 @@ export default {
     color: white;
     font-size: 1rem;
     border-radius: 5px;
+  }
+
+  select {
+    opacity: 0.6;
+    background-color: black;
   }
 </style>

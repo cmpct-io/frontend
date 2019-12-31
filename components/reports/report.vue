@@ -3,12 +3,14 @@
     <c-icon icon="user-circle" class="fa-fw mr" />
     <div class="content flex-grow">
       <p v-text="name" class="bold" />
-      <p v-text="reportType" />
+      <p v-text="reportTypeString" />
     </div>
   </div>
 </template>
 
 <script>
+import reportTypes from '@/services/report-types.js'
+
 export default {
   props: {
     name: {
@@ -18,6 +20,11 @@ export default {
     reportType: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    reportTypeString () {
+      return `Reason: ${reportTypes.getReportType(this.reportType)}`
     }
   }
 }
