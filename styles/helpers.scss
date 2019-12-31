@@ -4,6 +4,10 @@ html {
   word-spacing: 1px;
   box-sizing: border-box;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 input, button {
@@ -19,7 +23,6 @@ input, button {
 }
 
 h1 {
-  font-size: 50px;
   letter-spacing: 2px;
   margin-bottom: 10px;
   font-size: 2rem;
@@ -73,8 +76,12 @@ a {
     margin-bottom: 0;
     font-size: 1rem;
     flex-grow: 1;
-    padding: 20px 30px;
+    padding: 20px 20px;
     text-align: left;
+
+    &.text-small {
+      font-size: 0.85rem;
+    }
 
     @media (max-width: 768px) {
       padding: 15px 15px;
@@ -185,4 +192,35 @@ button, .square-button {
   padding: 10px 20px;
   color: white;
   border-radius: 5px;
+}
+
+.history-link {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  @media (max-height: 400px) {
+    display: none;
+  }
+
+  .button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 50%;
+
+      svg {
+        margin-top: 13px;
+
+        @media (max-width: 768px) {
+          margin-top: 15px;
+        }
+      }
+  }
 }

@@ -5,7 +5,7 @@
 
     <a :href="target" class="box with-hover break-word">
       <c-icon icon="globe" class="no-margin hidden-mobile" />
-      <p v-text="target" />
+      <p v-text="target" class="text-small" />
       <c-icon icon="chevron-right" class="no-margin hidden-mobile" />
     </a>
   </div>
