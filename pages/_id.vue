@@ -1,13 +1,15 @@
 <template>
   <container>
-    <render-target />
-    <comments-viewer />
-    <reports-viewer />
-
-    <drawers>
-      <comments />
-      <reports />
-    </drawers>
+    <loader v-show="isLoading" :is-loading="true"/>
+    <div v-show="!isLoading" class="animated fadeIn">
+      <render-target />
+      <comments-viewer />
+      <reports-viewer />
+      <drawers>
+        <comments />
+        <reports />
+      </drawers>
+    </div>
   </container>
 </template>
 
@@ -20,6 +22,7 @@ import reports from '@/components/reports/drawer.vue'
 import renderTarget from '@/components/routes/render-target.vue'
 import commentsViewer from '@/components/comments/viewer.vue'
 import reportsViewer from '@/components/reports/viewer.vue'
+import loader from '@/components/layout/loader.vue'
 
 export default {
   components: {
@@ -29,7 +32,13 @@ export default {
     reports,
     renderTarget,
     commentsViewer,
-    reportsViewer
+    reportsViewer,
+    loader
+  },
+  data () {
+    return {
+      isLoading: true
+    }
   },
   async created () {
     this.reset()
@@ -37,6 +46,7 @@ export default {
     await this.initialise(routeId)
     await this.loadComments(routeId)
     await this.loadReports(routeId)
+    this.isLoading = false
   },
   methods: {
     ...mapActions('landing', [
