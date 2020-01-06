@@ -1,4 +1,5 @@
 
+
 # cmpct.io
 **Tech:** A PWA built with VueJS, NUXT and .NETCore Web API.
 
@@ -6,15 +7,12 @@
 
 **Try it out:** https://cmpct.io
 
+![enter image description here](https://res.cloudinary.com/practicaldev/image/fetch/s--jaIROD_g--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://thepracticaldev.s3.amazonaws.com/i/2ky31x3nwpw5zxjgj236.png)
+
 ### What is cmpct.io?
-Essentially cmpct.io is a link shortener, like bit.ly, but it has some features that distinguish it, such as...
- - **A landing page**: when using a shortened link the user is not directed to the target website straight away, they land on cmpct.io so they can see where the link will take them.
-	 - This is important because it means people can avoid being sent to unsafe websites, but can still benefit from using a shorter link.
- - **Ability to add comments** to shortened links, telling other people what they think about a link, this could even be used to collect feedback from people about a website.
- - **Ability to report unsafe links**, scammers often use shorter links because they hide where the user will actually go, but because the landing page shows you where you will go, you can report it as unsafe to flag it up to other users. This makes cmpct.io links much more trustworthy.
-
-### Other benefits
-
- 1. Totally free, no advertising or premium accounts
- 2. Doesn't sell (or even store) your personal data
- 3. Has no account system so we don't even know who uses the website
+You may have heard of projects like bit.ly where you paste a long URL and the service spits back a shorter one you can share with friends and colleagues. cmpct.io is a bit like bit.ly but it differs in a few ways...
+1. **No automatic redirect**: bit.ly provides really short links, but they obfuscate where you will actually end up, this isn't great; so cmpct.io doesn't automatically redirect you, but you go to a landing page where you can see the destination before you choose to go there.
+2. **Comments**: I frequently work on projects and ask others for feedback, but its never easy to collect it; so I wanted to make it possible for people to leave comments on one of the links generated.
+3. **Reports**: Scammers often use bit.ly because they can get unsuspecting users to go to unsafe websites, so cmpct.io has a reporting capability which alerts you if the link you have been provided is unsafe; before you go there!
+4. **Privacy focused**: Internet companies love to harvest your info and habits, so I wanted to build one that stored absolutely nothing about you. Hence the project doesn't even have an account system, nor do we store on our servers a list of the links you have visited.
+5. **Free**: I build software because I enjoy building software, I have a job to make money, so a key advantage cmpct.io can offer is that I have no intention of generating revenue from it.
