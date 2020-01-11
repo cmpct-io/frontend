@@ -1,6 +1,6 @@
 <template>
   <section class="history">
-    <div v-show="!show" class="history-link animated slideInUp" title="View history">
+    <div v-show="!show" :title="$t('viewHistory')" class="history-link animated slideInUp">
       <div @click="toggle" class="button with-hover">
         <c-icon icon="chevron-up" />
       </div>
@@ -58,12 +58,14 @@ export default {
   "en": {
     "title": "Your history",
     "description": "These are the links you have generated or visited recently",
-    "zeroItemDescription": "When you have created or visited a link, we will show you a list of them here"
+    "zeroItemDescription": "When you have created or visited a link, we will show you a list of them here",
+    "viewHistory": "View history"
   },
   "fr": {
     "title": "Votre histoire",
     "description": "Ce sont les liens que vous avez générés ou visités récemment",
-    "zeroItemDescription": "Lorsque vous avez créé ou visité un lien, nous vous en montrerons une liste ici"
+    "zeroItemDescription": "Lorsque vous avez créé ou visité un lien, nous vous en montrerons une liste ici",
+    "viewHistory": "Voir l'historique"
   }
 }
 </i18n>

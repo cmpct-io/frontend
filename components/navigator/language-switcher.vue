@@ -56,6 +56,10 @@ export default {
     },
     change (language) {
       this.$root.$i18n.locale = language
+      this.$cookies.set('i18n_redirected', language, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 7
+      })
       this.expanded = false
     }
   }

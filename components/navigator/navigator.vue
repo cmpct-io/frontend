@@ -5,23 +5,27 @@
     <div class="links">
       <a href="https://github.com/tommcclean/cmpct.io" target="blank" class="mr">
         <c-icon icon="code" />
-        <span>Github</span>
+        <span v-text="$t('github')" />
       </a>
 
       <router-link to="help">
         <c-icon icon="question" />
-        <span>Help</span>
+        <span v-text="$t('help')" />
       </router-link>
+
+      <language-switcher />
     </div>
   </section>
 </template>
 
 <script>
 import logo from '@/components/navigator/logo.vue'
+import languageSwitcher from '@/components/navigator/language-switcher.vue'
 
 export default {
   components: {
-    logo
+    logo,
+    languageSwitcher
   }
 }
 </script>
@@ -52,3 +56,16 @@ export default {
     }
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "github": "Github",
+    "help": "Help"
+  },
+  "fr": {
+    "github": "Github",
+    "help": "Aidez-moi"
+  }
+}
+</i18n>

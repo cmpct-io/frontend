@@ -29,8 +29,13 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     ['nuxt-i18n', {
-      vueI18nLoader: true
-    }]
+      vueI18nLoader: true,
+      detectBrowserLanguage: {
+        useCookie: true,
+        alwaysRedirect: true
+      }
+    }],
+    ['cookie-universal-nuxt']
   ],
   i18n: {
     locales: ['en', 'fr'],
