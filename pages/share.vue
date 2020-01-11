@@ -28,7 +28,7 @@ export default {
   },
   created () {
     if (!this.shortcut) {
-      this.$router.push({ name: 'index' })
+      this.$router.push({ path: '/' })
     }
   }
 }
