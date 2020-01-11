@@ -27,8 +27,24 @@ export default {
   ],
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['nuxt-i18n', {
+      vueI18nLoader: true
+    }]
   ],
+  i18n: {
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+        },
+        fr: {
+        },
+      }
+    }
+  },
   axios: {
   },
   build: {

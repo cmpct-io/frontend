@@ -1,13 +1,9 @@
 <template>
   <div>
     <div v-show="show" class="animated fadeIn">
-      <h1>Get started</h1>
-      <p class="mb">
-        Create shorter, safer links you can share.
-      </p>
-      <p class="mb-l">
-        Paste your link into the box below to get started.
-      </p>
+      <h1 v-text="$t('title')" />
+      <p v-text="$t('subtitle')" class="mb" />
+      <p v-text="$t('message')" class="mb-l" />
       <generator />
     </div>
 
@@ -36,3 +32,18 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "title": "Get started",
+    "subtitle": "Create shorter, safer links you can share.",
+    "message": "Paste your link into the box below to get started."
+  },
+  "fr": {
+    "title": "Commencer",
+    "subtitle": "Créez des liens plus courts et plus sûrs que vous pouvez partager.",
+    "message": "Collez votre lien dans la case ci-dessous pour commencer."
+  }
+}
+</i18n>

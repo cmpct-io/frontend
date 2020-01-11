@@ -1,10 +1,10 @@
 <template>
   <div>
     <form v-on:submit.prevent="create" class="box">
-      <input v-model="target" placeholder="Website address..." required>
-      <c-icon @click="paste" icon="clipboard" class="secondary no-margin" title="Paste from clipboard" />
+      <input v-model="target" :placeholder="$t('placeholder')" required>
+      <c-icon @click="paste" :title="$t('pasteInfo')" icon="clipboard" class="secondary no-margin" />
       <button class="no-button" type="submit">
-        <c-icon icon="chevron-circle-right" class="no-margin" title="Start the compacter" />
+        <c-icon :title="$t('submitInfo')" icon="chevron-circle-right" class="no-margin" />
       </button>
     </form>
     <p v-show="showWarning" class="text-warning animated fadeInDown">
@@ -79,3 +79,18 @@ export default {
     cursor: pointer;
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "placeholder": "Website address...",
+    "pasteInfo": "Paste from clipboard",
+    "submitInfo": "Start the compacter"
+  },
+  "fr": {
+    "placeholder": "Adresse du site Web...",
+    "pasteInfo": "Coller depuis le presse-papiers",
+    "submitInfo": "Commencez le plus compact"
+  }
+}
+</i18n>
