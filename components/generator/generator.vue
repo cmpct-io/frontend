@@ -9,7 +9,7 @@
     </form>
     <p v-show="showWarning" class="text-warning animated fadeInDown">
       <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
-      <span>Please enter a valid website address</span>
+      <span v-text="$t('enterValidAddress')" />
     </p>
   </div>
 </template>
@@ -85,12 +85,14 @@ export default {
   "en": {
     "placeholder": "Website address...",
     "pasteInfo": "Paste from clipboard",
-    "submitInfo": "Start the compacter"
+    "submitInfo": "Start the compacter",
+    "enterValidAddress": "Please enter a valid website address"
   },
   "fr": {
     "placeholder": "Adresse du site Web...",
     "pasteInfo": "Coller depuis le presse-papiers",
-    "submitInfo": "Commencez le plus compact"
+    "submitInfo": "Commencez le plus compact",
+    "enterValidAddress": "Veuillez entrer une adresse de site Web valide"
   }
 }
 </i18n>

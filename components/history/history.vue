@@ -6,23 +6,19 @@
       </div>
     </div>
 
-    <div v-show="show" class="history-link animated slideInDown" title="View history">
+    <div v-show="show" class="history-link animated slideInDown">
       <div @click="toggle" class="button with-hover">
         <c-icon icon="times" />
       </div>
     </div>
 
     <div v-show="show" class="history-content animated slideInUp">
-      <h1>Your history</h1>
+      <h1 v-text="$t('title')" />
       <div v-if="items.length > 0">
-        <p class="mb-l">
-          These are the links you have generated or visited recently
-        </p>
+        <p v-text="$t('description')" class="mb-l" />
         <history-item v-for="(item, index) in items" :key="index" :shortcut="item" />
       </div>
-      <p v-else class="mb-l">
-        When you have created or visited a link, we will show you a list of them here
-      </p>
+      <p v-else v-text="$t('zeroItemDescription')" class="mb-l" />
     </div>
   </section>
 </template>
@@ -56,3 +52,18 @@ export default {
     padding: 0 10px;
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "title": "Your history",
+    "description": "These are the links you have generated or visited recently",
+    "zeroItemDescription": "When you have created or visited a link, we will show you a list of them here"
+  },
+  "fr": {
+    "title": "Votre histoire",
+    "description": "Ce sont les liens que vous avez générés ou visités récemment",
+    "zeroItemDescription": "Lorsque vous avez créé ou visité un lien, nous vous en montrerons une liste ici"
+  }
+}
+</i18n>

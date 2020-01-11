@@ -1,16 +1,10 @@
 <template>
   <form @submit.prevent="addComment" class="standard-width animated fadeIn">
-    <p class="mb-l">
-      Let people know what you think about this link
-    </p>
-    <input v-model="name" placeholder="Your name" required>
-    <textarea v-model="commentText" placeholder="Your comment" required />
-    <button class="with-hover" type="submit">
-      Add
-    </button>
-    <button @click="setIsCommenting(false)" class="with-hover" type="button">
-      Cancel
-    </button>
+    <p v-text="$t('description')" class="mb-l" />
+    <input v-model="name" :placeholder="$t('namePlaceholder')" required>
+    <textarea v-model="commentText" :placeholder="$t('commentPlaceholder')" required />
+    <button v-text="$t('add')" class="with-hover" type="submit" />
+    <button @click="setIsCommenting(false)" v-text="$t('cancel')" class="with-hover" type="button" />
   </form>
 </template>
 
@@ -59,3 +53,22 @@ export default {
     border-radius: 5px;
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "description": "Let people know what you think about this link",
+    "namePlaceholder": "Your name...",
+    "commentPlaceholder": "Your comment",
+    "add": "Add",
+    "cancel": "Cancel"
+  },
+  "fr": {
+    "description": "Faites savoir ce que vous pensez de ce lien",
+    "namePlaceholder": "Votre nom...",
+    "commentPlaceholder": "Votre commentaire...",
+    "add": "Ajouter",
+    "cancel": "Annuler"
+  }
+}
+</i18n>
