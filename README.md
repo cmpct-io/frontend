@@ -3,7 +3,7 @@
 # cmpct.io
 **Tech:** A PWA built with VueJS, NUXT and .NETCore Web API.
 
-**Status:** Currently under active development, hopefully ready for BETA in early January 2020
+**Status:** Currently localising for English and French, in BETA phase.
 
 **Try it out:** https://cmpct.io
 
