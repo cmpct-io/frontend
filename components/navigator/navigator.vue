@@ -12,8 +12,6 @@
         <c-icon icon="question" />
         <span>Help</span>
       </router-link>
-
-      <img :src="flagImage" class="flag" title="Browsing in English">
     </div>
   </section>
 </template>
@@ -24,11 +22,6 @@ import logo from '@/components/navigator/logo.vue'
 export default {
   components: {
     logo
-  },
-  computed: {
-    flagImage () {
-      return `/flags/${this.$i18n.locale}.png`
-    }
   }
 }
 </script>
@@ -57,11 +50,5 @@ export default {
         }
       }
     }
-  }
-
-  img.flag {
-    height: 35px;
-    margin: -10px;
-    margin-left: 15px;
   }
 </style>
