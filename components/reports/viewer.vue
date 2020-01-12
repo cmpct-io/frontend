@@ -66,6 +66,13 @@ export default {
     "pleaseReportIt": "veuillez le signaler",
     "nobodyHasReported": "Personne n'a encore signalé ce lien, ",
     "pleaseReportIfYouThink": "veuillez le signaler si vous pensez qu'il est dangereux"
+  },
+  "es": {
+    "reports": "Informes",
+    "ifYouThink": "Si crees que este enlace no es seguro, ",
+    "pleaseReportIt": "por favor repórtalo",
+    "nobodyHasReported": "Nadie ha informado este enlace todavía, ",
+    "pleaseReportIfYouThink": "por favor repórtelo si cree que no es seguro"
   }
 }
 </i18n>

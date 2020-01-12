@@ -59,7 +59,7 @@ export default {
   "en": {
     "description": "Let people know what you think about this link",
     "namePlaceholder": "Your name...",
-    "commentPlaceholder": "Your comment",
+    "commentPlaceholder": "Your comment...",
     "add": "Add",
     "cancel": "Cancel"
   },
@@ -69,6 +69,13 @@ export default {
     "commentPlaceholder": "Votre commentaire...",
     "add": "Ajouter",
     "cancel": "Annuler"
+  },
+  "es": {
+    "description": "Deje que la gente sepa lo que piensa sobre este enlace",
+    "namePlaceholder": "Tu nombre...",
+    "commentPlaceholder": "Tu comentario...",
+    "add": "Añadir",
+    "cancel": "Cancelar"
   }
 }
 </i18n>

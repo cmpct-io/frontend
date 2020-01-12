@@ -44,6 +44,11 @@ export default {
     "title": "Commencer",
     "subtitle": "Créez des liens plus courts et plus sûrs que vous pouvez partager.",
     "message": "Collez votre lien dans la case ci-dessous pour commencer."
+  },
+  "es": {
+    "title": "Empezar",
+    "subtitle": "Crea enlaces más cortos y seguros que puedas compartir.",
+    "message": "Pegue su enlace en el cuadro a continuación para comenzar."
   }
 }
 </i18n>

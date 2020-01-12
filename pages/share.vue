@@ -41,6 +41,10 @@ export default {
   "fr": {
     "title": "Prêt à partager",
     "description": "Vous pouvez partager votre lien maintenant, cliquez simplement sur la case ci-dessous pour le copier."
+  },
+  "es": {
+    "title": "Listo para compartir",
+    "description": "Puede compartir su enlace ahora, simplemente haga clic en el cuadro a continuación para copiarlo."
   }
 }
 </i18n>

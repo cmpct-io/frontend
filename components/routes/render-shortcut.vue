@@ -42,6 +42,11 @@ export default {
     "clickToCopy": "Cliquez pour copier",
     "tryItOut": "Essaye le",
     "snackbarMessage": "Lien copié dans votre presse-papiers!"
+  },
+  "es": {
+    "clickToCopy": "Haga clic para copiar",
+    "tryItOut": "Pruébalo",
+    "snackbarMessage": "Enlace copiado a su portapapeles!"
   }
 }
 </i18n>

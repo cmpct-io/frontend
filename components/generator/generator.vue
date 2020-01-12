@@ -93,6 +93,12 @@ export default {
     "pasteInfo": "Coller depuis le presse-papiers",
     "submitInfo": "Commencez le plus compact",
     "enterValidAddress": "Veuillez entrer une adresse de site Web valide"
+  },
+  "es": {
+    "placeholder": "Dirección web...",
+    "pasteInfo": "Pegar desde el portapapeles",
+    "submitInfo": "Inicia el compactador",
+    "enterValidAddress": "Por favor, introduzca una dirección de sitio web válida"
   }
 }
 </i18n>

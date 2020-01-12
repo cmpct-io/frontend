@@ -66,6 +66,12 @@ export default {
     "description": "Ce sont les liens que vous avez générés ou visités récemment",
     "zeroItemDescription": "Lorsque vous avez créé ou visité un lien, nous vous en montrerons une liste ici",
     "viewHistory": "Voir l'historique"
+  },
+  "es": {
+    "title": "Tu historia",
+    "description": "Estos son los enlaces que ha generado o visitado recientemente.",
+    "zeroItemDescription": "Cuando haya creado o visitado un enlace, le mostraremos una lista de ellos aquí",
+    "viewHistory": "Ver historial"
   }
 }
 </i18n>

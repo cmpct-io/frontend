@@ -28,6 +28,11 @@ p {
     "title": "Oups, quelque chose s'est mal passé",
     "description": "Nous ne trouvons pas la page que vous recherchez ...",
     "link": "Retournez à la page d'accueil"
+  },
+  "es": {
+    "title": "Huy! Algo salió mal",
+    "description": "No podemos encontrar la página que estás buscando ...",
+    "link": "Regrese a la página de inicio"
   }
 }
 </i18n>

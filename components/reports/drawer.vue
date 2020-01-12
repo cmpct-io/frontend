@@ -43,6 +43,9 @@ export default {
   },
   "fr": {
     "reports": "Rapports"
+  },
+  "es": {
+    "reports": "Informes"
   }
 }
 </i18n>

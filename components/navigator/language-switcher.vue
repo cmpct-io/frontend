@@ -34,6 +34,15 @@
           v-text="$t('french')"
           class="flex-grow" />
       </div>
+
+      <div @click="change('es')" class="option flex-container with-hover">
+        <img
+          src="/flags/es.png"
+          class="flag">
+        <p
+          v-text="$t('spanish')"
+          class="flex-grow" />
+      </div>
     </div>
   </div>
 </template>
@@ -104,12 +113,20 @@ export default {
   "en": {
     "english": "English",
     "french": "French",
+    "spanish": "Spanish",
     "title": "Choose a language"
   },
   "fr": {
     "english": "Anglais",
     "french": "Français",
+    "spanish": "Espagnol",
     "title": "Choisissez une langue"
+  },
+  "es": {
+    "english": "Inglés",
+    "french": "Francés",
+    "spanish": "Español",
+    "title": "Elige un idioma"
   }
 }
 </i18n>

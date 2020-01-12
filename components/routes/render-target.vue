@@ -67,6 +67,11 @@ export default {
     "title": "Prêt à sauter?",
     "description": "Cette page est une redirection vers un autre site Web, cliquez sur le lien ci-dessous si vous souhaitez le visiter.",
     "reportWarning": "Avertissement: quelqu'un a récemment signalé ce lien"
+  },
+  "es": {
+    "title": "Listo para saltar?",
+    "description": "Esta página es una redirección a otro sitio web, haga clic en el enlace a continuación si desea visitarla.",
+    "reportWarning": "Advertencia: alguien informó recientemente este enlace"
   }
 }
 </i18n>

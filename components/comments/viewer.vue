@@ -60,6 +60,13 @@ export default {
     "addAComment": "ajouter un commentaire?",
     "nobodyHasLeftAComment": "Personne n'a encore laissé de commentaires sur ce lien, ",
     "beTheFirst": "Pourquoi ne pas être le premier?"
+  },
+  "es": {
+    "comments": "Comentarios",
+    "wouldYouLikeTo": "Te gustaria ",
+    "addAComment": "¿añadir un comentario?",
+    "nobodyHasLeftAComment": "Nadie ha dejado ningún comentario en este enlace todavía, ",
+    "beTheFirst": "¿Por que no ser el primero?"
   }
 }
 </i18n>

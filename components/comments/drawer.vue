@@ -47,6 +47,9 @@ export default {
   },
   "fr": {
     "comments": "Commentaire"
+  },
+  "es": {
+    "comments": "Comentarios"
   }
 }
 </i18n>

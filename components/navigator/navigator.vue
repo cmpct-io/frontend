@@ -66,6 +66,10 @@ export default {
   "fr": {
     "github": "Github",
     "help": "Aidez-moi"
+  },
+  "es": {
+    "github": "Github",
+    "help": "Ayuda"
   }
 }
 </i18n>

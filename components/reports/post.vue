@@ -94,6 +94,16 @@ export default {
     "phishing": "Phishing (faux)",
     "add": "Ajouter",
     "cancel": "Annuler"
+  },
+  "es": {
+    "tellUsWhy": "Por favor díganos por qué este enlace no es seguro",
+    "yourNamePlaceholder": "Tu nombre...",
+    "scam": "Estafa",
+    "deadLink": "Enlace muerto",
+    "insecure": "Inseguro",
+    "phishing": "Phishing (falso)",
+    "add": "Añadir",
+    "cancel": "Cancelar"
   }
 }
 </i18n>

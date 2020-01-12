@@ -38,7 +38,7 @@ export default {
     ['cookie-universal-nuxt']
   ],
   i18n: {
-    locales: ['en', 'fr'],
+    locales: ['en', 'fr', 'es'],
     defaultLocale: 'en',
     vueI18n: {
       fallbackLocale: 'en',
