@@ -3,12 +3,12 @@
     <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="drawer animated slideInUp">
       <p v-bind:class="[{ 'text-warning': reports.length > 0 }]">
         <c-icon v-bind:class="[{ 'animated shake': reports.length > 0 }]" icon="bell" class="mr-s" />
-        <span class="mr-s">Reports</span>
+        <span v-text="$t('reports')" class="mr-s" />
         <span v-text="reports.length" class="text-small" />
       </p>
     </div>
 
-    <div v-show="displayedPanel === 'reports'" class="history-link animated slideInDown" title="View history">
+    <div v-show="displayedPanel === 'reports'" class="history-link animated slideInDown">
       <div @click="showPanel('target')" class="button with-hover">
         <c-icon icon="times" />
       </div>
@@ -35,3 +35,14 @@ export default {
     display: inline-block;
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "reports": "Reports"
+  },
+  "fr": {
+    "reports": "Rapports"
+  }
+}
+</i18n>

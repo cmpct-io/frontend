@@ -1,13 +1,13 @@
 <template>
   <section>
-    <div @click="copy" class="box with-hover" title="Click to copy">
+    <div @click="copy" :title="$t('clickToCopy')" class="box with-hover">
       <p v-text="qualifiedShortcut" />
       <c-icon icon="copy" class="no-margin" />
     </div>
 
     <nuxt-link :to="shortcut">
       <c-icon icon="link" />
-      <span>Try it out</span>
+      <span v-text="$t('tryItOut')" />
     </nuxt-link>
   </section>
 </template>
@@ -24,9 +24,24 @@ export default {
     ...mapActions('snackbar', ['showSnackbar']),
     copy () {
       navigator.clipboard.writeText(this.qualifiedShortcut).then(() =>
-        this.showSnackbar('Link copied to your clipboard!')
+        this.showSnackbar(this.$t('snackbarMessage'))
       )
     }
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "clickToCopy": "Click to copy",
+    "tryItOut": "Try it out",
+    "snackbarMessage": "Link copied to your clipboard!"
+  },
+  "fr": {
+    "clickToCopy": "Cliquez pour copier",
+    "tryItOut": "Essaye le",
+    "snackbarMessage": "Lien copié dans votre presse-papiers!"
+  }
+}
+</i18n>

@@ -1,16 +1,20 @@
 <template>
   <div v-show="displayedPanel === 'reports'" class="animated slideInUp">
-    <h1>Reports</h1>
+    <h1 v-text="$t('reports')" />
 
     <div v-show="!isReporting && reports.length > 0" class="animated fadeIn">
       <p class="mb-l">
-        If you think this link is unsafe, <span @click="setIsReporting(true)" class="text-link">please report it</span>
+        <span v-text="$t('ifYouThink')" />
+        <span @click="setIsReporting(true)" v-text="$t('pleaseReportIt')" class="text-link" />
       </p>
       <report v-for="(item, index) in reports" :key="index" v-bind="item" />
     </div>
 
     <div v-show="!isReporting && reports.length === 0">
-      <p>Nobody has reported this link yet, <span @click="setIsReporting(true)" class="text-link">please report it if you think it is unsafe</span></p>
+      <p>
+        <span v-text="$t('nobodyHasReported')" />
+        <span @click="setIsReporting(true)" v-text="$t('pleaseReportIfYouThink')" class="text-link" />
+      </p>
     </div>
 
     <post-report v-show="isReporting" />
@@ -46,3 +50,22 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "reports": "Reports",
+    "ifYouThink": "If you think this link is unsafe, ",
+    "pleaseReportIt": "please report it",
+    "nobodyHasReported": "Nobody has reported this link yet, ",
+    "pleaseReportIfYouThink": "please report it if you think it is unsafe"
+  },
+  "fr": {
+    "reports": "Rapports",
+    "ifYouThink": "Si vous pensez que ce lien n'est pas sûr, ",
+    "pleaseReportIt": "veuillez le signaler",
+    "nobodyHasReported": "Personne n'a encore signalé ce lien, ",
+    "pleaseReportIfYouThink": "veuillez le signaler si vous pensez qu'il est dangereux"
+  }
+}
+</i18n>

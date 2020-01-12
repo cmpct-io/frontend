@@ -1,30 +1,24 @@
 <template>
   <form @submit.prevent="addReport" class="standard-width animated fadeIn">
-    <p class="mb-l">
-      Please tell us why this link is unsafe
-    </p>
-    <input v-model="name" placeholder="Your name" required>
+    <p v-text="$t('tellUsWhy')" class="mb-l" />
+    <input v-model="name" :placeholder="$t('yourNamePlaceholder')" required>
     <select v-model="reportType">
       <option value="0">
-        Scam
+        {{ $t('scam') }}
       </option>
       <option value="1">
-        Dead link
+        {{ $t('deadLink') }}
       </option>
       <option value="2">
-        Insecure
+        {{ $t('insecure') }}
       </option>
       <option value="3">
-        Phishing (Fake)
+        {{ $t('phishing') }}
       </option>
     </select>
 
-    <button class="with-hover" type="submit">
-      Add
-    </button>
-    <button @click="setIsReporting(false)" class="with-hover" type="button">
-      Cancel
-    </button>
+    <button v-text="$t('add')" class="with-hover" type="submit" />
+    <button @click="setIsReporting(false)" v-text="$t('cancel')" class="with-hover" type="button" />
   </form>
 </template>
 
@@ -78,3 +72,28 @@ export default {
     background-color: black;
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "tellUsWhy": "Please tell us why this link is unsafe",
+    "yourNamePlaceholder": "Your name...",
+    "scam": "Scam",
+    "deadLink": "Dead Link",
+    "insecure": "Insecure",
+    "phishing": "Phishing (Fake)",
+    "add": "Add",
+    "cancel": "Cancel"
+  },
+  "fr": {
+    "tellUsWhy": "Veuillez nous expliquer pourquoi ce lien n'est pas sûr",
+    "yourNamePlaceholder": "Votre nom...",
+    "scam": "Arnaque",
+    "deadLink": "Lien mort",
+    "insecure": "Peu sûr",
+    "phishing": "Phishing (faux)",
+    "add": "Ajouter",
+    "cancel": "Annuler"
+  }
+}
+</i18n>
