@@ -13,7 +13,7 @@ import renderShortcut from '@/components/routes/render-shortcut.vue'
 export default {
   head () {
     return {
-      title: `cmpct.io: Share`
+      title: this.$t('pageTitle')
     }
   },
   components: {
@@ -35,14 +35,17 @@ export default {
 <i18n>
 {
   "en": {
+    "pageTitle": "cmpct.io: Share",
     "title": "Ready to Share",
     "description": "You can share your link now, simply click the box below to copy it."
   },
   "fr": {
+    "pageTitle": "cmpct.io: Partager",
     "title": "Prêt à partager",
     "description": "Vous pouvez partager votre lien maintenant, cliquez simplement sur la case ci-dessous pour le copier."
   },
   "es": {
+    "pageTitle": "cmpct.io: Compartir",
     "title": "Listo para compartir",
     "description": "Puede compartir su enlace ahora, simplemente haga clic en el cuadro a continuación para copiarlo."
   }

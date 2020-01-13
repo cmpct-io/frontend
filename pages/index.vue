@@ -19,7 +19,7 @@ import showMixin from '@/mixins/show-mixin.vue'
 export default {
   head () {
     return {
-      title: `cmpct.io: shorter, safer links`
+      title: this.$t('pageTitle')
     }
   },
   components: {
@@ -36,16 +36,19 @@ export default {
 <i18n>
 {
   "en": {
+    "pageTitle": "cmpct.io: shorter, safer links",
     "title": "Get started",
     "subtitle": "Create shorter, safer links you can share.",
     "message": "Paste your link into the box below to get started."
   },
   "fr": {
+    "pageTitle": "cmpct.io: liens plus courts et plus sûrs",
     "title": "Commencer",
     "subtitle": "Créez des liens plus courts et plus sûrs que vous pouvez partager.",
     "message": "Collez votre lien dans la case ci-dessous pour commencer."
   },
   "es": {
+    "pageTitle": "cmpct.io: enlaces más cortos y seguros",
     "title": "Empezar",
     "subtitle": "Crea enlaces más cortos y seguros que puedas compartir.",
     "message": "Pegue su enlace en el cuadro a continuación para comenzar."

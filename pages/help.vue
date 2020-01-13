@@ -40,7 +40,7 @@ import spoiler from '@/components/help/spoiler.vue'
 export default {
   head () {
     return {
-      title: `cmpct.io: Help`
+      title: this.$t('pageTitle')
     }
   },
   components: {
@@ -65,3 +65,17 @@ export default {
     }
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "pageTitle": "cmpct.io: Help"
+  },
+  "fr": {
+    "pageTitle": "cmpct.io: Aidez-moi"
+  },
+  "es": {
+    "pageTitle": "cmpct.io: Ayuda"
+  }
+}
+</i18n>

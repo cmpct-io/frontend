@@ -23,7 +23,7 @@ import reportsViewer from '@/components/reports/viewer.vue'
 export default {
   head () {
     return {
-      title: `cmpct.io: Jump`
+      title: this.$t('pageTitle')
     }
   },
   components: {
@@ -56,3 +56,17 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "pageTitle": "cmpct.io: Jump"
+  },
+  "fr": {
+    "pageTitle": "cmpct.io: Sauter"
+  },
+  "es": {
+    "pageTitle": "cmpct.io: Saltar"
+  }
+}
+</i18n>
