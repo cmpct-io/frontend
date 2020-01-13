@@ -27,7 +27,13 @@ export default {
     ]),
     ...mapState('comments', [
       'comments'
-    ])
+    ]),
+    showTarget () {
+      return this.displayedPanel === 'target'
+    },
+    showComments () {
+      return this.displayedPanel === 'comments'
+    }
   },
   methods: {
     ...mapActions('landing', [

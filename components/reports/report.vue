@@ -9,8 +9,6 @@
 </template>
 
 <script>
-import reportTypes from '@/services/report-types.js'
-
 export default {
   props: {
     name: {
@@ -24,7 +22,7 @@ export default {
   },
   computed: {
     reportTypeString () {
-      return `Reason: ${reportTypes.getReportType(this.reportType)}`
+      return this.$t(`type_${this.reportType}`)
     }
   }
 }
@@ -53,3 +51,26 @@ export default {
     }
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "type_0": "Scam",
+    "type_1": "Dead Link",
+    "type_2": "Insecure",
+    "type_3": "Phishing (Fake)"
+  },
+  "fr": {
+    "type_0": "Arnaque",
+    "type_1": "Lien mort",
+    "type_2": "Peu sûr",
+    "type_3": "Phishing (faux)"
+  },
+  "es": {
+    "type_0": "Estafa",
+    "type_1": "Enlace muerto",
+    "type_2": "Inseguro",
+    "type_3": "Phishing (falso)"
+  }
+}
+</i18n>
