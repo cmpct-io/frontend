@@ -1,15 +1,18 @@
 <template>
   <section class="history">
-    <div v-show="!show" :title="$t('viewHistory')" class="history-link animated slideInUp">
-      <div @click="toggle" class="button with-hover">
-        <c-icon icon="chevron-up" />
-      </div>
+    <div
+      v-show="!show"
+      :title="$t('viewHistory')"
+      @click="toggle"
+      class="circle-button with-hover animated slideInUp">
+      <c-icon icon="chevron-up" />
     </div>
 
-    <div v-show="show" class="history-link animated slideInDown">
-      <div @click="toggle" class="button with-hover">
-        <c-icon icon="times" />
-      </div>
+    <div
+      v-show="show"
+      @click="toggle"
+      class="circle-button with-hover animated slideInDown">
+      <c-icon icon="times" />
     </div>
 
     <div v-show="show" class="history-content animated slideInUp">
@@ -27,6 +30,7 @@
 import storageService from '@/services/storage-service.js'
 import showMixin from '@/mixins/show-mixin.vue'
 import historyItem from '@/components/history/item.vue'
+
 export default {
   components: {
     historyItem

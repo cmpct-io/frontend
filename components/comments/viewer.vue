@@ -1,16 +1,20 @@
 <template>
-  <div v-show="displayedPanel === 'comments'" class="animated slideInUp">
+  <div v-show="show" class="animated slideInUp">
     <h1 v-text="$t('comments')" />
 
-    <div v-show="!isCommenting && comments.length > 0" class="animated fadeIn">
+    <div v-show="hasComments" class="animated fadeIn">
       <p class="mb-l">
-        {{ $t('wouldYouLikeTo') }}<span @click="setIsCommenting(true)" class="text-link">{{ $t('addAComment') }}</span>
+        <span v-text="$t('wouldYouLikeTo')" />
+        <span @click="setIsCommenting(true)" class="text-link">{{ $t('addAComment') }}</span>
       </p>
       <comment v-for="(item, index) in comments" :key="index" v-bind="item" />
     </div>
 
-    <div v-show="!isCommenting && comments.length === 0">
-      <p>{{ $t('nobodyHasLeftAComment') }}<span @click="setIsCommenting(true)" class="text-link">{{ $t('beTheFirst') }}</span></p>
+    <div v-show="hasNoComments" class="animated fadeIn">
+      <p>
+        <span v-text="$t('nobodyHasLeftAComment')" />
+        <span @click="setIsCommenting(true)" class="text-link">{{ $t('beTheFirst') }}</span>
+      </p>
     </div>
 
     <post v-show="isCommenting" />
@@ -35,7 +39,16 @@ export default {
     ...mapState('comments', [
       'comments',
       'isCommenting'
-    ])
+    ]),
+    show () {
+      return this.displayedPanel === 'comments'
+    },
+    hasComments () {
+      return !this.isCommenting && this.comments.length > 0
+    },
+    hasNoComments () {
+      return !this.isCommenting && this.comments.length === 0
+    }
   },
   methods: {
     ...mapActions('comments', [

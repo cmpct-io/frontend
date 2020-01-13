@@ -6,7 +6,7 @@
     <a :href="target" class="box with-hover break-word">
       <img v-show="faviconUrl" :src="faviconUrl" class="favicon hidden-mobile animated bounceIn" alt="Website icon">
       <p v-text="target" class="text-small" />
-      <c-icon icon="chevron-right" class="no-margin hidden-mobile" />
+      <c-icon icon="chevron-right" class="hidden-mobile" />
     </a>
 
     <p v-show="reports.length > 0" class="text-warning animated fadeInDown">

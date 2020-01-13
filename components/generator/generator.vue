@@ -1,14 +1,29 @@
 <template>
   <div>
-    <form v-on:submit.prevent="create" class="box">
-      <input v-model="target" :placeholder="$t('placeholder')" required>
-      <c-icon @click="paste" :title="$t('pasteInfo')" icon="clipboard" class="secondary no-margin" />
-      <button class="no-button" type="submit">
-        <c-icon :title="$t('submitInfo')" icon="chevron-circle-right" class="no-margin" />
+    <form
+      v-on:submit.prevent="create"
+      class="box">
+      <input
+        v-model="target"
+        :placeholder="$t('placeholder')"
+        required>
+      <c-icon
+        @click="paste"
+        :title="$t('pasteInfo')"
+        icon="clipboard"
+        class="secondary" />
+      <button
+        class="no-button"
+        type="submit">
+        <c-icon
+          :title="$t('submitInfo')"
+          icon="chevron-circle-right" />
       </button>
     </form>
     <p v-show="showWarning" class="text-warning animated fadeInDown">
-      <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
+      <c-icon
+        icon="exclamation-circle"
+        class="fa-fw mr-s" />
       <span v-text="$t('enterValidAddress')" />
     </p>
   </div>
@@ -26,10 +41,14 @@ export default {
     }
   },
   computed: {
-    ...mapState('generator', ['shortcut'])
+    ...mapState('generator', [
+      'shortcut'
+    ])
   },
   methods: {
-    ...mapActions('generator', ['generate']),
+    ...mapActions('generator', [
+      'generate'
+    ]),
     create () {
       this.validateInput()
 

@@ -53,7 +53,6 @@ export default {
     left: 0;
     width: 100px;
     height: 100px;
-    background-color: red;
     border-radius: 50%;
     animation-name: translocate_1;
     animation-duration: 60s;

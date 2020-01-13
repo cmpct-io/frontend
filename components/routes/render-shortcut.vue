@@ -2,7 +2,7 @@
   <section>
     <div @click="copy" :title="$t('clickToCopy')" class="box with-hover">
       <p v-text="qualifiedShortcut" />
-      <c-icon icon="copy" class="no-margin" />
+      <c-icon icon="copy" />
     </div>
 
     <nuxt-link :to="shortcut">

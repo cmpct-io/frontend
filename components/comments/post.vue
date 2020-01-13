@@ -1,10 +1,25 @@
 <template>
   <form @submit.prevent="addComment" class="standard-width animated fadeIn">
-    <p v-text="$t('description')" class="mb-l" />
-    <input v-model="name" :placeholder="$t('namePlaceholder')" required>
-    <textarea v-model="commentText" :placeholder="$t('commentPlaceholder')" required />
-    <button v-text="$t('add')" class="with-hover" type="submit" />
-    <button @click="setIsCommenting(false)" v-text="$t('cancel')" class="with-hover" type="button" />
+    <p
+      v-text="$t('description')"
+      class="mb-l" />
+    <input
+      v-model="name"
+      :placeholder="$t('namePlaceholder')"
+      required>
+    <textarea
+      v-model="commentText"
+      :placeholder="$t('commentPlaceholder')"
+      required />
+    <button
+      v-text="$t('add')"
+      class="with-hover"
+      type="submit" />
+    <button
+      @click="setIsCommenting(false)"
+      v-text="$t('cancel')"
+      class="with-hover"
+      type="button" />
   </form>
 </template>
 
@@ -19,7 +34,9 @@ export default {
     }
   },
   computed: {
-    ...mapState('landing', ['routeId'])
+    ...mapState('landing', [
+      'routeId'
+    ])
   },
   methods: {
     ...mapActions('comments', [

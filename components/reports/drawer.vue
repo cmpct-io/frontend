@@ -1,5 +1,5 @@
 <template>
-  <section class="history">
+  <section class="inline-block">
     <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="drawer animated slideInUp">
       <p v-bind:class="[{ 'text-warning': reports.length > 0 }]">
         <c-icon v-bind:class="[{ 'animated shake': reports.length > 0 }]" icon="bell" class="mr-s" />
@@ -8,10 +8,8 @@
       </p>
     </div>
 
-    <div v-show="displayedPanel === 'reports'" class="history-link animated slideInDown">
-      <div @click="showPanel('target')" class="button with-hover">
-        <c-icon icon="times" />
-      </div>
+    <div v-show="displayedPanel === 'reports'" @click="showPanel('target')" class="circle-button with-hover animated slideInDown">
+      <c-icon icon="times" />
     </div>
   </section>
 </template>
@@ -29,12 +27,6 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-  section.history {
-    display: inline-block;
-  }
-</style>
 
 <i18n>
 {

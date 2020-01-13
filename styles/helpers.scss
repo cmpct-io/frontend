@@ -108,10 +108,6 @@ a {
   }
 }
 
-.no-margin {
-  margin: 0;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -124,6 +120,10 @@ a {
     border: 1px solid white;
     cursor: pointer;
   }
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex-container {
@@ -203,33 +203,25 @@ button, .square-button {
   border-radius: 5px;
 }
 
-.history-link {
+.circle-button {
   position: fixed;
-  bottom: 30px;
-  left: 0;
-  right: 0;
+  bottom: 0;
   margin: 0 auto;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 30px;
 
-  @media (max-height: 400px) {
-    display: none;
-  }
+  svg {
+    margin-top: 13px;
 
-  .button {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 0 auto;
-    border-radius: 50%;
-
-      svg {
-        margin-top: 13px;
-
-        @media (max-width: 768px) {
-          margin-top: 15px;
-        }
-      }
+    @media (max-width: 768px) {
+      margin-top: 15px;
+    }
   }
 }

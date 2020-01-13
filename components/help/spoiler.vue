@@ -1,11 +1,17 @@
 <template>
-  <div @click.prevent="toggle" v-bind:class="[{ 'open': show }]" class="spoiler">
+  <div
+    @click.prevent="toggle"
+    v-bind:class="[{ 'open': show }]"
+    class="spoiler">
     <div class="flex-container">
-      <p v-text="title" class="flex-grow mb-0" />
-      <c-icon v-if="!show" icon="chevron-down" />
-      <c-icon v-if="show" icon="chevron-up" />
+      <p
+        v-text="title"
+        class="flex-grow mb-0" />
+      <c-icon :icon="icon" />
     </div>
-    <div v-show="show" class="body animated fadeIn">
+    <div
+      v-show="show"
+      class="body animated fadeIn">
       <hr>
       <slot />
     </div>
@@ -23,13 +29,22 @@ export default {
     }
   },
   computed: {
-    ...mapState('help', ['openSpoilerText']),
+    ...mapState('help', [
+      'openSpoilerText'
+    ]),
     show () {
       return this.title === this.openSpoilerText
+    },
+    icon () {
+      return this.show
+        ? 'chevron-up'
+        : 'chevron-down'
     }
   },
   methods: {
-    ...mapActions('help', ['setOpenSpoilerText']),
+    ...mapActions('help', [
+      'setOpenSpoilerText'
+    ]),
     toggle () {
       this.setOpenSpoilerText(this.title)
     }

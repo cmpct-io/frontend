@@ -1,12 +1,12 @@
 <template>
   <div class="comment flex-container">
     <c-icon icon="user-circle" class="fa-fw mr" />
-    <div class="content flex-grow">
+    <div class="flex-grow">
       <p class="bold mb">
         <span v-text="name" class="mr" />
         <span v-text="timeSince" class="text-small" />
       </p>
-      <p v-text="commentText" class="no-margin" />
+      <p v-text="commentText" />
     </div>
   </div>
 </template>
@@ -46,13 +46,10 @@ export default {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 15px;
+    text-align: left;
 
     svg {
       font-size: 2rem;
-    }
-
-    .content {
-      text-align: left;
     }
   }
 </style>

@@ -1,15 +1,14 @@
 <template>
-  <div class="server-error">
+  <div>
     <h1 v-text="$t('title')" />
-    <p v-text="$t('description')" class="mb" />
-    <nuxt-link v-text="$t('link')" to="/" class="square-button with-hover" />
+    <p v-text="$t('description')" />
+
+    <nuxt-link
+      v-text="$t('link')"
+      to="/"
+      class="square-button with-hover" />
   </div>
 </template>
-
-<script>
-export default {
-}
-</script>
 
 <style scoped>
 p {

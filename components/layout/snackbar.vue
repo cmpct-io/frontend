@@ -5,9 +5,7 @@
     class="snackbar flex-container animated bounceInUp">
     <c-icon icon="bell" class="fa-fw mr" />
     <p v-text="snackbarMessage" class="flex-grow" />
-    <button>
-      <c-icon icon="times" class="fa-fw" />
-    </button>
+    <c-icon icon="times" class="fa-fw" />
   </div>
 </template>
 
@@ -16,10 +14,15 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('snackbar', ['showSnackbar', 'snackbarMessage'])
+    ...mapState('snackbar', [
+      'showSnackbar',
+      'snackbarMessage'
+    ])
   },
   methods: {
-    ...mapActions('snackbar', ['hideSnackbar']),
+    ...mapActions('snackbar', [
+      'hideSnackbar'
+    ]),
     dismiss () {
       this.hideSnackbar()
     }
@@ -51,15 +54,6 @@ export default {
 
     p {
       margin: 0;
-    }
-
-    button {
-      background-color: transparent;
-      color: white;
-      border: 1px solid white;
-      padding: 5px;
-      cursor: pointer;
-      border-radius: 50%;
     }
   }
 </style>
