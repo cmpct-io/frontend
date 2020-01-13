@@ -17,38 +17,20 @@
           class="fa-fw cursor-pointer" />
       </div>
 
-      <div @click="change('en')" class="option flex-container with-hover">
-        <img
-          src="/flags/en.png"
-          class="flag">
-        <p
-          v-text="$t('english')"
-          class="flex-grow" />
-      </div>
-
-      <div @click="change('fr')" class="option flex-container with-hover">
-        <img
-          src="/flags/fr.png"
-          class="flag">
-        <p
-          v-text="$t('french')"
-          class="flex-grow" />
-      </div>
-
-      <div @click="change('es')" class="option flex-container with-hover">
-        <img
-          src="/flags/es.png"
-          class="flag">
-        <p
-          v-text="$t('spanish')"
-          class="flex-grow" />
-      </div>
+      <language :name="$t('english')" @selected="change" locale="en" />
+      <language :name="$t('french')" @selected="change" locale="fr" />
+      <language :name="$t('spanish')" @selected="change" locale="es" />
     </div>
   </div>
 </template>
 
 <script>
+import language from '@/components/navigator/language.vue'
+
 export default {
+  components: {
+    language
+  },
   data () {
     return {
       expanded: false
@@ -88,16 +70,6 @@ export default {
       width: 300px;
       top: 0;
       right: -15px;
-
-      .option {
-        padding: 5px;
-        border: 1px solid transparent;
-      }
-
-      img.flag {
-        margin-right: 20px;
-        margin-left: 0;
-      }
     }
   }
 

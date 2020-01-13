@@ -43,10 +43,6 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
-        en: {
-        },
-        fr: {
-        },
       }
     }
   },
