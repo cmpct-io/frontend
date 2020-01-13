@@ -112,19 +112,19 @@ export default {
 {
   "en": {
     "english": "English",
-    "french": "French",
-    "spanish": "Spanish",
+    "french": "Français",
+    "spanish": "Español",
     "title": "Choose a language"
   },
   "fr": {
-    "english": "Anglais",
+    "english": "English",
     "french": "Français",
-    "spanish": "Espagnol",
+    "spanish": "Español",
     "title": "Choisissez une langue"
   },
   "es": {
-    "english": "Inglés",
-    "french": "Francés",
+    "english": "English",
+    "french": "Français",
     "spanish": "Español",
     "title": "Elige un idioma"
   }
