@@ -219,6 +219,10 @@ button, .square-button {
   border-radius: 50%;
   margin-bottom: 30px;
 
+  @media (max-height: 400px) {
+    display: none;
+  }
+
   svg {
     margin-top: 13px;
 
