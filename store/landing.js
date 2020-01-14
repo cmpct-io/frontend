@@ -23,10 +23,9 @@ export const actions = {
 
     if (routeData) {
       commit('setRouteData', routeData)
-      return true
-    } else {
-      return false
     }
+
+    return (routeData)
   },
   reset: ({ commit }) => {
     commit('showPanel', 'target')

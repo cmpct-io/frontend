@@ -11,21 +11,16 @@ export const getters = {
 }
 
 export const mutations = {
-  setTarget: (state, target) => {
+  setState: (state, { target, shortcut }) => {
     state.target = target
-  },
-  setShortcut: (state, shortcut) => {
     state.shortcut = shortcut
   }
-
 }
 
 export const actions = {
   generate: ({ commit }, target) => {
-    commit('setTarget', target)
-
     const shortcut = generator.generate()
-    commit('setShortcut', shortcut)
+    commit('setState', { target, shortcut })
 
     routesApi.postRoute({
       routeId: shortcut,

@@ -16,7 +16,6 @@ export const mutations = {
 
 export const actions = {
   loadComments: async ({ commit }, routeId) => {
-    commit('setComments', [])
     commit('setComments', await commentsApi.getComments(routeId))
   },
   submitComment: async ({ commit }, { routeId, name, commentText }) => {

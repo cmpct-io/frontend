@@ -17,19 +17,19 @@
       </p>
     </div>
 
-    <post-report v-show="isReporting" />
+    <poster v-show="isReporting" />
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import report from '@/components/reports/report.vue'
-import postReport from '@/components/reports/post.vue'
+import report from '@/components/reports/item.vue'
+import poster from '@/components/reports/poster.vue'
 
 export default {
   components: {
     report,
-    postReport
+    poster
   },
   computed: {
     ...mapState('landing', [

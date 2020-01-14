@@ -52,6 +52,7 @@ export default {
     background-color: white;
     border-radius: 50%;
     width: 42px;
+    min-width: 42px;
     height: 42px;
   }
 </style>

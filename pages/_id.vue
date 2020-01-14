@@ -4,8 +4,8 @@
     <comments-viewer />
     <reports-viewer />
     <drawers>
-      <comments />
-      <reports />
+      <comments-tab />
+      <reports-tab />
     </drawers>
   </div>
 </template>
@@ -14,8 +14,8 @@
 import { mapState } from 'vuex'
 import storageService from '@/services/storage-service.js'
 import drawers from '@/components/layout/drawers.vue'
-import comments from '@/components/comments/drawer.vue'
-import reports from '@/components/reports/drawer.vue'
+import commentsTab from '@/components/comments/tab.vue'
+import reportsTab from '@/components/reports/tab.vue'
 import renderTarget from '@/components/routes/render-target.vue'
 import commentsViewer from '@/components/comments/viewer.vue'
 import reportsViewer from '@/components/reports/viewer.vue'
@@ -28,8 +28,8 @@ export default {
   },
   components: {
     drawers,
-    comments,
-    reports,
+    commentsTab,
+    reportsTab,
     renderTarget,
     commentsViewer,
     reportsViewer

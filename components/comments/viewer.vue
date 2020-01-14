@@ -17,19 +17,19 @@
       </p>
     </div>
 
-    <post v-show="isCommenting" />
+    <poster v-show="isCommenting" />
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import comment from '@/components/comments/comment.vue'
-import post from '@/components/comments/post.vue'
+import comment from '@/components/comments/item.vue'
+import poster from '@/components/comments/poster.vue'
 
 export default {
   components: {
     comment,
-    post
+    poster
   },
   computed: {
     ...mapState('landing', [
