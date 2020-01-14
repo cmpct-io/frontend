@@ -3,17 +3,17 @@
     <render-target />
     <comments-viewer />
     <reports-viewer />
-    <drawers>
+    <tabs>
       <comments-tab />
       <reports-tab />
-    </drawers>
+    </tabs>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import storageService from '@/services/storage-service.js'
-import drawers from '@/components/layout/drawers.vue'
+import tabs from '@/components/layout/tabs.vue'
 import commentsTab from '@/components/comments/tab.vue'
 import reportsTab from '@/components/reports/tab.vue'
 import renderTarget from '@/components/routes/render-target.vue'
@@ -27,7 +27,7 @@ export default {
     }
   },
   components: {
-    drawers,
+    tabs,
     commentsTab,
     reportsTab,
     renderTarget,

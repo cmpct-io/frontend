@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import generator from '@/components/generator/generator.vue'
+import generator from '@/components/routes/route-generator.vue'
 import history from '@/components/history/history.vue'
 import showMixin from '@/mixins/show-mixin.vue'
 

@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import spoiler from '@/components/help/spoiler.vue'
+import spoiler from '@/components/shared/spoiler.vue'
 
 export default {
   head () {

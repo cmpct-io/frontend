@@ -1,6 +1,6 @@
 <template>
   <section class="inline-block">
-    <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="drawer animated slideInUp">
+    <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="tab animated slideInUp">
       <p v-bind:class="[{ 'text-warning': reports.length > 0 }]">
         <c-icon v-bind:class="[{ 'animated shake': reports.length > 0 }]" icon="bell" class="mr-s" />
         <span v-text="$t('reports')" class="mr-s" />
