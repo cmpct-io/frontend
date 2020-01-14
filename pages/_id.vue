@@ -13,7 +13,7 @@
 <script>
 import { mapState } from 'vuex'
 import storageService from '@/services/storage-service.js'
-import tabs from '@/components/layout/tabs.vue'
+import tabs from '@/components/shared/tabs.vue'
 import commentsTab from '@/components/comments/tab.vue'
 import reportsTab from '@/components/reports/tab.vue'
 import renderTarget from '@/components/routes/render-target.vue'
