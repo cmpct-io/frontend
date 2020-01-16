@@ -6,7 +6,7 @@
         <span v-text="name" class="mr" />
         <span v-text="timeSince" class="text-small" />
       </p>
-      <p v-text="commentText" />
+      <p v-text="text" />
     </div>
   </div>
 </template>
@@ -20,18 +20,18 @@ export default {
       type: String,
       required: true
     },
-    commentText: {
+    text: {
       type: String,
       required: true
     },
-    dateAdded: {
+    added: {
       type: String,
       required: true
     }
   },
   computed: {
     timeSince () {
-      return `(${moment(this.dateAdded).fromNow()})`
+      return `(${moment(this.added).fromNow()})`
     }
   }
 }
