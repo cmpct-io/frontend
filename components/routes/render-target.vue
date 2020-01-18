@@ -4,7 +4,7 @@
     <p v-text="$t('description')" class="mb-l" />
 
     <a :href="target" class="box with-hover break-word">
-      <img v-show="faviconUrl" :src="faviconUrl" class="favicon hidden-mobile animated bounceIn" alt="Website icon">
+      <route-favicon :target="target" />
       <p v-text="target" class="text-small" />
       <c-icon icon="chevron-right" class="hidden-mobile" />
     </a>
@@ -18,12 +18,11 @@
 
 <script>
 import { mapState } from 'vuex'
+import routeFavicon from '@/components/routes/route-favicon.vue'
 
 export default {
-  data () {
-    return {
-      faviconUrl: ''
-    }
+  components: {
+    routeFavicon
   },
   computed: {
     ...mapState('landing', [
@@ -33,29 +32,9 @@ export default {
     ...mapState('reports', [
       'reports'
     ])
-  },
-  mounted () {
-    try {
-      const hostname = (new URL(this.target)).hostname
-      this.faviconUrl = `https://${hostname}/favicon.ico`
-    } catch (error) {
-      this.faviconUrl = ''
-    }
   }
 }
 </script>
-
-<style scoped>
-  .favicon {
-    margin-left: 15px;
-    padding: 5px;
-    background-color: white;
-    border-radius: 50%;
-    width: 42px;
-    min-width: 42px;
-    height: 42px;
-  }
-</style>
 
 <i18n>
 {
