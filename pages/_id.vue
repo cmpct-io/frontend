@@ -35,20 +35,22 @@ export default {
     reportsViewer
   },
   computed: {
-    ...mapState('landing', ['routeId'])
+    ...mapState('landing', [
+      'routeId'
+    ])
   },
   async fetch ({ store, route, router, error }) {
     const routeId = route.params.id
     const isValid = await store.dispatch('landing/initialise', routeId)
+      .catch((err) => {
+        error({
+          statusCode: err.response.status
+        })
+      })
 
     if (isValid) {
       await store.dispatch('comments/loadComments', routeId)
       await store.dispatch('reports/loadReports', routeId)
-    } else {
-      error({
-        statusCode: 404,
-        message: 'The server successfully processed the request and is not returning any content.'
-      })
     }
   },
   mounted () {
