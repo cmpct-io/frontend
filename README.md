@@ -1,9 +1,9 @@
 
 
 # cmpct.io
-**Tech:** A PWA built with VueJS, NUXT and .NETCore Web API.
+**Tech:** A progressive web app built with VueJS, NUXT and .NETCore Web API, backed by Azure Blob Storage.
 
-**Status:** Currently localising for English and French, in BETA phase.
+**Status:** Launched in January 2020
 
 **Try it out:** https://cmpct.io
 
