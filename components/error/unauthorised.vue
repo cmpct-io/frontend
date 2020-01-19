@@ -1,9 +1,20 @@
 <template>
   <div>
     <h1 v-text="$t('title')" />
-    <p v-text="$t('description')" />
+    <p v-text="$t('description')" class="mb-l" />
+    <route-password />
   </div>
 </template>
+
+<script>
+import routePassword from '@/components/routes/route-password.vue'
+
+export default {
+  components: {
+    routePassword
+  }
+}
+</script>
 
 <i18n>
 {
