@@ -29,6 +29,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/applicationinsights',
     ['nuxt-i18n', {
       vueI18nLoader: true,
       detectBrowserLanguage: {
@@ -46,6 +47,9 @@ export default {
       messages: {
       }
     }
+  },
+  appInsights: {
+    instrumentationKey: '47f10985-4ca6-4031-8093-da011cddeee5'
   },
   axios: {
   },
