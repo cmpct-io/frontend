@@ -25,7 +25,11 @@ import shareWrapper from '@/components/sharing/wrapper.vue'
 export default {
   head () {
     return {
-      title: this.$t('pageTitle')
+      title: this.$t('pageTitle'),
+      meta: [
+        { property: 'og:site_name', name: 'og:site_name', hid: 'og:site_name', content: this.target },
+        { property: 'og:title', name: 'og:title', hid: 'og:title', content: `Visit: ${this.target}` }
+      ]
     }
   },
   components: {
@@ -38,7 +42,10 @@ export default {
     shareWrapper
   },
   computed: {
-    ...mapState('landing', ['routeId'])
+    ...mapState('landing', [
+      'routeId',
+      'target'
+    ])
   },
   async fetch ({ store, route, router, error }) {
     const routeId = route.params.id

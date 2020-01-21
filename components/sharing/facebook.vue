@@ -1,9 +1,9 @@
 <template>
   <a
     :href="hrefAttribute"
-    :onclick="onClickAttribute"
     :title="$t('hoverText')"
     class="social-button"
+    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');return false;"
     target="_blank">
     <c-icon :icon="['fab', 'facebook-square']" />
   </a>
@@ -20,9 +20,6 @@ export default {
   computed: {
     hrefAttribute () {
       return `https://www.facebook.com/sharer/sharer.php?u=${this.pageUrl}&t=${this.pageUrl}`
-    },
-    onClickAttribute () {
-      return `javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');return false;`
     }
   }
 }
