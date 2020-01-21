@@ -3,6 +3,7 @@
     <render-target />
     <comments-viewer />
     <reports-viewer />
+    <share-wrapper />
     <tabs>
       <comments-tab />
       <reports-tab />
@@ -19,6 +20,7 @@ import reportsTab from '@/components/reports/tab.vue'
 import renderTarget from '@/components/routes/render-target.vue'
 import commentsViewer from '@/components/comments/viewer.vue'
 import reportsViewer from '@/components/reports/viewer.vue'
+import shareWrapper from '@/components/sharing/wrapper.vue'
 
 export default {
   head () {
@@ -32,7 +34,8 @@ export default {
     reportsTab,
     renderTarget,
     commentsViewer,
-    reportsViewer
+    reportsViewer,
+    shareWrapper
   },
   computed: {
     ...mapState('landing', ['routeId'])
