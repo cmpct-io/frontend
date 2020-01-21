@@ -50,7 +50,7 @@ export default {
     height: 42px;
 
     .light & {
-      background-color: black;
+      background-color: whitesmoke;
       color: white;
     }
   }
