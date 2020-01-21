@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="uiMode">
     <navigator />
     <background />
     <div class="help-layout">
@@ -10,6 +10,7 @@
 
 <script>
 import '@/styles/helpers.scss'
+import uiModeMixin from '@/mixins/ui-mode-mixin.vue'
 import background from '@/components/background/background.vue'
 import navigator from '@/components/navigator/navigator.vue'
 
@@ -17,7 +18,8 @@ export default {
   components: {
     background,
     navigator
-  }
+  },
+  mixins: [uiModeMixin]
 }
 </script>
 

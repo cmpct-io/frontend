@@ -70,6 +70,11 @@ export default {
       width: 300px;
       top: 0;
       right: -15px;
+
+      .light & {
+      border: 1px solid black;
+      background-color: white;
+    }
     }
   }
 

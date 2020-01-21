@@ -66,6 +66,10 @@ export default {
 
   &.open {
     background-color: #660066;
+
+    .light & {
+      background-color: pink;
+    }
   }
 
   svg {

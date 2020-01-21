@@ -1,12 +1,16 @@
 import randomiser from '@/services/randomiser.js'
 
 export const state = () => ({
-  elements: []
+  elements: [],
+  isDarkMode: false
 })
 
 export const mutations = {
   setElements: (state, elements) => {
     state.elements = elements
+  },
+  setUIMode: (state, isDarkMode) => {
+    state.isDarkMode = isDarkMode
   }
 }
 
@@ -24,5 +28,8 @@ export const actions = {
     }
 
     commit('setElements', elements)
+  },
+  setUIMode: ({ commit }, isDarkMode) => {
+    commit('setUIMode', isDarkMode)
   }
 }
