@@ -1,5 +1,5 @@
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
@@ -11,6 +11,18 @@ export default {
         ? 'dark'
         : 'light'
     }
+  },
+  created () {
+    const uiMode = this.$cookies.get('ui-mode')
+
+    if (uiMode === 'light') {
+      this.setUIMode(false)
+    }
+  },
+  methods: {
+    ...mapActions('background', [
+      'setUIMode'
+    ])
   }
 }
 </script>

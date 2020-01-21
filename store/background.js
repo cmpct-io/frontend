@@ -2,7 +2,7 @@ import randomiser from '@/services/randomiser.js'
 
 export const state = () => ({
   elements: [],
-  isDarkMode: false
+  isDarkMode: true
 })
 
 export const mutations = {
