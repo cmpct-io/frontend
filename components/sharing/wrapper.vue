@@ -1,13 +1,18 @@
 <template>
-  <twitter v-bind="shareProperties" />
+  <div>
+    <twitter v-bind="shareProperties" />
+    <facebook v-bind="shareProperties" />
+  </div>
 </template>
 
 <script>
 import twitter from '@/components/sharing/twitter.vue'
+import facebook from '@/components/sharing/facebook.vue'
 
 export default {
   components: {
-    twitter
+    twitter,
+    facebook
   },
   data () {
     return {
@@ -21,3 +26,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .social-button {
+    font-size: 2rem;
+  }
+</style>

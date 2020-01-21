@@ -25,12 +25,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.social-button {
-  font-size: 2rem;
-}
-</style>
-
 <i18n>
 {
   "en": {
