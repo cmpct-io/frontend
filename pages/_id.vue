@@ -3,7 +3,7 @@
     <render-target />
     <comments-viewer />
     <reports-viewer />
-    <share-wrapper />
+    <share-wrapper v-if="false" />
     <tabs>
       <comments-tab />
       <reports-tab />
