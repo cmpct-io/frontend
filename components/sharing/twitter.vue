@@ -3,6 +3,7 @@
     :href="shareUrl"
     :title="$t('hoverText')"
     class="social-button"
+    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');return false;"
     target="blank"
     data-size="large">
     <c-icon :icon="['fab', 'twitter-square']" />
