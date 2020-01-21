@@ -37,7 +37,6 @@ export default {
     left: 0;
     right: 0;
     padding: 20px 30px;
-    color: white;
     z-index: 50;
     user-select: none;
 
@@ -48,6 +47,10 @@ export default {
       a {
         color: white;
         text-decoration: none;
+
+        .light & {
+          color: black;
+        }
 
         &.mr {
           margin-right: 15px;

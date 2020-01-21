@@ -24,10 +24,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .background {
     background-color: black;
     height: 100vh;
     overflow: hidden;
+
+    .light & {
+      background-color: white;
+    }
   }
 </style>

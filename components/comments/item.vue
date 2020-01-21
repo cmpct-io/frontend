@@ -48,6 +48,10 @@ export default {
     margin-bottom: 15px;
     text-align: left;
 
+    .light & {
+      border: 1px solid black;
+    }
+
     svg {
       font-size: 2rem;
     }

@@ -48,6 +48,11 @@ export default {
     user-select: none;
     cursor: pointer;
 
+    .light & {
+      background-color: white;
+      color: black;
+    }
+
     @media (max-width: 768px) {
       left: 0;
     }

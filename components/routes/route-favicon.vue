@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .favicon img, .favicon svg {
     margin-left: 15px;
     padding: 5px;
@@ -48,6 +48,11 @@ export default {
     width: 42px;
     min-width: 42px;
     height: 42px;
+
+    .light & {
+      background-color: whitesmoke;
+      color: white;
+    }
   }
 
   .favicon svg {

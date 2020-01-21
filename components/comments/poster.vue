@@ -68,6 +68,11 @@ export default {
     color: white;
     font-size: 1rem;
     border-radius: 5px;
+
+    .light & {
+      border: 1px solid black;
+      color: black;
+    }
   }
 </style>
 

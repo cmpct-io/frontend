@@ -13,16 +13,20 @@
       <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
       <span v-text="$t('reportWarning')" />
     </p>
+
+    <share-wrapper v-if="showSharePanel" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import routeFavicon from '@/components/routes/route-favicon.vue'
+import shareWrapper from '@/components/sharing/wrapper.vue'
 
 export default {
   components: {
-    routeFavicon
+    routeFavicon,
+    shareWrapper
   },
   computed: {
     ...mapState('landing', [
@@ -31,7 +35,10 @@ export default {
     ]),
     ...mapState('reports', [
       'reports'
-    ])
+    ]),
+    showSharePanel () {
+      return (this.$cookies.get('exp-share') === 'enabled')
+    }
   }
 }
 </script>

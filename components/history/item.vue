@@ -33,6 +33,10 @@ export default {
     text-align: left;
     cursor: pointer;
 
+    .light & {
+      border: 1px solid black;
+    }
+
     svg {
       margin-right: 10px;
       transition: all 0.2s ease-in-out;

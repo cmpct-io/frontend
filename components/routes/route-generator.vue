@@ -87,6 +87,10 @@ export default {
     outline: 0;
     width: 100%;
     flex-grow: 1;
+
+    .light & {
+      color: black;
+    }
   }
 
   button.no-button {
@@ -96,6 +100,10 @@ export default {
     padding: 0;
     color: white;
     cursor: pointer;
+
+    .light & {
+      color: black;
+    }
   }
 </style>
 
