@@ -16,20 +16,25 @@
           icon="times"
           class="fa-fw cursor-pointer" />
       </div>
+      <div class="mb-l">
+        <language :name="$t('english')" @selected="change" locale="en" />
+        <language :name="$t('french')" @selected="change" locale="fr" />
+        <language :name="$t('spanish')" @selected="change" locale="es" />
+      </div>
 
-      <language :name="$t('english')" @selected="change" locale="en" />
-      <language :name="$t('french')" @selected="change" locale="fr" />
-      <language :name="$t('spanish')" @selected="change" locale="es" />
+      <theme-switcher @close="close" />
     </div>
   </div>
 </template>
 
 <script>
 import language from '@/components/navigator/language.vue'
+import themeSwitcher from '@/components/navigator/theme-switcher.vue'
 
 export default {
   components: {
-    language
+    language,
+    themeSwitcher
   },
   data () {
     return {
@@ -51,6 +56,9 @@ export default {
         path: '/',
         maxAge: 60 * 60 * 24 * 7
       })
+      this.close()
+    },
+    close () {
       this.expanded = false
     }
   }
@@ -74,7 +82,7 @@ export default {
       .light & {
       border: 1px solid black;
       background-color: white;
-    }
+      }
     }
   }
 
