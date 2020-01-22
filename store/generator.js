@@ -18,13 +18,13 @@ export const mutations = {
 }
 
 export const actions = {
-  generate: ({ commit }, target) => {
+  generate: ({ commit }, links) => {
     const shortcut = generator.generate()
-    commit('setState', { target, shortcut })
+    commit('setState', { links, shortcut })
 
     routesApi.postRoute({
       routeId: shortcut,
-      target
+      links
     })
   }
 }
