@@ -3,11 +3,10 @@
     <h1 v-text="$t('title')" />
     <p v-text="$t('description')" class="mb-l" />
 
-    <a :href="target" class="box with-hover break-word">
-      <route-favicon :target="target" />
-      <p v-text="target" class="text-small" />
-      <c-icon icon="chevron-right" class="hidden-mobile" />
-    </a>
+    <render-link
+      v-for="(link, index) in links"
+      v-bind:key="index"
+      v-bind="link" />
 
     <p v-show="reports.length > 0" class="text-warning animated fadeInDown">
       <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
@@ -20,18 +19,18 @@
 
 <script>
 import { mapState } from 'vuex'
-import routeFavicon from '@/components/routes/route-favicon.vue'
+import renderLink from '@/components/links/link.vue'
 import shareWrapper from '@/components/sharing/wrapper.vue'
 
 export default {
   components: {
-    routeFavicon,
+    renderLink,
     shareWrapper
   },
   computed: {
     ...mapState('landing', [
       'displayedPanel',
-      'target'
+      'links'
     ]),
     ...mapState('reports', [
       'reports'

@@ -3,7 +3,7 @@ import routesApi from '@/services/routes.api.js'
 export const state = () => ({
   displayedPanel: 'target', // target / comments / reports
   routeId: null,
-  target: null
+  links: null
 })
 
 export const mutations = {
@@ -12,7 +12,7 @@ export const mutations = {
   },
   setRouteData: (state, routeData) => {
     state.routeId = routeData.id
-    state.target = routeData.target
+    state.links = routeData.links
   }
 }
 
@@ -29,7 +29,7 @@ export const actions = {
   },
   reset: ({ commit }) => {
     commit('showPanel', 'target')
-    commit('setRouteData', { routeId: null, target: null })
+    commit('setRouteData', { routeId: null, links: null })
   },
   showPanel: ({ commit }, panel) => {
     commit('showPanel', panel)
