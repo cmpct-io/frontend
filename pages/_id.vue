@@ -25,8 +25,7 @@ export default {
     return {
       title: this.$t('pageTitle'),
       meta: [
-        { property: 'og:site_name', name: 'og:site_name', hid: 'og:site_name', content: this.target },
-        { property: 'og:title', name: 'og:title', hid: 'og:title', content: `Visit: ${this.target}` }
+        { property: 'og:title', name: 'og:title', hid: 'og:title', content: this.metaTitle }
       ]
     }
   },
@@ -41,8 +40,13 @@ export default {
   computed: {
     ...mapState('landing', [
       'routeId',
-      'target'
-    ])
+      'links'
+    ]),
+    metaTitle () {
+      return this.links.length > 1
+        ? `Shared ${this.links.length} links with you`
+        : 'Shared a link with you'
+    }
   },
   async fetch ({ store, route, router, error }) {
     const routeId = route.params.id
