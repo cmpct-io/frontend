@@ -53,7 +53,7 @@ export default {
       this.validateInput()
 
       if (!this.showWarning) {
-        this.generate(this.target).then(() => {
+        this.generate([this.target]).then(() => {
           storageService.addToHistory(this.shortcut)
           this.$router.push({ path: '/share' })
         })
