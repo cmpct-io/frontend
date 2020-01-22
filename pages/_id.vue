@@ -1,6 +1,6 @@
 <template>
   <div>
-    <target-viewer />
+    <links-group />
     <comments-viewer />
     <reports-viewer />
     <tabs>
@@ -16,7 +16,7 @@ import storageService from '@/services/storage-service.js'
 import tabs from '@/components/shared/tabs.vue'
 import commentsTab from '@/components/comments/tab.vue'
 import reportsTab from '@/components/reports/tab.vue'
-import targetViewer from '@/components/routes/target-viewer.vue'
+import linksGroup from '@/components/links/group.vue'
 import commentsViewer from '@/components/comments/viewer.vue'
 import reportsViewer from '@/components/reports/viewer.vue'
 
@@ -34,7 +34,7 @@ export default {
     tabs,
     commentsTab,
     reportsTab,
-    targetViewer,
+    linksGroup,
     commentsViewer,
     reportsViewer
   },
