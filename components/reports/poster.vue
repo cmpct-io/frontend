@@ -65,11 +65,28 @@ export default {
     color: white;
     font-size: 1rem;
     border-radius: 5px;
+
+    .light & {
+      border: 1px solid black;
+      color: black;
+    }
   }
 
   select {
-    opacity: 0.6;
-    background-color: black;
+    background-color: transparent;
+    color: white;
+
+    .light & {
+      color: black;
+    }
+
+    option {
+      background-color: black;
+
+      .light & {
+        background-color: white;
+      }
+    }
   }
 </style>
 

@@ -51,7 +51,6 @@ export default {
 
     .light & {
       background-color: whitesmoke;
-      color: white;
     }
   }
 

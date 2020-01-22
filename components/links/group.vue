@@ -46,18 +46,18 @@ export default {
 {
   "en": {
     "title": "Ready to jump?",
-    "description": "This page is a redirect for another website, click the link below if you want to visit it.",
-    "reportWarning": "Warning: somebody recently reported this link"
+    "description": "This page contains links to other pages you might be interested in.",
+    "reportWarning": "Warning: somebody recently reported the links on this page."
   },
   "fr": {
     "title": "Prêt à sauter?",
-    "description": "Cette page est une redirection vers un autre site Web, cliquez sur le lien ci-dessous si vous souhaitez le visiter.",
-    "reportWarning": "Avertissement: quelqu'un a récemment signalé ce lien"
+    "description": "Cette page contient des liens vers d'autres pages qui pourraient vous intéresser.",
+    "reportWarning": "Avertissement: quelqu'un a récemment signalé les liens sur cette page."
   },
   "es": {
     "title": "Listo para saltar?",
-    "description": "Esta página es una redirección a otro sitio web, haga clic en el enlace a continuación si desea visitarla.",
-    "reportWarning": "Advertencia: alguien informó recientemente este enlace"
+    "description": "Esta página contiene enlaces a otras páginas que pueden interesarle.",
+    "reportWarning": "Advertencia: alguien informó recientemente los enlaces en esta página."
   }
 }
 </i18n>
