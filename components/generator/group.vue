@@ -63,7 +63,6 @@ export default {
     margin: 0 auto;
     width: 95%;
     max-width: 800px;
-    background: transparent;
     border-bottom: 0;
     border-radius: 5px;
     border: 1px solid white;
