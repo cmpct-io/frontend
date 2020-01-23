@@ -8,7 +8,8 @@ export const state = () => ({
 })
 
 export const getters = {
-  qualifiedShortcut: state => state.shortcut ? `cmpct.io/${state.shortcut}` : ''
+  qualifiedShortcut: state => state.shortcut ? `cmpct.io/${state.shortcut}` : '',
+  hasMultipleLinks: state => state.isGroup && state.links.length > 0
 }
 
 export const mutations = {
@@ -22,10 +23,7 @@ export const mutations = {
   },
   setIsGroup: (state, isGroup) => {
     state.isGroup = isGroup
-
-    if (!isGroup) {
-      state.links = []
-    }
+    state.links = []
   },
   addLink: (state, link) => {
     state.links.push(link)

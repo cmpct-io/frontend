@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isGroup && links.length > 0">
+  <div v-show="hasMultipleLinks">
     <div class="group animated fadeIn">
       <link-display
         v-for="(link, index) in links"
@@ -32,7 +32,8 @@ export default {
       'isGroup'
     ]),
     ...mapGetters('generator', [
-      'qualifiedShortcut'
+      'qualifiedShortcut',
+      'hasMultipleLinks'
     ])
   },
   methods: {
