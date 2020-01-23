@@ -33,7 +33,7 @@ export default {
 <style scoped lang="scss">
   .snackbar {
     position: fixed;
-    bottom: 20px;
+    bottom: 65px;
     left: 0;
     right: 0;
     width: 90%;
@@ -51,6 +51,7 @@ export default {
     .light & {
       background-color: white;
       color: black;
+      border: 1px solid whitesmoke;
     }
 
     @media (max-width: 768px) {
