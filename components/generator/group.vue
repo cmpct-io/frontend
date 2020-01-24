@@ -10,7 +10,15 @@
     <button
       @click.once="generateRoute"
       class="cursor-pointer with-hover">
-      <c-icon icon="layer-group" class="mr" />
+      <c-icon
+        v-show="isSubmitting"
+        icon="spinner"
+        class="fa-spin mr" />
+      <c-icon
+        v-show="!isSubmitting"
+        icon="layer-group"
+        class="mr" />
+
       <span v-text="$t('submitText')" />
     </button>
   </div>
@@ -24,6 +32,11 @@ import linkDisplay from '@/components/generator/link.vue'
 export default {
   components: {
     linkDisplay
+  },
+  data () {
+    return {
+      isSubmitting: false
+    }
   },
   computed: {
     ...mapState('generator', [
@@ -45,6 +58,7 @@ export default {
     ]),
 
     generateRoute () {
+      this.isSubmitting = true
       this.generate().then(() => {
         storageService.addToHistory(this.shortcut)
 

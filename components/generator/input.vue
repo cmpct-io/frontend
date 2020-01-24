@@ -26,7 +26,8 @@
         type="submit">
         <c-icon
           :title="$t('submitInfo')"
-          :icon="submitIcon" />
+          :icon="submitIcon"
+          v-bind:class="{ 'fa-spin' : isSubmitting }" />
       </button>
     </form>
 
@@ -47,7 +48,8 @@ export default {
   data () {
     return {
       target: '',
-      showWarning: false
+      showWarning: false,
+      isSubmitting: false
     }
   },
   computed: {
@@ -59,6 +61,10 @@ export default {
       'qualifiedShortcut'
     ]),
     submitIcon () {
+      if (this.isSubmitting) {
+        return 'spinner'
+      }
+
       return this.isGroup
         ? 'plus-circle'
         : 'chevron-circle-right'
@@ -82,9 +88,9 @@ export default {
 
       if (!this.showWarning) {
         this.addLink(this.target)
-        this.target = ''
 
         if (!this.isGroup) {
+          this.isSubmitting = true
           this.generate().then(() => {
             storageService.addToHistory(this.shortcut)
 
@@ -94,6 +100,8 @@ export default {
 
             this.$router.push({ path: `/${this.shortcut}` })
           })
+        } else {
+          this.target = ''
         }
       }
     },
@@ -137,6 +145,7 @@ export default {
     padding: 0;
     color: white;
     cursor: pointer;
+    outline: none;
 
     .light & {
       color: black;
