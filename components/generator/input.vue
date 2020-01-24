@@ -4,7 +4,6 @@
       v-on:submit.prevent="create"
       class="box">
       <c-icon
-        v-show="groupFeatureEnabled"
         @click="setIsGroup(!isGroup)"
         :title="$t('linkGroupInfo')"
         v-bind:class="{ 'icon-selected' : isGroup }"
@@ -68,9 +67,6 @@ export default {
       return this.isGroup
         ? 'plus-circle'
         : 'chevron-circle-right'
-    },
-    groupFeatureEnabled () {
-      return (this.$cookies.get('exp-group') === 'enabled')
     }
   },
   methods: {
