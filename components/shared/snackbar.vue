@@ -1,12 +1,14 @@
 <template>
-  <div
-    v-show="showSnackbar"
-    @click="dismiss"
-    class="snackbar flex-container animated bounceInUp">
-    <c-icon icon="bell" class="fa-fw mr" />
-    <p v-text="snackbarMessage" class="flex-grow" />
-    <c-icon icon="times" class="fa-fw" />
-  </div>
+  <transition name="fade">
+    <div
+      v-show="showSnackbar"
+      @click="dismiss"
+      class="snackbar flex-container">
+      <c-icon icon="bell" class="fa-fw mr" />
+      <p v-text="snackbarMessage" class="flex-grow" />
+      <c-icon icon="times" class="fa-fw" />
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -33,15 +35,16 @@ export default {
 <style scoped lang="scss">
   .snackbar {
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     left: 0;
     right: 0;
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     z-index: 50;
     background-color: black;
     color: white;
-    opacity: 0.7;
+    border: 1px solid #262626;
+    border-bottom: 0;
     margin: 0 auto;
     padding: 15px;
     border-radius: 5px;
@@ -51,6 +54,8 @@ export default {
     .light & {
       background-color: white;
       color: black;
+      border: 1px solid #DBDBDB;
+      border-bottom: 0;
     }
 
     @media (max-width: 768px) {

@@ -4,7 +4,8 @@
       <h1 v-text="$t('title')" />
       <p v-text="$t('subtitle')" class="mb" />
       <p v-text="$t('message')" class="mb-l" />
-      <generator />
+      <link-input />
+      <link-group />
     </div>
 
     <history v-on:toggled="toggle" />
@@ -12,9 +13,11 @@
 </template>
 
 <script>
-import generator from '@/components/routes/route-generator.vue'
-import history from '@/components/history/history.vue'
+import { mapState, mapActions } from 'vuex'
 import showMixin from '@/mixins/show-mixin.vue'
+import linkInput from '@/components/generator/input.vue'
+import linkGroup from '@/components/generator/group.vue'
+import history from '@/components/history/history.vue'
 
 export default {
   head () {
@@ -23,12 +26,24 @@ export default {
     }
   },
   components: {
-    generator,
+    linkInput,
+    linkGroup,
     history
   },
   mixins: [showMixin],
+  computed: {
+    ...mapState('generator', [
+      'links'
+    ])
+  },
   created () {
     this.show = true
+    this.reset()
+  },
+  methods: {
+    ...mapActions('generator', [
+      'reset'
+    ])
   }
 }
 </script>
