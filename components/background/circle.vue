@@ -24,6 +24,7 @@ export default {
       const size = `width: ${this.size}px; height: ${this.size}px;`
       const position = `top: ${this.startTop}%; left: ${this.startLeft}%;`
       const animation = `animation-duration: ${this.speed}s;animation-name: translocate_${this.animationVariant};`
+
       return `${size}${position}${animation}`
     }
   },
@@ -36,10 +37,12 @@ export default {
       this.startTop = randomiser.generateRandomNumber(-25, 125)
       this.startLeft = randomiser.generateRandomNumber(-25, 125)
       this.speed = randomiser.generateRandomNumber(5, 60)
+
       const animationVariant = randomiser.generateRandomNumber(1, 10)
       this.animationVariant = animationVariant < 6
         ? 1
         : 2
+
       this.isLoaded = true
     }
   }

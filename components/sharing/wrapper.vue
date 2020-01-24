@@ -1,7 +1,7 @@
 <template>
   <div>
-    <twitter v-bind="shareProperties" />
-    <facebook v-bind="shareProperties" />
+    <twitter :page-url="shareProperties" />
+    <facebook :page-url="shareProperties" />
   </div>
 </template>
 
@@ -16,13 +16,11 @@ export default {
   },
   data () {
     return {
-      shareProperties: {
-        pageUrl: ''
-      }
+      pageUrl: ''
     }
   },
   created () {
-    this.shareProperties.pageUrl = `https://cmpct.io${this.$router.currentRoute.fullPath}`
+    this.pageUrl = `https://cmpct.io${this.$router.currentRoute.fullPath}`
   }
 }
 </script>

@@ -1,14 +1,27 @@
 <template>
   <section class="inline-block">
-    <div v-show="displayedPanel === 'target'" @click="showPanel('reports')" class="tab animated slideInUp">
+    <div
+      v-show="displayedPanel === 'target'"
+      @click="showPanel('reports')"
+      class="tab animated slideInUp">
       <p v-bind:class="[{ 'text-warning': reports.length > 0 }]">
-        <c-icon v-bind:class="[{ 'animated shake': reports.length > 0 }]" icon="bell" class="mr-s" />
-        <span v-text="$t('reports')" class="mr-s" />
-        <span v-text="reports.length" class="text-small" />
+        <c-icon
+          v-bind:class="[{ 'animated shake': reports.length > 0 }]"
+          icon="bell"
+          class="mr-s" />
+        <span
+          v-text="$t('reports')"
+          class="mr-s" />
+        <span
+          v-text="reports.length"
+          class="text-small" />
       </p>
     </div>
 
-    <div v-show="displayedPanel === 'reports'" @click="showPanel('target')" class="circle-button with-hover animated slideInDown">
+    <div
+      v-show="displayedPanel === 'reports'"
+      @click="showPanel('target')"
+      class="circle-button with-hover animated slideInDown">
       <c-icon icon="times" />
     </div>
   </section>
@@ -19,11 +32,17 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('landing', ['displayedPanel']),
-    ...mapState('reports', ['reports'])
+    ...mapState('landing', [
+      'displayedPanel'
+    ]),
+    ...mapState('reports', [
+      'reports'
+    ])
   },
   methods: {
-    ...mapActions('landing', ['showPanel'])
+    ...mapActions('landing', [
+      'showPanel'
+    ])
   }
 }
 </script>

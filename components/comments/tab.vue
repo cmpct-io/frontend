@@ -1,10 +1,19 @@
 <template>
   <section class="inline-block mr">
-    <div v-show="showTarget" @click="showPanel('comments')" class="tab animated slideInUp">
+    <div
+      v-show="showTarget"
+      @click="showPanel('comments')"
+      class="tab animated slideInUp">
       <p>
-        <c-icon icon="comment-alt" class="mr-s" />
-        <span v-text="$t('comments')" class="mr-s" />
-        <span v-text="comments.length" class="text-small" />
+        <c-icon
+          icon="comment-alt"
+          class="mr-s" />
+        <span
+          v-text="$t('comments')"
+          class="mr-s" />
+        <span
+          v-text="comments.length"
+          class="text-small" />
       </p>
     </div>
 

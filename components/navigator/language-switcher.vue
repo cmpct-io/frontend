@@ -6,7 +6,7 @@
         class="flag">
     </div>
 
-    <div v-show="expanded" class="expanded">
+    <div v-if="expanded" class="expanded">
       <div class="flex-container">
         <p
           v-text="$t('title')"
@@ -17,9 +17,18 @@
           class="fa-fw cursor-pointer" />
       </div>
       <div class="mb-l">
-        <language :name="$t('english')" @selected="change" locale="en" />
-        <language :name="$t('french')" @selected="change" locale="fr" />
-        <language :name="$t('spanish')" @selected="change" locale="es" />
+        <language
+          :name="$t('english')"
+          @selected="change"
+          locale="en" />
+        <language
+          :name="$t('french')"
+          @selected="change"
+          locale="fr" />
+        <language
+          :name="$t('spanish')"
+          @selected="change"
+          locale="es" />
       </div>
 
       <theme-switcher @close="close" />

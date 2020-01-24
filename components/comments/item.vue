@@ -1,10 +1,16 @@
 <template>
   <div class="comment flex-container">
-    <c-icon icon="user-circle" class="fa-fw mr" />
+    <c-icon
+      icon="user-circle"
+      class="fa-fw mr" />
     <div class="flex-grow">
       <p class="bold mb">
-        <span v-text="name" class="mr" />
-        <span v-text="timeSince" class="text-small" />
+        <span
+          v-text="name"
+          class="mr" />
+        <span
+          v-text="timeSince"
+          class="text-small" />
       </p>
       <p v-text="text" />
     </div>

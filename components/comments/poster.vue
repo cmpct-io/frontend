@@ -1,5 +1,7 @@
 <template>
-  <form @submit.prevent="addComment" class="standard-width animated fadeIn">
+  <form
+    @submit.prevent="addComment"
+    class="standard-width animated fadeIn">
     <p
       v-text="$t('description')"
       class="mb-l" />
@@ -11,6 +13,7 @@
       v-model="commentText"
       :placeholder="$t('commentPlaceholder')"
       required />
+
     <button
       v-text="$t('add')"
       class="with-hover"

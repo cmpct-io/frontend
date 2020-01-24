@@ -1,7 +1,14 @@
 <template>
-  <form @submit.prevent="addReport" class="standard-width animated fadeIn">
-    <p v-text="$t('tellUsWhy')" class="mb-l" />
-    <input v-model="name" :placeholder="$t('yourNamePlaceholder')" required>
+  <form
+    @submit.prevent="addReport"
+    class="standard-width animated fadeIn">
+    <p
+      v-text="$t('tellUsWhy')"
+      class="mb-l" />
+    <input
+      v-model="name"
+      :placeholder="$t('yourNamePlaceholder')"
+      required>
     <select v-model="reportType">
       <option value="0">
         {{ $t('scam') }}
@@ -17,8 +24,15 @@
       </option>
     </select>
 
-    <button v-text="$t('add')" class="with-hover" type="submit" />
-    <button @click="setIsReporting(false)" v-text="$t('cancel')" class="with-hover" type="button" />
+    <button
+      v-text="$t('add')"
+      class="with-hover"
+      type="submit" />
+    <button
+      @click="setIsReporting(false)"
+      v-text="$t('cancel')"
+      class="with-hover"
+      type="button" />
   </form>
 </template>
 
@@ -33,7 +47,9 @@ export default {
     }
   },
   computed: {
-    ...mapState('landing', ['routeId'])
+    ...mapState('landing', [
+      'routeId'
+    ])
   },
   methods: {
     ...mapActions('reports', [

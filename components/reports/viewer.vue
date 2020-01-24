@@ -1,21 +1,35 @@
 <template>
-  <div v-show="displayedPanel === 'reports'" class="animated slideInUp">
+  <div
+    v-show="displayedPanel === 'reports'"
+    class="animated slideInUp">
     <h1 v-text="$t('reports')" />
 
-    <div v-show="!isReporting && reports.length > 0" class="animated fadeIn">
+    <div
+      v-show="!isReporting && reports.length > 0"
+      class="animated fadeIn">
       <p class="mb-l">
-        <span v-text="$t('ifYouThink')" />
-        <span @click="setIsReporting(true)" v-text="$t('pleaseReportIt')" class="text-link" />
+        <span
+          v-text="$t('ifYouThink')" />
+        <span
+          @click="setIsReporting(true)"
+          v-text="$t('pleaseReportIt')"
+          class="text-link" />
       </p>
-      <report v-for="(item, index) in reports" :key="index" v-bind="item" />
+
+      <report
+        v-for="(item, index) in reports"
+        :key="index"
+        v-bind="item" />
     </div>
 
-    <div v-show="!isReporting && reports.length === 0">
-      <p>
-        <span v-text="$t('nobodyHasReported')" />
-        <span @click="setIsReporting(true)" v-text="$t('pleaseReportIfYouThink')" class="text-link" />
-      </p>
-    </div>
+    <p v-show="!isReporting && reports.length === 0">
+      <span
+        v-text="$t('nobodyHasReported')" />
+      <span
+        @click="setIsReporting(true)"
+        v-text="$t('pleaseReportIfYouThink')"
+        class="text-link" />
+    </p>
 
     <poster v-show="isReporting" />
   </div>

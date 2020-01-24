@@ -2,11 +2,17 @@
   <transition name="fade">
     <div
       v-show="showSnackbar"
-      @click="dismiss"
+      @click="hideSnackbar()"
       class="snackbar flex-container">
-      <c-icon icon="bell" class="fa-fw mr" />
-      <p v-text="snackbarMessage" class="flex-grow" />
-      <c-icon icon="times" class="fa-fw" />
+      <c-icon
+        icon="bell"
+        class="fa-fw mr" />
+      <p
+        v-text="snackbarMessage"
+        class="flex-grow" />
+      <c-icon
+        icon="times"
+        class="fa-fw" />
     </div>
   </transition>
 </template>
@@ -24,10 +30,7 @@ export default {
   methods: {
     ...mapActions('snackbar', [
       'hideSnackbar'
-    ]),
-    dismiss () {
-      this.hideSnackbar()
-    }
+    ])
   }
 }
 </script>

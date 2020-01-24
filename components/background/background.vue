@@ -1,6 +1,8 @@
 <template>
   <section class="background">
-    <animated-circle v-for="element in elements" :key="element.id" />
+    <animated-circle
+      v-for="element in elements"
+      :key="element.id" />
   </section>
 </template>
 
@@ -13,13 +15,17 @@ export default {
     animatedCircle
   },
   computed: {
-    ...mapState('background', ['elements'])
+    ...mapState('background', [
+      'elements'
+    ])
   },
   mounted () {
     this.setupBackground()
   },
   methods: {
-    ...mapActions('background', ['setupBackground'])
+    ...mapActions('background', [
+      'setupBackground'
+    ])
   }
 }
 </script>

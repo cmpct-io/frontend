@@ -7,7 +7,8 @@
       <p
         v-text="title"
         class="flex-grow mb-0" />
-      <c-icon :icon="icon" />
+      <c-icon
+        :icon="icon" />
     </div>
     <div
       v-show="show"
