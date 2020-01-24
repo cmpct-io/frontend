@@ -30,7 +30,7 @@
       </button>
     </form>
 
-    <p v-show="showWarning" class="text-warning animated fadeInDown">
+    <p v-show="showWarning" class="text-warning animated fadeInDown mb-l">
       <c-icon
         icon="exclamation-circle"
         class="fa-fw mr-s" />
