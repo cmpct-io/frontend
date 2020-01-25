@@ -1,4 +1,6 @@
 
+import { APP_INSIGHTS_KEY } from './services/configuration-service.js'
+
 export default {
   mode: 'universal',
   head: {
@@ -49,7 +51,7 @@ export default {
     }
   },
   appInsights: {
-    instrumentationKey: '47f10985-4ca6-4031-8093-da011cddeee5'
+    instrumentationKey: APP_INSIGHTS_KEY
   },
   axios: {
   },
@@ -61,8 +63,8 @@ export default {
     host: '0.0.0.0'
   },
   manifest: {
-    name: 'cmpct',
-    short_name: 'cmpct',
+    name: 'cmpct.io',
+    short_name: 'cmpct.io',
     description: 'The better way to shorten long links',
     lang: 'en',
     display: 'standalone',
