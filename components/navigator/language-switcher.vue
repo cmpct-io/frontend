@@ -16,6 +16,7 @@
           icon="times"
           class="fa-fw cursor-pointer" />
       </div>
+
       <div class="mb-l">
         <language
           :name="$t('english')"

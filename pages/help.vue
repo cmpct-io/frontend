@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 v-text="$t('pageTitle')" class="mb-l" />
+    <h1
+      v-text="$t('pageTitle')"
+      class="mb-l" />
     <what-section />
     <privacy-section />
     <price-section />

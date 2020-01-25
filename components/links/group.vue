@@ -8,11 +8,7 @@
       v-bind:key="index"
       v-bind="link" />
 
-    <p v-show="reports.length > 0" class="text-warning animated fadeInDown">
-      <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
-      <span v-text="$t('reportWarning')" />
-    </p>
-
+    <report-warning v-show="reports.length > 0" />
     <share-wrapper v-if="showSharePanel" />
   </div>
 </template>
@@ -21,11 +17,13 @@
 import { mapState } from 'vuex'
 import renderLink from '@/components/links/link.vue'
 import shareWrapper from '@/components/sharing/wrapper.vue'
+import reportWarning from '@/components/links/warning.vue'
 
 export default {
   components: {
     renderLink,
-    shareWrapper
+    shareWrapper,
+    reportWarning
   },
   computed: {
     ...mapState('landing', [
@@ -46,18 +44,15 @@ export default {
 {
   "en": {
     "title": "Ready to jump?",
-    "description": "This page contains links to other pages you might be interested in.",
-    "reportWarning": "Warning: somebody recently reported the links on this page."
+    "description": "This page contains links to other pages you might be interested in."
   },
   "fr": {
     "title": "Prêt à sauter?",
-    "description": "Cette page contient des liens vers d'autres pages qui pourraient vous intéresser.",
-    "reportWarning": "Avertissement: quelqu'un a récemment signalé les liens sur cette page."
+    "description": "Cette page contient des liens vers d'autres pages qui pourraient vous intéresser."
   },
   "es": {
     "title": "Listo para saltar?",
-    "description": "Esta página contiene enlaces a otras páginas que pueden interesarle.",
-    "reportWarning": "Advertencia: alguien informó recientemente los enlaces en esta página."
+    "description": "Esta página contiene enlaces a otras páginas que pueden interesarle."
   }
 }
 </i18n>

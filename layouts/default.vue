@@ -2,9 +2,11 @@
   <div :class="uiMode">
     <navigator />
     <background />
+
     <container>
       <nuxt />
     </container>
+
     <snackbar />
   </div>
 </template>

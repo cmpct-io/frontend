@@ -1,8 +1,14 @@
 <template>
-  <nuxt-link :to="shortcut" class="item flex-container with-hover">
+  <nuxt-link
+    :to="shortcut"
+    class="item flex-container with-hover">
     <c-icon icon="link" />
-    <p v-text="qualifiedShortcut" class="flex-grow" />
-    <c-icon icon="chevron-right" class="arrow" />
+    <p
+      v-text="qualifiedShortcut"
+      class="flex-grow" />
+    <c-icon
+      icon="chevron-right"
+      class="arrow" />
   </nuxt-link>
 </template>
 

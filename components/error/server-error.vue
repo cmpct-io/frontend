@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h1 v-text="$t('title')" />
-    <p v-text="$t('description')" />
+    <h1
+      v-text="$t('title')" />
+    <p
+      v-text="$t('description')" />
 
     <nuxt-link
       v-text="$t('link')"

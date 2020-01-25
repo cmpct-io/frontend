@@ -3,12 +3,18 @@
     <p v-text="$t('title')" class="mb-m" />
     <div class="flex-container">
       <p @click="changeUIMode(true)" class="ui-option with-hover">
-        <c-icon icon="moon" class="fa-fw mr" />
-        <span v-text="$t('dark')" />
+        <c-icon
+          icon="moon"
+          class="fa-fw mr" />
+        <span
+          v-text="$t('dark')" />
       </p>
       <p @click="changeUIMode(false)" class="ui-option with-hover">
-        <c-icon icon="lightbulb" class="fa-fw mr" />
-        <span v-text="$t('light')" />
+        <c-icon
+          icon="lightbulb"
+          class="fa-fw mr" />
+        <span
+          v-text="$t('light')" />
       </p>
     </div>
   </div>

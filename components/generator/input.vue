@@ -30,20 +30,19 @@
       </button>
     </form>
 
-    <p v-show="showWarning" class="text-warning animated fadeInDown mb-l">
-      <c-icon
-        icon="exclamation-circle"
-        class="fa-fw mr-s" />
-      <span v-text="$t('enterValidAddress')" />
-    </p>
+    <warning-message v-show="showWarning" />
   </div>
 </template>
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
 import storageService from '@/services/storage-service.js'
+import warningMessage from '@/components/generator/warning.vue'
 
 export default {
+  components: {
+    warningMessage
+  },
   data () {
     return {
       target: '',
@@ -173,7 +172,6 @@ export default {
     "pasteInfo": "Paste from clipboard",
     "linkGroupInfo": "Create a link group",
     "submitInfo": "Start the compacter",
-    "enterValidAddress": "Please enter a valid website address",
     "snackbarMessage": "Link copied to your clipboard!"
   },
   "fr": {
@@ -181,7 +179,6 @@ export default {
     "pasteInfo": "Coller depuis le presse-papiers",
     "linkGroupInfo": "Créer un groupe de liens",
     "submitInfo": "Commencez le plus compact",
-    "enterValidAddress": "Veuillez entrer une adresse de site Web valide",
     "snackbarMessage": "Lien copié dans votre presse-papiers!"
   },
   "es": {
@@ -189,7 +186,6 @@ export default {
     "pasteInfo": "Pegar desde el portapapeles",
     "linkGroupInfo": "Crear un grupo de enlaces",
     "submitInfo": "Inicia el compactador",
-    "enterValidAddress": "Por favor, introduzca una dirección de sitio web válida",
     "snackbarMessage": "Enlace copiado a su portapapeles!"
   }
 }

@@ -52,12 +52,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  section.history {
-    display: inline-block;
-  }
-</style>
-
 <i18n>
 {
   "en": {

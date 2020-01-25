@@ -19,9 +19,15 @@
       <h1 v-text="$t('title')" />
       <div v-if="items.length > 0">
         <p v-text="$t('description')" class="mb-l" />
-        <history-item v-for="(item, index) in items" :key="index" :shortcut="item" />
+        <history-item
+          v-for="(item, index) in items"
+          :key="index"
+          :shortcut="item" />
       </div>
-      <p v-else v-text="$t('zeroItemDescription')" class="mb-l" />
+      <p
+        v-else
+        v-text="$t('zeroItemDescription')"
+        class="mb-l" />
     </div>
   </section>
 </template>
@@ -50,12 +56,6 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-  section.history {
-    padding: 0 10px;
-  }
-</style>
 
 <i18n>
 {

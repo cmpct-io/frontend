@@ -1,9 +1,15 @@
 <template>
   <div>
     <div v-show="show" class="animated fadeIn">
-      <h1 v-text="$t('title')" />
-      <p v-text="$t('subtitle')" class="mb" />
-      <p v-text="$t('message')" class="mb-l" />
+      <h1
+        v-text="$t('title')" />
+      <p
+        v-text="$t('subtitle')"
+        class="mb" />
+      <p
+        v-text="$t('message')"
+        class="mb-l" />
+
       <link-input />
       <link-group />
     </div>

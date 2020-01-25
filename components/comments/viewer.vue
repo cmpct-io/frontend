@@ -4,18 +4,30 @@
 
     <div v-show="hasComments" class="animated fadeIn">
       <p class="mb-l">
-        <span v-text="$t('wouldYouLikeTo')" />
-        <span @click="setIsCommenting(true)" class="text-link">{{ $t('addAComment') }}</span>
+        <span
+          v-text="$t('wouldYouLikeTo')" />
+        <span
+          @click="setIsCommenting(true)"
+          v-text="$t('addAComment')"
+          class="text-link" />
       </p>
-      <comment v-for="(item, index) in comments" :key="index" v-bind="item" />
+
+      <comment
+        v-for="(item, index) in comments"
+        :key="index"
+        v-bind="item" />
     </div>
 
-    <div v-show="hasNoComments" class="animated fadeIn">
-      <p>
-        <span v-text="$t('nobodyHasLeftAComment')" />
-        <span @click="setIsCommenting(true)" class="text-link">{{ $t('beTheFirst') }}</span>
-      </p>
-    </div>
+    <p
+      v-show="hasNoComments"
+      class="animated fadeIn">
+      <span
+        v-text="$t('nobodyHasLeftAComment')" />
+      <span
+        @click="setIsCommenting(true)"
+        v-text="$t('beTheFirst')"
+        class="text-link" />
+    </p>
 
     <poster v-show="isCommenting" />
   </div>
