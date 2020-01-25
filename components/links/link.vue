@@ -1,12 +1,12 @@
 <template>
-  <a :href="target" class="box with-hover break-word">
+  <a :href="target" class="box flex-container with-border with-hover break-word mb-m">
     <link-favicon :target="target" />
     <p
       v-text="target"
-      class="text-small" />
+      class="flex-grow" />
     <c-icon
       icon="chevron-right"
-      class="hidden-mobile" />
+      class="hidden-mobile mr-m" />
   </a>
 </template>
 

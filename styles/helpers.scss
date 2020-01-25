@@ -2,20 +2,26 @@ html {
   font-family: 'Tomorrow', sans-serif;
   font-size: 21px;
   box-sizing: border-box;
-  color: white;
-
-  .light {
-    color: black;
-  }
 
   @media (max-width: 768px) {
     font-size: 18px;
   }
 }
 
-input, button, select {
-  font-family: 'Tomorrow', sans-serif;
-  font-size: 1rem;
+body {
+  color: white;
+
+  .light {
+    color: black;
+  }
+}
+
+a, button, input, , textarea, select {
+  color: white;
+
+  .light & {
+    color: black;
+  } 
 }
 
 *,
@@ -35,75 +41,73 @@ h4 {
   font-size: 1.25rem;
 }
 
-p {
-  font-size: 1rem;
-}
-
 a {
-  color: white;
   text-decoration: none;
-
-  .light & {
-    color: black;
-  }
 
   &:hover {
     text-decoration: underline;
   }
 }
 
-.mr {
-  margin-right: 10px;
+input, select, textarea {
+  font-family: 'Tomorrow', sans-serif;
+  background-color: transparent;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 1rem;
 }
 
-.mr-s {
-  margin-right: 5px;
-}
-
-.mb {
-  margin-bottom: 5px;
-}
-
-.mb-m {
-  margin-bottom: 10px;
-}
-
-.mb-l {
-  margin-bottom: 30px;
-}
-
-.box {
-  display: inline-block;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  padding-right: 20px;
-  width: 95%;
-  max-width: 800px;
-  background: transparent;
+button, .square-button {
+  font-family: 'Tomorrow', sans-serif;
+  background-color: transparent;
+  font-size: 1rem;
   border: 1px solid white;
+  padding: 10px 20px;
   border-radius: 5px;
-  color: white;
-  margin-bottom: 20px;
+  margin: 0 2.5px;
 
   .light & {
     border: 1px solid black;
-    color: black;
   }
+}
+
+::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.mr-s {
+  margin-right: 5px !important;
+}
+
+.mr {
+  margin-right: 10px !important;
+}
+
+.mr-m {
+  margin-right: 15px !important;
+}
+
+
+.mb {
+  margin-bottom: 5px !important;
+}
+
+.mb-m {
+  margin-bottom: 12px !important;
+}
+
+.mb-l {
+  margin-bottom: 30px !important;
+}
+
+.box {
+  width: 95%;
+  max-width: 800px;
 
   p {
-    font-size: 1rem;
-    flex-grow: 1;
     padding: 20px 15px;
     text-align: left;
-
-    &.text-small {
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 768px) {
-      padding: 15px 15px;
-    }
   }
 
   svg{
@@ -144,6 +148,15 @@ a {
   }
 }
 
+.with-border {
+  border: 1px solid white;
+  border-radius: 5px;
+
+  .light & {
+    border: 1px solid black;
+  }
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -151,16 +164,12 @@ a {
 .flex-container {
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 .flex-grow {
   flex-grow: 1;
   max-width: 100%;
-}
-
-::placeholder {
-  color: gray;
-  opacity: 1;
 }
 
 .tab {
@@ -176,10 +185,6 @@ a {
 
   .light & {
     border: 1px solid black;
-  }
-
-  p {
-    margin: 0;
   }
 
   &:hover {
@@ -208,7 +213,7 @@ a {
   font-size: 0.75rem;
 }
 
-.text-warning {
+p.text-warning {
   color: red;
 }
 
@@ -224,33 +229,16 @@ a {
   }
 }
 
-button, .square-button {
-  margin-bottom: 10px;
-  background-color: transparent;
-  border: 1px solid white;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 5px;
-
-  .light & {
-    border: 1px solid black;
-    color: black;
-  }
-}
-
 .circle-button {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
-  display: inline-block;
   width: 50px;
   height: 50px;
   border: 1px solid white;
-  font-size: 1rem;
   cursor: pointer;
-  margin: 0 auto;
   border-radius: 50%;
   margin-bottom: 30px;
 

@@ -28,32 +28,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .logo {
-    float: left;
-    font-size: 35px;
-    color: white;
-    text-decoration: none;
-    user-select: none;
+  img {
+    height: 50px;
+  }
 
-    .light & {
-      color: black;
+  img.small {
+    display: none
+  }
+
+  @media (max-width: 768px) {
+    img.large {
+      display: none;
     }
 
-    img {
-      height: 50px;
-    }
     img.small {
-      display: none
-    }
-
-    @media (max-width: 768px) {
-      img.large {
-        display: none;
-      }
-
-      img.small {
-        display: initial;
-      }
+      display: initial;
     }
   }
 </style>

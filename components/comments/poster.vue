@@ -8,10 +8,12 @@
     <input
       v-model="name"
       :placeholder="$t('namePlaceholder')"
+      class="with-border mb-m"
       required>
     <textarea
       v-model="commentText"
       :placeholder="$t('commentPlaceholder')"
+      class="with-border mb-m"
       required />
 
     <button
@@ -60,24 +62,6 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-  input, textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
-
-    .light & {
-      border: 1px solid black;
-      color: black;
-    }
-  }
-</style>
 
 <i18n>
 {

@@ -1,6 +1,6 @@
 <template>
   <div v-show="hasMultipleLinks">
-    <div class="group animated fadeIn">
+    <div class="group with-border animated fadeIn">
       <link-display
         v-for="(link, index) in links"
         :key="index"
@@ -79,17 +79,12 @@ export default {
     width: 95%;
     max-width: 800px;
     border-bottom: 0;
-    border-radius: 5px;
-    border: 1px solid white;
     border-bottom: 0;
-    color: white;
     margin-bottom: 20px;
     text-align: left;
 
     .light & {
-      border: 1px solid black;
       border-bottom: 0;
-      color: black;
     }
   }
 </style>

@@ -8,8 +8,11 @@
     <input
       v-model="name"
       :placeholder="$t('yourNamePlaceholder')"
+      class="with-border mb-m"
       required>
-    <select v-model="reportType">
+    <select
+      v-model="reportType"
+      class="with-border mb-m">
       <option value="0">
         {{ $t('scam') }}
       </option>
@@ -72,36 +75,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  input, select {
-    width: 100%;
-    margin-bottom: 10px;
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
+  option {
+    background-color: black;
 
     .light & {
-      border: 1px solid black;
-      color: black;
-    }
-  }
-
-  select {
-    background-color: transparent;
-    color: white;
-
-    .light & {
-      color: black;
-    }
-
-    option {
-      background-color: black;
-
-      .light & {
-        background-color: white;
-      }
+      background-color: white;
     }
   }
 </style>

@@ -2,7 +2,7 @@
   <div>
     <form
       v-on:submit.prevent="create"
-      class="box">
+      class="box flex-container with-border mb-m">
       <c-icon
         @click="setIsGroup(!isGroup)"
         :title="$t('linkGroupInfo')"
@@ -21,7 +21,7 @@
         class="secondary" />
 
       <button
-        class="no-button"
+        class="no-button mr-m"
         type="submit">
         <c-icon
           :title="$t('submitInfo')"
@@ -123,14 +123,9 @@ export default {
     padding: 20px 30px;
     border: 0;
     font-size: 1rem;
-    color: white;
     outline: 0;
     width: 100%;
     flex-grow: 1;
-
-    .light & {
-      color: black;
-    }
   }
 
   button.no-button {
@@ -138,7 +133,6 @@ export default {
     border: 0;
     margin: 0;
     padding: 0;
-    color: white;
     cursor: pointer;
     outline: none;
 

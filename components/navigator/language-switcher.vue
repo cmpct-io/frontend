@@ -6,7 +6,7 @@
         class="flag">
     </div>
 
-    <div v-if="expanded" class="expanded">
+    <div v-if="expanded" class="expanded with-border">
       <div class="flex-container">
         <p
           v-text="$t('title')"
@@ -83,14 +83,12 @@ export default {
     .expanded {
       position: absolute;
       background-color: black;
-      border: 1px solid white;
       padding: 15px;
       width: 300px;
       top: 0;
       right: -15px;
 
       .light & {
-      border: 1px solid black;
       background-color: white;
       }
     }

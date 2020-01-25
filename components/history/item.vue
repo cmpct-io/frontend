@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     :to="shortcut"
-    class="item flex-container with-hover">
+    class="item flex-container with-hover with-border">
     <c-icon icon="link" />
     <p
       v-text="qualifiedShortcut"
@@ -30,18 +30,12 @@ export default {
 
 <style scoped lang="scss">
   .item {
-    border: 1px solid white;
     padding: 15px;
-    border-radius: 5px;
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 10px;
     text-align: left;
     cursor: pointer;
-
-    .light & {
-      border: 1px solid black;
-    }
 
     svg {
       margin-right: 10px;

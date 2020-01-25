@@ -8,7 +8,7 @@
         <span v-text="$t('github')" />
       </a>
 
-      <router-link to="help">
+      <router-link to="help" class="mr">
         <c-icon icon="question" />
         <span v-text="$t('help')" />
       </router-link>
@@ -43,19 +43,6 @@ export default {
     .links {
       float: right;
       padding: 10px;
-
-      a {
-        color: white;
-        text-decoration: none;
-
-        .light & {
-          color: black;
-        }
-
-        &.mr {
-          margin-right: 15px;
-        }
-      }
     }
   }
 </style>

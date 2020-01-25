@@ -45,7 +45,6 @@ export default {
     max-width: 800px;
     z-index: 50;
     background-color: black;
-    color: white;
     border: 1px solid #262626;
     border-bottom: 0;
     margin: 0 auto;
@@ -56,7 +55,6 @@ export default {
 
     .light & {
       background-color: white;
-      color: black;
       border: 1px solid #DBDBDB;
       border-bottom: 0;
     }
