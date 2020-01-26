@@ -1,5 +1,5 @@
 const developmentConfiguration = {
-  'apiBaseUrI': 'https://cmpct-api-tmp.azurewebsites.net/api',
+  'apiBaseUrI': 'https://localhost:44302/api',
   'appInsights': ''
 }
 

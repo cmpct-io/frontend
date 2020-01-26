@@ -113,7 +113,11 @@ button, .square-button {
   svg{
     cursor: pointer;
     font-size: 35px;
-    margin-left: 20px;
+    margin: 15px;
+
+    @media (max-width: 768px) {
+      margin: 10px;
+    }
 
     &.secondary{
       color: gray;

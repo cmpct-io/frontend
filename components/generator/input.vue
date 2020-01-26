@@ -21,7 +21,7 @@
         class="secondary" />
 
       <button
-        class="no-button mr-m"
+        class="no-button"
         type="submit">
         <c-icon
           :title="$t('submitInfo')"
@@ -120,7 +120,7 @@ export default {
 <style scoped lang="scss">
   input {
     background-color: transparent;
-    padding: 20px 30px;
+    padding: 20px 20px;
     border: 0;
     font-size: 1rem;
     outline: 0;
