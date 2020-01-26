@@ -40,7 +40,7 @@ export default {
 
 <style scoped lang="scss">
   .favicon img, .favicon svg {
-    margin-left: 15px;
+    margin-left: 10px;
     padding: 5px;
     background-color: white;
     color: black;
@@ -48,6 +48,7 @@ export default {
     width: 42px;
     min-width: 42px;
     height: 42px;
+    overflow: hidden;
 
     .light & {
       background-color: whitesmoke;
