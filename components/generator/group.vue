@@ -47,7 +47,10 @@ export default {
     ...mapGetters('generator', [
       'qualifiedShortcut',
       'hasMultipleLinks'
-    ])
+    ]),
+    isClipboardSupported () {
+      return (typeof (navigator) !== 'undefined' && navigator.clipboard)
+    }
   },
   methods: {
     ...mapActions('generator', [
@@ -62,9 +65,11 @@ export default {
       this.generate().then(() => {
         storageService.addToHistory(this.shortcut)
 
-        navigator.clipboard.writeText(this.qualifiedShortcut).then(() =>
-          this.showSnackbar(this.$t('snackbarMessage'))
-        )
+        if (this.isClipboardSupported) {
+          navigator.clipboard.writeText(this.qualifiedShortcut).then(() =>
+            this.showSnackbar(this.$t('snackbarMessage'))
+          )
+        }
 
         this.$router.push({ path: `/${this.shortcut}` })
       })

@@ -14,7 +14,9 @@
         v-model="target"
         :placeholder="$t('placeholder')"
         required>
+
       <c-icon
+        v-show="isClipboardSupported"
         @click="paste"
         :title="$t('pasteInfo')"
         icon="clipboard"
@@ -66,6 +68,9 @@ export default {
       return this.isGroup
         ? 'plus-circle'
         : 'chevron-circle-right'
+    },
+    isClipboardSupported () {
+      return (typeof (navigator) !== 'undefined' && navigator.clipboard)
     }
   },
   methods: {
@@ -89,9 +94,11 @@ export default {
           this.generate().then(() => {
             storageService.addToHistory(this.shortcut)
 
-            navigator.clipboard.writeText(this.qualifiedShortcut).then(() =>
-              this.showSnackbar(this.$t('snackbarMessage'))
-            )
+            if (this.isClipboardSupported) {
+              navigator.clipboard.writeText(this.qualifiedShortcut).then(() =>
+                this.showSnackbar(this.$t('snackbarMessage'))
+              )
+            }
 
             this.$router.push({ path: `/${this.shortcut}` })
           })
@@ -101,12 +108,14 @@ export default {
       }
     },
     paste () {
-      navigator.clipboard.readText().then((text) => {
-        if (text) {
-          this.target = text
-          this.create()
-        }
-      })
+      if (this.isClipboardSupported) {
+        navigator.clipboard.readText().then((text) => {
+          if (text) {
+            this.target = text
+            this.create()
+          }
+        })
+      }
     },
     validateInput () {
       const expression = /[-a-zA-Z0-9@:%._~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_.~#?&//=]*)?/gi
