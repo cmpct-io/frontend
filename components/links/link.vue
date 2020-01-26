@@ -1,5 +1,8 @@
 <template>
-  <a :href="target" class="box flex-container with-border with-hover break-word mb-m">
+  <a
+    :href="qualifiedTarget"
+    :target="targetValue"
+    class="box flex-container with-border with-hover break-word mb-m">
     <link-favicon :target="target" />
     <p
       v-text="target"
@@ -21,6 +24,22 @@ export default {
     target: {
       type: String,
       required: true
+    },
+    newPage: {
+      type: Boolean,
+      required: true
+    }
+  },
+  computed: {
+    qualifiedTarget () {
+      return this.target.toLowerCase().startsWith('http')
+        ? this.target
+        : `https://${this.target}`
+    },
+    targetValue () {
+      return this.newPage
+        ? 'blank'
+        : ''
     }
   }
 }

@@ -6,7 +6,8 @@
     <render-link
       v-for="(link, index) in links"
       v-bind:key="index"
-      v-bind="link" />
+      v-bind="link"
+      :new-page="links.length > 1" />
 
     <report-warning v-show="reports.length > 0" />
     <share-wrapper v-if="showSharePanel" />
