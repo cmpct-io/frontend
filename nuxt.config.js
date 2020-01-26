@@ -1,5 +1,5 @@
 
-import { APP_INSIGHTS_KEY, PUBLIC_PATH } from './services/configuration-service.js'
+import { APP_INSIGHTS_KEY } from './services/configuration-service.js'
 
 export default {
   mode: 'universal',
@@ -56,7 +56,7 @@ export default {
   axios: {
   },
   build: {
-    publicPath: PUBLIC_PATH,
+    publicPath: 'https://cmpct.azureedge.net/_nuxt',
     extend (config, ctx) {
     }
   },
