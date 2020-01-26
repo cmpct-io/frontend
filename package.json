@@ -1,7 +1,7 @@
 {
   "name": "cmpct",
-  "version": "0.0.1",
-  "description": "A better way to shorten links",
+  "version": "1.0.0",
+  "description": "cmpct.io: shorter, safer links",
   "author": "Thomas William McClean",
   "private": true,
   "scripts": {
@@ -19,7 +19,6 @@
     "@nuxtjs/applicationinsights": "^1.1.1",
     "@nuxtjs/axios": "^5.9.3",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "animate.css": "^3.7.2",
     "cookie-universal-nuxt": "^2.1.0",
     "moment": "^2.24.0",
     "nuxt": "^2.11.0",
