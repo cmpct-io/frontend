@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { ASSET_PATH } from '@/services/configuration-service.js'
+
 export default {
   props: {
     locale: {
@@ -23,7 +25,7 @@ export default {
   },
   computed: {
     imageSource () {
-      return `/flags/${this.locale}.png`
+      return ASSET_PATH(`/flags/${this.locale}.png`)
     }
   }
 }

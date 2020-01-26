@@ -7,6 +7,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { ASSET_PATH } from '@/services/configuration-service.js'
 
 export default {
   computed: {
@@ -15,13 +16,13 @@ export default {
     ]),
     largeImageSource () {
       return this.isDarkMode
-        ? '/logo.png'
-        : '/logo--light.png'
+        ? ASSET_PATH('/logo.png')
+        : ASSET_PATH('/logo--light.png')
     },
     smallImageSource () {
       return this.isDarkMode
-        ? '/logo-square.png'
-        : '/logo-square--light.png'
+        ? ASSET_PATH('/logo-square.png')
+        : ASSET_PATH('/logo-square--light.png')
     }
   }
 }

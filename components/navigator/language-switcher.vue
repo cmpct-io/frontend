@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import { ASSET_PATH } from '@/services/configuration-service.js'
 import language from '@/components/navigator/language.vue'
 import themeSwitcher from '@/components/navigator/theme-switcher.vue'
 
@@ -53,7 +54,7 @@ export default {
   },
   computed: {
     selectedLanguageIcon () {
-      return `/flags/${this.$i18n.locale}.png`
+      return ASSET_PATH(`/flags/${this.$i18n.locale}.png`)
     }
   },
   methods: {
