@@ -34,6 +34,7 @@ export default {
     '@nuxtjs/robots',
     ['nuxt-i18n', {
       vueI18nLoader: true,
+      strategy: 'no_prefix',
       detectBrowserLanguage: {
         useCookie: true,
         alwaysRedirect: true
