@@ -43,6 +43,9 @@ export default {
     ['cookie-universal-nuxt'],
     '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    hostname: 'https://cmpct.io'
+  },
   i18n: {
     locales: ['en', 'fr', 'es'],
     defaultLocale: 'en',
