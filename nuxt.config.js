@@ -39,7 +39,8 @@ export default {
         alwaysRedirect: true
       }
     }],
-    ['cookie-universal-nuxt']
+    ['cookie-universal-nuxt'],
+    '@nuxtjs/sitemap'
   ],
   i18n: {
     locales: ['en', 'fr', 'es'],
