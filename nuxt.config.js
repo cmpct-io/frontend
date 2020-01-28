@@ -31,6 +31,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/applicationinsights',
+    '@nuxtjs/robots',
     ['nuxt-i18n', {
       vueI18nLoader: true,
       detectBrowserLanguage: {
