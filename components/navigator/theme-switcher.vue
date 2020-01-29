@@ -22,6 +22,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
   computed: {
@@ -37,6 +38,8 @@ export default {
       const uiMode = isDarkMode === true
         ? 'dark'
         : 'light'
+
+      TRACK_EVENT(this, `SwitchTheme/${uiMode}`)
 
       this.$cookies.set('ui-mode', uiMode, {
         path: '/',
