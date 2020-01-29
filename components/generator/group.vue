@@ -26,6 +26,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
+import { TRACK_EVENT } from '@/services/analytics-service.js'
 import storageService from '@/services/storage-service.js'
 import linkDisplay from '@/components/generator/link.vue'
 
@@ -70,6 +71,8 @@ export default {
             this.showSnackbar(this.$t('snackbarMessage'))
           )
         }
+
+        TRACK_EVENT(this, 'Generate/Group', `Shortcut: ${this.shortcut}`)
 
         this.$router.push({ path: `/${this.shortcut}` })
       })
