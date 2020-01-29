@@ -1,18 +1,29 @@
 
+  
+  
 
-# cmpct.io
-**Tech:** A progressive web app built with VueJS, NUXT and .NETCore Web API, backed by Azure Blob Storage.
+![enter image description here](https://cmpct.azureedge.net/logo--light.png)
 
-**Status:** Launched in January 2020
+**What:** Create shorter, safer, better links you can share
 
-**Try it out:** https://cmpct.io
+**Stack:** Progressive web app built with VueJS, NUXT and .NETCore Web API, backed by Azure Blob Storage.
 
-![enter image description here](https://res.cloudinary.com/practicaldev/image/fetch/s--jaIROD_g--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://thepracticaldev.s3.amazonaws.com/i/2ky31x3nwpw5zxjgj236.png)
+**Status:** Launched 1st January 2020.
 
-### What is cmpct.io?
-You may have heard of projects like bit.ly where you paste a long URL and the service spits back a shorter one you can share with friends and colleagues. cmpct.io is a bit like bit.ly but it differs in a few ways...
-1. **No automatic redirect**: bit.ly provides really short links, but they obfuscate where you will actually end up, this isn't great; so cmpct.io doesn't automatically redirect you, but you go to a landing page where you can see the destination before you choose to go there.
-2. **Comments**: I frequently work on projects and ask others for feedback, but its never easy to collect it; so I wanted to make it possible for people to leave comments on one of the links generated.
-3. **Reports**: Scammers often use bit.ly because they can get unsuspecting users to go to unsafe websites, so cmpct.io has a reporting capability which alerts you if the link you have been provided is unsafe; before you go there!
-4. **Privacy focused**: Internet companies love to harvest your info and habits, so I wanted to build one that stored absolutely nothing about you. Hence the project doesn't even have an account system, nor do we store on our servers a list of the links you have visited.
-5. **Free**: I build software because I enjoy building software, I have a job to make money, so a key advantage cmpct.io can offer is that I have no intention of generating revenue from it.
+**Try it:** https://cmpct.io
+
+![Screenshot](https://cmpct.azureedge.net/marketing/dark-en.png)  
+
+### Why use cmpct.io?
+There are lots of link shorteners out there, but none like cmpct.io. We are different in a few ways...
+
+1.  **No automatic redirect**: Our competition provides short links, but they obfuscate where you will actually go which can be dangerous; so cmpct.io doesn't automatically redirect you, but you go to a landing page where you can see the destination before you choose to go there.
+2. **Aggregate links**: Because we have a landing page, you can actually create one short link that goes to multiple different places, meaning you can send a group of dashboards or news stories with one succinct link.
+
+3.  **Comments**: Visitors to our site can choose to add comments to a link you share with them, they could use this to give you feedback or discuss with others.
+
+4.  **Reports**: Scammers often use our competition because they can trick people into visiting unsafe websites, so cmpct.io has a reporting capability which lets you know if somebody has reported the link as unsafe, before you click on it.
+
+5.  **Privacy focused**: We don't want to harvest your information, so we don't have an account system, you don't need to sign in or give any of your data away. We gather the minimum amount of analytics information to ensure we deliver a robust service.
+
+6.  **Free**: We don't intend to make any revenue from cmpct.io, that means no premium plans or paid addons. We don't sell data that we collect either, it is run simply to deliver a really useful website to those who want it.
