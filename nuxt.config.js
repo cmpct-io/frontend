@@ -71,7 +71,7 @@ export default {
   manifest: {
     name: 'cmpct.io',
     short_name: 'cmpct.io',
-    description: 'The better way to shorten long links',
+    description: 'Create shorter, safer, better links you can share',
     lang: 'en',
     display: 'standalone',
     background_color: '#000000',

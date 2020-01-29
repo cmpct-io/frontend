@@ -1,7 +1,7 @@
 <template>
   <div>
-    <twitter :page-url="shareProperties" />
-    <facebook :page-url="shareProperties" />
+    <twitter :page-url="this.pageUrl" />
+    <facebook :page-url="this.pageUrl" />
   </div>
 </template>
 
