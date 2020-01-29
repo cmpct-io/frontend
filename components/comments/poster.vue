@@ -30,6 +30,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
   data () {
@@ -50,6 +51,8 @@ export default {
       'setIsCommenting'
     ]),
     async addComment () {
+      TRACK_EVENT(this, 'feature/comment/submitted', `Route: ${this.routeId}`)
+
       await this.submitComment({
         routeId: this.routeId,
         name: this.name,

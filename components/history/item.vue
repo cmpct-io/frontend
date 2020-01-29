@@ -1,18 +1,22 @@
 <template>
-  <nuxt-link
-    :to="shortcut"
-    class="item flex-container with-hover with-border">
-    <c-icon icon="link" />
-    <p
-      v-text="qualifiedShortcut"
-      class="flex-grow" />
-    <c-icon
-      icon="chevron-right"
-      class="arrow" />
-  </nuxt-link>
+  <div @click="trackEvent">
+    <nuxt-link
+      :to="shortcut"
+      class="item flex-container with-hover with-border">
+      <c-icon icon="link" />
+      <p
+        v-text="qualifiedShortcut"
+        class="flex-grow" />
+      <c-icon
+        icon="chevron-right"
+        class="arrow" />
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
+import { TRACK_EVENT } from '@/services/analytics-service.js'
+
 export default {
   props: {
     shortcut: {
@@ -23,6 +27,11 @@ export default {
   computed: {
     qualifiedShortcut () {
       return `cmpct.io/${this.shortcut}`
+    }
+  },
+  methods: {
+    trackEvent () {
+      TRACK_EVENT(this, 'feature/history/interact', `Shortcut: ${this.shortcut}`)
     }
   }
 }

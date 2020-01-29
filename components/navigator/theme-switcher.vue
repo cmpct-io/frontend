@@ -39,7 +39,7 @@ export default {
         ? 'dark'
         : 'light'
 
-      TRACK_EVENT(this, `SwitchTheme/${uiMode}`)
+      TRACK_EVENT(this, `feature/theme/switched/${uiMode}`)
 
       this.$cookies.set('ui-mode', uiMode, {
         path: '/',

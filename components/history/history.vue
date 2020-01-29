@@ -3,7 +3,7 @@
     <div
       v-show="!show"
       :title="$t('viewHistory')"
-      @click="toggle"
+      @click="toggleVisibility"
       class="circle-button with-hover animated slideInUp">
       <c-icon icon="chevron-up" />
     </div>
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import { TRACK_EVENT } from '@/services/analytics-service.js'
 import storageService from '@/services/storage-service.js'
 import showMixin from '@/mixins/show-mixin.vue'
 import historyItem from '@/components/history/item.vue'
@@ -52,6 +53,15 @@ export default {
 
     if (items) {
       this.items = items.reverse().slice(0, 5)
+    }
+  },
+  methods: {
+    toggleVisibility () {
+      this.toggle()
+
+      if (this.show) {
+        TRACK_EVENT(this, 'feature/history/expanded')
+      }
     }
   }
 }

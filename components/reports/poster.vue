@@ -41,6 +41,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
   data () {
@@ -61,6 +62,8 @@ export default {
       'setIsReporting'
     ]),
     async addReport () {
+      TRACK_EVENT(this, 'feature/report/submitted', `Route: ${this.routeId}`)
+
       await this.submitReport({
         routeId: this.routeId,
         name: this.name,

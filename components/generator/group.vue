@@ -72,7 +72,7 @@ export default {
           )
         }
 
-        TRACK_EVENT(this, 'Generate/Group', `Shortcut: ${this.shortcut}`)
+        TRACK_EVENT(this, 'feature/generate/group', `Shortcut: ${this.shortcut}`)
 
         this.$router.push({ path: `/${this.shortcut}` })
       })

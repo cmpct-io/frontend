@@ -1,6 +1,7 @@
 <template>
   <a
     :href="qualifiedTarget"
+    @click="track"
     :target="targetValue"
     class="box flex-container with-border with-hover break-word mb-m">
     <link-favicon :target="target" />
@@ -14,6 +15,7 @@
 </template>
 
 <script>
+import { TRACK_EVENT } from '@/services/analytics-service.js'
 import linkFavicon from '@/components/links/link-favicon.vue'
 
 export default {
@@ -40,6 +42,11 @@ export default {
       return this.newPage
         ? 'blank'
         : ''
+    }
+  },
+  methods: {
+    track () {
+      TRACK_EVENT(this, 'feature/link/interact', `Link: ${this.qualifiedTarget}`)
     }
   }
 }
