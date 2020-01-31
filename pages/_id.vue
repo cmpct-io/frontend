@@ -53,8 +53,10 @@ export default {
     const isValid = await store.dispatch('landing/initialise', routeId)
 
     if (isValid) {
-      await store.dispatch('comments/loadComments', routeId)
-      await store.dispatch('reports/loadReports', routeId)
+      await Promise.all([
+        await store.dispatch('comments/loadComments', routeId),
+        await store.dispatch('reports/loadReports', routeId)
+      ])
     } else {
       error({
         statusCode: 404,
