@@ -26,13 +26,13 @@ import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
   computed: {
-    ...mapState('background', [
+    ...mapState('theme', [
       'isDarkMode'
     ])
   },
   methods: {
-    ...mapActions('background', [
-      'setUIMode'
+    ...mapActions('theme', [
+      'setTheme'
     ]),
     changeUIMode (isDarkMode) {
       const uiMode = isDarkMode === true
@@ -46,7 +46,7 @@ export default {
         maxAge: 60 * 60 * 24 * 7
       })
 
-      this.setUIMode(isDarkMode)
+      this.setTheme(isDarkMode)
       this.$emit('close')
     }
   }

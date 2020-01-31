@@ -11,7 +11,7 @@ import { ASSET_PATH } from '@/services/configuration-service.js'
 
 export default {
   computed: {
-    ...mapState('background', [
+    ...mapState('theme', [
       'isDarkMode'
     ]),
     largeImageSource () {

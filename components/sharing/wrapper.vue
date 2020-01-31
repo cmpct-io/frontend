@@ -1,7 +1,7 @@
 <template>
   <div>
-    <twitter :page-url="this.pageUrl" />
-    <facebook :page-url="this.pageUrl" />
+    <twitter :page-url="pageUrl" />
+    <facebook :page-url="pageUrl" />
   </div>
 </template>
 

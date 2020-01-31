@@ -3,7 +3,7 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('background', [
+    ...mapState('theme', [
       'isDarkMode'
     ]),
     uiMode () {
@@ -16,12 +16,12 @@ export default {
     const uiMode = this.$cookies.get('ui-mode')
 
     if (uiMode === 'light') {
-      this.setUIMode(false)
+      this.setTheme(false)
     }
   },
   methods: {
-    ...mapActions('background', [
-      'setUIMode'
+    ...mapActions('theme', [
+      'setTheme'
     ])
   }
 }
