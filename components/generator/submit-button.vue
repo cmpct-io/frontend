@@ -13,16 +13,12 @@
 import { mapState } from 'vuex'
 
 export default {
-  props: {
-    isSubmitting: {
-      type: Boolean,
-      required: true
-    }
-  },
   computed: {
     ...mapState('generator', [
-      'isGroup'
+      'isGroup',
+      'isSubmitting'
     ]),
+
     submitIcon () {
       if (this.isSubmitting) {
         return 'spinner'
@@ -32,6 +28,7 @@ export default {
         ? 'plus-circle'
         : 'chevron-circle-right'
     },
+
     submitTitle () {
       return this.isGroup
         ? this.$t('submitGroup')

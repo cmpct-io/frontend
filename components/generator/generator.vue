@@ -11,10 +11,10 @@
         required>
 
       <paste-button @paste="paste" />
-      <submit-button :is-submitting="isSubmitting" />
+      <submit-button />
     </form>
 
-    <warning-message v-show="showWarning" />
+    <validation-warning />
   </div>
 </template>
 
@@ -27,21 +27,19 @@ import clipboardService from '@/services/clipboard-service.js'
 import groupButton from '@/components/generator/group-button.vue'
 import pasteButton from '@/components/generator/paste-button.vue'
 import submitButton from '@/components/generator/submit-button.vue'
-import warningMessage from '@/components/generator/warning.vue'
+import validationWarning from '@/components/generator/validation-warning.vue'
 
 export default {
   components: {
     groupButton,
     pasteButton,
     submitButton,
-    warningMessage
+    validationWarning
   },
 
   data () {
     return {
-      target: '',
-      showWarning: false,
-      isSubmitting: false
+      target: ''
     }
   },
 
@@ -59,7 +57,8 @@ export default {
   methods: {
     ...mapActions('generator', [
       'generate',
-      'addLink'
+      'addLink',
+      'setValidationWarning'
     ]),
 
     ...mapActions('snackbar', [
@@ -73,13 +72,12 @@ export default {
 
     create () {
       const isValid = IS_VALID_URL(this.target)
-      this.showWarning = !isValid
+      this.setValidationWarning(!isValid)
 
       if (isValid) {
         this.addLink(this.target)
 
         if (!this.isGroup) {
-          this.isSubmitting = true
           this.generate().then(() => {
             storageService.addToHistory(this.shortcut)
 

@@ -1,7 +1,7 @@
 <template>
   <div v-show="hasMultipleLinks">
     <div class="group with-border animated fadeIn">
-      <link-display
+      <group-link
         v-for="(link, index) in links"
         :key="index"
         :link="link" />
@@ -29,11 +29,11 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import storageService from '@/services/storage-service.js'
 import clipboardService from '@/services/clipboard-service.js'
-import linkDisplay from '@/components/generator/link.vue'
+import groupLink from '@/components/generator/group-link.vue'
 
 export default {
   components: {
-    linkDisplay
+    groupLink
   },
   data () {
     return {

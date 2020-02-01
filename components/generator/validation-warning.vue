@@ -1,5 +1,5 @@
 <template>
-  <p class="text-warning animated fadeInDown mb-l">
+  <p v-show="showValidationWarning" class="text-warning animated fadeInDown mb-l">
     <c-icon
       icon="exclamation-circle"
       class="fa-fw mr-s" />
@@ -7,6 +7,18 @@
       v-text="$t('enterValidAddress')" />
   </p>
 </template>
+
+<script>
+import { mapState } from 'vuex'
+
+export default {
+  computed: {
+    ...mapState('generator', [
+      'showValidationWarning'
+    ])
+  }
+}
+</script>
 
 <i18n>
 {

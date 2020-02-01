@@ -1,8 +1,7 @@
 <template>
   <div>
     <div v-show="show" class="animated fadeIn">
-      <h1
-        v-text="$t('title')" />
+      <h1 v-text="$t('title')" />
       <p
         v-text="$t('subtitle')"
         class="mb" />
@@ -10,8 +9,8 @@
         v-text="$t('message')"
         class="mb-l" />
 
-      <link-input />
-      <link-group />
+      <generator />
+      <group-wrapper />
     </div>
 
     <history v-on:toggled="toggle" />
@@ -21,8 +20,8 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import showMixin from '@/mixins/show-mixin.vue'
-import linkInput from '@/components/generator/input.vue'
-import linkGroup from '@/components/generator/group.vue'
+import generator from '@/components/generator/generator.vue'
+import groupWrapper from '@/components/generator/group-wrapper.vue'
 import history from '@/components/history/history.vue'
 
 export default {
@@ -32,8 +31,8 @@ export default {
     }
   },
   components: {
-    linkInput,
-    linkGroup,
+    generator,
+    groupWrapper,
     history
   },
   mixins: [showMixin],
