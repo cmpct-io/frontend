@@ -13,7 +13,7 @@ import clipboardService from '@/services/clipboard-service.js'
 export default {
   computed: {
     show () {
-      return clipboardService.hasAccess
+      return clipboardService.hasAccess()
     }
   }
 }
