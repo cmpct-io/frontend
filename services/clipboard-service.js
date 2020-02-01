@@ -2,7 +2,7 @@ const hasAccess = () =>
   (typeof (navigator) !== 'undefined' && navigator.clipboard)
 
 const copy = (text) => {
-  if (hasAccess) {
+  if (hasAccess()) {
     return navigator.clipboard.writeText(text).then(() => true)
   }
 
@@ -12,7 +12,7 @@ const copy = (text) => {
 const paste = async () => {
   let text = ''
 
-  if (hasAccess) {
+  if (hasAccess()) {
     await navigator.clipboard.readText().then((clipboardText) => {
       text = clipboardText
     })

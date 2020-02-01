@@ -51,7 +51,7 @@ export default {
       'hasMultipleLinks'
     ]),
     isClipboardSupported () {
-      return clipboardService.hasAccess
+      return clipboardService.hasAccess()
     }
   },
   methods: {
