@@ -3,12 +3,7 @@
     <form
       v-on:submit.prevent="create"
       class="box flex-container with-border mb-m">
-      <c-icon
-        @click="setIsGroup(!isGroup)"
-        :title="$t('linkGroupInfo')"
-        v-bind:class="{ 'icon-selected' : isGroup }"
-        icon="list-ol"
-        class="secondary icon" />
+      <group-toggle />
 
       <input
         v-model="target"
@@ -28,12 +23,14 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import storageService from '@/services/storage-service.js'
 import clipboardService from '@/services/clipboard-service.js'
+import groupToggle from '@/components/generator/group-toggle.vue'
 import pasteButton from '@/components/generator/paste-button.vue'
 import submitButton from '@/components/generator/submit-button.vue'
 import warningMessage from '@/components/generator/warning.vue'
 
 export default {
   components: {
+    groupToggle,
     pasteButton,
     submitButton,
     warningMessage
@@ -57,8 +54,7 @@ export default {
   methods: {
     ...mapActions('generator', [
       'generate',
-      'addLink',
-      'setIsGroup'
+      'addLink'
     ]),
     ...mapActions('snackbar', [
       'showSnackbar'
@@ -134,17 +130,14 @@ export default {
 {
   "en": {
     "placeholder": "Website address...",
-    "linkGroupInfo": "Create a link group",
     "snackbarMessage": "Link copied to your clipboard!"
   },
   "fr": {
     "placeholder": "Adresse du site Web...",
-    "linkGroupInfo": "Créer un groupe de liens",
     "snackbarMessage": "Lien copié dans votre presse-papiers!"
   },
   "es": {
     "placeholder": "Dirección web...",
-    "linkGroupInfo": "Crear un grupo de enlaces",
     "snackbarMessage": "Enlace copiado a su portapapeles!"
   }
 }
