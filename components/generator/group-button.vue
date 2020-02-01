@@ -3,7 +3,7 @@
     @click="setIsGroup(!isGroup)"
     :title="tooltip"
     v-bind:class="{ 'icon-selected' : isGroup }"
-    icon="list-ol"
+    :icon="icon"
     class="secondary icon" />
 </template>
 
@@ -15,12 +15,20 @@ export default {
     ...mapState('generator', [
       'isGroup'
     ]),
+
     tooltip () {
       return this.isGroup
         ? this.$t('cancelGroup')
         : this.$t('startGroup')
+    },
+
+    icon () {
+      return this.isGroup
+        ? 'times'
+        : 'list-ol'
     }
   },
+
   methods: {
     ...mapActions('generator', [
       'setIsGroup'
@@ -28,6 +36,25 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.icon {
+  transition: all 0.25s ease-in-out;
+
+  &.icon-selected {
+    background-color: white;
+    color: black !important;
+    padding: 5px;
+    width: 35px;
+    border-radius: 50%;
+
+    .light & {
+      background-color: black;
+      color: white !important;
+    }
+  }
+}
+</style>
 
 <i18n>
 {

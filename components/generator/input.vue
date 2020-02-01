@@ -3,7 +3,7 @@
     <form
       v-on:submit.prevent="create"
       class="box flex-container with-border mb-m">
-      <group-toggle />
+      <group-button />
 
       <input
         v-model="target"
@@ -21,20 +21,22 @@
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
+import { IS_VALID_URL } from '@/services/validation-service.js'
 import storageService from '@/services/storage-service.js'
 import clipboardService from '@/services/clipboard-service.js'
-import groupToggle from '@/components/generator/group-toggle.vue'
+import groupButton from '@/components/generator/group-button.vue'
 import pasteButton from '@/components/generator/paste-button.vue'
 import submitButton from '@/components/generator/submit-button.vue'
 import warningMessage from '@/components/generator/warning.vue'
 
 export default {
   components: {
-    groupToggle,
+    groupButton,
     pasteButton,
     submitButton,
     warningMessage
   },
+
   data () {
     return {
       target: '',
@@ -42,20 +44,24 @@ export default {
       isSubmitting: false
     }
   },
+
   computed: {
     ...mapState('generator', [
       'shortcut',
       'isGroup'
     ]),
+
     ...mapGetters('generator', [
       'qualifiedShortcut'
     ])
   },
+
   methods: {
     ...mapActions('generator', [
       'generate',
       'addLink'
     ]),
+
     ...mapActions('snackbar', [
       'showSnackbar'
     ]),
@@ -64,10 +70,12 @@ export default {
       this.target = await clipboardService.paste()
       this.create()
     },
-    create () {
-      this.validateInput()
 
-      if (!this.showWarning) {
+    create () {
+      const isValid = IS_VALID_URL(this.target)
+      this.showWarning = !isValid
+
+      if (isValid) {
         this.addLink(this.target)
 
         if (!this.isGroup) {
@@ -87,11 +95,6 @@ export default {
           this.target = ''
         }
       }
-    },
-    validateInput () {
-      const expression = /[-a-zA-Z0-9@:%._~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_.~#?&//=]*)?/gi
-      const regex = new RegExp(expression)
-      this.showWarning = !this.target.match(regex)
     }
   }
 }
@@ -102,27 +105,8 @@ export default {
     background-color: transparent;
     padding: 20px 10px;
     border: 0;
-    font-size: 1rem;
     outline: 0;
-    width: 100%;
     flex-grow: 1;
-  }
-
-  .icon {
-    transition: all 0.2s ease-in-out;
-
-    &.icon-selected {
-      background-color: white;
-      color: black !important;
-      padding: 7.5px;
-      border-radius: 50%;
-      opacity: 1;
-
-      .light & {
-        background-color: black;
-        color: white !important;
-      }
-    }
   }
 </style>
 
