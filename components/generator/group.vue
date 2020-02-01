@@ -28,6 +28,7 @@
 import { mapState, mapGetters, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import storageService from '@/services/storage-service.js'
+import clipboardService from '@/services/clipboard-service.js'
 import linkDisplay from '@/components/generator/link.vue'
 
 export default {
@@ -50,7 +51,7 @@ export default {
       'hasMultipleLinks'
     ]),
     isClipboardSupported () {
-      return (typeof (navigator) !== 'undefined' && navigator.clipboard)
+      return clipboardService.hasAccess
     }
   },
   methods: {
@@ -66,10 +67,8 @@ export default {
       this.generate().then(() => {
         storageService.addToHistory(this.shortcut)
 
-        if (this.isClipboardSupported) {
-          navigator.clipboard.writeText(this.qualifiedShortcut).then(() =>
-            this.showSnackbar(this.$t('snackbarMessage'))
-          )
+        if (clipboardService.copy(this.qualifiedShortcut)) {
+          this.showSnackbar(this.$t('snackbarMessage'))
         }
 
         TRACK_EVENT(this, 'feature/generate/group', `Shortcut: ${this.shortcut}`)

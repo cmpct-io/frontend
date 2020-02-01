@@ -15,12 +15,7 @@
         :placeholder="$t('placeholder')"
         required>
 
-      <c-icon
-        v-show="isClipboardSupported"
-        @click="paste"
-        :title="$t('pasteInfo')"
-        icon="clipboard"
-        class="secondary" />
+      <paste-button @paste="paste" />
 
       <button
         class="no-button"
@@ -40,10 +35,13 @@
 import { mapState, mapGetters, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import storageService from '@/services/storage-service.js'
+import clipboardService from '@/services/clipboard-service.js'
+import pasteButton from '@/components/generator/paste-button.vue'
 import warningMessage from '@/components/generator/warning.vue'
 
 export default {
   components: {
+    pasteButton,
     warningMessage
   },
   data () {
@@ -69,9 +67,6 @@ export default {
       return this.isGroup
         ? 'plus-circle'
         : 'chevron-circle-right'
-    },
-    isClipboardSupported () {
-      return (typeof (navigator) !== 'undefined' && navigator.clipboard)
     }
   },
   methods: {
@@ -84,6 +79,10 @@ export default {
       'showSnackbar'
     ]),
 
+    async paste () {
+      this.target = await clipboardService.paste()
+      this.create()
+    },
     create () {
       this.validateInput()
 
@@ -95,10 +94,8 @@ export default {
           this.generate().then(() => {
             storageService.addToHistory(this.shortcut)
 
-            if (this.isClipboardSupported) {
-              navigator.clipboard.writeText(this.qualifiedShortcut).then(() =>
-                this.showSnackbar(this.$t('snackbarMessage'))
-              )
+            if (clipboardService.copy(this.qualifiedShortcut)) {
+              this.showSnackbar(this.$t('snackbarMessage'))
             }
 
             TRACK_EVENT(this, 'feature/generate/single', `Shortcut: ${this.shortcut}`)
@@ -108,16 +105,6 @@ export default {
         } else {
           this.target = ''
         }
-      }
-    },
-    paste () {
-      if (this.isClipboardSupported) {
-        navigator.clipboard.readText().then((text) => {
-          if (text) {
-            this.target = text
-            this.create()
-          }
-        })
       }
     },
     validateInput () {
@@ -175,21 +162,18 @@ export default {
 {
   "en": {
     "placeholder": "Website address...",
-    "pasteInfo": "Paste from clipboard",
     "linkGroupInfo": "Create a link group",
     "submitInfo": "Start the compacter",
     "snackbarMessage": "Link copied to your clipboard!"
   },
   "fr": {
     "placeholder": "Adresse du site Web...",
-    "pasteInfo": "Coller depuis le presse-papiers",
     "linkGroupInfo": "Créer un groupe de liens",
     "submitInfo": "Commencez le plus compact",
     "snackbarMessage": "Lien copié dans votre presse-papiers!"
   },
   "es": {
     "placeholder": "Dirección web...",
-    "pasteInfo": "Pegar desde el portapapeles",
     "linkGroupInfo": "Crear un grupo de enlaces",
     "submitInfo": "Inicia el compactador",
     "snackbarMessage": "Enlace copiado a su portapapeles!"
