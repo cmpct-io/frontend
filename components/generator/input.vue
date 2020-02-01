@@ -16,15 +16,7 @@
         required>
 
       <paste-button @paste="paste" />
-
-      <button
-        class="no-button"
-        type="submit">
-        <c-icon
-          :title="$t('submitInfo')"
-          :icon="submitIcon"
-          v-bind:class="{ 'fa-spin' : isSubmitting }" />
-      </button>
+      <submit-button :is-submitting="isSubmitting" />
     </form>
 
     <warning-message v-show="showWarning" />
@@ -37,11 +29,13 @@ import { TRACK_EVENT } from '@/services/analytics-service.js'
 import storageService from '@/services/storage-service.js'
 import clipboardService from '@/services/clipboard-service.js'
 import pasteButton from '@/components/generator/paste-button.vue'
+import submitButton from '@/components/generator/submit-button.vue'
 import warningMessage from '@/components/generator/warning.vue'
 
 export default {
   components: {
     pasteButton,
+    submitButton,
     warningMessage
   },
   data () {
@@ -58,16 +52,7 @@ export default {
     ]),
     ...mapGetters('generator', [
       'qualifiedShortcut'
-    ]),
-    submitIcon () {
-      if (this.isSubmitting) {
-        return 'spinner'
-      }
-
-      return this.isGroup
-        ? 'plus-circle'
-        : 'chevron-circle-right'
-    }
+    ])
   },
   methods: {
     ...mapActions('generator', [
@@ -127,19 +112,6 @@ export default {
     flex-grow: 1;
   }
 
-  button.no-button {
-    background: transparent;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    outline: none;
-
-    .light & {
-      color: black;
-    }
-  }
-
   .icon {
     transition: all 0.2s ease-in-out;
 
@@ -163,19 +135,16 @@ export default {
   "en": {
     "placeholder": "Website address...",
     "linkGroupInfo": "Create a link group",
-    "submitInfo": "Start the compacter",
     "snackbarMessage": "Link copied to your clipboard!"
   },
   "fr": {
     "placeholder": "Adresse du site Web...",
     "linkGroupInfo": "Créer un groupe de liens",
-    "submitInfo": "Commencez le plus compact",
     "snackbarMessage": "Lien copié dans votre presse-papiers!"
   },
   "es": {
     "placeholder": "Dirección web...",
     "linkGroupInfo": "Crear un grupo de enlaces",
-    "submitInfo": "Inicia el compactador",
     "snackbarMessage": "Enlace copiado a su portapapeles!"
   }
 }
