@@ -12,6 +12,12 @@
 
 **Try it:** https://cmpct.io
 
+#### This project is made up of three distinct repositories
+1. This one - the frontend website (Nuxt/Vue)
+2. Web API - .NetCore 3.1 Web API - https://github.com/tommcclean/api.cmpct.io
+3. Functions - Serverless functions - https://github.com/tommcclean/functions.cmpct.io
+
+
 ![Screenshot](https://cmpct.azureedge.net/marketing/dark-en.png)  
 
 ### Why use cmpct.io?
