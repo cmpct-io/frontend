@@ -16,9 +16,9 @@
 **Run it locally:** [Read the guide](https://github.com/tommcclean/cmpct.io/blob/documentation/local.md)
 
 #### Associated Repositories
-1. This one - the frontend website (Nuxt/Vue)
-2. Web API - .NetCore 3.1 Web API - https://github.com/tommcclean/api.cmpct.io
-3. Functions - Serverless functions - https://github.com/tommcclean/functions.cmpct.io
+1. Frontend website (Nuxt/Vue) - This repository
+2. .NETCore Web API - https://github.com/tommcclean/api.cmpct.io
+3. C# Azure Functions - https://github.com/tommcclean/functions.cmpct.io
 
 ![Screenshot](https://cmpct.azureedge.net/marketing/dark-en.png)  
 
