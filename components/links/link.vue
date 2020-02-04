@@ -3,6 +3,7 @@
     :href="qualifiedTarget"
     @click="track"
     :target="targetValue"
+    :title="title"
     class="box flex-container with-border with-hover break-word mb-m">
     <link-favicon :target="target" />
     <p
@@ -26,6 +27,10 @@ export default {
     target: {
       type: String,
       required: true
+    },
+    title: {
+      type: String,
+      default: ''
     },
     newPage: {
       type: Boolean,
