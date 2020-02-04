@@ -1,4 +1,5 @@
 
+
   
   
 
@@ -11,6 +12,13 @@
 **Status:** Launched 1st January 2020.
 
 **Try it:** https://cmpct.io
+
+**Run it locally:** [Read the guide](https://github.com/tommcclean/cmpct.io/blob/documentation/local.md)
+
+#### Associated Repositories
+1. Frontend website (Nuxt/Vue) - This repository
+2. .NETCore Web API - https://github.com/tommcclean/api.cmpct.io
+3. C# Azure Functions - https://github.com/tommcclean/functions.cmpct.io
 
 ![Screenshot](https://cmpct.azureedge.net/marketing/dark-en.png)  
 
