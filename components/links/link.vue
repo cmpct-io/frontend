@@ -4,11 +4,18 @@
     @click="track"
     :target="targetValue"
     :title="title"
-    class="box flex-container with-border with-hover break-word mb-m">
+    class="box flex-container with-border with-hover mb-m">
     <link-favicon :target="target" />
-    <p
-      v-text="target"
-      class="flex-grow" />
+    <div class="link-inner flex-grow">
+      <p
+        v-if="title"
+        v-text="title"
+        class="mb" />
+      <p
+        v-text="target"
+        v-bind:class="{ 'text-small' : title }"
+        class="break-word" />
+    </div>
     <c-icon
       icon="chevron-right"
       class="hidden-mobile mr-m" />
@@ -56,3 +63,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.link-inner {
+  padding: 20px 20px;
+}
+</style>
