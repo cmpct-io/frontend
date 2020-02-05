@@ -5,7 +5,7 @@ const developmentConfiguration = {
 }
 
 const productionConfiguration = {
-  'apiBaseUrI': 'https://cmpct-api-tmp.azurewebsites.net/api',
+  'apiBaseUrI': 'https://cmpct-api.azurewebsites.net/api',
   'appInsights': '47f10985-4ca6-4031-8093-da011cddeee5',
   'publicPath': 'https://cmpct.azureedge.net'
 }
