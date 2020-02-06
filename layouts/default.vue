@@ -8,6 +8,7 @@
     </container>
 
     <snackbar />
+    <image-viewer />
   </div>
 </template>
 
@@ -19,13 +20,15 @@ import background from '@/components/background/background.vue'
 import navigator from '@/components/navigator/navigator.vue'
 import snackbar from '@/components/shared/snackbar.vue'
 import container from '@/components/shared/container.vue'
+import imageViewer from '@/components/shared/image-viewer.vue'
 
 export default {
   components: {
     background,
     navigator,
     snackbar,
-    container
+    container,
+    imageViewer
   },
   mixins: [uiModeMixin]
 }
