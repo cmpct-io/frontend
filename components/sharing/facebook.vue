@@ -2,10 +2,15 @@
   <a
     :href="hrefAttribute"
     :title="$t('hoverText')"
-    class="social-button"
     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');return false;"
+    class="flex-container"
     target="_blank">
-    <c-icon :icon="['fab', 'facebook-square']" />
+    <c-icon
+      :icon="['fab', 'facebook-square']"
+      class="social-button mr" />
+    <span
+      v-text="$t('hoverText')"
+      class="text-small" />
   </a>
 </template>
 
@@ -24,6 +29,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  svg {
+    font-size: 2rem;
+  }
+</style>
 
 <i18n>
 {

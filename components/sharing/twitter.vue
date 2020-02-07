@@ -2,11 +2,12 @@
   <a
     :href="shareUrl"
     :title="$t('hoverText')"
-    class="social-button"
     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');return false;"
+    class="flex-container"
     target="blank"
     data-size="large">
-    <c-icon :icon="['fab', 'twitter-square']" />
+    <c-icon :icon="['fab', 'twitter-square']" class="social-button mr" />
+    <span v-text="$t('hoverText')" class="text-small" />
   </a>
 </template>
 
@@ -25,6 +26,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  svg {
+    font-size: 2rem;
+  }
+</style>
 
 <i18n>
 {

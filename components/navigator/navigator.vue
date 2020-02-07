@@ -3,13 +3,15 @@
     <logo />
 
     <div class="links">
-      <a href="https://github.com/tommcclean/cmpct.io" target="blank" class="mr">
-        <c-icon icon="code" />
+      <sharing-wrapper />
+
+      <a href="https://github.com/tommcclean/cmpct.io" target="blank" class="hidden-mobile mr">
+        <c-icon icon="code" class="mr-s" />
         <span v-text="$t('github')" />
       </a>
 
       <router-link to="help" class="mr">
-        <c-icon icon="question" />
+        <c-icon icon="question" class="mr-s" />
         <span v-text="$t('help')" />
       </router-link>
 
@@ -21,10 +23,12 @@
 <script>
 import logo from '@/components/navigator/logo.vue'
 import languageSwitcher from '@/components/navigator/language-switcher.vue'
+import sharingWrapper from '@/components/sharing/wrapper.vue'
 
 export default {
   components: {
     logo,
+    sharingWrapper,
     languageSwitcher
   }
 }

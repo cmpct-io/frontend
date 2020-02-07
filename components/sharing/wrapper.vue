@@ -1,32 +1,84 @@
 <template>
-  <div>
-    <twitter :page-url="pageUrl" />
-    <facebook :page-url="pageUrl" />
+  <div class="sharing-wrapper">
+    <a @click.prevent="toggle" href="#" class="mr">
+      <c-icon icon="share-alt" class="mr-s" />
+      <span v-text="$t('share')" />
+    </a>
+
+    <panel v-show="show">
+      <div class="flex-container">
+        <p
+          v-text="$t('title')"
+          class="mb-m flex-grow" />
+        <c-icon
+          @click="toggle"
+          icon="times"
+          class="fa-fw cursor-pointer" />
+      </div>
+
+      <twitter :page-url="pageUrl" />
+      <facebook :page-url="pageUrl" />
+    </panel>
   </div>
 </template>
 
 <script>
+import panel from '@/components/shared/panel.vue'
 import twitter from '@/components/sharing/twitter.vue'
 import facebook from '@/components/sharing/facebook.vue'
 
 export default {
   components: {
+    panel,
     twitter,
     facebook
   },
   data () {
     return {
+      show: false,
       pageUrl: ''
     }
   },
+  watch: {
+    $route (to, from) {
+      this.show = false
+      this.setPageUrl()
+    }
+  },
   created () {
-    this.pageUrl = `https://cmpct.io${this.$router.currentRoute.fullPath}`
+    this.setPageUrl()
+  },
+  methods: {
+    setPageUrl () {
+      this.pageUrl = `https://cmpct.io${this.$router.currentRoute.fullPath}`
+    },
+    toggle () {
+      this.show = !this.show
+    }
   }
 }
 </script>
 
 <style scoped>
-  .social-button {
-    font-size: 2rem;
+  .sharing-wrapper {
+    display: inline-block;
+    position: relative;
   }
 </style>
+
+<i18n>
+{
+  "en": {
+    "share": "Share",
+    "title": "Share this page"
+  },
+  "fr": {
+    "share": "Partager",
+    "title": "Partagez cette page"
+  },
+  "es": {
+    "share": "Compartir",
+    "title": "Comparte esta página"
+  }
+}
+</i18n>

@@ -10,20 +10,17 @@
       :new-page="links.length > 1" />
 
     <report-warning v-show="reports.length > 0" />
-    <share-wrapper v-if="showSharePanel" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import renderLink from '@/components/links/link.vue'
-import shareWrapper from '@/components/sharing/wrapper.vue'
 import reportWarning from '@/components/links/warning.vue'
 
 export default {
   components: {
     renderLink,
-    shareWrapper,
     reportWarning
   },
   computed: {
@@ -33,10 +30,7 @@ export default {
     ]),
     ...mapState('reports', [
       'reports'
-    ]),
-    showSharePanel () {
-      return (this.$cookies.get('exp-share') === 'enabled')
-    }
+    ])
   }
 }
 </script>

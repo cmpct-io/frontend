@@ -6,7 +6,7 @@
         class="flag">
     </div>
 
-    <div v-if="expanded" class="expanded with-border">
+    <panel v-if="expanded">
       <div class="flex-container">
         <p
           v-text="$t('title')"
@@ -33,7 +33,7 @@
       </div>
 
       <theme-switcher @close="close" />
-    </div>
+    </panel>
   </div>
 </template>
 
@@ -42,11 +42,13 @@ import { ASSET_PATH } from '@/services/configuration-service.js'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import language from '@/components/navigator/language.vue'
 import themeSwitcher from '@/components/navigator/theme-switcher.vue'
+import panel from '@/components/shared/panel.vue'
 
 export default {
   components: {
     language,
-    themeSwitcher
+    themeSwitcher,
+    panel
   },
   data () {
     return {
@@ -86,25 +88,12 @@ export default {
   .language-switcher {
     display: inline-block;
     position: relative;
-
-    .expanded {
-      position: absolute;
-      background-color: black;
-      padding: 15px;
-      width: 300px;
-      top: 0;
-      right: -15px;
-
-      .light & {
-      background-color: white;
-      }
-    }
+    margin-left: 15px;
   }
 
   img.flag {
     height: 35px;
     margin: -10px;
-    margin-left: 15px;
   }
 </style>
 
