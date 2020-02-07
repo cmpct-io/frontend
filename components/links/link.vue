@@ -16,15 +16,16 @@
         v-bind:class="{ 'text-small' : title }"
         class="break-word" />
     </div>
-    <c-icon
+    <div
       v-if="screenshotImageUrl"
       @click.prevent="showScreenshot"
-      :title="$t('viewSecurePicture')"
-      icon="image"
-      class="hidden-mobile mr-m" />
+      :title="$t('viewSecurePicture')">
+      <c-icon
+        icon="image" />
+    </div>
     <c-icon
       icon="chevron-right"
-      class="hidden-mobile mr-m" />
+      class="mr-m" />
   </a>
 </template>
 

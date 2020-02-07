@@ -37,7 +37,7 @@ export default {
     left: 0;
     right: 0;
     padding: 20px 30px;
-    z-index: 50;
+    z-index: 51;
     user-select: none;
 
     .links {
