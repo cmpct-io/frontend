@@ -89,6 +89,8 @@ export default {
         imageUrl: this.screenshotImageUrl,
         pageTitle: this.title
       })
+
+      TRACK_EVENT(this, 'feature/screenshot/viewed', `Image: ${this.screenshotImageUrl}`)
     }
   }
 }
