@@ -1,7 +1,13 @@
 <template>
   <div v-show="displayedPanel === 'target'" class="animated fadeIn">
     <h1 v-text="$t('title')" />
-    <p v-text="$t('description')" class="mb-l" />
+    <p
+      v-show="processDate"
+      v-text="$t('description')"
+      class="mb-l" />
+    <reloader
+      v-if="!processDate"
+      class="mb-l" />
 
     <render-link
       v-for="(link, index) in links"
@@ -15,19 +21,24 @@
 
 <script>
 import { mapState } from 'vuex'
+import reloader from '@/components/links/reloader.vue'
 import renderLink from '@/components/links/link.vue'
 import reportWarning from '@/components/links/warning.vue'
 
 export default {
   components: {
+    reloader,
     renderLink,
     reportWarning
   },
+
   computed: {
     ...mapState('landing', [
       'displayedPanel',
-      'links'
+      'links',
+      'processDate'
     ]),
+
     ...mapState('reports', [
       'reports'
     ])

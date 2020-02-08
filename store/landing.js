@@ -3,7 +3,8 @@ import routesApi from '@/services/routes.api.js'
 export const state = () => ({
   displayedPanel: 'target', // target / comments / reports
   routeId: null,
-  links: []
+  links: [],
+  processDate: null
 })
 
 export const mutations = {
@@ -13,6 +14,7 @@ export const mutations = {
   setRouteData: (state, routeData) => {
     state.routeId = routeData.id
     state.links = routeData.links
+    state.processDate = routeData.processDate
   }
 }
 
@@ -26,6 +28,13 @@ export const actions = {
     }
 
     return (routeData)
+  },
+  reload: async ({ commit, state }) => {
+    const routeData = await routesApi.getRoute(state.routeId)
+
+    if (routeData) {
+      commit('setRouteData', routeData)
+    }
   },
   reset: ({ commit }) => {
     commit('showPanel', 'target')
