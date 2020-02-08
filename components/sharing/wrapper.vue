@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { TRACK_EVENT } from '@/services/analytics-service.js'
 import panel from '@/components/shared/panel.vue'
 import twitter from '@/components/sharing/twitter.vue'
 import facebook from '@/components/sharing/facebook.vue'
@@ -54,6 +55,10 @@ export default {
     },
     toggle () {
       this.show = !this.show
+
+      if (this.show) {
+        TRACK_EVENT(this, 'feature/sharing/expanded', `URL: ${this.pageUrl}`)
+      }
     }
   }
 }
