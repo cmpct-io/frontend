@@ -14,7 +14,6 @@
       <submit-button />
     </form>
 
-    <video-link />
     <validation-warning />
   </div>
 </template>
@@ -29,15 +28,13 @@ import groupButton from '@/components/generator/group-button.vue'
 import pasteButton from '@/components/generator/paste-button.vue'
 import submitButton from '@/components/generator/submit-button.vue'
 import validationWarning from '@/components/generator/validation-warning.vue'
-import videoLink from '@/components/shared/video-link.vue'
 
 export default {
   components: {
     groupButton,
     pasteButton,
     submitButton,
-    validationWarning,
-    videoLink
+    validationWarning
   },
 
   data () {
