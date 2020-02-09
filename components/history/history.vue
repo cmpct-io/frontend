@@ -1,12 +1,14 @@
 <template>
   <section class="history">
-    <div
-      v-show="!show"
-      :title="$t('viewHistory')"
-      @click="toggleVisibility"
-      class="circle-button with-hover animated slideInUp">
-      <c-icon icon="chevron-up" />
-    </div>
+    <tabs v-show="!show">
+      <div
+        :title="$t('viewHistory')"
+        @click="toggleVisibility"
+        class="tab with-border with-hover animated slideInUp">
+        <c-icon icon="history" class="mr-s" />
+        <span v-text="$t('history')" />
+      </div>
+    </tabs>
 
     <div
       v-show="show"
@@ -36,10 +38,12 @@
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import storageService from '@/services/storage-service.js'
 import showMixin from '@/mixins/show-mixin.vue'
+import tabs from '@/components/shared/tabs.vue'
 import historyItem from '@/components/history/item.vue'
 
 export default {
   components: {
+    tabs,
     historyItem
   },
 
@@ -75,18 +79,21 @@ export default {
 {
   "en": {
     "title": "Your history",
+    "history": "History",
     "description": "These are the links you have generated or visited recently",
     "zeroItemDescription": "When you have created or visited a link, we will show you a list of them here",
     "viewHistory": "View history"
   },
   "fr": {
     "title": "Votre histoire",
+    "history": "Histoire",
     "description": "Ce sont les liens que vous avez générés ou visités récemment",
     "zeroItemDescription": "Lorsque vous avez créé ou visité un lien, nous vous en montrerons une liste ici",
     "viewHistory": "Voir l'historique"
   },
   "es": {
     "title": "Tu historia",
+    "history": "Historia",
     "description": "Estos son los enlaces que ha generado o visitado recientemente.",
     "zeroItemDescription": "Cuando haya creado o visitado un enlace, le mostraremos una lista de ellos aquí",
     "viewHistory": "Ver historial"

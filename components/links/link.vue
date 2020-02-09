@@ -25,7 +25,7 @@
     </div>
     <c-icon
       icon="chevron-right"
-      class="mr-m" />
+      class="hidden-mobile mr-m" />
   </a>
 </template>
 
@@ -100,9 +100,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .link-inner {
-  padding: 20px 20px;
+  padding: 20px;
+
+  @media (max-width: 767px) {
+    padding: 15px;
+  }
+}
+
+svg {
+  @media (max-width: 767px) {
+    font-size: 1.5rem;
+  }
 }
 </style>
 

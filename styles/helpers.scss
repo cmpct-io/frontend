@@ -175,14 +175,12 @@ button, .square-button {
 
 .tab {
   display: inline-block;
-  padding: 10px 10px;
+  padding: 12.5px;
   background-color: transparent;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   border: 1px solid white;
-  border-bottom: 0;
 
   .light & {
     border: 1px solid black;
@@ -225,7 +223,7 @@ p.text-warning {
 }
 
 .hidden-mobile {
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
