@@ -50,16 +50,19 @@ export default {
     themeSwitcher,
     panel
   },
+
   data () {
     return {
       expanded: false
     }
   },
+
   computed: {
     selectedLanguageIcon () {
       return ASSET_PATH(`/flags/${this.$i18n.locale}.png`)
     }
   },
+
   methods: {
     toggle () {
       this.expanded = !this.expanded
@@ -68,6 +71,7 @@ export default {
         TRACK_EVENT(this, 'feature/locale/expanded', `Current Language: ${this.$i18n.locale}`)
       }
     },
+
     change (language) {
       TRACK_EVENT(this, `feature/locale/switched/${language}`)
       this.$root.$i18n.locale = language
@@ -77,6 +81,7 @@ export default {
       })
       this.close()
     },
+
     close () {
       this.expanded = false
     }

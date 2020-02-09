@@ -34,21 +34,23 @@ export default {
     ...mapState('landing', [
       'displayedPanel'
     ]),
+
     ...mapState('comments', [
       'comments'
     ]),
+
     showTarget () {
       return this.displayedPanel === 'target'
     },
+
     showComments () {
       return this.displayedPanel === 'comments'
     }
   },
-  methods: {
-    ...mapActions('landing', [
-      'showPanel'
-    ])
-  }
+
+  methods: mapActions('landing', [
+    'showPanel'
+  ])
 }
 </script>
 

@@ -18,6 +18,7 @@ export default {
       intervalCount: 0
     }
   },
+
   mounted () {
     this.interval = setInterval(() => {
       this.reload()
@@ -28,14 +29,14 @@ export default {
       }
     }, 10000)
   },
+
   beforeDestroy () {
     clearInterval(this.interval)
   },
-  methods: {
-    ...mapActions('landing', [
-      'reload'
-    ])
-  }
+
+  methods: mapActions('landing', [
+    'reload'
+  ])
 }
 </script>
 

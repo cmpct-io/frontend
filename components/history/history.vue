@@ -42,12 +42,15 @@ export default {
   components: {
     historyItem
   },
+
   mixins: [showMixin],
+
   data () {
     return {
       items: []
     }
   },
+
   mounted () {
     const items = storageService.getHistory()
 
@@ -55,6 +58,7 @@ export default {
       this.items = items.reverse().slice(0, 5)
     }
   },
+
   methods: {
     toggleVisibility () {
       this.toggle()

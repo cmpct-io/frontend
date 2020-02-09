@@ -20,6 +20,7 @@ export default {
       required: true
     }
   },
+
   computed: {
     reportTypeString () {
       return this.$t(`type_${this.reportType}`)

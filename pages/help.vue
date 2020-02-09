@@ -18,11 +18,13 @@ import safetySection from '@/components/help/safety.vue'
 
 export default {
   layout: 'help',
+
   head () {
     return {
       title: this.$t('pageTitle')
     }
   },
+
   components: {
     whatSection,
     privacySection,

@@ -19,6 +19,7 @@ export default {
       required: true
     }
   },
+
   computed: {
     shareUrl () {
       return `https://twitter.com/intent/tweet?text=${this.pageUrl}`

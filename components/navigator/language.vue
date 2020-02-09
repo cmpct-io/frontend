@@ -23,6 +23,7 @@ export default {
       default: 'English'
     }
   },
+
   computed: {
     imageSource () {
       return ASSET_PATH(`/flags/${this.locale}.png`)

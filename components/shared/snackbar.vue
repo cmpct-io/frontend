@@ -21,17 +21,14 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
-  computed: {
-    ...mapState('snackbar', [
-      'showSnackbar',
-      'snackbarMessage'
-    ])
-  },
-  methods: {
-    ...mapActions('snackbar', [
-      'hideSnackbar'
-    ])
-  }
+  computed: mapState('snackbar', [
+    'showSnackbar',
+    'snackbarMessage'
+  ]),
+
+  methods: mapActions('snackbar', [
+    'hideSnackbar'
+  ])
 }
 </script>
 

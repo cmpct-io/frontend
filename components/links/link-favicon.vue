@@ -21,12 +21,14 @@ export default {
       required: true
     }
   },
+
   data () {
     return {
       faviconUrl: '',
       hasImageError: false
     }
   },
+
   created () {
     try {
       const hostname = (new URL(this.target)).hostname

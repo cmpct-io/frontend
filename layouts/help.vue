@@ -19,6 +19,7 @@ export default {
     background,
     navigator
   },
+
   mixins: [uiModeMixin]
 }
 </script>

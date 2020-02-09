@@ -39,6 +39,7 @@ export default {
   components: {
     linkFavicon
   },
+
   props: {
     target: {
       type: String,
@@ -57,6 +58,7 @@ export default {
       required: true
     }
   },
+
   computed: {
     qualifiedTarget () {
       return this.target.toLowerCase().startsWith('http')
@@ -76,6 +78,7 @@ export default {
         : ''
     }
   },
+
   methods: {
     ...mapActions('viewer', [
       'showViewer'

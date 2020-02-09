@@ -50,17 +50,18 @@ export default {
       reportType: 0
     }
   },
-  computed: {
-    ...mapState('landing', [
-      'routeId'
-    ])
-  },
+
+  computed: mapState('landing', [
+    'routeId'
+  ]),
+
   methods: {
     ...mapActions('reports', [
       'submitReport',
       'loadReports',
       'setIsReporting'
     ]),
+
     async addReport () {
       TRACK_EVENT(this, 'feature/report/submitted', `Route: ${this.routeId}`)
 

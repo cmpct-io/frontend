@@ -26,13 +26,13 @@ export default {
   components: {
     container
   },
-  computed: {
-    ...mapState('viewer', [
-      'show',
-      'imageUrl',
-      'pageTitle'
-    ])
-  },
+
+  computed: mapState('viewer', [
+    'show',
+    'imageUrl',
+    'pageTitle'
+  ]),
+
   watch: {
     $route (to, from) {
       setTimeout(() => {
@@ -40,11 +40,10 @@ export default {
       }, 300)
     }
   },
-  methods: {
-    ...mapActions('viewer', [
-      'hideViewer'
-    ])
-  }
+
+  methods: mapActions('viewer', [
+    'hideViewer'
+  ])
 }
 </script>
 

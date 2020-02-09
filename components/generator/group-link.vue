@@ -20,11 +20,10 @@ export default {
       required: true
     }
   },
-  methods: {
-    ...mapActions('generator', [
-      'removeLink'
-    ])
-  }
+
+  methods: mapActions('generator', [
+    'removeLink'
+  ])
 }
 </script>
 

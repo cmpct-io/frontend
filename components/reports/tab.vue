@@ -35,15 +35,15 @@ export default {
     ...mapState('landing', [
       'displayedPanel'
     ]),
+
     ...mapState('reports', [
       'reports'
     ])
   },
-  methods: {
-    ...mapActions('landing', [
-      'showPanel'
-    ])
-  }
+
+  methods: mapActions('landing', [
+    'showPanel'
+  ])
 }
 </script>
 

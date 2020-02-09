@@ -14,11 +14,13 @@ export default {
     ...mapState('theme', [
       'isDarkMode'
     ]),
+
     largeImageSource () {
       return this.isDarkMode
         ? ASSET_PATH('/logo.png')
         : ASSET_PATH('/logo--light.png')
     },
+
     smallImageSource () {
       return this.isDarkMode
         ? ASSET_PATH('/logo-square.png')

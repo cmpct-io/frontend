@@ -34,25 +34,30 @@ export default {
     twitter,
     facebook
   },
+
   data () {
     return {
       show: false,
       pageUrl: ''
     }
   },
+
   watch: {
     $route (to, from) {
       this.show = false
       this.setPageUrl()
     }
   },
+
   created () {
     this.setPageUrl()
   },
+
   methods: {
     setPageUrl () {
       this.pageUrl = `https://cmpct.io${this.$router.currentRoute.fullPath}`
     },
+
     toggle () {
       this.show = !this.show
 

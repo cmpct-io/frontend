@@ -35,29 +35,35 @@ export default {
   components: {
     groupLink
   },
+
   data () {
     return {
       isSubmitting: false
     }
   },
+
   computed: {
     ...mapState('generator', [
       'links',
       'shortcut',
       'isGroup'
     ]),
+
     ...mapGetters('generator', [
       'qualifiedShortcut',
       'hasMultipleLinks'
     ]),
+
     isClipboardSupported () {
       return clipboardService.hasAccess()
     }
   },
+
   methods: {
     ...mapActions('generator', [
       'generate'
     ]),
+
     ...mapActions('snackbar', [
       'showSnackbar'
     ]),

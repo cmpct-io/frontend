@@ -3,6 +3,7 @@
     <c-icon
       icon="user-circle"
       class="fa-fw mr" />
+
     <div class="flex-grow">
       <p class="bold mb">
         <span

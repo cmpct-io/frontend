@@ -39,17 +39,18 @@ export default {
       commentText: ''
     }
   },
-  computed: {
-    ...mapState('landing', [
-      'routeId'
-    ])
-  },
+
+  computed: mapState('landing', [
+    'routeId'
+  ]),
+
   methods: {
     ...mapActions('comments', [
       'loadComments',
       'submitComment',
       'setIsCommenting'
     ]),
+
     async addComment () {
       TRACK_EVENT(this, 'feature/comment/submitted', `Route: ${this.routeId}`)
 
@@ -60,6 +61,7 @@ export default {
       })
 
       this.commentText = ''
+
       await this.loadComments(this.routeId)
     }
   }

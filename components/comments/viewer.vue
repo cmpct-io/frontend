@@ -43,30 +43,33 @@ export default {
     comment,
     poster
   },
+
   computed: {
     ...mapState('landing', [
       'routeId',
       'displayedPanel'
     ]),
+
     ...mapState('comments', [
       'comments',
       'isCommenting'
     ]),
+
     show () {
       return this.displayedPanel === 'comments'
     },
+
     hasComments () {
       return !this.isCommenting && this.comments.length > 0
     },
+
     hasNoComments () {
       return !this.isCommenting && this.comments.length === 0
     }
   },
-  methods: {
-    ...mapActions('comments', [
-      'setIsCommenting'
-    ])
-  }
+  methods: mapActions('comments', [
+    'setIsCommenting'
+  ])
 }
 </script>
 

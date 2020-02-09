@@ -15,7 +15,9 @@ export default {
     notFound,
     serverError
   },
+
   mixins: [uiModeMixin],
+
   props: {
     error: {
       type: Object,

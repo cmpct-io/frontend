@@ -25,15 +25,15 @@ import { mapState, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
-  computed: {
-    ...mapState('theme', [
-      'isDarkMode'
-    ])
-  },
+  computed: mapState('theme', [
+    'isDarkMode'
+  ]),
+
   methods: {
     ...mapActions('theme', [
       'setTheme'
     ]),
+
     changeUIMode (isDarkMode) {
       const uiMode = isDarkMode === true
         ? 'dark'

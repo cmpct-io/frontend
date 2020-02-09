@@ -3,8 +3,8 @@
     <c-icon
       icon="exclamation-circle"
       class="fa-fw mr-s" />
-    <span
-      v-text="$t('enterValidAddress')" />
+
+    <span v-text="$t('enterValidAddress')" />
   </p>
 </template>
 
@@ -12,11 +12,9 @@
 import { mapState } from 'vuex'
 
 export default {
-  computed: {
-    ...mapState('generator', [
-      'showValidationWarning'
-    ])
-  }
+  computed: mapState('generator', [
+    'showValidationWarning'
+  ])
 }
 </script>
 

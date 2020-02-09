@@ -24,11 +24,13 @@ export default {
       required: true
     }
   },
+
   computed: {
     qualifiedShortcut () {
       return `cmpct.io/${this.shortcut}`
     }
   },
+
   methods: {
     trackEvent () {
       TRACK_EVENT(this, 'feature/history/interact', `Shortcut: ${this.shortcut}`)

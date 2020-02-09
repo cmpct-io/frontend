@@ -30,26 +30,27 @@ export default {
       title: this.$t('pageTitle')
     }
   },
+
   components: {
     generator,
     groupWrapper,
     history
   },
+
   mixins: [showMixin],
-  computed: {
-    ...mapState('generator', [
-      'links'
-    ])
-  },
+
+  computed: mapState('generator', [
+    'links'
+  ]),
+
   created () {
     this.show = true
     this.reset()
   },
-  methods: {
-    ...mapActions('generator', [
-      'reset'
-    ])
-  }
+
+  methods: mapActions('generator', [
+    'reset'
+  ])
 }
 </script>
 

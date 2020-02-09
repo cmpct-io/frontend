@@ -29,6 +29,7 @@ export default {
       ]
     }
   },
+
   components: {
     tabs,
     commentsTab,
@@ -37,17 +38,20 @@ export default {
     commentsViewer,
     reportsViewer
   },
+
   computed: {
     ...mapState('landing', [
       'routeId',
       'links'
     ]),
+
     metaTitle () {
       return this.links.length > 1
         ? `Shared ${this.links.length} links with you`
         : 'Shared a link with you'
     }
   },
+
   async fetch ({ store, route, router, error }) {
     const routeId = route.params.id
     const isValid = await store.dispatch('landing/initialise', routeId)
@@ -64,6 +68,7 @@ export default {
       })
     }
   },
+
   mounted () {
     storageService.addToHistory(this.routeId)
   }

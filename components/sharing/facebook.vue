@@ -22,6 +22,7 @@ export default {
       required: true
     }
   },
+
   computed: {
     hrefAttribute () {
       return `https://www.facebook.com/sharer/sharer.php?u=${this.pageUrl}&t=${this.pageUrl}`

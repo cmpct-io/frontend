@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="isLoaded"
-    :style="classOverrides"
+    :style="styleOverrides"
     class="circle" />
 </template>
 
@@ -19,8 +19,9 @@ export default {
       animationVariant: 0
     }
   },
+
   computed: {
-    classOverrides () {
+    styleOverrides () {
       const size = `width: ${this.size}px; height: ${this.size}px;`
       const position = `top: ${this.startTop}%; left: ${this.startLeft}%;`
       const animation = `animation-duration: ${this.speed}s;animation-name: translocate_${this.animationVariant};`
@@ -28,15 +29,17 @@ export default {
       return `${size}${position}${animation}`
     }
   },
+
   mounted () {
     this.setup()
   },
+
   methods: {
     setup () {
       this.size = randomiser.generateRandomNumber(50, 300)
       this.startTop = randomiser.generateRandomNumber(-25, 125)
       this.startLeft = randomiser.generateRandomNumber(-25, 125)
-      this.speed = randomiser.generateRandomNumber(5, 60)
+      this.speed = randomiser.generateRandomNumber(20, 90)
 
       const animationVariant = randomiser.generateRandomNumber(1, 10)
       this.animationVariant = animationVariant < 6

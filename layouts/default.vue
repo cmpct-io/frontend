@@ -30,6 +30,7 @@ export default {
     container,
     imageViewer
   },
+
   mixins: [uiModeMixin]
 }
 </script>

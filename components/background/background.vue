@@ -14,19 +14,18 @@ export default {
   components: {
     animatedCircle
   },
-  computed: {
-    ...mapState('background', [
-      'elements'
-    ])
-  },
+
+  computed: mapState('background', [
+    'elements'
+  ]),
+
   mounted () {
     this.setupBackground()
   },
-  methods: {
-    ...mapActions('background', [
-      'setupBackground'
-    ])
-  }
+
+  methods: mapActions('background', [
+    'setupBackground'
+  ])
 }
 </script>
 

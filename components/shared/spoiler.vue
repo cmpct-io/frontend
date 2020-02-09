@@ -1,6 +1,6 @@
 <template>
   <div
-    @click.prevent="toggle"
+    @click.prevent="setOpenSpoilerText(title)"
     v-bind:class="[{ 'open': show }]"
     class="spoiler">
     <div class="flex-container">
@@ -29,27 +29,26 @@ export default {
       required: true
     }
   },
+
   computed: {
     ...mapState('help', [
       'openSpoilerText'
     ]),
+
     show () {
       return this.title === this.openSpoilerText
     },
+
     icon () {
       return this.show
         ? 'chevron-up'
         : 'chevron-down'
     }
   },
-  methods: {
-    ...mapActions('help', [
-      'setOpenSpoilerText'
-    ]),
-    toggle () {
-      this.setOpenSpoilerText(this.title)
-    }
-  }
+
+  methods: mapActions('help', [
+    'setOpenSpoilerText'
+  ])
 }
 </script>
 

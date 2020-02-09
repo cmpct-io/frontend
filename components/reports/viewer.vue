@@ -45,23 +45,24 @@ export default {
     report,
     poster
   },
+
   computed: {
     ...mapState('landing', [
       'routeId',
       'displayedPanel'
     ]),
+
     ...mapState('reports', [
       'isReporting',
       'reports'
     ])
   },
-  methods: {
-    ...mapActions('reports', [
-      'submitReport',
-      'loadReports',
-      'setIsReporting'
-    ])
-  }
+
+  methods: mapActions('reports', [
+    'submitReport',
+    'loadReports',
+    'setIsReporting'
+  ])
 }
 </script>
 
