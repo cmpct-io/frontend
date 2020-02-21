@@ -35,7 +35,7 @@ export default {
 <style scoped lang="scss">
   .snackbar {
     position: fixed;
-    bottom: 0px;
+    bottom: 20px;
     left: 0;
     right: 0;
     width: 90%;

@@ -7,7 +7,7 @@
 <style scoped>
   .tabs {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     left: 0;
     right: 0;
     margin: 0 auto;

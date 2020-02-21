@@ -9,11 +9,13 @@
       v-if="!processDate"
       class="mb-l" />
 
-    <render-link
-      v-for="(link, index) in links"
-      v-bind:key="index"
-      v-bind="link"
-      :new-page="links.length > 1" />
+    <div class="group-wrapper">
+      <render-link
+        v-for="(link, index) in links"
+        v-bind:key="index"
+        v-bind="link"
+        :new-page="links.length > 1" />
+    </div>
 
     <report-warning v-show="reports.length > 0" />
   </div>
@@ -62,3 +64,15 @@ export default {
   }
 }
 </i18n>
+
+<style scoped>
+.group-wrapper {
+  margin-bottom: 20px;
+  max-height: 55vh;
+  overflow: auto;
+}
+
+.group-wrapper::-webkit-scrollbar {
+  display: none;
+}
+</style>
