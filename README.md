@@ -5,6 +5,8 @@
 
 ![enter image description here](https://cmpct.azureedge.net/logo--light.png)
 
+[![MadeWithVueJs.com shield](https://madewithvuejs.com/storage/repo-shields/2167-shield.svg)](https://madewithvuejs.com/p/cmpct-io/shield-link)
+
 **What:** Create shorter, safer, better links you can share
 
 **Stack:** Progressive web app built with VueJS, NUXT and .NETCore Web API, backed by Azure Blob Storage.
