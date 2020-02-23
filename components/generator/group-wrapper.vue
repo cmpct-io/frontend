@@ -74,7 +74,7 @@ export default {
         storageService.addToHistory(this.shortcut)
 
         if (clipboardService.copy(this.qualifiedShortcut)) {
-          this.showSnackbar(this.$t('snackbarMessage'))
+          this.showSnackbar(`${this.qualifiedShortcut} ${this.$t('snackbarMessage')}`)
         }
 
         TRACK_EVENT(this, 'feature/generate/group', `Shortcut: ${this.shortcut}`)

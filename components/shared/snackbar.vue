@@ -1,20 +1,18 @@
 <template>
-  <transition name="fade">
-    <div
-      v-show="showSnackbar"
-      @click="hideSnackbar()"
-      class="snackbar flex-container">
-      <c-icon
-        icon="bell"
-        class="fa-fw mr" />
-      <p
-        v-text="snackbarMessage"
-        class="flex-grow" />
-      <c-icon
-        icon="times"
-        class="fa-fw" />
-    </div>
-  </transition>
+  <div
+    v-show="showSnackbar"
+    @click="hideSnackbar()"
+    class="snackbar flex-container animated slideInUp">
+    <c-icon
+      icon="bell"
+      class="fa-fw mr" />
+    <p
+      v-text="snackbarMessage"
+      class="flex-grow" />
+    <c-icon
+      icon="times"
+      class="fa-fw" />
+  </div>
 </template>
 
 <script>
@@ -43,7 +41,6 @@ export default {
     z-index: 50;
     background-color: black;
     border: 1px solid #262626;
-    border-bottom: 0;
     margin: 0 auto;
     padding: 15px;
     border-radius: 5px;
@@ -53,7 +50,6 @@ export default {
     .light & {
       background-color: white;
       border: 1px solid #DBDBDB;
-      border-bottom: 0;
     }
 
     @media (max-width: 768px) {

@@ -20,6 +20,6 @@ export const actions = {
 
     setTimeout(function () {
       commit('hide')
-    }, 5000)
+    }, 7750)
   }
 }

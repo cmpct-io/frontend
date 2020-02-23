@@ -82,7 +82,7 @@ export default {
             storageService.addToHistory(this.shortcut)
 
             if (clipboardService.copy(this.qualifiedShortcut)) {
-              this.showSnackbar(this.$t('snackbarMessage'))
+              this.showSnackbar(`${this.qualifiedShortcut} ${this.$t('snackbarMessage')}`)
             }
 
             TRACK_EVENT(this, 'feature/generate/single', `Shortcut: ${this.shortcut}`)
@@ -112,15 +112,15 @@ export default {
 {
   "en": {
     "placeholder": "Website address...",
-    "snackbarMessage": "Link copied to your clipboard!"
+    "snackbarMessage": "copied to your clipboard"
   },
   "fr": {
     "placeholder": "Adresse du site Web...",
-    "snackbarMessage": "Lien copié dans votre presse-papiers!"
+    "snackbarMessage": "copié dans votre presse-papiers"
   },
   "es": {
     "placeholder": "Dirección web...",
-    "snackbarMessage": "Enlace copiado a su portapapeles!"
+    "snackbarMessage": "copiado a su portapapeles"
   }
 }
 </i18n>
