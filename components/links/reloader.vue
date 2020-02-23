@@ -27,7 +27,7 @@ export default {
       if (this.intervalCount === 10) {
         clearInterval(this.interval)
       }
-    }, 10000)
+    }, 7500)
   },
 
   beforeDestroy () {
