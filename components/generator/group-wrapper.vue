@@ -105,15 +105,15 @@ export default {
 <i18n>
 {
   "en": {
-    "snackbarMessage": "Link copied to your clipboard!",
+    "snackbarMessage": "copied to your clipboard!",
     "submitText": "Submit Group"
   },
   "fr": {
-    "snackbarMessage": "Lien copié dans votre presse-papiers!",
+    "snackbarMessage": "copié dans votre presse-papiers!",
     "submitText": "Soumettre un groupe"
   },
   "es": {
-    "snackbarMessage": "Enlace copiado a su portapapeles!",
+    "snackbarMessage": "copiado a su portapapeles!",
     "submitText": "Enviar grupo"
   }
 }
