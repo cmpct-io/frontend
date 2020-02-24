@@ -4,8 +4,7 @@ import { API_BASE_URI } from '@/services/configuration-service.js'
 const postRoute = ({ routeId, links }) =>
   axios.post(`${API_BASE_URI}/routes`, {
     routeId,
-    links,
-    password: ''
+    links
   })
 
 const getRoute = routeId =>
