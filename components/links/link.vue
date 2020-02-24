@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="qualifiedTarget"
+    :href="target"
     @click="track"
     :target="targetValue"
     :title="title"
@@ -60,12 +60,6 @@ export default {
   },
 
   computed: {
-    qualifiedTarget () {
-      return this.target.toLowerCase().startsWith('http')
-        ? this.target
-        : `https://${this.target}`
-    },
-
     targetValue () {
       return this.newPage
         ? 'blank'
@@ -85,7 +79,7 @@ export default {
     ]),
 
     track () {
-      TRACK_EVENT(this, 'feature/link/interact', `Link: ${this.qualifiedTarget}`)
+      TRACK_EVENT(this, 'feature/link/interact', `Link: ${this.target}`)
     },
 
     showScreenshot () {

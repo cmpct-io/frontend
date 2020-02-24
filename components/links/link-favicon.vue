@@ -1,15 +1,15 @@
 <template>
-  <div class="favicon">
+  <div class="favicon hidden-mobile">
     <img
       v-show="faviconUrl && !hasImageError"
       :src="faviconUrl"
       :alt="$t('altText')"
       @error="hasImageError = true"
-      class="hidden-mobile animated bounceIn">
+      class="animated bounceIn">
     <c-icon
       v-show="hasImageError"
-      icon="external-link-alt"
-      class="hidden-mobile animated fadeIn" />
+      icon="globe"
+      class="animated fadeIn" />
   </div>
 </template>
 
@@ -31,9 +31,10 @@ export default {
 
   created () {
     try {
-      const hostname = (new URL(this.target)).hostname
-      this.faviconUrl = `https://${hostname}/favicon.ico`
-    } catch (error) {
+      const { protocol, hostname } = new URL(this.target)
+      this.faviconUrl = `${protocol}//${hostname}/favicon.ico`
+    } catch {
+      this.hasImageError = true
       this.faviconUrl = ''
     }
   }
@@ -42,7 +43,8 @@ export default {
 
 <style scoped lang="scss">
   .favicon img, .favicon svg {
-    margin-left: 10px;
+    margin: 0;
+    margin-left: 15px;
     padding: 5px;
     background-color: white;
     color: black;
@@ -50,15 +52,10 @@ export default {
     width: 42px;
     min-width: 42px;
     height: 42px;
-    overflow: hidden;
 
     .light & {
       background-color: whitesmoke;
     }
-  }
-
-  .favicon svg {
-    padding: 10px;
   }
 </style>
 

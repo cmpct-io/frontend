@@ -43,6 +43,10 @@ export const mutations = {
   },
 
   addLink: (state, link) => {
+    if (!link.startsWith('http')) {
+      link = `https://${link}`
+    }
+
     state.links.push(link)
   },
 
