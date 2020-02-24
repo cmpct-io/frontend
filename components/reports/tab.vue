@@ -3,10 +3,10 @@
     <div
       v-show="displayedPanel === 'target'"
       @click="showPanel('reports')"
-      class="tab animated slideInUp">
+      class="tab slideInUp">
       <p v-bind:class="[{ 'text-warning': reports.length > 0 }]">
         <c-icon
-          v-bind:class="[{ 'animated shake': reports.length > 0 }]"
+          v-bind:class="[{ 'shake': reports.length > 0 }]"
           icon="bell"
           class="mr-s" />
         <span
@@ -21,7 +21,7 @@
     <div
       v-show="displayedPanel === 'reports'"
       @click="showPanel('target')"
-      class="circle-button with-hover animated slideInDown">
+      class="circle-button with-hover slideInDown">
       <c-icon icon="times" />
     </div>
   </section>

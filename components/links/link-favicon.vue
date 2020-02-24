@@ -5,11 +5,11 @@
       :src="faviconUrl"
       :alt="$t('altText')"
       @error="hasImageError = true"
-      class="animated bounceIn">
+      class="bounceIn">
     <c-icon
       v-show="hasImageError"
       icon="globe"
-      class="animated fadeIn" />
+      class="fadeIn" />
   </div>
 </template>
 

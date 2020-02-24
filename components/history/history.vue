@@ -4,7 +4,7 @@
       <div
         :title="$t('viewHistory')"
         @click="toggleVisibility"
-        class="tab with-border with-hover animated slideInUp">
+        class="tab with-border with-hover slideInUp">
         <c-icon icon="history" class="mr-s" />
         <span v-text="$t('history')" />
       </div>
@@ -13,11 +13,11 @@
     <div
       v-show="show"
       @click="toggle"
-      class="circle-button with-hover animated slideInDown">
+      class="circle-button with-hover slideInDown">
       <c-icon icon="times" />
     </div>
 
-    <div v-show="show" class="history-content animated slideInUp">
+    <div v-show="show" class="history-content slideInUp">
       <h1 v-text="$t('title')" />
       <div v-if="items.length > 0">
         <p v-text="$t('description')" class="mb-l" />

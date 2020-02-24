@@ -1,7 +1,7 @@
 <template>
   <form
     @submit.prevent="addReport"
-    class="standard-width animated fadeIn">
+    class="standard-width fadeIn">
     <p
       v-text="$t('tellUsWhy')"
       class="mb-l" />

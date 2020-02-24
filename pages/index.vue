@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="show" class="animated fadeIn">
+    <div v-show="show" class="fadeIn">
       <h1 v-text="$t('title')" />
       <p
         v-text="$t('subtitle')"

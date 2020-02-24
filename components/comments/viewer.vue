@@ -1,8 +1,8 @@
 <template>
-  <div v-show="show" class="animated slideInUp">
+  <div v-show="show" class="slideInUp">
     <h1 v-text="$t('comments')" />
 
-    <div v-show="hasComments" class="animated fadeIn">
+    <div v-show="hasComments" class="fadeIn">
       <p class="mb-l">
         <span
           v-text="$t('wouldYouLikeTo')" />
@@ -20,7 +20,7 @@
 
     <p
       v-show="hasNoComments"
-      class="animated fadeIn">
+      class="fadeIn">
       <span
         v-text="$t('nobodyHasLeftAComment')" />
       <span

@@ -1,5 +1,5 @@
 <template>
-  <p class="text-warning animated fadeInDown">
+  <p class="text-warning fadeInDown">
     <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
     <span v-text="$t('reportWarning')" />
   </p>

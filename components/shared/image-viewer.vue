@@ -1,7 +1,7 @@
 <template>
   <div v-if="show" @click="hideViewer" class="wrapper">
     <container>
-      <div class="image-viewer animated fadeIn">
+      <div class="image-viewer fadeIn">
         <h3
           v-text="pageTitle"
           class="header mb-s" />
@@ -11,7 +11,7 @@
           class="with-border">
       </div>
 
-      <div class="circle-button with-hover animated slideInDown">
+      <div class="circle-button with-hover slideInDown">
         <c-icon icon="times" />
       </div>
     </container>

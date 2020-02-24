@@ -1,5 +1,5 @@
 <template>
-  <div :class="`container animated fadeIn ${uiMode}`">
+  <div :class="`container fadeIn ${uiMode}`">
     <not-found v-if="error.statusCode === 404" />
     <server-error v-else />
   </div>

@@ -3,7 +3,7 @@
     <div
       v-show="showTarget"
       @click="showPanel('comments')"
-      class="tab animated slideInUp">
+      class="tab slideInUp">
       <p>
         <c-icon
           icon="comment-alt"
@@ -20,7 +20,7 @@
     <div
       v-show="showComments"
       @click="showPanel('target')"
-      class="circle-button with-hover animated slideInDown">
+      class="circle-button with-hover slideInDown">
       <c-icon icon="times" />
     </div>
   </section>
