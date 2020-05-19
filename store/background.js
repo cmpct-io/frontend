@@ -13,12 +13,12 @@ export const mutations = {
 export const actions = {
   setupBackground: ({ commit }) => {
     const elements = []
-    let elementCount = randomiser.generateRandomNumber(20, 40)
+    let elementCount = randomiser.generateRandomNumber(10, 25)
 
     while (elementCount > 0) {
-      elements.push({
+      elements[elements.length] = {
         id: elements.length + 1
-      })
+      }
 
       elementCount -= 1
     }
