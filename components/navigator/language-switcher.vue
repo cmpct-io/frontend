@@ -3,7 +3,8 @@
     <div @click="toggle" class="cursor-pointer">
       <img
         :src="selectedLanguageIcon"
-        class="flag">
+        class="flag"
+        alt="Flag">
     </div>
 
     <panel v-if="expanded">
