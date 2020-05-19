@@ -80,7 +80,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Tomorrow:400,400']
+      families: ['Tomorrow:400,400&display=swap']
     }
   },
 }
