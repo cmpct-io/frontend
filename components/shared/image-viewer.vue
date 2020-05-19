@@ -8,7 +8,8 @@
 
         <img
           :src="imageUrl"
-          class="with-border">
+          class="with-border"
+          alt="Screenshot">
       </div>
 
       <div class="circle-button with-hover slideInDown">
