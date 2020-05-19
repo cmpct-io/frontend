@@ -2,7 +2,8 @@
   <div @click="$emit('selected', locale)" class="option flex-container with-hover">
     <img
       :src="imageSource"
-      class="flag">
+      class="flag"
+      alt="Flag">
     <p
       v-text="name"
       class="flex-grow" />
