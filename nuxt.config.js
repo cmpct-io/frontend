@@ -2,7 +2,24 @@
 import { APP_INSIGHTS_KEY } from './services/configuration-service.js'
 
 export default {
-  mode: 'universal',
+  appInsights: {
+    instrumentationKey: APP_INSIGHTS_KEY
+  },
+
+  build: {
+    publicPath: 'https://cmpct.azureedge.net/_nuxt',
+    extend (config, ctx) {
+    }
+  },
+
+  buildModules: [
+    '@nuxtjs/eslint-module'
+  ],
+
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
+
   head: {
     title: 'cmpct.io: shorter, safer links',
     meta: [
@@ -16,16 +33,31 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  i18n: {
+    locales: ['en', 'fr', 'es'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+      }
+    }
+  },
+
   loading: { color: '#fff' },
-  css: [
-    '@fortawesome/fontawesome-svg-core/styles.css'
-  ],
-  plugins: [
-    '~/plugins/fontawesome.plugin.js'
-  ],
-  buildModules: [
-    '@nuxtjs/eslint-module'
-  ],
+
+  manifest: {
+    name: 'cmpct.io',
+    short_name: 'cmpct.io',
+    description: 'Create shorter, safer, better links you can share',
+    lang: 'en',
+    display: 'standalone',
+    background_color: '#000000',
+    theme_color: '#000000'
+  },
+
+  mode: 'universal',
+
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
@@ -43,39 +75,17 @@ export default {
     ['cookie-universal-nuxt'],
     '@nuxtjs/sitemap'
   ],
-  sitemap: {
-    hostname: 'https://cmpct.io'
-  },
-  i18n: {
-    locales: ['en', 'fr', 'es'],
-    defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-      }
-    }
-  },
-  appInsights: {
-    instrumentationKey: APP_INSIGHTS_KEY
-  },
-  axios: {
-  },
-  build: {
-    publicPath: 'https://cmpct.azureedge.net/_nuxt',
-    extend (config, ctx) {
-    }
-  },
+
+  plugins: [
+    '~/plugins/fontawesome.plugin.js'
+  ],
+
   server: {
     host: '0.0.0.0'
   },
-  manifest: {
-    name: 'cmpct.io',
-    short_name: 'cmpct.io',
-    description: 'Create shorter, safer, better links you can share',
-    lang: 'en',
-    display: 'standalone',
-    background_color: '#000000',
-    theme_color: '#000000'
+
+  sitemap: {
+    hostname: 'https://cmpct.io'
   },
 
   webfontloader: {

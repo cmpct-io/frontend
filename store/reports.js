@@ -9,6 +9,7 @@ export const mutations = {
   setReports: (state, reports) => {
     state.reports = reports
   },
+
   setIsReporting: (state, value) => {
     state.isReporting = value
   }
@@ -19,6 +20,7 @@ export const actions = {
     commit('setReports', [])
     commit('setReports', await reportsApi.getReports(routeId))
   },
+
   submitReport: async ({ commit }, { routeId, name, reportType }) => {
     await reportsApi.postReport({
       routeId,
@@ -28,6 +30,7 @@ export const actions = {
 
     commit('setIsReporting', false)
   },
+
   setIsReporting: ({ commit }, isReporting) => {
     commit('setIsReporting', isReporting)
   }

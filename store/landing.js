@@ -11,6 +11,7 @@ export const mutations = {
   showPanel: (state, panel) => {
     state.displayedPanel = panel
   },
+
   setRouteData: (state, routeData) => {
     state.routeId = routeData.id
     state.links = routeData.links
@@ -29,6 +30,7 @@ export const actions = {
 
     return (routeData)
   },
+
   reload: async ({ commit, state }) => {
     const routeData = await routesApi.getRoute(state.routeId)
 
@@ -36,10 +38,12 @@ export const actions = {
       commit('setRouteData', routeData)
     }
   },
+
   reset: ({ commit }) => {
     commit('showPanel', 'target')
     commit('setRouteData', { routeId: null, links: [] })
   },
+
   showPanel: ({ commit }, panel) => {
     commit('showPanel', panel)
   }
