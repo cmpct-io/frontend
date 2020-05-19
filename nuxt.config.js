@@ -13,8 +13,7 @@ export default {
       { name: 'google-site-verification', content: 'Zih5ZaiWwv-IozG3zKriVzfzz9ZjMZ-OgoFraU0sABY' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Tomorrow&display=swap' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   loading: { color: '#fff' },
@@ -32,6 +31,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/applicationinsights',
     '@nuxtjs/robots',
+    'nuxt-webfontloader',
     ['nuxt-i18n', {
       vueI18nLoader: true,
       strategy: 'no_prefix',
@@ -76,5 +76,11 @@ export default {
     display: 'standalone',
     background_color: '#000000',
     theme_color: '#000000'
-  }
+  },
+
+  webfontloader: {
+    google: {
+      families: ['Tomorrow:400,400']
+    }
+  },
 }
