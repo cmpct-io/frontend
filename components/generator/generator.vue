@@ -8,6 +8,7 @@
       <input
         v-model="target"
         :placeholder="$t('placeholder')"
+        :aria-label="$t('placeholder')"
         required>
 
       <paste-button @paste="paste" />
