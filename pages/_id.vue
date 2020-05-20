@@ -12,6 +12,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { CDN_PATH } from '@/services/configuration-service.js'
 import storageService from '@/services/storage-service.js'
 import tabs from '@/components/shared/tabs.vue'
 import commentsTab from '@/components/comments/tab.vue'
@@ -25,7 +26,8 @@ export default {
     return {
       title: this.$t('pageTitle'),
       meta: [
-        { property: 'og:title', name: 'og:title', hid: 'og:title', content: this.metaTitle }
+        { property: 'og:title', name: 'og:title', hid: 'og:title', content: this.metaTitle },
+        { property: 'og:image', name: 'og:image', hid: 'og:image', content: this.metaImage }
       ]
     }
   },
@@ -55,6 +57,12 @@ export default {
       return this.links[0].title
         ? `${this.links[0].title} ${this.$t('and')} ${this.links.length - 1} ${this.$t('otherLinks')}`
         : this.$t('sharedMultipleLinks')
+    },
+
+    metaImage () {
+      return this.links[0].screenshotFileName
+        ? `${CDN_PATH}/screenshots/${this.links[0].screenshotFileName}`
+        : 'https://cdn.cmpct.io/_nuxt/icons/icon_512.d73a66.png'
     }
   },
 
