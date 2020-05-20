@@ -1,14 +1,14 @@
 const developmentConfiguration = {
   'apiBaseUrI': 'https://cmpct-api.azurewebsites.net/api',
   'appInsights': '',
-  'cdnPath': 'https://cmpct.blob.core.windows.net',
+  'cdnPath': '',
   'publicPath': ''
 }
 
 const productionConfiguration = {
   'apiBaseUrI': 'https://cmpct-api.azurewebsites.net/api',
   'appInsights': '47f10985-4ca6-4031-8093-da011cddeee5',
-  'cdnPath': 'https://cmpct.blob.core.windows.net',
+  'cdnPath': 'https://cdn.cmpct.io',
   'publicPath': 'https://cdn.cmpct.io/_nuxt'
 }
 
@@ -31,7 +31,7 @@ const PUBLIC_PATH = isProduction
   : developmentConfiguration.publicPath
 
 const ASSET_PATH = assetName =>
-  `${PUBLIC_PATH}${assetName}`
+  `${CDN_PATH}${assetName}`
 
 export {
   API_BASE_URI,

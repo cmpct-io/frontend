@@ -22,11 +22,11 @@ export default {
   ],
 
   head: {
-    title: 'cmpct.io: shorter, safer links',
+    title: 'cmpct.io | Free Custom URL Shortener for Safer, Shorter Links',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'cmpct.io: shorter, safer links' },
+      { hid: 'description', name: 'description', content: 'cmpct.io | Free Custom URL shortener | Create safer, better links you can share' },
       { name: 'theme-color', content: '#000000' },
       { name: 'google-site-verification', content: 'Zih5ZaiWwv-IozG3zKriVzfzz9ZjMZ-OgoFraU0sABY' }
     ],
@@ -74,7 +74,7 @@ export default {
     manifest: {
       name: 'cmpct.io',
       short_name: 'cmpct.io',
-      description: 'Create shorter, safer, better links you can share',
+      description: `Create shorter, safer & better links that you can share with cmpct - the free custom URL shortener that lets you see where you're going before you click.`,
       lang: 'en',
       display: 'standalone',
       background_color: '#000000',
