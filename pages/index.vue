@@ -58,20 +58,20 @@ export default {
 {
   "en": {
     "pageTitle": "cmpct.io | Free Custom URL Shortener for Safer, Shorter Links",
-    "title": "Get started",
-    "subtitle": "Create shorter, safer links you can share.",
+    "title": "Custom URL Shortener",
+    "subtitle": "Create free shorter and safer links you can share.",
     "message": "Paste your link into the box below to get started."
   },
   "fr": {
     "pageTitle": "cmpct.io | Raccourcisseur d'URL personnalisé gratuit pour des liens plus sûrs et plus courts",
     "title": "Commencer",
-    "subtitle": "Créez des liens plus courts et plus sûrs que vous pouvez partager.",
+    "subtitle": "Créez gratuitement des liens plus courts et plus sûrs que vous pouvez partager.",
     "message": "Collez votre lien dans la case ci-dessous pour commencer."
   },
   "es": {
     "pageTitle": "cmpct.io | Acortador de URL personalizado gratuito para enlaces más seguros y cortos",
     "title": "Empezar",
-    "subtitle": "Crea enlaces más cortos y seguros que puedas compartir.",
+    "subtitle": "Cree enlaces gratuitos más cortos y seguros que pueda compartir.",
     "message": "Pegue su enlace en el cuadro a continuación para comenzar."
   }
 }
