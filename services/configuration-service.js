@@ -9,7 +9,7 @@ const productionConfiguration = {
   'apiBaseUrI': 'https://cmpct-api.azurewebsites.net/api',
   'appInsights': '47f10985-4ca6-4031-8093-da011cddeee5',
   'cdnPath': 'https://cmpct.blob.core.windows.net',
-  'publicPath': 'https://cmpct.azureedge.net'
+  'publicPath': 'https://cdn.cmpct.io'
 }
 
 const isProduction = process.env.NODE_ENV === 'production'
