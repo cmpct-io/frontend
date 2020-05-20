@@ -13,7 +13,8 @@ export default {
   },
 
   buildModules: [
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/pwa'
   ],
 
   css: [
@@ -46,21 +47,10 @@ export default {
 
   loading: { color: '#fff' },
 
-  manifest: {
-    name: 'cmpct.io',
-    short_name: 'cmpct.io',
-    description: 'Create shorter, safer, better links you can share',
-    lang: 'en',
-    display: 'standalone',
-    background_color: '#000000',
-    theme_color: '#000000'
-  },
-
   mode: 'universal',
 
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
     '@nuxtjs/applicationinsights',
     '@nuxtjs/robots',
     'nuxt-webfontloader',
@@ -79,6 +69,18 @@ export default {
   plugins: [
     '~/plugins/fontawesome.plugin.js'
   ],
+
+  pwa: {
+    manifest: {
+      name: 'cmpct.io',
+      short_name: 'cmpct.io',
+      description: 'Create shorter, safer, better links you can share',
+      lang: 'en',
+      display: 'standalone',
+      background_color: '#000000',
+      theme_color: '#000000'
+    }
+  },
 
   server: {
     host: '0.0.0.0'
