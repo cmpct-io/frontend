@@ -1,5 +1,5 @@
 
-import { APP_INSIGHTS_KEY } from './services/configuration-service.js'
+import { PUBLIC_PATH, APP_INSIGHTS_KEY } from './services/configuration-service.js'
 
 export default {
   appInsights: {
@@ -7,7 +7,7 @@ export default {
   },
 
   build: {
-    publicPath: 'https://cdn.cmpct.io/_nuxt',
+    publicPath: PUBLIC_PATH,
     extend (config, ctx) {
     }
   },
