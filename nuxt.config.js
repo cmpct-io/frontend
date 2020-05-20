@@ -7,7 +7,7 @@ export default {
   },
 
   build: {
-    publicPath: 'https://cdn.cmpct.io/_nuxt',
+    publicPath: '',
     extend (config, ctx) {
     }
   },
