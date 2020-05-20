@@ -32,7 +32,7 @@
 <script>
 import { mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
-import { CDN_PATH } from '@/services/configuration-service.js'
+import { STORAGE_PATH } from '@/services/configuration-service.js'
 import linkFavicon from '@/components/links/link-favicon.vue'
 
 export default {
@@ -68,7 +68,7 @@ export default {
 
     screenshotImageUrl () {
       return this.screenshotFileName
-        ? `${CDN_PATH}/screenshots/${this.screenshotFileName}`
+        ? `${STORAGE_PATH}/screenshots/${this.screenshotFileName}`
         : ''
     }
   },
