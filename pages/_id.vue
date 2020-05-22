@@ -27,7 +27,7 @@ import imageViewer from '@/components/shared/image-viewer.vue'
 export default {
   head () {
     return {
-      title: this.$t('pageTitle'),
+      title: `cmpct.io | ${this.metaTitle}`,
       meta: [
         { property: 'og:title', name: 'og:title', hid: 'og:title', content: this.metaTitle },
         { property: 'og:image', name: 'og:image', hid: 'og:image', content: this.metaImage }
@@ -103,21 +103,18 @@ export default {
 <i18n>
 {
   "en": {
-    "pageTitle": "cmpct.io | Jump",
     "sharedALink": "A link was shared with you",
     "sharedMultipleLinks": "Multiple links have been shared with you",
     "and": "and",
     "otherLinks": "other link(s) were shared with you"
   },
   "fr": {
-    "pageTitle": "cmpct.io | Sauter",
     "sharedALink": "Un lien a été partagé avec vous",
     "sharedMultipleLinks": "Plusieurs liens ont été partagés avec vous",
     "and": "et",
     "otherLinks": "d'autres liens ont été partagés avec vous"
   },
   "es": {
-    "pageTitle": "cmpct.io | Saltar",
     "sharedALink": "Un enlace fue compartido contigo",
     "sharedMultipleLinks": "Se han compartido múltiples enlaces contigo",
     "and": "y",
