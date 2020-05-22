@@ -134,6 +134,15 @@ button, .square-button {
   cursor: pointer;
 }
 
+.u-noScroll {
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+
+.u-noScroll::-webkit-scrollbar {
+  display: none;
+}
+
 .u-hover {
   transition: all 0.2s ease-in-out;
 

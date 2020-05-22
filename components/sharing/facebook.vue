@@ -6,12 +6,8 @@
     class="u-flex-container"
     rel="noopener"
     target="_blank">
-    <c-icon
-      :icon="['fab', 'facebook-square']"
-      class="social-button mr" />
-    <span
-      v-text="$t('hoverText')"
-      class="u-text-small" />
+    <c-icon :icon="['fab', 'facebook-square']" class="c-facebook-icon mr" />
+    <span v-text="$t('hoverText')" class="u-text-small" />
   </a>
 </template>
 
@@ -33,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-  svg {
+  .c-facebook-icon {
     font-size: 2rem;
   }
 </style>

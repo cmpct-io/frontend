@@ -7,7 +7,7 @@
     rel="noopener"
     target="_blank"
     data-size="large">
-    <c-icon :icon="['fab', 'twitter-square']" class="social-button mr" />
+    <c-icon :icon="['fab', 'twitter-square']" class="c-twitter-icon mr" />
     <span v-text="$t('hoverText')" class="u-text-small" />
   </a>
 </template>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-  svg {
+  .c-twitter-icon {
     font-size: 2rem;
   }
 </style>

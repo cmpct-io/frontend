@@ -14,7 +14,7 @@
       <h1 v-text="$t('title')" />
       <div v-if="items.length > 0">
         <p v-text="$t('description')" class="mb-l" />
-        <div class="c-history-items">
+        <div class="c-history-items u-noScroll">
           <history-item
             v-for="(item, index) in items"
             :key="index"
@@ -73,12 +73,6 @@ export default {
 <style scoped>
   .c-history-items {
     max-height: 65vh;
-    overflow: auto;
-    -ms-overflow-style: none;
-  }
-
-  .c-history-items::-webkit-scrollbar {
-    display: none;
   }
 </style>
 

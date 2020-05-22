@@ -1,5 +1,5 @@
 <template>
-  <div class="sharing-wrapper">
+  <div class="c-sharing-wrapper">
     <a @click.prevent="toggle" href="#" class="mr">
       <c-icon icon="share-alt" class="mr-s" />
       <span v-text="$t('share')" />
@@ -70,9 +70,8 @@ export default {
 </script>
 
 <style scoped>
-  .sharing-wrapper {
+  .c-sharing-wrapper {
     display: inline-block;
-    position: relative;
   }
 </style>
 

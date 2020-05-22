@@ -2,9 +2,10 @@
   <div :class="uiMode">
     <navigator />
     <background />
-    <div class="help-layout">
+
+    <section class="c-help u-noScroll">
       <nuxt />
-    </div>
+    </section>
   </div>
 </template>
 
@@ -25,14 +26,12 @@ export default {
 </script>
 
 <style scoped>
-.help-layout {
+.c-help {
   position: fixed;
   top: 85px;
-  left: 0;
-  right: 0;
+  width: 100%;
   bottom: 0;
   padding: 10px;
   text-align: center;
-  overflow: auto;
 }
 </style>
