@@ -36,7 +36,6 @@ export default {
 
   computed: {
     ...mapState('landing', [
-      'routeId',
       'displayedPanel',
       'links',
       'processDate'
