@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="show" class="a-fadeIn">
+    <div v-show="!showHistory" class="a-fadeIn">
       <h1 v-text="$t('title')" />
       <p
         v-text="$t('subtitle')"
@@ -13,13 +13,12 @@
       <group-wrapper />
     </div>
 
-    <history v-on:toggled="toggle" />
+    <history />
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import showMixin from '@/mixins/show-mixin.vue'
 import generator from '@/components/generator/generator.vue'
 import groupWrapper from '@/components/generator/group-wrapper.vue'
 import history from '@/components/history/history.vue'
@@ -37,20 +36,25 @@ export default {
     history
   },
 
-  mixins: [showMixin],
+  computed: mapState('history', {
+    showHistory: 'show'
+  }),
 
-  computed: mapState('generator', [
-    'links'
-  ]),
-
-  created () {
-    this.show = true
+  beforeDestroy () {
     this.reset()
+    this.hideHistory()
   },
 
-  methods: mapActions('generator', [
-    'reset'
-  ])
+  methods: {
+    ...mapActions('generator', [
+      'reset'
+    ]),
+
+    ...mapActions('history', [
+      'toggle',
+      'hideHistory'
+    ])
+  }
 }
 </script>
 
