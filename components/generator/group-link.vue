@@ -1,5 +1,5 @@
 <template>
-  <div class="link u-flex-container fadeIn">
+  <div class="link u-flex-container a-fadeIn">
     <p
       v-text="link"
       class="u-text-small u-flex-grow u-break-word mr" />

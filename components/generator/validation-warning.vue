@@ -1,5 +1,5 @@
 <template>
-  <p v-show="showValidationWarning" class="text-warning fadeInDown mb-l">
+  <p v-show="showValidationWarning" class="text-warning a-fadeInDown mb-l">
     <c-icon
       icon="exclamation-circle"
       class="fa-fw mr-s" />

@@ -1,12 +1,12 @@
 <template>
   <div
     v-show="displayedPanel === 'reports'"
-    class="slideInUp">
+    class="a-slideInUp">
     <h1 v-text="$t('reports')" />
 
     <div
       v-show="!isReporting && reports.length > 0"
-      class="fadeIn">
+      class="a-fadeIn">
       <p class="mb-l">
         <span
           v-text="$t('ifYouThink')" />

@@ -3,7 +3,7 @@
     <div
       v-show="showTarget"
       @click="showPanel('comments')"
-      class="tab slideInUp">
+      class="tab a-slideInUp">
       <p>
         <c-icon
           icon="comment-alt"

@@ -12,7 +12,7 @@
     </div>
     <div
       v-show="show"
-      class="body fadeIn">
+      class="body a-fadeIn">
       <hr>
       <slot />
     </div>

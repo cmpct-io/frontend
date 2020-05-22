@@ -1,5 +1,5 @@
 <template>
-  <div v-show="displayedPanel === 'target'" class="fadeIn">
+  <div v-show="displayedPanel === 'target'" class="a-fadeIn">
     <h1 v-text="$t('title')" />
     <p
       v-show="processDate"

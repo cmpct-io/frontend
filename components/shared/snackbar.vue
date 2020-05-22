@@ -2,7 +2,7 @@
   <div
     v-show="showSnackbar"
     @click="hideSnackbar()"
-    class="snackbar u-flex-container slideInUp">
+    class="snackbar u-flex-container a-slideInUp">
     <c-icon
       icon="bell"
       class="fa-fw mr" />

@@ -1,5 +1,5 @@
 <template>
-  <button @click="click" class="c-circle-button u-hover slideInDown">
+  <button @click="click" class="c-circle-button u-hover a-slideInDown">
     <c-icon :icon="icon" />
   </button>
 </template>
@@ -38,10 +38,6 @@ export default {
 
   .light & {
     border: 1px solid black;
-  }
-
-  @media (max-height: 400px) {
-    display: none;
   }
 }
 </style>

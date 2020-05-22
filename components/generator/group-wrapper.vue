@@ -1,6 +1,6 @@
 <template>
   <div v-show="hasMultipleLinks">
-    <div class="group u-border fadeIn">
+    <div class="group u-border a-fadeIn">
       <group-link
         v-for="(link, index) in links"
         :key="index"

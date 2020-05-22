@@ -24,7 +24,7 @@ export default {
     styleOverrides () {
       const size = `width: ${this.size}px; height: ${this.size}px;`
       const position = `top: ${this.startTop}%; left: ${this.startLeft}%;`
-      const animation = `animation-duration: ${this.speed}s;animation-name: translocate_${this.animationVariant};`
+      const animation = `animation-duration: ${this.speed}s;animation-name: a-translocate_${this.animationVariant};`
 
       return `${size}${position}${animation}`
     }
@@ -60,7 +60,7 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    animation-name: translocate_1;
+    animation-name: a-translocate_1;
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;

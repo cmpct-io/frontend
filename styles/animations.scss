@@ -9,7 +9,7 @@ page-enter-active,
   transform-origin: 50% 50%;
 }
 
-@keyframes translocate_1 {
+@keyframes a-translocate_1 {
   0% {
     background-color: #FF0000;
     margin-left: 100px;
@@ -36,7 +36,7 @@ page-enter-active,
   }
 }
 
-@keyframes translocate_2 {
+@keyframes a-translocate_2 {
   0% {
     background-color: #FFFC00;
     margin-left: -100px;
@@ -64,14 +64,14 @@ page-enter-active,
 }
 
 // From Animate.CSS
-.fadeIn, .fadeInDown, .slideInUp, .slideInDown, .bounceIn, .shake {
+.a-fadeIn, .a-fadeInDown, .a-slideInUp, .a-slideInDown, .a-bounceIn, .a-shake {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes a-fadeIn {
   from {
     opacity: 0;
   }
@@ -81,7 +81,7 @@ page-enter-active,
   }
 }
 
-@keyframes fadeIn {
+@keyframes a-fadeIn {
   from {
     opacity: 0;
   }
@@ -91,26 +91,12 @@ page-enter-active,
   }
 }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+.a-fadeIn {
+  -webkit-animation-name: a-fadeIn;
+  animation-name: a-fadeIn;
 }
 
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeInDown {
+@-webkit-keyframes a-fadeInDown {
   from {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
@@ -124,12 +110,26 @@ page-enter-active,
   }
 }
 
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+@keyframes a-fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-@-webkit-keyframes slideInUp {
+.a-fadeInDown {
+  -webkit-animation-name: a-fadeInDown;
+  animation-name: a-fadeInDown;
+}
+
+@-webkit-keyframes a-slideInUp {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
@@ -142,7 +142,7 @@ page-enter-active,
   }
 }
 
-@keyframes slideInUp {
+@keyframes a-slideInUp {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
@@ -155,12 +155,12 @@ page-enter-active,
   }
 }
 
-.slideInUp {
-  -webkit-animation-name: slideInUp;
-  animation-name: slideInUp;
+.a-slideInUp {
+  -webkit-animation-name: a-slideInUp;
+  animation-name: a-slideInUp;
 }
 
-@-webkit-keyframes slideInDown {
+@-webkit-keyframes a-slideInDown {
   from {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -173,7 +173,7 @@ page-enter-active,
   }
 }
 
-@keyframes slideInDown {
+@keyframes a-slideInDown {
   from {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -186,12 +186,12 @@ page-enter-active,
   }
 }
 
-.slideInDown {
-  -webkit-animation-name: slideInDown;
-  animation-name: slideInDown;
+.a-slideInDown {
+  -webkit-animation-name: a-slideInDown;
+  animation-name: a-slideInDown;
 }
 
-@-webkit-keyframes bounceIn {
+@-webkit-keyframes a-bounceIn {
 
   from,
   20%,
@@ -237,7 +237,7 @@ page-enter-active,
   }
 }
 
-@keyframes bounceIn {
+@keyframes a-bounceIn {
 
   from,
   20%,
@@ -283,14 +283,14 @@ page-enter-active,
   }
 }
 
-.bounceIn {
+.a-bounceIn {
   -webkit-animation-duration: 0.75s;
   animation-duration: 0.75s;
-  -webkit-animation-name: bounceIn;
-  animation-name: bounceIn;
+  -webkit-animation-name: a-bounceIn;
+  animation-name: a-bounceIn;
 }
 
-@-webkit-keyframes shake {
+@-webkit-keyframes a-shake {
 
   from,
   to {
@@ -316,7 +316,7 @@ page-enter-active,
   }
 }
 
-@keyframes shake {
+@keyframes a-shake {
 
   from,
   to {
@@ -342,7 +342,7 @@ page-enter-active,
   }
 }
 
-.shake {
-  -webkit-animation-name: shake;
-  animation-name: shake;
+.a-shake {
+  -webkit-animation-name: a-shake;
+  animation-name: a-shake;
 }

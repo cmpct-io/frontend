@@ -1,6 +1,6 @@
 <template>
   <container v-if="show" @click="hideViewer" class="c-image-viewer">
-    <div class="c-image-viewer-inner fadeIn">
+    <div class="c-image-viewer-inner a-fadeIn">
       <h3 v-text="pageTitle" class="header mb-s" />
       <img :src="imageUrl" class="u-border" alt="Screenshot">
     </div>

@@ -1,7 +1,7 @@
 <template>
   <form
     @submit.prevent="addComment"
-    class="u-standard-width fadeIn">
+    class="u-standard-width a-fadeIn">
     <p
       v-text="$t('description')"
       class="mb-l" />
