@@ -23,7 +23,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import routeMetadataMixin from '@/mixins/route-metadata-mixin.vue'
 import reloader from '@/components/links/reloader.vue'
 import renderLink from '@/components/links/link.vue'
 import reportWarning from '@/components/links/warning.vue'
@@ -34,8 +33,6 @@ export default {
     renderLink,
     reportWarning
   },
-
-  mixins: [routeMetadataMixin],
 
   computed: {
     ...mapState('landing', [
@@ -48,12 +45,6 @@ export default {
     ...mapState('reports', [
       'reports'
     ])
-  },
-
-  watch: {
-    processDate () {
-      this.addHistory()
-    }
   }
 }
 </script>

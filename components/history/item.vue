@@ -3,7 +3,6 @@
     <nuxt-link
       :to="shortcut"
       class="c-item flex-container with-hover with-border">
-      <c-icon icon="link" />
       <p v-text="title" class="flex-grow" />
       <c-icon
         icon="chevron-right"
