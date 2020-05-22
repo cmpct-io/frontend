@@ -59,6 +59,7 @@ export default {
     &:hover {
       svg.arrow {
         margin-right: 0;
+        margin-left: 10px;
       }
     }
   }
