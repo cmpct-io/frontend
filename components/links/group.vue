@@ -23,6 +23,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import historyService from '@/services/history-service.js'
 import reloader from '@/components/links/reloader.vue'
 import renderLink from '@/components/links/link.vue'
 import reportWarning from '@/components/links/warning.vue'
@@ -36,6 +37,7 @@ export default {
 
   computed: {
     ...mapState('landing', [
+      'routeId',
       'displayedPanel',
       'links',
       'processDate'
@@ -43,7 +45,19 @@ export default {
 
     ...mapState('reports', [
       'reports'
-    ])
+    ]),
+
+    metaTitle () {
+      return this.links.length > 1
+        ? this.multipleLinksMetaTitle
+        : this.links[0].title || this.$t('sharedALink')
+    }
+  },
+
+  watch: {
+    processDate () {
+      historyService.add(this.routeId, this.metaTitle)
+    }
   }
 }
 </script>
@@ -52,15 +66,18 @@ export default {
 {
   "en": {
     "title": "Ready to jump?",
-    "description": "This page contains links to other pages you might be interested in."
+    "description": "This page contains links to other pages you might be interested in.",
+    "sharedALink": "A link was shared with you"
   },
   "fr": {
     "title": "Prêt à sauter?",
-    "description": "Cette page contient des liens vers d'autres pages qui pourraient vous intéresser."
+    "description": "Cette page contient des liens vers d'autres pages qui pourraient vous intéresser.",
+    "sharedALink": "Un lien a été partagé avec vous"
   },
   "es": {
     "title": "Listo para saltar?",
-    "description": "Esta página contiene enlaces a otras páginas que pueden interesarle."
+    "description": "Esta página contiene enlaces a otras páginas que pueden interesarle.",
+    "sharedALink": "Un enlace fue compartido contigo"
   }
 }
 </i18n>
