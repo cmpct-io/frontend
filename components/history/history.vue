@@ -49,8 +49,13 @@ export default {
     'show'
   ]),
 
+  mounted () {
+    this.initialise()
+  },
+
   methods: mapActions('history', [
-    'toggle'
+    'toggle',
+    'initialise'
   ])
 }
 </script>

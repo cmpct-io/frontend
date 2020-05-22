@@ -21,6 +21,9 @@ export const mutations = {
 }
 
 export const actions = {
+  initialise: ({ commit }) =>
+    commit('setItems', historyService.get()),
+
   hideHistory: ({ commit }) =>
     commit('hide'),
 
@@ -28,7 +31,6 @@ export const actions = {
     if (state.show) {
       commit('hide')
     } else {
-      commit('setItems', historyService.get())
       TRACK_EVENT(this, 'feature/history/expanded')
       commit('show')
     }
