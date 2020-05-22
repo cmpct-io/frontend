@@ -1,4 +1,4 @@
-const get = () => JSON.parse(localStorage.getItem('visited-history'))
+const get = () => JSON.parse(localStorage.getItem('visited-history')) || []
 
 const add = (shortcut, title) => {
   let history = get() || []
