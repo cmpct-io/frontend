@@ -4,10 +4,7 @@
       :to="shortcut"
       class="c-item flex-container with-hover with-border">
       <c-icon icon="link" />
-      <div class="flex-grow">
-        <p v-if="title" v-text="title" class="c-item-title" />
-        <p v-text="qualifiedShortcut" />
-      </div>
+      <p v-text="title" class="flex-grow" />
       <c-icon
         icon="chevron-right"
         class="arrow" />
@@ -47,7 +44,8 @@ export default {
 <style scoped lang="scss">
   .c-item {
     padding: 15px;
-    max-width: 600px;
+    width: 800px;
+    max-width: 90%;
     margin: 0 auto;
     margin-bottom: 10px;
     text-align: left;
@@ -63,10 +61,5 @@ export default {
         margin-right: 0;
       }
     }
-  }
-
-  .c-item-title {
-    font-weight: bold;
-    margin-bottom: 5px;
   }
 </style>
