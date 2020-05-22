@@ -1,7 +1,7 @@
-const getHistory = () => JSON.parse(localStorage.getItem('visited-history'))
+const get = () => JSON.parse(localStorage.getItem('visited-history'))
 
-const addToHistory = (shortcut, title) => {
-  let history = getHistory() || []
+const add = (shortcut, title) => {
+  let history = get() || []
 
   // Remove item from history if it already exists
   history = history.filter(item => item.shortcut !== shortcut)
@@ -17,10 +17,10 @@ const addToHistory = (shortcut, title) => {
   localStorage.setItem('visited-history', JSON.stringify(history))
 }
 
-const deleteHistory = () => localStorage.removeItem('visited-history')
+const clear = () => localStorage.removeItem('visited-history')
 
 export default {
-  getHistory,
-  addToHistory,
-  deleteHistory
+  get,
+  add,
+  clear
 }

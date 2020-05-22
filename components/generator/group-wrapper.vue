@@ -71,7 +71,7 @@ export default {
     generateRoute () {
       this.isSubmitting = true
       this.generate().then(() => {
-        historyService.addToHistory(this.shortcut)
+        historyService.add(this.shortcut)
 
         if (clipboardService.copy(this.qualifiedShortcut)) {
           this.showSnackbar(`${this.qualifiedShortcut} ${this.$t('snackbarMessage')}`)

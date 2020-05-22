@@ -84,7 +84,7 @@ export default {
   },
 
   mounted () {
-    historyService.addToHistory(this.routeId, this.metaTitle)
+    historyService.add(this.routeId, this.metaTitle)
   }
 }
 </script>

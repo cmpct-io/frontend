@@ -58,7 +58,7 @@ export default {
   },
 
   mounted () {
-    this.items = historyService.getHistory()
+    this.items = historyService.get()
   },
 
   methods: {
