@@ -12,8 +12,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { STORAGE_PATH } from '@/services/configuration-service.js'
-import historyService from '@/services/history-service.js'
+import routeMetadataMixin from '@/mixins/route-metadata-mixin.vue'
 import tabs from '@/components/shared/tabs.vue'
 import commentsTab from '@/components/comments/tab.vue'
 import reportsTab from '@/components/reports/tab.vue'
@@ -41,30 +40,12 @@ export default {
     reportsViewer
   },
 
-  computed: {
-    ...mapState('landing', [
-      'routeId',
-      'links'
-    ]),
+  mixins: [routeMetadataMixin],
 
-    metaTitle () {
-      return this.links.length > 1
-        ? this.multipleLinksMetaTitle
-        : this.links[0].title || this.$t('sharedALink')
-    },
-
-    multipleLinksMetaTitle () {
-      return this.links[0].title
-        ? `${this.links[0].title} ${this.$t('and')} ${this.links.length - 1} ${this.$t('otherLinks')}`
-        : this.$t('sharedMultipleLinks')
-    },
-
-    metaImage () {
-      return this.links[0].screenshotFileName
-        ? `${STORAGE_PATH}/screenshots/${this.links[0].screenshotFileName}`
-        : 'https://cdn.cmpct.io/_nuxt/icons/icon_512.d73a66.png'
-    }
-  },
+  computed: mapState('landing', [
+    'routeId',
+    'links'
+  ]),
 
   async fetch ({ store, route, router, error }) {
     const routeId = route.params.id
@@ -84,7 +65,7 @@ export default {
   },
 
   mounted () {
-    historyService.add(this.routeId, this.metaTitle)
+    this.addHistory()
   }
 }
 </script>
@@ -92,25 +73,13 @@ export default {
 <i18n>
 {
   "en": {
-    "pageTitle": "cmpct.io | Jump",
-    "sharedALink": "A link was shared with you",
-    "sharedMultipleLinks": "Multiple links have been shared with you",
-    "and": "and",
-    "otherLinks": "other link(s) were shared with you"
+    "pageTitle": "cmpct.io | Jump"
   },
   "fr": {
-    "pageTitle": "cmpct.io | Sauter",
-    "sharedALink": "Un lien a été partagé avec vous",
-    "sharedMultipleLinks": "Plusieurs liens ont été partagés avec vous",
-    "and": "et",
-    "otherLinks": "d'autres liens ont été partagés avec vous"
+    "pageTitle": "cmpct.io | Sauter"
   },
   "es": {
-    "pageTitle": "cmpct.io | Saltar",
-    "sharedALink": "Un enlace fue compartido contigo",
-    "sharedMultipleLinks": "Se han compartido múltiples enlaces contigo",
-    "and": "y",
-    "otherLinks": "otros enlaces fueron compartidos contigo"
+    "pageTitle": "cmpct.io | Saltar"
   }
 }
 </i18n>
