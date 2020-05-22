@@ -22,7 +22,7 @@
 2. .NETCore Web API - https://github.com/tommcclean/api.cmpct.io
 3. C# Azure Functions - https://github.com/tommcclean/functions.cmpct.io
 
-![Screenshot](https://cmpct.azureedge.net/marketing/dark-en.png)  
+![Screenshot](https://cmpct.azureedge.net/marketing/home-dark-en.png)  
 
 ### Why use cmpct.io?
 There are lots of link shorteners out there, but none like cmpct.io. We differ in a few ways...
