@@ -2,7 +2,7 @@
   <div
     @click.prevent="setOpenSpoilerText(title)"
     v-bind:class="[{ 'open': show }]"
-    class="spoiler">
+    class="c-spoiler u-border u-pointer">
     <div class="u-flex-container">
       <p
         v-text="title"
@@ -12,7 +12,7 @@
     </div>
     <div
       v-show="show"
-      class="body a-fadeIn">
+      class="c-spoiler-body a-fadeIn">
       <hr>
       <slot />
     </div>
@@ -53,14 +53,11 @@ export default {
 </script>
 
 <style lang="scss">
-.spoiler{
+.c-spoiler{
   background-color: transparent;
   transition: all 0.3s ease-in-out;
-  border: 1px solid gray;
   padding: 15px;
-  cursor: pointer;
   user-select: none;
-  border-radius: 5px;
   margin-bottom: 10px;
   text-align: left;
 
@@ -72,14 +69,8 @@ export default {
     }
   }
 
-  svg {
-    margin-top: 5px;
-    margin-left: 10px;
-  }
-
-  .body {
+  .c-spoiler-body {
     margin-top: 10px;
-    padding: 10px 0;
 
     p {
       margin-top: 10px;

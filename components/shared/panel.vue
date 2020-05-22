@@ -1,11 +1,11 @@
 <template>
-  <div class="panel u-border">
+  <div class="c-panel u-border">
     <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
-.panel {
+.c-panel {
   position: absolute;
   background-color: black;
   padding: 15px;

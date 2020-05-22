@@ -6,12 +6,14 @@ export default {
     ...mapState('theme', [
       'isDarkMode'
     ]),
+
     uiMode () {
       return this.isDarkMode
         ? 'dark'
         : 'light'
     }
   },
+
   created () {
     const uiMode = this.$cookies.get('ui-mode')
 
@@ -19,10 +21,9 @@ export default {
       this.setTheme(false)
     }
   },
-  methods: {
-    ...mapActions('theme', [
-      'setTheme'
-    ])
-  }
+
+  methods: mapActions('theme', [
+    'setTheme'
+  ])
 }
 </script>

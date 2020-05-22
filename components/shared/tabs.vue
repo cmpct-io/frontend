@@ -1,11 +1,11 @@
 <template>
-  <section class="tabs">
+  <section class="c-tabs">
     <slot />
   </section>
 </template>
 
 <style scoped>
-  .tabs {
+  .c-tabs {
     position: fixed;
     bottom: 20px;
     left: 0;

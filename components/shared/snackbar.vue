@@ -2,13 +2,15 @@
   <div
     v-show="showSnackbar"
     @click="hideSnackbar()"
-    class="snackbar u-flex-container a-slideInUp">
+    class="c-snackbar u-flex-container u-pointer a-slideInUp">
     <c-icon
       icon="bell"
       class="fa-fw mr" />
+
     <p
       v-text="snackbarMessage"
       class="u-flex-grow" />
+
     <c-icon
       icon="times"
       class="fa-fw" />
@@ -31,7 +33,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .snackbar {
+  .c-snackbar {
     position: fixed;
     bottom: 20px;
     left: 0;
@@ -44,20 +46,10 @@ export default {
     margin: 0 auto;
     padding: 15px;
     border-radius: 5px;
-    user-select: none;
-    cursor: pointer;
 
     .light & {
       background-color: white;
       border: 1px solid #DBDBDB;
-    }
-
-    @media (max-width: 768px) {
-      left: 0;
-    }
-
-    p {
-      margin: 0;
     }
   }
 </style>
