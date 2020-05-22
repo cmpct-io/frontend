@@ -26,12 +26,8 @@ export default {
     'pageTitle'
   ]),
 
-  watch: {
-    $route (to, from) {
-      setTimeout(() => {
-        this.hideViewer()
-      }, 300)
-    }
+  beforeDestroy () {
+    this.hideViewer()
   },
 
   methods: mapActions('viewer', [

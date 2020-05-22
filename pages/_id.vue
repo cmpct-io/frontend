@@ -7,6 +7,8 @@
       <comments-tab />
       <reports-tab />
     </tabs>
+
+    <image-viewer />
   </div>
 </template>
 
@@ -20,6 +22,7 @@ import reportsTab from '@/components/reports/tab.vue'
 import linksGroup from '@/components/links/group.vue'
 import commentsViewer from '@/components/comments/viewer.vue'
 import reportsViewer from '@/components/reports/viewer.vue'
+import imageViewer from '@/components/shared/image-viewer.vue'
 
 export default {
   head () {
@@ -38,7 +41,8 @@ export default {
     reportsTab,
     linksGroup,
     commentsViewer,
-    reportsViewer
+    reportsViewer,
+    imageViewer
   },
 
   computed: {
