@@ -27,7 +27,6 @@
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
-import storageService from '@/services/storage-service.js'
 import clipboardService from '@/services/clipboard-service.js'
 import groupLink from '@/components/generator/group-link.vue'
 
@@ -71,8 +70,6 @@ export default {
     generateRoute () {
       this.isSubmitting = true
       this.generate().then(() => {
-        storageService.addToHistory(this.shortcut)
-
         if (clipboardService.copy(this.qualifiedShortcut)) {
           this.showSnackbar(`${this.qualifiedShortcut} ${this.$t('snackbarMessage')}`)
         }

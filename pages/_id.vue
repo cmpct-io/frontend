@@ -13,7 +13,7 @@
 <script>
 import { mapState } from 'vuex'
 import { STORAGE_PATH } from '@/services/configuration-service.js'
-import storageService from '@/services/storage-service.js'
+import historyService from '@/services/history-service.js'
 import tabs from '@/components/shared/tabs.vue'
 import commentsTab from '@/components/comments/tab.vue'
 import reportsTab from '@/components/reports/tab.vue'
@@ -44,7 +44,8 @@ export default {
   computed: {
     ...mapState('landing', [
       'routeId',
-      'links'
+      'links',
+      'processDate'
     ]),
 
     metaTitle () {
@@ -66,6 +67,12 @@ export default {
     }
   },
 
+  watch: {
+    processDate () {
+      historyService.add(this.routeId, this.metaTitle)
+    }
+  },
+
   async fetch ({ store, route, router, error }) {
     const routeId = route.params.id
     const isValid = await store.dispatch('landing/initialise', routeId)
@@ -84,7 +91,7 @@ export default {
   },
 
   mounted () {
-    storageService.addToHistory(this.routeId)
+    historyService.add(this.routeId, this.metaTitle)
   }
 }
 </script>

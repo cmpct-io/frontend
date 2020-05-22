@@ -1,5 +1,5 @@
 <template>
-  <section class="history">
+  <section class="c-history">
     <tabs v-show="!show">
       <div
         :title="$t('viewHistory')"
@@ -10,33 +10,35 @@
       </div>
     </tabs>
 
-    <div
-      v-show="show"
-      @click="toggle"
-      class="circle-button with-hover slideInDown">
-      <c-icon icon="times" />
-    </div>
-
-    <div v-show="show" class="history-content slideInUp">
+    <div v-show="show" class="c-history-content slideInUp">
       <h1 v-text="$t('title')" />
       <div v-if="items.length > 0">
         <p v-text="$t('description')" class="mb-l" />
-        <history-item
-          v-for="(item, index) in items"
-          :key="index"
-          :shortcut="item" />
+        <div class="c-history-items">
+          <history-item
+            v-for="(item, index) in items"
+            :key="index"
+            v-bind="item" />
+        </div>
       </div>
       <p
         v-else
         v-text="$t('zeroItemDescription')"
         class="mb-l" />
     </div>
+
+    <div
+      v-show="show"
+      @click="toggle"
+      class="circle-button with-hover slideInDown">
+      <c-icon icon="times" />
+    </div>
   </section>
 </template>
 
 <script>
 import { TRACK_EVENT } from '@/services/analytics-service.js'
-import storageService from '@/services/storage-service.js'
+import historyService from '@/services/history-service.js'
 import showMixin from '@/mixins/show-mixin.vue'
 import tabs from '@/components/shared/tabs.vue'
 import historyItem from '@/components/history/item.vue'
@@ -56,11 +58,7 @@ export default {
   },
 
   mounted () {
-    const items = storageService.getHistory()
-
-    if (items) {
-      this.items = items.reverse().slice(0, 5)
-    }
+    this.items = historyService.get()
   },
 
   methods: {
@@ -74,6 +72,18 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .c-history-items {
+    max-height: 65vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+  }
+
+  .c-history-items::-webkit-scrollbar {
+    display: none;
+  }
+</style>
 
 <i18n>
 {
