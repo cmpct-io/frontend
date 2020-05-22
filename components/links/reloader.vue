@@ -34,7 +34,7 @@ export default {
     clearInterval(this.interval)
   },
 
-  methods: mapActions('landing', [
+  methods: mapActions('activeRoute', [
     'reload'
   ])
 }

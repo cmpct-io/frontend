@@ -32,7 +32,7 @@ export default {
   },
 
   computed: {
-    ...mapState('landing', [
+    ...mapState('activeRoute', [
       'displayedPanel'
     ]),
 
@@ -41,7 +41,7 @@ export default {
     ])
   },
 
-  methods: mapActions('landing', [
+  methods: mapActions('activeRoute', [
     'showPanel'
   ])
 }

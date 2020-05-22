@@ -46,7 +46,7 @@ export default {
   },
 
   computed: {
-    ...mapState('landing', [
+    ...mapState('activeRoute', [
       'routeId',
       'links',
       'processDate'
@@ -79,7 +79,7 @@ export default {
 
   async fetch ({ store, route, router, error }) {
     const routeId = route.params.id
-    const isValid = await store.dispatch('landing/initialise', routeId)
+    const isValid = await store.dispatch('activeRoute/initialise', routeId)
 
     if (isValid) {
       await Promise.all([

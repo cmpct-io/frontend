@@ -51,7 +51,7 @@ export default {
     }
   },
 
-  computed: mapState('landing', [
+  computed: mapState('activeRoute', [
     'routeId'
   ]),
 

@@ -20,7 +20,7 @@ export default {
     circleButton
   },
 
-  computed: mapState('viewer', [
+  computed: mapState('imageViewer', [
     'show',
     'imageUrl',
     'pageTitle'
@@ -30,7 +30,7 @@ export default {
     this.hideViewer()
   },
 
-  methods: mapActions('viewer', [
+  methods: mapActions('imageViewer', [
     'hideViewer'
   ])
 }

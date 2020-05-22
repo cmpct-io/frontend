@@ -31,7 +31,7 @@ export default {
   },
 
   computed: {
-    ...mapState('help', [
+    ...mapState('spoiler', [
       'openSpoilerText'
     ]),
 
@@ -46,7 +46,7 @@ export default {
     }
   },
 
-  methods: mapActions('help', [
+  methods: mapActions('spoiler', [
     'setOpenSpoilerText'
   ])
 }

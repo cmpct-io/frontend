@@ -45,7 +45,7 @@ export default {
   },
 
   computed: {
-    ...mapState('landing', [
+    ...mapState('activeRoute', [
       'routeId',
       'displayedPanel'
     ]),

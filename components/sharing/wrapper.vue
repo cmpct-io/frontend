@@ -72,6 +72,7 @@ export default {
 <style scoped>
   .c-sharing-wrapper {
     display: inline-block;
+    position: relative;
   }
 </style>
 

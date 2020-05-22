@@ -74,7 +74,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('viewer', [
+    ...mapActions('imageViewer', [
       'showViewer'
     ]),
 
