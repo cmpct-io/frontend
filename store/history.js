@@ -1,4 +1,3 @@
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 import historyService from '@/services/history-service.js'
 
 export const state = () => ({
@@ -31,7 +30,6 @@ export const actions = {
     if (state.show) {
       commit('hide')
     } else {
-      TRACK_EVENT(this, 'feature/history/expanded')
       commit('show')
     }
   }
