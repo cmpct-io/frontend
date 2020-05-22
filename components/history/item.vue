@@ -2,8 +2,8 @@
   <div @click="trackEvent">
     <nuxt-link
       :to="shortcut"
-      class="c-item flex-container with-hover with-border">
-      <p v-text="title" class="flex-grow" />
+      class="c-item u-flex-container u-hover u-border">
+      <p v-text="title" class="u-flex-grow" />
       <c-icon
         icon="chevron-right"
         class="arrow" />

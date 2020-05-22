@@ -4,17 +4,17 @@
     @click="track"
     :target="targetValue"
     :title="title"
-    class="box flex-container with-border with-hover mb-m">
+    class="box u-flex-container u-border u-hover mb-m">
     <link-favicon :target="target" />
-    <div class="link-inner flex-grow">
+    <div class="link-inner u-flex-grow">
       <p
         v-if="title"
         v-text="title"
         class="mb" />
       <p
         v-text="target"
-        v-bind:class="{ 'text-small' : title }"
-        class="break-word" />
+        v-bind:class="{ 'u-text-small' : title }"
+        class="u-break-word" />
     </div>
     <div
       v-if="screenshotImageUrl"
@@ -25,7 +25,7 @@
     </div>
     <c-icon
       icon="chevron-right"
-      class="hidden-mobile mr-m" />
+      class="u-hidden-mobile mr-m" />
   </a>
 </template>
 

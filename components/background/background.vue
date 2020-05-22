@@ -1,5 +1,5 @@
 <template>
-  <section class="background">
+  <section class="c-background">
     <animated-circle
       v-for="element in elements"
       :key="element.id" />
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .background {
+  .c-background {
     background-color: black;
     height: 100vh;
     overflow: hidden;

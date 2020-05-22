@@ -13,7 +13,7 @@
         <span
           @click="setIsReporting(true)"
           v-text="$t('pleaseReportIt')"
-          class="text-link" />
+          class="u-text-link" />
       </p>
 
       <report
@@ -28,7 +28,7 @@
       <span
         @click="setIsReporting(true)"
         v-text="$t('pleaseReportIfYouThink')"
-        class="text-link" />
+        class="u-text-link" />
     </p>
 
     <poster v-show="isReporting" />

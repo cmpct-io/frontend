@@ -3,7 +3,7 @@
     :href="hrefAttribute"
     :title="$t('hoverText')"
     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');return false;"
-    class="flex-container"
+    class="u-flex-container"
     rel="noopener"
     target="_blank">
     <c-icon
@@ -11,7 +11,7 @@
       class="social-button mr" />
     <span
       v-text="$t('hoverText')"
-      class="text-small" />
+      class="u-text-small" />
   </a>
 </template>
 

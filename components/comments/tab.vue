@@ -1,5 +1,5 @@
 <template>
-  <section class="inline-block mr">
+  <section class="u-inline-block mr">
     <div
       v-show="showTarget"
       @click="showPanel('comments')"
@@ -13,23 +13,22 @@
           class="mr-s" />
         <span
           v-text="comments.length"
-          class="text-small" />
+          class="u-text-small" />
       </p>
     </div>
 
-    <div
-      v-show="showComments"
-      @click="showPanel('target')"
-      class="circle-button with-hover slideInDown">
-      <c-icon icon="times" />
-    </div>
+    <circle-button v-show="showComments" @clicked="showPanel('target')" icon="times" />
   </section>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import circleButton from '@/components/shared/circle-button.vue'
 
 export default {
+  components: {
+    circleButton
+  },
   computed: {
     ...mapState('landing', [
       'displayedPanel'

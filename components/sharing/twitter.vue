@@ -3,12 +3,12 @@
     :href="shareUrl"
     :title="$t('hoverText')"
     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');return false;"
-    class="flex-container"
+    class="u-flex-container"
     rel="noopener"
     target="_blank"
     data-size="large">
     <c-icon :icon="['fab', 'twitter-square']" class="social-button mr" />
-    <span v-text="$t('hoverText')" class="text-small" />
+    <span v-text="$t('hoverText')" class="u-text-small" />
   </a>
 </template>
 

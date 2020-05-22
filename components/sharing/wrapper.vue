@@ -6,14 +6,14 @@
     </a>
 
     <panel v-show="show">
-      <div class="flex-container">
+      <div class="u-flex-container">
         <p
           v-text="$t('title')"
-          class="mb-m flex-grow" />
+          class="mb-m u-flex-grow" />
         <c-icon
           @click="toggle"
           icon="times"
-          class="fa-fw cursor-pointer" />
+          class="fa-fw u-pointer" />
       </div>
 
       <twitter :page-url="pageUrl" />

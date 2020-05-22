@@ -1,6 +1,6 @@
 <template>
   <div class="language-switcher">
-    <div @click="toggle" class="cursor-pointer">
+    <div @click="toggle" class="u-pointer">
       <img
         :src="selectedLanguageIcon"
         class="flag"
@@ -8,14 +8,14 @@
     </div>
 
     <panel v-if="expanded">
-      <div class="flex-container">
+      <div class="u-flex-container">
         <p
           v-text="$t('title')"
-          class="mb-m flex-grow" />
+          class="mb-m u-flex-grow" />
         <c-icon
           @click="toggle"
           icon="times"
-          class="fa-fw cursor-pointer" />
+          class="fa-fw u-pointer" />
       </div>
 
       <div class="mb-l">

@@ -1,29 +1,29 @@
 <template>
   <form
     @submit.prevent="addComment"
-    class="standard-width fadeIn">
+    class="u-standard-width fadeIn">
     <p
       v-text="$t('description')"
       class="mb-l" />
     <input
       v-model="name"
       :placeholder="$t('namePlaceholder')"
-      class="with-border mb-m"
+      class="u-border mb-m"
       required>
     <textarea
       v-model="commentText"
       :placeholder="$t('commentPlaceholder')"
-      class="with-border mb-m"
+      class="u-border mb-m"
       required />
 
     <button
       v-text="$t('add')"
-      class="with-hover"
+      class="u-hover"
       type="submit" />
     <button
       @click="setIsCommenting(false)"
       v-text="$t('cancel')"
-      class="with-hover"
+      class="u-hover"
       type="button" />
   </form>
 </template>

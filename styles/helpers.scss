@@ -130,11 +130,11 @@ button, .square-button {
   }
 }
 
-.cursor-pointer {
+.u-pointer {
   cursor: pointer;
 }
 
-.with-hover {
+.u-hover {
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -149,7 +149,7 @@ button, .square-button {
   }
 }
 
-.with-border {
+.u-border {
   border: 1px solid white;
   border-radius: 5px;
 
@@ -158,17 +158,17 @@ button, .square-button {
   }
 }
 
-.inline-block {
+.u-inline-block {
   display: inline-block;
 }
 
-.flex-container {
+.u-flex-container {
   display: flex;
   align-items: center;
   margin: 0 auto;
 }
 
-.flex-grow {
+.u-flex-grow {
   flex-grow: 1;
   max-width: 100%;
 }
@@ -195,7 +195,7 @@ button, .square-button {
   }
 }
 
-.break-word {
+.u-break-word {
   word-break: break-all;
 }
 
@@ -203,12 +203,12 @@ button, .square-button {
   font-weight: bold;
 }
 
-.text-link {
+.u-text-link {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.text-small {
+.u-text-small {
   font-size: 0.75rem;
 }
 
@@ -216,44 +216,14 @@ p.text-warning {
   color: red;
 }
 
-.standard-width {
+.u-standard-width {
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
 }
 
-.hidden-mobile {
+.u-hidden-mobile {
   @media (max-width: 767px) {
     display: none;
-  }
-}
-
-.circle-button {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  border: 1px solid white;
-  cursor: pointer;
-  border-radius: 50%;
-  margin-bottom: 30px;
-
-  .light & {
-    border: 1px solid black;
-  }
-
-  @media (max-height: 400px) {
-    display: none;
-  }
-
-  svg {
-    margin-top: 13px;
-
-    @media (max-width: 768px) {
-      margin-top: 15px;
-    }
   }
 }

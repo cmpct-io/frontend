@@ -1,6 +1,6 @@
 <template>
   <div v-show="hasMultipleLinks">
-    <div class="group with-border fadeIn">
+    <div class="group u-border fadeIn">
       <group-link
         v-for="(link, index) in links"
         :key="index"
@@ -9,7 +9,7 @@
 
     <button
       @click.once="generateRoute"
-      class="cursor-pointer with-hover">
+      class="u-pointer u-hover">
       <c-icon
         v-show="isSubmitting"
         icon="spinner"

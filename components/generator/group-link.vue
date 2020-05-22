@@ -1,12 +1,12 @@
 <template>
-  <div class="link flex-container fadeIn">
+  <div class="link u-flex-container fadeIn">
     <p
       v-text="link"
-      class="text-small flex-grow break-word mr" />
+      class="u-text-small u-flex-grow u-break-word mr" />
     <c-icon
       @click="removeLink(link)"
       icon="times"
-      class="text-small cursor-pointer" />
+      class="u-text-small u-pointer" />
   </div>
 </template>
 

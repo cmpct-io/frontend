@@ -1,5 +1,5 @@
 <template>
-  <section class="inline-block">
+  <section class="u-inline-block">
     <div
       v-show="displayedPanel === 'target'"
       @click="showPanel('reports')"
@@ -14,23 +14,23 @@
           class="mr-s" />
         <span
           v-text="reports.length"
-          class="text-small" />
+          class="u-text-small" />
       </p>
     </div>
 
-    <div
-      v-show="displayedPanel === 'reports'"
-      @click="showPanel('target')"
-      class="circle-button with-hover slideInDown">
-      <c-icon icon="times" />
-    </div>
+    <circle-button v-show="displayedPanel === 'reports'" @clicked="showPanel('target')" icon="times" />
   </section>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import circleButton from '@/components/shared/circle-button.vue'
 
 export default {
+  components: {
+    circleButton
+  },
+
   computed: {
     ...mapState('landing', [
       'displayedPanel'

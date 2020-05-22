@@ -1,13 +1,13 @@
 <template>
-  <div class="content flex-container">
-    <section class="container flex-grow">
+  <div class="c-content u-flex-container">
+    <section class="c-content-container u-flex-grow">
       <slot />
     </section>
   </div>
 </template>
 
 <style scoped>
-  .content {
+  .c-content {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@
     padding: 0 10px;
   }
 
-  section.container {
+  .c-content-container {
     position: relative;
     z-index: 50;
   }

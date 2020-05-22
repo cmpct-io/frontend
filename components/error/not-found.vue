@@ -6,7 +6,7 @@
     <nuxt-link
       v-text="$t('link')"
       to="/"
-      class="square-button with-hover" />
+      class="square-button u-hover" />
   </div>
 </template>
 

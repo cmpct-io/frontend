@@ -2,7 +2,7 @@
   <div
     v-show="isLoaded"
     :style="styleOverrides"
-    class="circle" />
+    class="c-circle" />
 </template>
 
 <script>
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped>
-  .circle {
+  .c-circle {
     position: fixed;
     top: 0;
     left: 0;

@@ -1,5 +1,5 @@
 <template>
-  <div class="favicon hidden-mobile">
+  <div class="favicon u-hidden-mobile">
     <img
       v-show="faviconUrl && !hasImageError"
       :src="faviconUrl"

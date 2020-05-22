@@ -1,7 +1,7 @@
 <template>
-  <div class="report standard-width flex-container with-border mb-m">
+  <div class="report u-standard-width u-flex-container u-border mb-m">
     <c-icon icon="user-circle" class="fa-fw mr" />
-    <div class="content flex-grow">
+    <div class="content u-flex-grow">
       <p v-text="name" class="bold" />
       <p v-text="reportTypeString" />
     </div>

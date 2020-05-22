@@ -2,13 +2,13 @@
   <div
     v-show="showSnackbar"
     @click="hideSnackbar()"
-    class="snackbar flex-container slideInUp">
+    class="snackbar u-flex-container slideInUp">
     <c-icon
       icon="bell"
       class="fa-fw mr" />
     <p
       v-text="snackbarMessage"
-      class="flex-grow" />
+      class="u-flex-grow" />
     <c-icon
       icon="times"
       class="fa-fw" />

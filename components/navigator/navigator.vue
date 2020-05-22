@@ -5,7 +5,7 @@
     <div class="links">
       <sharing-wrapper />
 
-      <a href="https://github.com/cmpct-io" target="blank" class="hidden-mobile mr">
+      <a href="https://github.com/cmpct-io" target="blank" class="u-hidden-mobile mr">
         <c-icon icon="code" class="mr-s" />
         <span v-text="$t('github')" />
       </a>

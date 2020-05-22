@@ -4,7 +4,7 @@
       <div
         :title="$t('viewHistory')"
         @click="toggleVisibility"
-        class="tab with-border with-hover slideInUp">
+        class="tab u-border u-hover slideInUp">
         <c-icon icon="history" class="mr-s" />
         <span v-text="$t('history')" />
       </div>
@@ -27,18 +27,14 @@
         class="mb-l" />
     </div>
 
-    <div
-      v-show="show"
-      @click="toggle"
-      class="circle-button with-hover slideInDown">
-      <c-icon icon="times" />
-    </div>
+    <circle-button v-show="show" @clicked="toggle" icon="times" />
   </section>
 </template>
 
 <script>
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import historyService from '@/services/history-service.js'
+import circleButton from '@/components/shared/circle-button.vue'
 import showMixin from '@/mixins/show-mixin.vue'
 import tabs from '@/components/shared/tabs.vue'
 import historyItem from '@/components/history/item.vue'
@@ -46,7 +42,8 @@ import historyItem from '@/components/history/item.vue'
 export default {
   components: {
     tabs,
-    historyItem
+    historyItem,
+    circleButton
   },
 
   mixins: [showMixin],

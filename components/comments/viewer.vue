@@ -9,7 +9,7 @@
         <span
           @click="setIsCommenting(true)"
           v-text="$t('addAComment')"
-          class="text-link" />
+          class="u-text-link" />
       </p>
 
       <comment
@@ -26,7 +26,7 @@
       <span
         @click="setIsCommenting(true)"
         v-text="$t('beTheFirst')"
-        class="text-link" />
+        class="u-text-link" />
     </p>
 
     <poster v-show="isCommenting" />

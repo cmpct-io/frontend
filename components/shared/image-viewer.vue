@@ -1,31 +1,23 @@
 <template>
-  <div v-if="show" @click="hideViewer" class="wrapper">
-    <container>
-      <div class="image-viewer fadeIn">
-        <h3
-          v-text="pageTitle"
-          class="header mb-s" />
+  <container v-if="show" @click="hideViewer" class="c-image-viewer">
+    <div class="c-image-viewer-inner fadeIn">
+      <h3 v-text="pageTitle" class="header mb-s" />
+      <img :src="imageUrl" class="u-border" alt="Screenshot">
+    </div>
 
-        <img
-          :src="imageUrl"
-          class="with-border"
-          alt="Screenshot">
-      </div>
-
-      <div class="circle-button with-hover slideInDown">
-        <c-icon icon="times" />
-      </div>
-    </container>
-  </div>
+    <circle-button @clicked="hideViewer()" icon="times" />
+  </container>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
 import container from '@/components/shared/container.vue'
+import circleButton from '@/components/shared/circle-button.vue'
 
 export default {
   components: {
-    container
+    container,
+    circleButton
   },
 
   computed: mapState('viewer', [
@@ -49,7 +41,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.wrapper {
+.c-image-viewer {
   position: fixed;
   left: 0;
   right: 0;
@@ -69,7 +61,7 @@ export default {
   }
 }
 
-.image-viewer {
+.c-image-viewer-inner {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;

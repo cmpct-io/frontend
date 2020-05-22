@@ -1,17 +1,17 @@
 <template>
-  <div class="comment standard-width flex-container with-border mb-m">
+  <div class="c-comment u-standard-width u-flex-container u-border mb-m">
     <c-icon
       icon="user-circle"
       class="fa-fw mr" />
 
-    <div class="flex-grow">
+    <div class="u-flex-grow">
       <p class="bold mb">
         <span
           v-text="name"
           class="mr" />
         <span
           v-text="timeSince"
-          class="text-small" />
+          class="u-text-small" />
       </p>
       <p v-text="text" />
     </div>

@@ -1,18 +1,18 @@
 <template>
   <form
     @submit.prevent="addReport"
-    class="standard-width fadeIn">
+    class="u-standard-width fadeIn">
     <p
       v-text="$t('tellUsWhy')"
       class="mb-l" />
     <input
       v-model="name"
       :placeholder="$t('yourNamePlaceholder')"
-      class="with-border mb-m"
+      class="u-border mb-m"
       required>
     <select
       v-model="reportType"
-      class="with-border mb-m">
+      class="u-border mb-m">
       <option value="0">
         {{ $t('scam') }}
       </option>
@@ -29,12 +29,12 @@
 
     <button
       v-text="$t('add')"
-      class="with-hover"
+      class="u-hover"
       type="submit" />
     <button
       @click="setIsReporting(false)"
       v-text="$t('cancel')"
-      class="with-hover"
+      class="u-hover"
       type="button" />
   </form>
 </template>

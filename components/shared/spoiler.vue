@@ -3,10 +3,10 @@
     @click.prevent="setOpenSpoilerText(title)"
     v-bind:class="[{ 'open': show }]"
     class="spoiler">
-    <div class="flex-container">
+    <div class="u-flex-container">
       <p
         v-text="title"
-        class="flex-grow mb-0" />
+        class="u-flex-grow mb-0" />
       <c-icon
         :icon="icon" />
     </div>

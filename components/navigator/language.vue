@@ -1,12 +1,12 @@
 <template>
-  <div @click="$emit('selected', locale)" class="option flex-container with-hover">
+  <div @click="$emit('selected', locale)" class="option u-flex-container u-hover">
     <img
       :src="imageSource"
       class="flag"
       alt="Flag">
     <p
       v-text="name"
-      class="flex-grow" />
+      class="u-flex-grow" />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="panel with-border">
+  <div class="panel u-border">
     <slot />
   </div>
 </template>
