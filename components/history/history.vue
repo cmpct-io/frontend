@@ -24,7 +24,7 @@
         <history-item
           v-for="(item, index) in items"
           :key="index"
-          :shortcut="item" />
+          v-bind="item" />
       </div>
       <p
         v-else
@@ -36,7 +36,7 @@
 
 <script>
 import { TRACK_EVENT } from '@/services/analytics-service.js'
-import storageService from '@/services/storage-service.js'
+import historyService from '@/services/history-service.js'
 import showMixin from '@/mixins/show-mixin.vue'
 import tabs from '@/components/shared/tabs.vue'
 import historyItem from '@/components/history/item.vue'
@@ -56,11 +56,7 @@ export default {
   },
 
   mounted () {
-    const items = storageService.getHistory()
-
-    if (items) {
-      this.items = items.reverse().slice(0, 5)
-    }
+    this.items = historyService.getHistory()
   },
 
   methods: {

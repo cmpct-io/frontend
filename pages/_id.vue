@@ -13,7 +13,7 @@
 <script>
 import { mapState } from 'vuex'
 import { STORAGE_PATH } from '@/services/configuration-service.js'
-import storageService from '@/services/storage-service.js'
+import historyService from '@/services/history-service.js'
 import tabs from '@/components/shared/tabs.vue'
 import commentsTab from '@/components/comments/tab.vue'
 import reportsTab from '@/components/reports/tab.vue'
@@ -84,7 +84,7 @@ export default {
   },
 
   mounted () {
-    storageService.addToHistory(this.routeId)
+    historyService.addToHistory(this.routeId, this.metaTitle)
   }
 }
 </script>

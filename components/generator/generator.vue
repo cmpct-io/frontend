@@ -23,7 +23,7 @@
 import { mapState, mapGetters, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import { IS_VALID_URL } from '@/services/validation-service.js'
-import storageService from '@/services/storage-service.js'
+import historyService from '@/services/history-service.js'
 import clipboardService from '@/services/clipboard-service.js'
 import groupButton from '@/components/generator/group-button.vue'
 import pasteButton from '@/components/generator/paste-button.vue'
@@ -80,7 +80,7 @@ export default {
 
         if (!this.isGroup) {
           this.generate().then(() => {
-            storageService.addToHistory(this.shortcut)
+            historyService.addToHistory(this.shortcut)
 
             if (clipboardService.copy(this.qualifiedShortcut)) {
               this.showSnackbar(`${this.qualifiedShortcut} ${this.$t('snackbarMessage')}`)

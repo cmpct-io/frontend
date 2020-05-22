@@ -2,11 +2,12 @@
   <div @click="trackEvent">
     <nuxt-link
       :to="shortcut"
-      class="item flex-container with-hover with-border">
+      class="c-item flex-container with-hover with-border">
       <c-icon icon="link" />
-      <p
-        v-text="qualifiedShortcut"
-        class="flex-grow" />
+      <div class="flex-grow">
+        <p v-if="title" v-text="title" class="c-item-title" />
+        <p v-text="qualifiedShortcut" />
+      </div>
       <c-icon
         icon="chevron-right"
         class="arrow" />
@@ -22,6 +23,10 @@ export default {
     shortcut: {
       type: String,
       required: true
+    },
+    title: {
+      type: String,
+      default: ''
     }
   },
 
@@ -40,7 +45,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .item {
+  .c-item {
     padding: 15px;
     max-width: 600px;
     margin: 0 auto;
@@ -58,5 +63,10 @@ export default {
         margin-right: 0;
       }
     }
+  }
+
+  .c-item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
   }
 </style>
