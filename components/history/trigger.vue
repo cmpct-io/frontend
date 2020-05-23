@@ -2,7 +2,7 @@
   <tabs v-show="!show">
     <div
       :title="$t('viewHistory')"
-      @click="showHistory"
+      @click="openHistoryPanel"
       class="tab u-border u-hover a-slideInUp">
       <c-icon icon="history" class="mr-s" />
       <span v-text="$t('history')" />
@@ -26,12 +26,12 @@ export default {
 
   methods: {
     ...mapActions('history', [
-      'toggle'
+      'showHistory'
     ]),
 
-    showHistory () {
+    openHistoryPanel () {
       TRACK_EVENT(this, 'feature/history/expanded')
-      this.toggle();
+      this.showHistory()
     }
   }
 }

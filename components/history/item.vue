@@ -4,6 +4,11 @@
       :to="shortcut"
       class="c-item u-flex-container u-hover u-border">
       <p v-text="title" class="u-flex-grow" />
+
+      <div @click.prevent="deleteItem" class="c-item-clear">
+        <c-icon
+          icon="trash" />
+      </div>
       <c-icon
         icon="chevron-right"
         class="arrow" />
@@ -12,7 +17,9 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
+import historyService from '@/services/history-service.js'
 
 export default {
   props: {
@@ -33,8 +40,17 @@ export default {
   },
 
   methods: {
+    ...mapActions('history', [
+      'initialise'
+    ]),
+
     trackEvent () {
       TRACK_EVENT(this, 'feature/history/interact', `Shortcut: ${this.shortcut}`)
+    },
+
+    deleteItem () {
+      historyService.deleteItem(this.shortcut)
+      this.initialise()
     }
   }
 }
@@ -42,24 +58,17 @@ export default {
 
 <style scoped lang="scss">
   .c-item {
-    padding: 15px;
+    padding: 10px 15px;
     width: 800px;
     max-width: 90%;
     margin: 0 auto;
     margin-bottom: 10px;
     text-align: left;
     cursor: pointer;
+  }
 
-    svg {
-      margin-right: 10px;
-      transition: all 0.2s ease-in-out;
-    }
-
-    &:hover {
-      svg.arrow {
-        margin-right: 0;
-        margin-left: 10px;
-      }
-    }
+  .c-item-clear {
+    margin: 0 10px;
+    padding: 10px;
   }
 </style>

@@ -17,10 +17,19 @@ const add = (shortcut, title) => {
   localStorage.setItem('visited-history', JSON.stringify(history))
 }
 
+const deleteItem = (shortcut) => {
+  let history = get() || []
+
+  history = history.filter(item => item.shortcut !== shortcut)
+
+  localStorage.setItem('visited-history', JSON.stringify(history))
+}
+
 const clear = () => localStorage.removeItem('visited-history')
 
 export default {
   get,
   add,
+  deleteItem,
   clear
 }

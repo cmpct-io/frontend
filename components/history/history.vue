@@ -1,7 +1,7 @@
 <template>
   <section v-show="items.length > 0" class="c-history">
     <history-trigger />
-    <circle-button v-show="show" @clicked="toggle" icon="times" />
+    <circle-button v-show="show" @clicked="hideHistory" icon="times" />
 
     <div v-show="show" class="c-history-content a-slideInUp">
       <h1 v-text="$t('history')" />
@@ -40,7 +40,7 @@ export default {
   },
 
   methods: mapActions('history', [
-    'toggle',
+    'hideHistory',
     'initialise'
   ])
 }

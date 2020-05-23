@@ -20,17 +20,18 @@ export const mutations = {
 }
 
 export const actions = {
-  initialise: ({ commit }) =>
-    commit('setItems', historyService.get()),
+  showHistory: ({ commit }) =>
+    commit('show'),
 
   hideHistory: ({ commit }) =>
     commit('hide'),
 
-  toggle: ({ state, commit }) => {
-    if (state.show) {
+  initialise: ({ commit }) => {
+    const historyItems = historyService.get()
+    commit('setItems', historyItems)
+
+    if (historyItems.length === 0) {
       commit('hide')
-    } else {
-      commit('show')
     }
   }
 }

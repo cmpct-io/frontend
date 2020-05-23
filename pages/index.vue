@@ -51,7 +51,6 @@ export default {
     ]),
 
     ...mapActions('history', [
-      'toggle',
       'hideHistory'
     ])
   }
