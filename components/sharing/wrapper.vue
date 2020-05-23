@@ -16,8 +16,9 @@
           class="fa-fw u-pointer" />
       </div>
 
-      <twitter :page-url="pageUrl" />
-      <facebook :page-url="pageUrl" />
+      <twitter :page-url="pageUrl" class="mb" />
+      <facebook :page-url="pageUrl" class="mb" />
+      <copy-address :page-url="pageUrl" />
     </panel>
   </div>
 </template>
@@ -26,11 +27,13 @@
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import twitter from '@/components/sharing/twitter.vue'
 import facebook from '@/components/sharing/facebook.vue'
+import copyAddress from '@/components/sharing/copy-address.vue'
 
 export default {
   components: {
     twitter,
-    facebook
+    facebook,
+    copyAddress
   },
 
   data () {
