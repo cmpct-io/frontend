@@ -11,16 +11,6 @@
   </div>
 </template>
 
-<script>
-import spoiler from '@/components/shared/spoiler.vue'
-
-export default {
-  components: {
-    spoiler
-  }
-}
-</script>
-
 <i18n>
 {
   "en": {

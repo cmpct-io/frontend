@@ -4,6 +4,12 @@
   </section>
 </template>
 
+<script>
+export default {
+  name: 'Tabs'
+}
+</script>
+
 <style scoped>
   .c-tabs {
     position: fixed;

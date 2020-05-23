@@ -16,7 +16,6 @@
 import { mapState } from 'vuex'
 import { STORAGE_PATH } from '@/services/configuration-service.js'
 import historyService from '@/services/history-service.js'
-import tabs from '@/components/shared/tabs.vue'
 import commentsTab from '@/components/comments/tab.vue'
 import reportsTab from '@/components/reports/tab.vue'
 import linksGroup from '@/components/links/group.vue'
@@ -36,7 +35,6 @@ export default {
   },
 
   components: {
-    tabs,
     commentsTab,
     reportsTab,
     linksGroup,

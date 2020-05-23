@@ -24,13 +24,8 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import circleButton from '@/components/shared/circle-button.vue'
 
 export default {
-  components: {
-    circleButton
-  },
-
   computed: {
     ...mapState('activeRoute', [
       'displayedPanel'

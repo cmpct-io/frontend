@@ -20,14 +20,12 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import historyTrigger from '@/components/history/trigger.vue'
-import circleButton from '@/components/shared/circle-button.vue'
 import historyItem from '@/components/history/item.vue'
 
 export default {
   components: {
     historyTrigger,
-    historyItem,
-    circleButton
+    historyItem
   },
 
   computed: mapState('history', [

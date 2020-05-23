@@ -11,15 +11,8 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import container from '@/components/shared/container.vue'
-import circleButton from '@/components/shared/circle-button.vue'
 
 export default {
-  components: {
-    container,
-    circleButton
-  },
-
   computed: mapState('imageViewer', [
     'show',
     'imageUrl',

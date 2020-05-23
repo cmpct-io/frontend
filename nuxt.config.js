@@ -67,7 +67,8 @@ export default {
   ],
 
   plugins: [
-    '~/plugins/fontawesome.plugin.js'
+    '~/plugins/fontawesome.plugin.js',
+    '~/plugins/sharedcomponents.plugin.js'
   ],
 
   pwa: {

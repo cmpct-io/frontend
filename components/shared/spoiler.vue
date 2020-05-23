@@ -23,6 +23,7 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
+  name: 'Spoiler',
   props: {
     title: {
       type: String,

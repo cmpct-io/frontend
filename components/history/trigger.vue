@@ -13,13 +13,8 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
-import tabs from '@/components/shared/tabs.vue'
 
 export default {
-  components: {
-    tabs
-  },
-
   computed: mapState('history', [
     'show'
   ]),
