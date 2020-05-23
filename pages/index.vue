@@ -63,7 +63,7 @@ export default {
     "pageTitle": "cmpct.io | Free Custom URL Shortener for Safer, Shorter Links",
     "title": "Custom URL Shortener",
     "subtitle": "Create free shorter and safer links you can share.",
-    "message": "Paste your link into the c-box below to get started."
+    "message": "Paste your link into the box below to get started."
   },
   "fr": {
     "pageTitle": "cmpct.io | Raccourcisseur d'URL personnalisé gratuit pour des liens plus sûrs et plus courts",
