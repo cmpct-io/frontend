@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .comment {
+  .c-comment {
     padding: 10px;
     text-align: left;
 
