@@ -5,7 +5,7 @@
       class="fa-fw mr" />
 
     <div class="u-flex-grow">
-      <p class="bold mb">
+      <p class="u-bold mb">
         <span
           v-text="name"
           class="mr" />
@@ -27,15 +27,18 @@ export default {
       type: String,
       required: true
     },
+
     text: {
       type: String,
       required: true
     },
+
     added: {
       type: String,
       required: true
     }
   },
+
   computed: {
     timeSince () {
       return `(${moment(this.added).fromNow()})`

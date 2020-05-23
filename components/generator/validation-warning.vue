@@ -4,7 +4,8 @@
       icon="exclamation-circle"
       class="fa-fw mr-s" />
 
-    <span v-text="$t('enterValidAddress')" />
+    <span
+      v-text="$t('enterValidAddress')" />
   </p>
 </template>
 

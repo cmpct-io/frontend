@@ -4,7 +4,7 @@
     @click="track"
     :target="targetValue"
     :title="title"
-    class="box u-flex-container u-border u-hover mb-m">
+    class="c-box u-flex-container u-border u-hover mb-m">
     <link-favicon :target="target" />
     <div class="link-inner u-flex-grow">
       <p

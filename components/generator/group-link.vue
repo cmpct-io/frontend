@@ -1,8 +1,9 @@
 <template>
-  <div class="link u-flex-container a-fadeIn">
+  <div class="c-link u-flex-container a-fadeIn">
     <p
       v-text="link"
       class="u-text-small u-flex-grow u-break-word mr" />
+
     <c-icon
       @click="removeLink(link)"
       icon="times"
@@ -28,17 +29,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.link {
+.c-link {
   padding: 10px 15px;
   border-bottom: 1px solid white;
   border-radius: 5px;
 
   .light & {
     border-bottom: 1px solid black;
-  }
-
-  svg {
-    font-size: 1rem;
   }
 }
 </style>

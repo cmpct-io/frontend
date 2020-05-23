@@ -20,13 +20,11 @@ export default {
     ]),
 
     submitIcon () {
-      if (this.isSubmitting) {
-        return 'spinner'
-      }
-
-      return this.isGroup
-        ? 'plus-circle'
-        : 'chevron-circle-right'
+      return this.isSubmitting
+        ? 'spinner'
+        : this.isGroup
+          ? 'plus-circle'
+          : 'chevron-circle-right'
     },
 
     submitTitle () {

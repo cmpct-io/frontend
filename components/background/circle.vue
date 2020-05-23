@@ -42,9 +42,7 @@ export default {
       this.speed = randomiser.generateRandomNumber(20, 90)
 
       const animationVariant = randomiser.generateRandomNumber(1, 10)
-      this.animationVariant = animationVariant < 6
-        ? 1
-        : 2
+      this.animationVariant = animationVariant < 6 ? 1 : 2
 
       this.isLoaded = true
     }

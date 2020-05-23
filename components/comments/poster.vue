@@ -5,11 +5,13 @@
     <p
       v-text="$t('description')"
       class="mb-l" />
+
     <input
       v-model="name"
       :placeholder="$t('namePlaceholder')"
       class="u-border mb-m"
       required>
+
     <textarea
       v-model="commentText"
       :placeholder="$t('commentPlaceholder')"
@@ -20,6 +22,7 @@
       v-text="$t('add')"
       class="u-hover"
       type="submit" />
+
     <button
       @click="setIsCommenting(false)"
       v-text="$t('cancel')"

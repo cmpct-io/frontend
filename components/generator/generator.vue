@@ -2,7 +2,7 @@
   <div>
     <form
       v-on:submit.prevent="create"
-      class="box u-flex-container u-border mb-m">
+      class="c-box u-flex-container u-border mb-m">
       <group-button />
 
       <input
@@ -102,7 +102,7 @@ export default {
     padding: 20px 10px;
     border: 0;
     outline: 0;
-    u-flex-grow: 1;
+    flex-grow: 1;
   }
 </style>
 

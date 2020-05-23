@@ -1,6 +1,6 @@
 <template>
   <div v-show="hasMultipleLinks">
-    <div class="group u-border a-fadeIn">
+    <div class="c-group u-border a-fadeIn">
       <group-link
         v-for="(link, index) in links"
         :key="index"
@@ -84,7 +84,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .group {
+  .c-group {
     margin: 0 auto;
     width: 95%;
     max-width: 800px;

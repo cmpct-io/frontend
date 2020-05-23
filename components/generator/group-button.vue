@@ -29,11 +29,9 @@ export default {
     }
   },
 
-  methods: {
-    ...mapActions('generator', [
-      'setIsGroup'
-    ])
-  }
+  methods: mapActions('generator', [
+    'setIsGroup'
+  ])
 }
 </script>
 
