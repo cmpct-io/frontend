@@ -1,9 +1,25 @@
 <template>
-  <p class="text-warning a-fadeInDown">
-    <c-icon icon="exclamation-circle" class="fa-fw mr-s" />
-    <span v-text="$t('reportWarning')" />
+  <p
+    v-show="hasReports"
+    class="u-text-warning a-fadeInDown">
+    <c-icon
+      icon="exclamation-circle"
+      class="fa-fw mr-s" />
+
+    <span
+      v-text="$t('reportWarning')" />
   </p>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  computed: mapGetters('reports', [
+    'hasReports'
+  ])
+}
+</script>
 
 <i18n>
 {

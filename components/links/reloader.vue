@@ -1,15 +1,18 @@
 <template>
-  <p>
+  <p
+    v-if="!isProcessed"
+    class="mb-l">
     <c-icon
       icon="spinner"
       class="fa-spin fa-fw mr-s" />
 
-    <span v-text="$t('scanning')" />
+    <span
+      v-text="$t('scanning')" />
   </p>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   data () {
@@ -18,6 +21,10 @@ export default {
       intervalCount: 0
     }
   },
+
+  computed: mapGetters('activeRoute', [
+    'isProcessed'
+  ]),
 
   mounted () {
     this.interval = setInterval(() => {

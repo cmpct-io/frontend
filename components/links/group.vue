@@ -1,15 +1,15 @@
 <template>
   <div v-show="displayedPanel === 'target'" class="a-fadeIn">
-    <h1 v-text="$t('title')" />
+    <h1
+      v-text="$t('title')" />
     <p
       v-show="processDate"
       v-text="$t('description')"
       class="mb-l" />
-    <reloader
-      v-if="!processDate"
-      class="mb-l" />
 
-    <div class="group-wrapper">
+    <reloader />
+
+    <div class="c-group-wrapper u-noScroll">
       <render-link
         v-for="(link, index) in links"
         v-bind:key="index"
@@ -17,7 +17,7 @@
         :new-page="links.length > 1" />
     </div>
 
-    <report-warning v-show="reports.length > 0" />
+    <report-warning />
   </div>
 </template>
 
@@ -34,19 +34,20 @@ export default {
     reportWarning
   },
 
-  computed: {
-    ...mapState('activeRoute', [
-      'displayedPanel',
-      'links',
-      'processDate'
-    ]),
-
-    ...mapState('reports', [
-      'reports'
-    ])
-  }
+  computed: mapState('activeRoute', [
+    'displayedPanel',
+    'links',
+    'processDate'
+  ])
 }
 </script>
+
+<style scoped>
+.c-group-wrapper {
+  margin-bottom: 20px;
+  max-height: 55vh;
+}
+</style>
 
 <i18n>
 {
@@ -64,15 +65,3 @@ export default {
   }
 }
 </i18n>
-
-<style scoped>
-.group-wrapper {
-  margin-bottom: 20px;
-  max-height: 55vh;
-  overflow: auto;
-}
-
-.group-wrapper::-webkit-scrollbar {
-  display: none;
-}
-</style>

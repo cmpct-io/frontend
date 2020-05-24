@@ -4,7 +4,7 @@
       v-show="displayedPanel === 'target'"
       @click="showPanel('reports')"
       class="tab a-slideInUp">
-      <p v-bind:class="[{ 'text-warning': reports.length > 0 }]">
+      <p v-bind:class="[{ 'u-text-warning': reports.length > 0 }]">
         <c-icon
           v-bind:class="[{ 'a-shake': reports.length > 0 }]"
           icon="bell"

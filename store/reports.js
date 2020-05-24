@@ -5,6 +5,11 @@ export const state = () => ({
   isReporting: false
 })
 
+export const getters = {
+  hasReports: ({ reports }) =>
+    reports.length > 0
+}
+
 export const mutations = {
   setReports: (state, reports) => {
     state.reports = reports

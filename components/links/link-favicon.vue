@@ -1,13 +1,13 @@
 <template>
-  <div class="favicon u-hidden-mobile">
+  <div class="c-favicon u-hidden-mobile">
     <img
-      v-show="faviconUrl && !hasImageError"
+      v-show="faviconUrl && hasFavicon"
       :src="faviconUrl"
       :alt="$t('altText')"
-      @error="hasImageError = true"
+      @error="hasFavicon = false"
       class="a-bounceIn">
     <c-icon
-      v-show="hasImageError"
+      v-show="!hasFavicon"
       icon="globe"
       class="a-fadeIn" />
   </div>
@@ -25,7 +25,7 @@ export default {
   data () {
     return {
       faviconUrl: '',
-      hasImageError: false
+      hasFavicon: true
     }
   },
 
@@ -34,7 +34,7 @@ export default {
       const { protocol, hostname } = new URL(this.target)
       this.faviconUrl = `${protocol}//${hostname}/favicon.ico`
     } catch {
-      this.hasImageError = true
+      this.hasFavicon = false
       this.faviconUrl = ''
     }
   }
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .favicon img, .favicon svg {
+  .c-favicon img, .c-favicon svg {
     margin: 0;
     margin-left: 15px;
     padding: 5px;
@@ -51,7 +51,10 @@ export default {
     border-radius: 50%;
     width: 42px;
     min-width: 42px;
+    max-width: 42px;
     height: 42px;
+    max-height: 42px;
+    overflow: hidden;
 
     .light & {
       background-color: whitesmoke;

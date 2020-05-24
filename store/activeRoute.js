@@ -7,6 +7,11 @@ export const state = () => ({
   processDate: null
 })
 
+export const getters = {
+  isProcessed: ({ processDate }) =>
+    (processDate)
+}
+
 export const mutations = {
   showPanel: (state, panel) => {
     state.displayedPanel = panel
