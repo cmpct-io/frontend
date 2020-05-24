@@ -30,7 +30,6 @@
     "url-regex": "^5.0.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.2.0",
     "babel-eslint": "^10.1.0",
