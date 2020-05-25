@@ -20,7 +20,7 @@ body, a, button, input, textarea, select {
   background-color: transparent;
   color: white;
 
-  .light {
+  .light &, .light {
     color: black;
   }
 }
