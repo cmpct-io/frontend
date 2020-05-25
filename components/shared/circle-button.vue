@@ -1,5 +1,5 @@
 <template>
-  <button @click="click" class="c-circle-button u-hover a-slideInDown">
+  <button @click="click" class="c-circle-button u-hover a-fadeInDown">
     <c-icon :icon="icon" />
   </button>
 </template>

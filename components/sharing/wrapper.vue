@@ -5,7 +5,7 @@
       <span v-text="$t('share')" />
     </a>
 
-    <panel v-show="show">
+    <panel v-show="show" class="a-fadeIn">
       <div class="u-flex-container">
         <p
           v-text="$t('title')"
@@ -16,9 +16,11 @@
           class="fa-fw u-pointer" />
       </div>
 
-      <twitter :page-url="pageUrl" class="mb" />
-      <facebook :page-url="pageUrl" class="mb" />
-      <copy-address :page-url="pageUrl" />
+      <div @click="toggle">
+        <twitter :page-url="pageUrl" class="mb" />
+        <facebook :page-url="pageUrl" class="mb" />
+        <copy-address :page-url="pageUrl" />
+      </div>
     </panel>
   </div>
 </template>

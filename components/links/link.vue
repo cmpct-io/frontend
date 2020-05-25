@@ -25,7 +25,7 @@
     </div>
     <c-icon
       icon="chevron-right"
-      class="u-hidden-mobile mr-m" />
+      class="u-hidden-mobile mr" />
   </a>
 </template>
 

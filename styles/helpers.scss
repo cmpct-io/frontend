@@ -1,29 +1,3 @@
-html {
-  font-family: 'Tomorrow', sans-serif;
-  font-size: 21px;
-  box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-}
-
-body {
-  color: white;
-
-  .light {
-    color: black;
-  }
-}
-
-a, button, input, textarea, select {
-  color: white;
-
-  .light & {
-    color: black;
-  } 
-}
-
 *,
 *:before,
 *:after {
@@ -31,10 +5,30 @@ a, button, input, textarea, select {
   margin: 0;
 }
 
+html {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 21px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+body, a, button, input, textarea, select {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+
+  .light {
+    color: black;
+  }
+}
+
 h1 {
+  font-size: 2rem;
   letter-spacing: 2px;
   margin-bottom: 10px;
-  font-size: 2rem;
 }
 
 h4 {
@@ -50,17 +44,11 @@ a {
 }
 
 input, select, textarea {
-  font-family: 'Tomorrow', sans-serif;
-  background-color: transparent;
   padding: 10px 20px;
   width: 100%;
-  font-size: 1rem;
 }
 
 button, .square-button {
-  font-family: 'Tomorrow', sans-serif;
-  background-color: transparent;
-  font-size: 1rem;
   border: 1px solid white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -83,11 +71,6 @@ button, .square-button {
 .mr {
   margin-right: 10px !important;
 }
-
-.mr-m {
-  margin-right: 15px !important;
-}
-
 
 .mb {
   margin-bottom: 5px !important;

@@ -7,7 +7,7 @@
         alt="Flag">
     </div>
 
-    <panel v-if="expanded">
+    <panel v-if="expanded" class="a-fadeIn">
       <div class="u-flex-container">
         <p
           v-text="$t('title')"
