@@ -1,13 +1,14 @@
 <template>
-  <div>
+  <section>
     <h1
       v-text="$t('pageTitle')"
       class="mb-l" />
+
     <what-section />
     <privacy-section />
     <price-section />
     <safety-section />
-  </div>
+  </section>
 </template>
 
 <script>

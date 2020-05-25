@@ -1,27 +1,25 @@
 <template>
-  <div>
-    <div v-show="!showHistory" class="a-fadeIn">
-      <h1 v-text="$t('title')" />
-      <p
-        v-text="$t('subtitle')"
-        class="mb" />
-      <p
-        v-text="$t('message')"
-        class="mb-l" />
+  <section>
+    <h1
+      v-text="$t('title')" />
+    <p
+      v-text="$t('subtitle')"
+      class="mb" />
+    <p
+      v-text="$t('message')"
+      class="mb-l" />
 
-      <generator />
-      <group-wrapper />
-    </div>
-
-    <history />
-  </div>
+    <generator />
+    <group-wrapper />
+    <history-trigger />
+  </section>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 import generator from '@/components/generator/generator.vue'
 import groupWrapper from '@/components/generator/group-wrapper.vue'
-import history from '@/components/history/history.vue'
+import historyTrigger from '@/components/history/trigger.vue'
 
 export default {
   head () {
@@ -33,27 +31,16 @@ export default {
   components: {
     generator,
     groupWrapper,
-    history
+    historyTrigger
   },
-
-  computed: mapState('history', {
-    showHistory: 'show'
-  }),
 
   beforeDestroy () {
     this.reset()
-    this.hideHistory()
   },
 
-  methods: {
-    ...mapActions('generator', [
-      'reset'
-    ]),
-
-    ...mapActions('history', [
-      'hideHistory'
-    ])
-  }
+  methods: mapActions('generator', [
+    'reset'
+  ])
 }
 </script>
 

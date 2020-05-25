@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <links-group />
     <comments-viewer />
     <reports-viewer />
@@ -9,7 +9,7 @@
       <comments-tab />
       <reports-tab />
     </tabs>
-  </div>
+  </section>
 </template>
 
 <script>

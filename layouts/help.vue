@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import '@/styles/animations.scss'
 import '@/styles/helpers.scss'
 import uiModeMixin from '@/mixins/ui-mode-mixin.vue'
 import background from '@/components/background/background.vue'

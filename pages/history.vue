@@ -1,11 +1,11 @@
 <template>
-  <section v-show="items.length > 0" class="c-history">
-    <history-trigger />
-    <circle-button v-show="show" @clicked="hideHistory" icon="times" />
-
-    <div v-show="show" class="c-history-content a-slideInUp">
-      <h1 v-text="$t('history')" />
-      <p v-text="$t('description')" class="mb-l" />
+  <section class="c-history">
+    <div class="c-history-content">
+      <h1
+        v-text="$t('history')" />
+      <p
+        v-text="$t('description')"
+        class="mb-l" />
 
       <div class="c-history-items u-noScroll">
         <history-item
@@ -14,33 +14,43 @@
           v-bind="item" />
       </div>
     </div>
+
+    <nuxt-link to="/">
+      <circle-button icon="times" />
+    </nuxt-link>
   </section>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import historyTrigger from '@/components/history/trigger.vue'
+import { TRACK_EVENT } from '@/services/analytics-service.js'
 import historyItem from '@/components/history/item.vue'
 
 export default {
+  head () {
+    return {
+      title: this.$t('pageTitle')
+    }
+  },
+
   components: {
-    historyTrigger,
     historyItem
   },
 
   computed: mapState('history', [
-    'items',
-    'show'
+    'items'
   ]),
 
   mounted () {
+    TRACK_EVENT(this, 'feature/history/expanded')
     this.initialise()
   },
 
-  methods: mapActions('history', [
-    'hideHistory',
-    'initialise'
-  ])
+  methods: {
+    ...mapActions('history', [
+      'initialise'
+    ])
+  }
 }
 </script>
 
@@ -53,14 +63,17 @@ export default {
 <i18n>
 {
   "en": {
+    "pageTitle": "cmpct.io | History",
     "history": "History",
     "description": "These are the links you have created or visited recently"
   },
   "fr": {
+    "pageTitle": "cmpct.io | Histoire",
     "history": "Histoire",
     "description": "Ce sont les liens que vous avez générés ou visités récemment"
   },
   "es": {
+    "pageTitle": "cmpct.io | Historia",
     "history": "Historia",
     "description": "Estos son los enlaces que ha generado o visitado recientemente."
   }

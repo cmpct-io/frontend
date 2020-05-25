@@ -1,50 +1,29 @@
 <template>
-  <tabs v-show="!show">
-    <div
-      :title="$t('viewHistory')"
-      @click="openHistoryPanel"
+  <tabs>
+    <nuxt-link
+      :title="$t('history')"
+      to="history"
       class="tab u-border u-hover a-slideInUp">
-      <c-icon icon="history" class="mr-s" />
-      <span v-text="$t('history')" />
-    </div>
+      <c-icon
+        icon="history"
+        class="mr-s" />
+
+      <span
+        v-text="$t('history')" />
+    </nuxt-link>
   </tabs>
 </template>
-
-<script>
-import { mapState, mapActions } from 'vuex'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
-
-export default {
-  computed: mapState('history', [
-    'show'
-  ]),
-
-  methods: {
-    ...mapActions('history', [
-      'showHistory'
-    ]),
-
-    openHistoryPanel () {
-      TRACK_EVENT(this, 'feature/history/expanded')
-      this.showHistory()
-    }
-  }
-}
-</script>
 
 <i18n>
 {
   "en": {
-    "history": "History",
-    "viewHistory": "View history"
+    "history": "History"
   },
   "fr": {
-    "history": "Histoire",
-    "viewHistory": "Voir l'historique"
+    "history": "Histoire"
   },
   "es": {
-    "history": "Historia",
-    "viewHistory": "Ver historial"
+    "history": "Historia"
   }
 }
 </i18n>
