@@ -22,7 +22,7 @@ export default {
 
   head () {
     return {
-      title: this.$t('pageTitle')
+      title: `cmpct.io | ${this.$t('pageTitle')}`
     }
   },
 
