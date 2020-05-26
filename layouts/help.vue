@@ -6,6 +6,7 @@
     <section class="c-help u-noScroll">
       <nuxt />
     </section>
+    <metadata />
   </div>
 </template>
 

@@ -8,6 +8,7 @@
     </container>
 
     <snackbar />
+    <metadata />
   </div>
 </template>
 
