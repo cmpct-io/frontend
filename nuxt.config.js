@@ -83,6 +83,14 @@ export default {
     }
   },
 
+  robots: () => {
+    return {
+      UserAgent: '*',
+      Allow: '/',
+      Sitemap: 'https://cmpct.io/sitemap.xml'
+    }
+  },
+
   server: {
     host: '0.0.0.0'
   },
