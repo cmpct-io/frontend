@@ -29,7 +29,8 @@ export default {
       title: `cmpct.io | ${this.metaTitle}`,
       meta: [
         { property: 'og:title', name: 'og:title', hid: 'og:title', content: this.metaTitle },
-        { property: 'og:image', name: 'og:image', hid: 'og:image', content: this.metaImage }
+        { property: 'og:image', name: 'og:image', hid: 'og:image', content: this.metaImage },
+        { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io${this.$router.currentRoute.fullPath}/` }
       ]
     }
   },

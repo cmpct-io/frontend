@@ -24,7 +24,10 @@ import historyTrigger from '@/components/history/trigger.vue'
 export default {
   head () {
     return {
-      title: this.$t('pageTitle')
+      title: this.$t('pageTitle'),
+      meta: [
+        { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io/` }
+      ]
     }
   },
 
