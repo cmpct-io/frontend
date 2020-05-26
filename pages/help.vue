@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="c-help u-noScroll">
     <h1
       v-text="$t('pageTitle')"
       class="mb-l" />
@@ -18,8 +18,6 @@ import priceSection from '@/components/help/price.vue'
 import safetySection from '@/components/help/safety.vue'
 
 export default {
-  layout: 'help',
-
   head () {
     return {
       title: `cmpct.io | ${this.$t('pageTitle')}`,
@@ -39,6 +37,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .c-help {
+    position: fixed;
+    top: 85px;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
   .help-section {
     display: block;
     margin: 0 auto;
