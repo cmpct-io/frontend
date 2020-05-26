@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <div class="c-panel u-border">
     <slot />
   </div>

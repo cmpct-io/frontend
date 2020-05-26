@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <section class="c-tabs">
     <slot />
   </section>

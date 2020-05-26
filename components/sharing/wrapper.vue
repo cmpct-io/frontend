@@ -5,7 +5,7 @@
       <span v-text="$t('share')" />
     </a>
 
-    <panel v-show="show" class="a-fadeIn">
+    <panel v-if="show">
       <div class="u-flex-container">
         <p
           v-text="$t('title')"
