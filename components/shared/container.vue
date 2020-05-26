@@ -1,6 +1,6 @@
 <template>
-  <div class="c-content u-flex-container">
-    <section class="c-content-container u-flex-grow">
+  <div class="c-container u-flex-container">
+    <section class="c-container-inner u-flex-grow">
       <slot />
     </section>
   </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style scoped>
-  .c-content {
+  .c-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -25,7 +25,7 @@ export default {
     padding: 0 10px;
   }
 
-  .c-content-container {
+  .c-container-inner {
     position: relative;
     z-index: 50;
   }
