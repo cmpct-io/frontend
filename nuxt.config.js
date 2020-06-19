@@ -78,6 +78,7 @@ export default {
       description: `Create shorter, safer & better links that you can share with cmpct - the free custom URL shortener that lets you see where you're going before you click.`,
       lang: 'en',
       display: 'standalone',
+      start_url: 'https://cmpct.io',
       background_color: '#000000',
       theme_color: '#000000'
     }
@@ -103,5 +104,5 @@ export default {
     google: {
       families: ['Tomorrow:400,400&display=swap']
     }
-  },
+  }
 }
