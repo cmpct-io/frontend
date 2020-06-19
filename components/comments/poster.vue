@@ -24,7 +24,7 @@
       type="submit" />
 
     <button
-      @click="setIsCommenting(false)"
+      @click="COMMENTS_SET_IS_COMMENTING(false)"
       v-text="$t('cancel')"
       class="u-hover"
       type="button" />
@@ -32,7 +32,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations, mapActions } from 'vuex'
+import { COMMENTS_SET_IS_COMMENTING } from '@/store/mutations.constants'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
@@ -50,8 +51,11 @@ export default {
   methods: {
     ...mapActions('comments', [
       'loadComments',
-      'submitComment',
-      'setIsCommenting'
+      'submitComment'
+    ]),
+
+    ...mapMutations('comments', [
+      COMMENTS_SET_IS_COMMENTING
     ]),
 
     async addComment () {

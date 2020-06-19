@@ -20,7 +20,8 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
+import { GENERATOR_ADD_LINK, GENERATOR_SET_VALIDATION_WARNING } from '@/store/mutations.constants'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import { IS_VALID_URL } from '@/services/validation-service.js'
 import clipboardService from '@/services/clipboard-service.js'
@@ -56,9 +57,12 @@ export default {
 
   methods: {
     ...mapActions('generator', [
-      'generate',
-      'addLink',
-      'setValidationWarning'
+      'generate'
+    ]),
+
+    ...mapMutations('generator', [
+      GENERATOR_ADD_LINK,
+      GENERATOR_SET_VALIDATION_WARNING
     ]),
 
     ...mapActions('snackbar', [
@@ -72,10 +76,10 @@ export default {
 
     create () {
       const isValid = IS_VALID_URL(this.target)
-      this.setValidationWarning(!isValid)
+      this.GENERATOR_SET_VALIDATION_WARNING(!isValid)
 
       if (isValid) {
-        this.addLink(this.target)
+        this.GENERATOR_ADD_LINK(this.target)
 
         if (!this.isGroup) {
           this.generate().then(() => {

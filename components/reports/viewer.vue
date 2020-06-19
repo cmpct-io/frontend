@@ -11,7 +11,7 @@
         <span
           v-text="$t('ifYouThink')" />
         <span
-          @click="setIsReporting(true)"
+          @click="REPORTS_SET_IS_REPORTING(true)"
           v-text="$t('pleaseReportIt')"
           class="u-text-link" />
       </p>
@@ -26,7 +26,7 @@
       <span
         v-text="$t('nobodyHasReported')" />
       <span
-        @click="setIsReporting(true)"
+        @click="REPORTS_SET_IS_REPORTING(true)"
         v-text="$t('pleaseReportIfYouThink')"
         class="u-text-link" />
     </p>
@@ -36,7 +36,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations, mapActions } from 'vuex'
+import { REPORTS_SET_IS_REPORTING } from '@/store/mutations.constants'
 import report from '@/components/reports/item.vue'
 import poster from '@/components/reports/poster.vue'
 
@@ -58,11 +59,16 @@ export default {
     ])
   },
 
-  methods: mapActions('reports', [
-    'submitReport',
-    'loadReports',
-    'setIsReporting'
-  ])
+  methods: {
+    ...mapActions('reports', [
+      'submitReport',
+      'loadReports'
+    ]),
+
+    ...mapMutations('reports', [
+      REPORTS_SET_IS_REPORTING
+    ])
+  }
 }
 </script>
 

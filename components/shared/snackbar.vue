@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="showSnackbar"
-    @click="hideSnackbar()"
+    @click="SNACKBAR_HIDE()"
     class="c-snackbar u-flex-container u-pointer a-slideInUp">
     <c-icon
       icon="bell"
@@ -18,7 +18,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
+import { SNACKBAR_HIDE } from '@/store/mutations.constants'
 
 export default {
   computed: mapState('snackbar', [
@@ -26,8 +27,8 @@ export default {
     'snackbarMessage'
   ]),
 
-  methods: mapActions('snackbar', [
-    'hideSnackbar'
+  methods: mapMutations('snackbar', [
+    SNACKBAR_HIDE
   ])
 }
 </script>

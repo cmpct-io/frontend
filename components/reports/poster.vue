@@ -32,7 +32,7 @@
       class="u-hover"
       type="submit" />
     <button
-      @click="setIsReporting(false)"
+      @click="REPORTS_SET_IS_REPORTING(false)"
       v-text="$t('cancel')"
       class="u-hover"
       type="button" />
@@ -40,7 +40,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations, mapActions } from 'vuex'
+import { REPORTS_SET_IS_REPORTING } from '@/store/mutations.constants'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
@@ -58,8 +59,11 @@ export default {
   methods: {
     ...mapActions('reports', [
       'submitReport',
-      'loadReports',
-      'setIsReporting'
+      'loadReports'
+    ]),
+
+    ...mapMutations('reports', [
+      REPORTS_SET_IS_REPORTING
     ]),
 
     async addReport () {

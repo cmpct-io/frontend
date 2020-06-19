@@ -1,6 +1,6 @@
 <template>
   <c-icon
-    @click="setIsGroup(!isGroup)"
+    @click="GENERATOR_SET_IS_GROUP(!isGroup)"
     :title="tooltip"
     v-bind:class="{ 'icon-selected' : isGroup }"
     :icon="icon"
@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
+import { GENERATOR_SET_IS_GROUP } from '@/store/mutations.constants'
 
 export default {
   computed: {
@@ -29,8 +30,8 @@ export default {
     }
   },
 
-  methods: mapActions('generator', [
-    'setIsGroup'
+  methods: mapMutations('generator', [
+    GENERATOR_SET_IS_GROUP
   ])
 }
 </script>

@@ -35,9 +35,5 @@ export const actions = {
     })
 
     commit(REPORTS_SET_IS_REPORTING, false)
-  },
-
-  setIsReporting: ({ commit }, isReporting) => {
-    commit(REPORTS_SET_IS_REPORTING, isReporting)
   }
 }

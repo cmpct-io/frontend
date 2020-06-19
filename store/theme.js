@@ -9,9 +9,3 @@ export const mutations = {
     state.isDarkMode = isDarkMode
   }
 }
-
-export const actions = {
-  setTheme: ({ commit }, isDarkMode) => {
-    commit(THEME_SET_THEME, isDarkMode)
-  }
-}

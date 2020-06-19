@@ -5,14 +5,15 @@
       class="u-text-small u-flex-grow u-break-word mr" />
 
     <c-icon
-      @click="removeLink(link)"
+      @click="GENERATOR_REMOVE_LINK(link)"
       icon="times"
       class="u-text-small u-pointer" />
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapMutations } from 'vuex'
+import { GENERATOR_REMOVE_LINK } from '@/store/mutations.constants'
 
 export default {
   props: {
@@ -22,8 +23,8 @@ export default {
     }
   },
 
-  methods: mapActions('generator', [
-    'removeLink'
+  methods: mapMutations('generator', [
+    GENERATOR_REMOVE_LINK
   ])
 }
 </script>

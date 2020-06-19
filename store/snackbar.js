@@ -17,9 +17,6 @@ export const mutations = {
 }
 
 export const actions = {
-  hideSnackbar: ({ commit }) =>
-    commit(SNACKBAR_HIDE),
-
   showSnackbar: ({ commit }, message) => {
     commit(SNACKBAR_SHOW, message)
 

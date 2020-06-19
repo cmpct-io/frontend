@@ -16,7 +16,8 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapMutations } from 'vuex'
+import { GENERATOR_RESET } from '@/store/mutations.constants'
 import generator from '@/components/generator/generator.vue'
 import groupWrapper from '@/components/generator/group-wrapper.vue'
 import historyTrigger from '@/components/history/trigger.vue'
@@ -38,11 +39,11 @@ export default {
   },
 
   beforeDestroy () {
-    this.reset()
+    this.GENERATOR_RESET()
   },
 
-  methods: mapActions('generator', [
-    'reset'
+  methods: mapMutations('generator', [
+    GENERATOR_RESET
   ])
 }
 </script>

@@ -17,11 +17,3 @@ export const mutations = {
     state.show = true
   }
 }
-
-export const actions = {
-  hideViewer: ({ commit }) =>
-    commit(IMAGE_VIEWER_HIDE),
-
-  showViewer: ({ commit }, payload) =>
-    commit(IMAGE_VIEWER_SHOW, payload)
-}

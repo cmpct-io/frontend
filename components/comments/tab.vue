@@ -2,7 +2,7 @@
   <section class="u-inline-block mr">
     <div
       v-show="showTarget"
-      @click="showPanel('comments')"
+      @click="ACTIVE_ROUTE_SHOW_PANEL('comments')"
       class="tab a-slideInUp">
       <p>
         <c-icon
@@ -17,12 +17,13 @@
       </p>
     </div>
 
-    <circle-button v-show="showComments" @clicked="showPanel('target')" icon="times" />
+    <circle-button v-show="showComments" @clicked="ACTIVE_ROUTE_SHOW_PANEL('target')" icon="times" />
   </section>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
+import { ACTIVE_ROUTE_SHOW_PANEL } from '@/store/mutations.constants'
 
 export default {
   computed: {
@@ -43,8 +44,8 @@ export default {
     }
   },
 
-  methods: mapActions('activeRoute', [
-    'showPanel'
+  methods: mapMutations('activeRoute', [
+    ACTIVE_ROUTE_SHOW_PANEL
   ])
 }
 </script>

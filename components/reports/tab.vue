@@ -2,7 +2,7 @@
   <section class="u-inline-block">
     <div
       v-show="displayedPanel === 'target'"
-      @click="showPanel('reports')"
+      @click="ACTIVE_ROUTE_SHOW_PANEL('reports')"
       class="tab a-slideInUp">
       <p v-bind:class="[{ 'u-text-warning': reports.length > 0 }]">
         <c-icon
@@ -18,12 +18,13 @@
       </p>
     </div>
 
-    <circle-button v-show="displayedPanel === 'reports'" @clicked="showPanel('target')" icon="times" />
+    <circle-button v-show="displayedPanel === 'reports'" @clicked="ACTIVE_ROUTE_SHOW_PANEL('target')" icon="times" />
   </section>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
+import { ACTIVE_ROUTE_SHOW_PANEL } from '@/store/mutations.constants'
 
 export default {
   computed: {
@@ -36,8 +37,8 @@ export default {
     ])
   },
 
-  methods: mapActions('activeRoute', [
-    'showPanel'
+  methods: mapMutations('activeRoute', [
+    ACTIVE_ROUTE_SHOW_PANEL
   ])
 }
 </script>

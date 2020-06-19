@@ -7,7 +7,7 @@
         <span
           v-text="$t('wouldYouLikeTo')" />
         <span
-          @click="setIsCommenting(true)"
+          @click="COMMENTS_SET_IS_COMMENTING(true)"
           v-text="$t('addAComment')"
           class="u-text-link" />
       </p>
@@ -24,7 +24,7 @@
       <span
         v-text="$t('nobodyHasLeftAComment')" />
       <span
-        @click="setIsCommenting(true)"
+        @click="COMMENTS_SET_IS_COMMENTING(true)"
         v-text="$t('beTheFirst')"
         class="u-text-link" />
     </p>
@@ -34,7 +34,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
+import { COMMENTS_SET_IS_COMMENTING } from '@/store/mutations.constants'
 import comment from '@/components/comments/item.vue'
 import poster from '@/components/comments/poster.vue'
 
@@ -67,8 +68,8 @@ export default {
       return !this.isCommenting && this.comments.length === 0
     }
   },
-  methods: mapActions('comments', [
-    'setIsCommenting'
+  methods: mapMutations('comments', [
+    COMMENTS_SET_IS_COMMENTING
   ])
 }
 </script>

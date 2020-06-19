@@ -21,8 +21,9 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
+import { THEME_SET_THEME } from '@/store/mutations.constants'
 
 export default {
   computed: mapState('theme', [
@@ -30,8 +31,8 @@ export default {
   ]),
 
   methods: {
-    ...mapActions('theme', [
-      'setTheme'
+    ...mapMutations('theme', [
+      THEME_SET_THEME
     ]),
 
     changeUIMode (isDarkMode) {
@@ -46,7 +47,7 @@ export default {
         maxAge: 60 * 60 * 24 * 7
       })
 
-      this.setTheme(isDarkMode)
+      this.THEME_SET_THEME(isDarkMode)
       this.$emit('close')
     }
   }

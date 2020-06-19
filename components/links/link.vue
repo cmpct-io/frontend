@@ -30,9 +30,10 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapMutations } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import { STORAGE_PATH } from '@/services/configuration-service.js'
+import { IMAGE_VIEWER_SHOW } from '@/store/mutations.constants'
 import linkFavicon from '@/components/links/link-favicon.vue'
 
 export default {
@@ -74,8 +75,8 @@ export default {
   },
 
   methods: {
-    ...mapActions('imageViewer', [
-      'showViewer'
+    ...mapMutations('imageViewer', [
+      IMAGE_VIEWER_SHOW
     ]),
 
     track () {
@@ -83,7 +84,7 @@ export default {
     },
 
     showScreenshot () {
-      this.showViewer({
+      this.IMAGE_VIEWER_SHOW({
         imageUrl: this.screenshotImageUrl,
         pageTitle: this.title
       })

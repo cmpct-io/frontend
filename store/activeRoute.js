@@ -48,9 +48,5 @@ export const actions = {
   reset: ({ commit }) => {
     commit(ACTIVE_ROUTE_SHOW_PANEL, 'target')
     commit(ACTIVE_ROUTE_SET_ROUTE_DATA, { routeId: null, links: [] })
-  },
-
-  showPanel: ({ commit }, panel) => {
-    commit(ACTIVE_ROUTE_SHOW_PANEL, panel)
   }
 }

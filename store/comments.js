@@ -29,9 +29,5 @@ export const actions = {
     })
 
     commit(COMMENTS_SET_IS_COMMENTING, false)
-  },
-
-  setIsCommenting: ({ commit }, isCommenting) => {
-    commit(COMMENTS_SET_IS_COMMENTING, isCommenting)
   }
 }

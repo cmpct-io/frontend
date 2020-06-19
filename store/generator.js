@@ -79,20 +79,5 @@ export const actions = {
 
     commit(GENERATOR_SET_SHORTCUT, shortcut)
     commit(GENERATOR_SET_IS_SUBMITTING, false)
-  },
-
-  reset: ({ commit }) =>
-    commit(GENERATOR_RESET),
-
-  setValidationWarning: ({ commit }, show) =>
-    commit(GENERATOR_SET_VALIDATION_WARNING, show),
-
-  setIsGroup: ({ commit }, isGroup) =>
-    commit(GENERATOR_SET_IS_GROUP, isGroup),
-
-  addLink: ({ commit }, link) =>
-    commit(GENERATOR_ADD_LINK, link),
-
-  removeLink: ({ commit }, link) =>
-    commit(GENERATOR_REMOVE_LINK, link)
+  }
 }

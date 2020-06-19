@@ -1,16 +1,17 @@
 <template>
-  <container v-if="show" @click="hideViewer" class="c-image-viewer">
+  <container v-if="show" class="c-image-viewer">
     <div class="c-image-viewer-inner a-fadeIn">
       <h3 v-text="pageTitle" class="header mb-s" />
       <img :src="imageUrl" class="u-border" alt="Screenshot">
     </div>
 
-    <circle-button @clicked="hideViewer()" icon="times" />
+    <circle-button @clicked="IMAGE_VIEWER_HIDE()" icon="times" />
   </container>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
+import { IMAGE_VIEWER_HIDE } from '@/store/mutations.constants'
 
 export default {
   computed: mapState('imageViewer', [
@@ -20,11 +21,11 @@ export default {
   ]),
 
   beforeDestroy () {
-    this.hideViewer()
+    this.IMAGE_VIEWER_HIDE()
   },
 
-  methods: mapActions('imageViewer', [
-    'hideViewer'
+  methods: mapMutations('imageViewer', [
+    IMAGE_VIEWER_HIDE
   ])
 }
 </script>
