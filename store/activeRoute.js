@@ -1,3 +1,4 @@
+import { ACTIVE_ROUTE_SHOW_PANEL, ACTIVE_ROUTE_SET_ROUTE_DATA } from '@/store/mutations.constants'
 import routesApi from '@/services/routes.api.js'
 
 export const state = () => ({
@@ -13,11 +14,11 @@ export const getters = {
 }
 
 export const mutations = {
-  showPanel: (state, panel) => {
+  [ACTIVE_ROUTE_SHOW_PANEL]: (state, panel) => {
     state.displayedPanel = panel
   },
 
-  setRouteData: (state, routeData) => {
+  [ACTIVE_ROUTE_SET_ROUTE_DATA]: (state, routeData) => {
     state.routeId = routeData.id
     state.links = routeData.links
     state.processDate = routeData.processDate
@@ -26,11 +27,11 @@ export const mutations = {
 
 export const actions = {
   initialise: async ({ commit }, routeId) => {
-    commit('showPanel', 'target')
+    commit(ACTIVE_ROUTE_SHOW_PANEL, 'target')
     const routeData = await routesApi.getRoute(routeId)
 
     if (routeData) {
-      commit('setRouteData', routeData)
+      commit(ACTIVE_ROUTE_SET_ROUTE_DATA, routeData)
     }
 
     return (routeData)
@@ -40,16 +41,16 @@ export const actions = {
     const routeData = await routesApi.getRoute(state.routeId)
 
     if (routeData) {
-      commit('setRouteData', routeData)
+      commit(ACTIVE_ROUTE_SET_ROUTE_DATA, routeData)
     }
   },
 
   reset: ({ commit }) => {
-    commit('showPanel', 'target')
-    commit('setRouteData', { routeId: null, links: [] })
+    commit(ACTIVE_ROUTE_SHOW_PANEL, 'target')
+    commit(ACTIVE_ROUTE_SET_ROUTE_DATA, { routeId: null, links: [] })
   },
 
   showPanel: ({ commit }, panel) => {
-    commit('showPanel', panel)
+    commit(ACTIVE_ROUTE_SHOW_PANEL, panel)
   }
 }

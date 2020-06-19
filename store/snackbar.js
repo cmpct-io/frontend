@@ -1,14 +1,16 @@
+import { SNACKBAR_SHOW, SNACKBAR_HIDE } from '@/store/mutations.constants'
+
 export const state = () => ({
   showSnackbar: false,
   snackbarMessage: 'Message not supplied'
 })
 
 export const mutations = {
-  hide: (state) => {
+  [SNACKBAR_HIDE]: (state) => {
     state.showSnackbar = false
   },
 
-  show: (state, message) => {
+  [SNACKBAR_SHOW]: (state, message) => {
     state.snackbarMessage = message
     state.showSnackbar = true
   }
@@ -16,13 +18,13 @@ export const mutations = {
 
 export const actions = {
   hideSnackbar: ({ commit }) =>
-    commit('hide'),
+    commit(SNACKBAR_HIDE),
 
   showSnackbar: ({ commit }, message) => {
-    commit('show', message)
+    commit(SNACKBAR_SHOW, message)
 
     setTimeout(function () {
-      commit('hide')
+      commit(SNACKBAR_HIDE)
     }, 7750)
   }
 }

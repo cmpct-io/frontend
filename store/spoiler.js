@@ -1,19 +1,21 @@
+import { SPOILER_SET_MESSAGE } from '@/store/mutations.constants'
+
 export const state = () => ({
   openSpoilerText: ''
 })
 
 export const mutations = {
-  setOpenSpoilerText: (state, spoilerText) => {
-    state.openSpoilerText = spoilerText
+  [SPOILER_SET_MESSAGE]: (state, message) => {
+    state.openSpoilerText = message
   }
 }
 
 export const actions = {
-  setOpenSpoilerText: ({ commit, state }, spoilerText) => {
-    if (state.openSpoilerText === spoilerText) {
-      commit('setOpenSpoilerText', '')
+  setOpenSpoilerText: ({ commit, state }, message) => {
+    if (state.openSpoilerText === message) {
+      commit(SPOILER_SET_MESSAGE, '')
     } else {
-      commit('setOpenSpoilerText', spoilerText)
+      commit(SPOILER_SET_MESSAGE, message)
     }
   }
 }

@@ -1,4 +1,15 @@
 import generator from 'shortid'
+
+import {
+  GENERATOR_RESET,
+  GENERATOR_SET_VALIDATION_WARNING,
+  GENERATOR_SET_SHORTCUT,
+  GENERATOR_SET_IS_SUBMITTING,
+  GENERATOR_SET_IS_GROUP,
+  GENERATOR_ADD_LINK,
+  GENERATOR_REMOVE_LINK
+} from '@/store/mutations.constants'
+
 import routesApi from '@/services/routes.api.js'
 
 export const state = () => ({
@@ -18,31 +29,31 @@ export const getters = {
 }
 
 export const mutations = {
-  reset: (state) => {
+  [GENERATOR_RESET]: (state) => {
     state.links = []
     state.isGroup = false
     state.shortcut = null
     state.showValidationWarning = false
   },
 
-  setValidationWarning: (state, show) => {
+  [GENERATOR_SET_VALIDATION_WARNING]: (state, show) => {
     state.showValidationWarning = show
   },
 
-  setShortcut: (state, shortcut) => {
+  [GENERATOR_SET_SHORTCUT]: (state, shortcut) => {
     state.shortcut = shortcut
   },
 
-  setIsSubmitting: (state, value) => {
+  [GENERATOR_SET_IS_SUBMITTING]: (state, value) => {
     state.isSubmitting = value
   },
 
-  setIsGroup: (state, isGroup) => {
+  [GENERATOR_SET_IS_GROUP]: (state, isGroup) => {
     state.isGroup = isGroup
     state.links = []
   },
 
-  addLink: (state, link) => {
+  [GENERATOR_ADD_LINK]: (state, link) => {
     if (!link.startsWith('http')) {
       link = `https://${link}`
     }
@@ -50,14 +61,14 @@ export const mutations = {
     state.links.push(link)
   },
 
-  removeLink: (state, link) => {
+  [GENERATOR_REMOVE_LINK]: (state, link) => {
     state.links = state.links.filter(lnk => lnk !== link)
   }
 }
 
 export const actions = {
   generate: async ({ commit, state }) => {
-    commit('setIsSubmitting', true)
+    commit(GENERATOR_SET_IS_SUBMITTING, true)
 
     const shortcut = generator.generate()
 
@@ -66,22 +77,22 @@ export const actions = {
       links: state.links
     })
 
-    commit('setShortcut', shortcut)
-    commit('setIsSubmitting', false)
+    commit(GENERATOR_SET_SHORTCUT, shortcut)
+    commit(GENERATOR_SET_IS_SUBMITTING, false)
   },
 
   reset: ({ commit }) =>
-    commit('reset'),
+    commit(GENERATOR_RESET),
 
   setValidationWarning: ({ commit }, show) =>
-    commit('setValidationWarning', show),
+    commit(GENERATOR_SET_VALIDATION_WARNING, show),
 
   setIsGroup: ({ commit }, isGroup) =>
-    commit('setIsGroup', isGroup),
+    commit(GENERATOR_SET_IS_GROUP, isGroup),
 
   addLink: ({ commit }, link) =>
-    commit('addLink', link),
+    commit(GENERATOR_ADD_LINK, link),
 
   removeLink: ({ commit }, link) =>
-    commit('removeLink', link)
+    commit(GENERATOR_REMOVE_LINK, link)
 }

@@ -1,15 +1,17 @@
+import { THEME_SET_THEME } from '@/store/mutations.constants'
+
 export const state = () => ({
   isDarkMode: true
 })
 
 export const mutations = {
-  setTheme: (state, isDarkMode) => {
+  [THEME_SET_THEME]: (state, isDarkMode) => {
     state.isDarkMode = isDarkMode
   }
 }
 
 export const actions = {
   setTheme: ({ commit }, isDarkMode) => {
-    commit('setTheme', isDarkMode)
+    commit(THEME_SET_THEME, isDarkMode)
   }
 }

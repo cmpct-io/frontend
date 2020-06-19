@@ -1,3 +1,5 @@
+import { IMAGE_VIEWER_SHOW, IMAGE_VIEWER_HIDE } from '@/store/mutations.constants'
+
 export const state = () => ({
   show: false,
   imageUrl: '',
@@ -5,11 +7,11 @@ export const state = () => ({
 })
 
 export const mutations = {
-  hide: (state) => {
+  [IMAGE_VIEWER_HIDE]: (state) => {
     state.show = false
   },
 
-  show: (state, { imageUrl, pageTitle }) => {
+  [IMAGE_VIEWER_SHOW]: (state, { imageUrl, pageTitle }) => {
     state.imageUrl = imageUrl
     state.pageTitle = pageTitle
     state.show = true
@@ -18,8 +20,8 @@ export const mutations = {
 
 export const actions = {
   hideViewer: ({ commit }) =>
-    commit('hide'),
+    commit(IMAGE_VIEWER_HIDE),
 
   showViewer: ({ commit }, payload) =>
-    commit('show', payload)
+    commit(IMAGE_VIEWER_SHOW, payload)
 }

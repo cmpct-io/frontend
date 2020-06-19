@@ -1,3 +1,4 @@
+import { BACKGROUND_SET_ELEMENTS } from '@/store/mutations.constants'
 import randomiser from '@/services/randomiser.js'
 
 export const state = () => ({
@@ -5,7 +6,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setElements: (state, elements) => {
+  [BACKGROUND_SET_ELEMENTS]: (state, elements) => {
     state.elements = elements
   }
 }
@@ -23,6 +24,6 @@ export const actions = {
       elementCount -= 1
     }
 
-    commit('setElements', elements)
+    commit(BACKGROUND_SET_ELEMENTS, elements)
   }
 }

@@ -1,3 +1,4 @@
+import { REPORTS_SET_REPORTS, REPORTS_SET_IS_REPORTING } from '@/store/mutations.constants'
 import reportsApi from '@/services/reports.api.js'
 
 export const state = () => ({
@@ -11,19 +12,19 @@ export const getters = {
 }
 
 export const mutations = {
-  setReports: (state, reports) => {
+  [REPORTS_SET_REPORTS]: (state, reports) => {
     state.reports = reports
   },
 
-  setIsReporting: (state, value) => {
+  [REPORTS_SET_IS_REPORTING]: (state, value) => {
     state.isReporting = value
   }
 }
 
 export const actions = {
   loadReports: async ({ commit }, routeId) => {
-    commit('setReports', [])
-    commit('setReports', await reportsApi.getReports(routeId))
+    commit(REPORTS_SET_REPORTS, [])
+    commit(REPORTS_SET_REPORTS, await reportsApi.getReports(routeId))
   },
 
   submitReport: async ({ commit }, { routeId, name, reportType }) => {
@@ -33,10 +34,10 @@ export const actions = {
       reportType
     })
 
-    commit('setIsReporting', false)
+    commit(REPORTS_SET_IS_REPORTING, false)
   },
 
   setIsReporting: ({ commit }, isReporting) => {
-    commit('setIsReporting', isReporting)
+    commit(REPORTS_SET_IS_REPORTING, isReporting)
   }
 }

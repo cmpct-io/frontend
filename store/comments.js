@@ -1,3 +1,4 @@
+import { COMMENTS_SET_COMMENTS, COMMENTS_SET_IS_COMMENTING } from '@/store/mutations.constants'
 import commentsApi from '@/services/comments.api.js'
 
 export const state = () => ({
@@ -6,18 +7,18 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setComments: (state, comments) => {
+  [COMMENTS_SET_COMMENTS]: (state, comments) => {
     state.comments = comments
   },
 
-  setIsCommenting: (state, value) => {
+  [COMMENTS_SET_IS_COMMENTING]: (state, value) => {
     state.isCommenting = value
   }
 }
 
 export const actions = {
   loadComments: async ({ commit }, routeId) => {
-    commit('setComments', await commentsApi.getComments(routeId))
+    commit(COMMENTS_SET_COMMENTS, await commentsApi.getComments(routeId))
   },
 
   submitComment: async ({ commit }, { routeId, name, commentText }) => {
@@ -27,10 +28,10 @@ export const actions = {
       commentText
     })
 
-    commit('setIsCommenting', false)
+    commit(COMMENTS_SET_IS_COMMENTING, false)
   },
 
   setIsCommenting: ({ commit }, isCommenting) => {
-    commit('setIsCommenting', isCommenting)
+    commit(COMMENTS_SET_IS_COMMENTING, isCommenting)
   }
 }
