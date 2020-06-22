@@ -13,9 +13,3 @@
     }
   </script>
 </template>
-
-<script>
-export default {
-  name: 'Metadata'
-}
-</script>

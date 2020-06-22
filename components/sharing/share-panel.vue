@@ -27,17 +27,8 @@
 
 <script>
 import { TRACK_EVENT } from '@/services/analytics-service.js'
-import twitter from '@/components/sharing/twitter.vue'
-import facebook from '@/components/sharing/facebook.vue'
-import copyAddress from '@/components/sharing/copy-address.vue'
 
 export default {
-  components: {
-    twitter,
-    facebook,
-    copyAddress
-  },
-
   data () {
     return {
       show: false,

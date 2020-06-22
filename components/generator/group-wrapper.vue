@@ -28,13 +28,8 @@
 import { mapState, mapGetters, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import clipboardService from '@/services/clipboard-service.js'
-import groupLink from '@/components/generator/group-link.vue'
 
 export default {
-  components: {
-    groupLink
-  },
-
   data () {
     return {
       isSubmitting: false

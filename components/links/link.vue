@@ -5,7 +5,7 @@
     :target="targetValue"
     :title="title"
     class="c-box u-flex-container u-border u-hover mb-m">
-    <link-favicon :target="target" />
+    <links-link-favicon :target="target" />
     <div class="link-inner u-flex-grow">
       <p
         v-if="title"
@@ -34,13 +34,8 @@ import { mapMutations } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import { STORAGE_PATH } from '@/services/configuration-service.js'
 import { IMAGE_VIEWER_SHOW } from '@/store/mutations.constants'
-import linkFavicon from '@/components/links/link-favicon.vue'
 
 export default {
-  components: {
-    linkFavicon
-  },
-
   props: {
     target: {
       type: String,

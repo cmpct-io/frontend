@@ -41,15 +41,8 @@
 <script>
 import { ASSET_PATH } from '@/services/configuration-service.js'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
-import language from '@/components/navigator/language.vue'
-import themeSwitcher from '@/components/navigator/theme-switcher.vue'
 
 export default {
-  components: {
-    language,
-    themeSwitcher
-  },
-
   data () {
     return {
       expanded: false

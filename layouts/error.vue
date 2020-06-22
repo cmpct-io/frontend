@@ -10,15 +10,8 @@
 
 <script>
 import uiModeMixin from '@/mixins/ui-mode-mixin.vue'
-import notFound from '@/components/error/not-found.vue'
-import serverError from '@/components/error/server-error.vue'
 
 export default {
-  components: {
-    notFound,
-    serverError
-  },
-
   mixins: [uiModeMixin],
 
   props: {

@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: 'CircleButton',
   props: {
     icon: {
       type: String,

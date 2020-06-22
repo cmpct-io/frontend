@@ -18,9 +18,6 @@
 <script>
 import { mapMutations } from 'vuex'
 import { GENERATOR_RESET } from '@/store/mutations.constants'
-import generator from '@/components/generator/generator.vue'
-import groupWrapper from '@/components/generator/group-wrapper.vue'
-import historyTrigger from '@/components/history/trigger.vue'
 
 export default {
   head () {
@@ -30,12 +27,6 @@ export default {
         { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io/` }
       ]
     }
-  },
-
-  components: {
-    generator,
-    groupWrapper,
-    historyTrigger
   },
 
   beforeDestroy () {

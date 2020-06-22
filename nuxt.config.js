@@ -14,7 +14,16 @@ export default {
 
   buildModules: [
     '@nuxtjs/eslint-module',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxt/components'
+  ],
+
+  components: [
+    '~/components',
+    { path: '~/components/history/', prefix: 'history' },
+    { path: '~/components/comments/', prefix: 'comments' },
+    { path: '~/components/reports/', prefix: 'reports' },
+    { path: '~/components/links/', prefix: 'links' }
   ],
 
   css: [
@@ -67,8 +76,7 @@ export default {
   ],
 
   plugins: [
-    '~/plugins/fontawesome.plugin.js',
-    '~/plugins/sharedcomponents.plugin.js'
+    '~/plugins/fontawesome.plugin.js'
   ],
 
   pwa: {

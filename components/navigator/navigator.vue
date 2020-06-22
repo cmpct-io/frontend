@@ -3,7 +3,7 @@
     <logo />
 
     <div class="links">
-      <sharing-wrapper />
+      <share-panel />
 
       <a href="https://github.com/cmpct-io" target="blank" class="u-hidden-mobile mr">
         <c-icon icon="code" class="mr-s" />
@@ -19,20 +19,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import logo from '@/components/navigator/logo.vue'
-import languageSwitcher from '@/components/navigator/language-switcher.vue'
-import sharingWrapper from '@/components/sharing/wrapper.vue'
-
-export default {
-  components: {
-    logo,
-    sharingWrapper,
-    languageSwitcher
-  }
-}
-</script>
 
 <style scoped lang="scss">
   section.navigator {

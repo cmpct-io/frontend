@@ -7,33 +7,24 @@
       v-text="$t('description')"
       class="mb-l" />
 
-    <reloader />
+    <links-reloader />
 
     <div class="c-group-wrapper u-noScroll">
-      <render-link
+      <links-link
         v-for="(link, index) in links"
         v-bind:key="index"
         v-bind="link"
         :new-page="links.length > 1" />
     </div>
 
-    <report-warning />
+    <links-warning />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import reloader from '@/components/links/reloader.vue'
-import renderLink from '@/components/links/link.vue'
-import reportWarning from '@/components/links/warning.vue'
 
 export default {
-  components: {
-    reloader,
-    renderLink,
-    reportWarning
-  },
-
   computed: mapState('activeRoute', [
     'displayedPanel',
     'links',

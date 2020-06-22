@@ -4,19 +4,14 @@
       v-text="$t('pageTitle')"
       class="mb-l" />
 
-    <what-section />
-    <privacy-section />
-    <price-section />
-    <safety-section />
+    <what />
+    <privacy />
+    <price />
+    <safety />
   </section>
 </template>
 
 <script>
-import whatSection from '@/components/help/what.vue'
-import privacySection from '@/components/help/privacy.vue'
-import priceSection from '@/components/help/price.vue'
-import safetySection from '@/components/help/safety.vue'
-
 export default {
   head () {
     return {
@@ -25,13 +20,6 @@ export default {
         { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io/help/` }
       ]
     }
-  },
-
-  components: {
-    whatSection,
-    privacySection,
-    priceSection,
-    safetySection
   }
 }
 </script>

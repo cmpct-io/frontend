@@ -24,7 +24,6 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import { TRACK_EVENT } from '@/services/analytics-service.js'
-import historyItem from '@/components/history/item.vue'
 
 export default {
   head () {
@@ -34,10 +33,6 @@ export default {
         { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io/history/` }
       ]
     }
-  },
-
-  components: {
-    historyItem
   },
 
   computed: mapState('history', [

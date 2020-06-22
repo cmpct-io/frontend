@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Panel'
-}
-</script>
-
 <style scoped lang="scss">
 .c-panel {
   position: absolute;

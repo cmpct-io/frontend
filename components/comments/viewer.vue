@@ -12,7 +12,7 @@
           class="u-text-link" />
       </p>
 
-      <comment
+      <comments-item
         v-for="(item, index) in comments"
         :key="index"
         v-bind="item" />
@@ -29,22 +29,15 @@
         class="u-text-link" />
     </p>
 
-    <poster v-show="isCommenting" />
+    <comments-poster v-show="isCommenting" />
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
 import { COMMENTS_SET_IS_COMMENTING } from '@/store/mutations.constants'
-import comment from '@/components/comments/item.vue'
-import poster from '@/components/comments/poster.vue'
 
 export default {
-  components: {
-    comment,
-    poster
-  },
-
   computed: {
     ...mapState('activeRoute', [
       'routeId',

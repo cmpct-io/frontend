@@ -16,7 +16,7 @@
           class="u-text-link" />
       </p>
 
-      <report
+      <reports-item
         v-for="(item, index) in reports"
         :key="index"
         v-bind="item" />
@@ -31,22 +31,15 @@
         class="u-text-link" />
     </p>
 
-    <poster v-show="isReporting" />
+    <reports-poster v-show="isReporting" />
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex'
 import { REPORTS_SET_IS_REPORTING } from '@/store/mutations.constants'
-import report from '@/components/reports/item.vue'
-import poster from '@/components/reports/poster.vue'
 
 export default {
-  components: {
-    report,
-    poster
-  },
-
   computed: {
     ...mapState('activeRoute', [
       'routeId',

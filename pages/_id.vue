@@ -16,12 +16,6 @@
 import { mapState } from 'vuex'
 import { STORAGE_PATH } from '@/services/configuration-service.js'
 import historyService from '@/services/history-service.js'
-import commentsTab from '@/components/comments/tab.vue'
-import reportsTab from '@/components/reports/tab.vue'
-import linksGroup from '@/components/links/group.vue'
-import commentsViewer from '@/components/comments/viewer.vue'
-import reportsViewer from '@/components/reports/viewer.vue'
-import imageViewer from '@/components/shared/image-viewer.vue'
 
 export default {
   head () {
@@ -33,15 +27,6 @@ export default {
         { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io${this.$router.currentRoute.fullPath}/` }
       ]
     }
-  },
-
-  components: {
-    commentsTab,
-    reportsTab,
-    linksGroup,
-    commentsViewer,
-    reportsViewer,
-    imageViewer
   },
 
   computed: {

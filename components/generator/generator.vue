@@ -25,19 +25,8 @@ import { GENERATOR_ADD_LINK, GENERATOR_SET_VALIDATION_WARNING } from '@/store/mu
 import { TRACK_EVENT } from '@/services/analytics-service.js'
 import { IS_VALID_URL } from '@/services/validation-service.js'
 import clipboardService from '@/services/clipboard-service.js'
-import groupButton from '@/components/generator/group-button.vue'
-import pasteButton from '@/components/generator/paste-button.vue'
-import submitButton from '@/components/generator/submit-button.vue'
-import validationWarning from '@/components/generator/validation-warning.vue'
 
 export default {
-  components: {
-    groupButton,
-    pasteButton,
-    submitButton,
-    validationWarning
-  },
-
   data () {
     return {
       target: ''
