@@ -1,14 +1,16 @@
 <template>
-  <section class="c-help u-noScroll">
-    <h1
-      v-text="$t('pageTitle')"
-      class="mb-l" />
+  <container>
+    <section class="c-help u-noScroll">
+      <h1
+        v-text="$t('pageTitle')"
+        class="mb-l" />
 
-    <what />
-    <privacy />
-    <price />
-    <safety />
-  </section>
+      <what />
+      <privacy />
+      <price />
+      <safety />
+    </section>
+  </container>
 </template>
 
 <script>

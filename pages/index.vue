@@ -1,18 +1,20 @@
 <template>
-  <section>
-    <h1
-      v-text="$t('title')" />
-    <p
-      v-text="$t('subtitle')"
-      class="mb" />
-    <p
-      v-text="$t('message')"
-      class="mb-l" />
+  <container>
+    <section>
+      <h1
+        v-text="$t('title')" />
+      <p
+        v-text="$t('subtitle')"
+        class="mb" />
+      <p
+        v-text="$t('message')"
+        class="mb-l" />
 
-    <generator />
-    <group-wrapper />
-    <history-trigger />
-  </section>
+      <generator />
+      <group-wrapper />
+      <history-trigger />
+    </section>
+  </container>
 </template>
 
 <script>

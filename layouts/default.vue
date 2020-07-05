@@ -3,9 +3,7 @@
     <navigator />
     <background />
 
-    <container>
-      <nuxt />
-    </container>
+    <nuxt />
 
     <snackbar />
     <metadata />

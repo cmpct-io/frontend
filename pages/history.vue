@@ -1,24 +1,26 @@
 <template>
-  <section class="c-history">
-    <div class="c-history-content">
-      <h1
-        v-text="$t('history')" />
-      <p
-        v-text="$t('description')"
-        class="mb-l" />
+  <container>
+    <section class="c-history">
+      <div class="c-history-content">
+        <h1
+          v-text="$t('history')" />
+        <p
+          v-text="$t('description')"
+          class="mb-l" />
 
-      <div class="c-history-items u-noScroll">
-        <history-item
-          v-for="(item, index) in items"
-          :key="index"
-          v-bind="item" />
+        <div class="c-history-items u-noScroll">
+          <history-item
+            v-for="(item, index) in items"
+            :key="index"
+            v-bind="item" />
+        </div>
       </div>
-    </div>
 
-    <nuxt-link to="/">
-      <circle-button icon="times" />
-    </nuxt-link>
-  </section>
+      <nuxt-link to="/">
+        <circle-button icon="times" />
+      </nuxt-link>
+    </section>
+  </container>
 </template>
 
 <script>

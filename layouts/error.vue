@@ -1,11 +1,13 @@
 <template>
-  <div :class="uiMode">
-    <not-found
-      v-if="error.statusCode === 404" />
+  <container>
+    <div :class="uiMode">
+      <not-found
+        v-if="error.statusCode === 404" />
 
-    <server-error
-      v-else />
-  </div>
+      <server-error
+        v-else />
+    </div>
+  </container>
 </template>
 
 <script>
