@@ -173,6 +173,7 @@ button, .square-button {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   border: 1px solid white;
+  margin: 0 5px;
 
   .light & {
     border: 1px solid black;

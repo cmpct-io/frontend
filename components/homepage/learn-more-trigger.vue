@@ -4,24 +4,24 @@
     to="history"
     class="tab u-border u-hover a-slideInUp">
     <c-icon
-      icon="history"
+      icon="chevron-down"
       class="mr-s" />
 
     <span
-      v-text="$t('history')" />
+      v-text="$t('learnMore')" />
   </nuxt-link>
 </template>
 
 <i18n>
 {
   "en": {
-    "history": "History"
+    "learnMore": "Learn More"
   },
   "fr": {
-    "history": "Histoire"
+    "learnMore": "Learn More"
   },
   "es": {
-    "history": "Historia"
+    "learnMore": "Learn More"
   }
 }
 </i18n>

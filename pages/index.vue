@@ -1,18 +1,13 @@
 <template>
-  <section>
-    <h1
-      v-text="$t('title')" />
-    <p
-      v-text="$t('subtitle')"
-      class="mb" />
-    <p
-      v-text="$t('message')"
-      class="mb-l" />
+  <slide-wrapper>
+    <template v-slot:one>
+      <generator-slide />
+    </template>
 
-    <generator />
-    <group-wrapper />
-    <history-trigger />
-  </section>
+    <template v-slot:two>
+      <h2>What is cmpct.io?</h2>
+    </template>
+  </slide-wrapper>
 </template>
 
 <script>
@@ -42,22 +37,13 @@ export default {
 <i18n>
 {
   "en": {
-    "pageTitle": "cmpct.io | Free Custom URL Shortener for Safer, Shorter Links",
-    "title": "Custom URL Shortener",
-    "subtitle": "Create free shorter and safer links you can share.",
-    "message": "Paste your link into the box below to get started."
+    "pageTitle": "cmpct.io | Free Custom URL Shortener for Safer, Shorter Links"
   },
   "fr": {
-    "pageTitle": "cmpct.io | Raccourcisseur d'URL personnalisé gratuit pour des liens plus sûrs et plus courts",
-    "title": "Commencer",
-    "subtitle": "Créez gratuitement des liens plus courts et plus sûrs que vous pouvez partager.",
-    "message": "Collez votre lien dans la case ci-dessous pour commencer."
+    "pageTitle": "cmpct.io | Raccourcisseur d'URL personnalisé gratuit pour des liens plus sûrs et plus courts"
   },
   "es": {
-    "pageTitle": "cmpct.io | Acortador de URL personalizado gratuito para enlaces más seguros y cortos",
-    "title": "Empezar",
-    "subtitle": "Cree enlaces gratuitos más cortos y seguros que pueda compartir.",
-    "message": "Pegue su enlace en el cuadro a continuación para comenzar."
+    "pageTitle": "cmpct.io | Acortador de URL personalizado gratuito para enlaces más seguros y cortos"
   }
 }
 </i18n>
