@@ -56,8 +56,6 @@ export default {
 
   loading: { color: '#fff' },
 
-  mode: 'universal',
-
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/applicationinsights',
