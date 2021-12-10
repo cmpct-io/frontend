@@ -76,6 +76,10 @@ export default {
               this.showSnackbar(`${this.qualifiedShortcut} ${this.$t('snackbarMessage')}`)
             }
 
+            const linkCountStat = new this.$statistics.Counter('Total Links')
+            linkCountStat.value = 1
+            linkCountStat.publish()
+
             const linkGeneratedStat = new this.$statistics.HitCounter('Link Generated')
             linkGeneratedStat.publish()
 
