@@ -74,7 +74,8 @@ export default {
   ],
 
   plugins: [
-    '~/plugins/fontawesome.plugin.js'
+    '~/plugins/fontawesome.plugin.js',
+    `~/plugins/statistics.client.js`
   ],
 
   pwa: {

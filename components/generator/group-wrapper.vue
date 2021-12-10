@@ -68,6 +68,12 @@ export default {
         if (clipboardService.copy(this.qualifiedShortcut)) {
           this.showSnackbar(`${this.qualifiedShortcut} ${this.$t('snackbarMessage')}`)
         }
+        const linkCountStat = new this.$statistics.Counter('Total Links')
+        linkCountStat.value = this.links.length
+        linkCountStat.publish()
+
+        const linkGeneratedStat = new this.$statistics.HitCounter('Link Generated')
+        linkGeneratedStat.publish()
 
         TRACK_EVENT(this, 'feature/generate/group', `Shortcut: ${this.shortcut}`)
 

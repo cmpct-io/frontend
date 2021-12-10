@@ -76,6 +76,9 @@ export default {
               this.showSnackbar(`${this.qualifiedShortcut} ${this.$t('snackbarMessage')}`)
             }
 
+            const linkGeneratedStat = new this.$statistics.HitCounter('Link Generated')
+            linkGeneratedStat.publish()
+
             TRACK_EVENT(this, 'feature/generate/single', `Shortcut: ${this.shortcut}`)
 
             this.$router.push({ path: `/${this.shortcut}` })
