@@ -23,7 +23,7 @@
     "@nuxtjs/robots": "2.4.2",
     "@nuxtjs/sitemap": "2.4.0",
     "cookie-universal-nuxt": "2.1.4",
-    "micro-stat": "0.3.0",
+    "micro-stat": "0.4.1",
     "moment": "2.29.1",
     "nuxt": "2.14.12",
     "nuxt-i18n": "6.13.2",
