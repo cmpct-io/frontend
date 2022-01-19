@@ -5981,10 +5981,10 @@ methods@~1.1.2:
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
   integrity sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=
 
-micro-stat@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/micro-stat/-/micro-stat-0.4.1.tgz#7eb97aef070fa69876a0c7113c800b6c8ba908c3"
-  integrity sha512-BNoPkyCHYVVaSpJvrgX4yzmdij2MaDFVtdE+1kW086HBwpFjosq4ovZdI6k8dm/ZOUX2cfXqjCFxq+ystJCctg==
+micro-stat@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/micro-stat/-/micro-stat-0.7.0.tgz#9669591f397c9574d4f842e6ffde436a9f8bc5bb"
+  integrity sha512-M5XPYr6Ge4soe117ySXh6vfeh50dR2wfyH6VMfK87vryRG3nfUehHrGBUgKQcw3COpLRVfe6b2NC6JQvpgxfbg==
   dependencies:
     axios "0.23.0"
     web-vitals "2.1.2"
