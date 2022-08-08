@@ -38,13 +38,13 @@ export default {
 
 <style scoped lang="scss">
 .icon {
-  transition: all 0.25s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  min-width: 35px;
+  padding: 2px;
 
   &.icon-selected {
     background-color: white;
     color: black !important;
-    padding: 5px;
-    width: 35px;
     border-radius: 50%;
 
     .light & {
