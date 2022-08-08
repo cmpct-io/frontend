@@ -42,8 +42,8 @@ export default {
 <i18n>
 {
   "en": {
-    "pageTitle": "cmpct.io | Free Custom URL Shortener for Safer, Shorter Links",
-    "title": "Custom URL Shortener",
+    "pageTitle": "cmpct.io | Create & share safer, shorter links",
+    "title": "Create & share safer, shorter links",
     "subtitle": "Create free shorter and safer links you can share.",
     "message": "Paste your link into the box below to get started."
   },

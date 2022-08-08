@@ -25,11 +25,11 @@ export default {
   ],
 
   head: {
-    title: 'cmpct.io | Free Custom URL Shortener for Safer, Shorter Links',
+    title: 'cmpct.io | Create & share safer short links',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'cmpct.io | Free Custom URL shortener | Create safer, better links you can share' },
+      { hid: 'description', name: 'description', content: 'cmpct.io | Share safer short links | Create safer, better links you can share' },
       { name: 'theme-color', content: '#000000' },
       { name: 'google-site-verification', content: 'Zih5ZaiWwv-IozG3zKriVzfzz9ZjMZ-OgoFraU0sABY' }
     ],
