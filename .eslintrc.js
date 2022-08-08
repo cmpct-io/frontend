@@ -5,7 +5,9 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@babel/eslint-parser',
+    ecmaVersion: 8,
+    requireConfigFile: false
   },
   extends: [
     '@nuxtjs',
@@ -13,6 +15,6 @@ module.exports = {
   ],
   rules: {
     'no-return-assign': 'off',
-    'vue/html-closing-bracket-newline': 'off',
+    'vue/html-closing-bracket-newline': 'off'
   }
 }
