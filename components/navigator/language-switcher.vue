@@ -40,7 +40,6 @@
 
 <script>
 import { ASSET_PATH } from '@/services/configuration-service.js'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
   data () {
@@ -58,14 +57,9 @@ export default {
   methods: {
     toggle () {
       this.expanded = !this.expanded
-
-      if (this.expanded) {
-        TRACK_EVENT(this, 'feature/locale/expanded', `Current Language: ${this.$i18n.locale}`)
-      }
     },
 
     change (language) {
-      TRACK_EVENT(this, `feature/locale/switched/${language}`)
       this.$root.$i18n.locale = language
       this.$cookies.set('i18n_redirected', language, {
         path: '/',

@@ -23,7 +23,6 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
   head () {
@@ -40,7 +39,6 @@ export default {
   ]),
 
   mounted () {
-    TRACK_EVENT(this, 'feature/history/expanded')
     this.initialise()
   },
 

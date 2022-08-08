@@ -22,7 +22,6 @@
 <script>
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 import { GENERATOR_ADD_LINK, GENERATOR_SET_VALIDATION_WARNING } from '@/store/mutations.constants'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 import { IS_VALID_URL } from '@/services/validation-service.js'
 import clipboardService from '@/services/clipboard-service.js'
 
@@ -82,8 +81,6 @@ export default {
 
             const linkGeneratedStat = new this.$statistics.HitCounter('Link Generated')
             linkGeneratedStat.publish()
-
-            TRACK_EVENT(this, 'feature/generate/single', `Shortcut: ${this.shortcut}`)
 
             this.$router.push({ path: `/${this.shortcut}` })
           })

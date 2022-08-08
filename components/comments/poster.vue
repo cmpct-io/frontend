@@ -34,7 +34,6 @@
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex'
 import { COMMENTS_SET_IS_COMMENTING } from '@/store/mutations.constants'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 
 export default {
   data () {
@@ -59,8 +58,6 @@ export default {
     ]),
 
     async addComment () {
-      TRACK_EVENT(this, 'feature/comment/submitted', `Route: ${this.routeId}`)
-
       await this.submitComment({
         routeId: this.routeId,
         name: this.name,

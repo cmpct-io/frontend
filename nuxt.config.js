@@ -1,15 +1,9 @@
 
-import { PUBLIC_PATH, APP_INSIGHTS_KEY } from './services/configuration-service.js'
+import { PUBLIC_PATH } from './services/configuration-service.js'
 
 export default {
-  appInsights: {
-    instrumentationKey: APP_INSIGHTS_KEY
-  },
-
   build: {
-    publicPath: PUBLIC_PATH,
-    extend (config, ctx) {
-    }
+    publicPath: PUBLIC_PATH
   },
 
   buildModules: [
@@ -52,7 +46,6 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/applicationinsights',
     '@nuxtjs/robots',
     'nuxt-webfontloader',
     ['nuxt-i18n', {

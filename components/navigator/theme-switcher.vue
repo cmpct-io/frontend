@@ -22,7 +22,6 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 import { THEME_SET_THEME } from '@/store/mutations.constants'
 
 export default {
@@ -39,8 +38,6 @@ export default {
       const uiMode = isDarkMode === true
         ? 'dark'
         : 'light'
-
-      TRACK_EVENT(this, `feature/theme/switched/${uiMode}`)
 
       this.$cookies.set('ui-mode', uiMode, {
         path: '/',

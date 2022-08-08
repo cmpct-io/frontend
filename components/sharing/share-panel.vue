@@ -26,8 +26,6 @@
 </template>
 
 <script>
-import { TRACK_EVENT } from '@/services/analytics-service.js'
-
 export default {
   data () {
     return {
@@ -54,10 +52,6 @@ export default {
 
     toggle () {
       this.show = !this.show
-
-      if (this.show) {
-        TRACK_EVENT(this, 'feature/sharing/expanded', `URL: ${this.pageUrl}`)
-      }
     }
   }
 }

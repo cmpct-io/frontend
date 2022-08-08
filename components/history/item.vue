@@ -1,5 +1,5 @@
 <template>
-  <div @click="trackEvent">
+  <div>
     <nuxt-link
       :to="shortcut"
       class="c-item u-flex-container u-hover u-border">
@@ -18,7 +18,6 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 import historyService from '@/services/history-service.js'
 
 export default {
@@ -43,10 +42,6 @@ export default {
     ...mapActions('history', [
       'initialise'
     ]),
-
-    trackEvent () {
-      TRACK_EVENT(this, 'feature/history/interact', `Shortcut: ${this.shortcut}`)
-    },
 
     deleteItem () {
       historyService.deleteItem(this.shortcut)

@@ -40,7 +40,7 @@
     },
     "q4": {
       "title": "What analytics do you use?",
-      "answer1": "We use Application Insights to gather some metrics such as page and network performance so we can continue to deliver a reliable service. Using this information we can see why errors are occurring on our website, but we cannot use it to identify you, nor would we want too."
+      "answer1": "We use micro-stat which simply tells us basic statistics to show how our website is used such as counting page loads, such data does not include anything sensitive or otherwise about you. Micro-stat is another of our technologies, not a third party company."
     }
   },
   "fr": {
@@ -62,7 +62,7 @@
     },
     "q4": {
       "title": "Quelles analyses utilisez-vous?",
-      "answer1": "Nous utilisons Application Insights pour collecter certaines mesures telles que les performances des pages et du réseau afin de pouvoir continuer à fournir un service fiable. En utilisant ces informations, nous pouvons voir pourquoi des erreurs se produisent sur notre site Web, mais nous ne pouvons pas les utiliser pour vous identifier, et nous ne le souhaiterions pas non plus."
+      "answer1": "Nous utilisons des micro-stats qui nous indiquent simplement des statistiques de base pour montrer comment notre site Web est utilisé, comme le comptage des chargements de pages, ces données n'incluent rien de sensible ou autrement vous concernant. Micro-stat est une autre de nos technologies, pas une société tierce"
     }
   },
   "es": {
@@ -84,7 +84,7 @@
     },
     "q4": {
       "title": "¿Qué análisis utilizas?",
-      "answer1": "Utilizamos Application Insights para recopilar algunas métricas, como el rendimiento de la página y de la red, de modo que podamos continuar brindando un servicio confiable. Al usar esta información, podemos ver por qué se producen errores en nuestro sitio web, pero no podemos usarla para identificarlo, ni tampoco nos gustaría."
+      "answer1": "Usamos micro-stat que simplemente nos brinda estadísticas básicas para mostrar cómo se usa nuestro sitio web, como contar las cargas de página, dichos datos no incluyen nada confidencial o de otro tipo sobre usted. Micro-stat es otra de nuestras tecnologías, no una empresa de terceros"
     }
   }
 }

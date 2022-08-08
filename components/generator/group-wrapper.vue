@@ -26,7 +26,6 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 import clipboardService from '@/services/clipboard-service.js'
 
 export default {
@@ -74,8 +73,6 @@ export default {
 
         const linkGeneratedStat = new this.$statistics.HitCounter('Link Generated')
         linkGeneratedStat.publish()
-
-        TRACK_EVENT(this, 'feature/generate/group', `Shortcut: ${this.shortcut}`)
 
         this.$router.push({ path: `/${this.shortcut}` })
       })

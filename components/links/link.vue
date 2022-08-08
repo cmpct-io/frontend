@@ -1,7 +1,6 @@
 <template>
   <a
     :href="target"
-    @click="track"
     :target="targetValue"
     :title="title"
     class="c-box u-flex-container u-border u-hover mb-m">
@@ -31,7 +30,6 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import { TRACK_EVENT } from '@/services/analytics-service.js'
 import { STORAGE_PATH } from '@/services/configuration-service.js'
 import { IMAGE_VIEWER_SHOW } from '@/store/mutations.constants'
 
@@ -74,17 +72,11 @@ export default {
       IMAGE_VIEWER_SHOW
     ]),
 
-    track () {
-      TRACK_EVENT(this, 'feature/link/interact', `Link: ${this.target}`)
-    },
-
     showScreenshot () {
       this.IMAGE_VIEWER_SHOW({
         imageUrl: this.screenshotImageUrl,
         pageTitle: this.title
       })
-
-      TRACK_EVENT(this, 'feature/screenshot/viewed', `Image: ${this.screenshotImageUrl}`)
     }
   }
 }
