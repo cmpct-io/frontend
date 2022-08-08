@@ -26,6 +26,7 @@
     "nuxt": "2.15.8",
     "nuxt-i18n": "6.28.1",
     "nuxt-webfontloader": "1.1.0",
+    "sass": "1.54.3",
     "shortid": "2.2.16",
     "url-regex": "5.0.0"
   },
@@ -35,7 +36,6 @@
     "babel-eslint": "10.1.0",
     "eslint": "8.21.0",
     "eslint-plugin-nuxt": "3.2.0",
-    "node-sass": "4.14.1",
-    "sass-loader": "8.0.1"
+    "sass-loader": "10.1.1"
   }
 }
