@@ -3,7 +3,7 @@
     <not-found
       v-if="error.statusCode === 404" />
 
-    <server-error
+    <error-server-error
       v-else />
   </div>
 </template>

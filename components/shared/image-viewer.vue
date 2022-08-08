@@ -1,12 +1,12 @@
 <template>
-  <container v-if="show" class="c-image-viewer">
+  <shared-container v-if="show" class="c-image-viewer">
     <div class="c-image-viewer-inner a-fadeIn">
       <h3 v-text="pageTitle" class="header mb-s" />
       <img :src="imageUrl" class="u-border" alt="Screenshot">
     </div>
 
-    <circle-button @clicked="IMAGE_VIEWER_HIDE()" icon="times" />
-  </container>
+    <shared-circle-button @clicked="IMAGE_VIEWER_HIDE()" icon="times" />
+  </shared-container>
 </template>
 
 <script>

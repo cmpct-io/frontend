@@ -1,5 +1,5 @@
 <template>
-  <tabs>
+  <shared-tabs>
     <nuxt-link
       :title="$t('history')"
       to="history"
@@ -11,7 +11,7 @@
       <span
         v-text="$t('history')" />
     </nuxt-link>
-  </tabs>
+  </shared-tabs>
 </template>
 
 <i18n>

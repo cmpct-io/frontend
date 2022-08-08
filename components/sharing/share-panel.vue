@@ -5,7 +5,7 @@
       <span v-text="$t('share')" />
     </a>
 
-    <panel v-if="show">
+    <shared-panel v-if="show">
       <div class="u-flex-container">
         <p
           v-text="$t('title')"
@@ -17,11 +17,11 @@
       </div>
 
       <div @click="toggle">
-        <twitter :page-url="pageUrl" class="mb" />
-        <facebook :page-url="pageUrl" class="mb" />
-        <copy-address :page-url="pageUrl" />
+        <sharing-twitter :page-url="pageUrl" class="mb" />
+        <sharing-facebook :page-url="pageUrl" class="mb" />
+        <sharing-copy-address :page-url="pageUrl" />
       </div>
-    </panel>
+    </shared-panel>
   </div>
 </template>
 

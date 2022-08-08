@@ -7,7 +7,7 @@
         alt="Flag">
     </div>
 
-    <panel v-if="expanded">
+    <shared-panel v-if="expanded">
       <div class="u-flex-container">
         <p
           v-text="$t('title')"
@@ -19,22 +19,22 @@
       </div>
 
       <div class="mb-l">
-        <language
+        <navigator-language
           :name="$t('english')"
           @selected="change"
           locale="en" />
-        <language
+        <navigator-language
           :name="$t('french')"
           @selected="change"
           locale="fr" />
-        <language
+        <navigator-language
           :name="$t('spanish')"
           @selected="change"
           locale="es" />
       </div>
 
-      <theme-switcher @close="close" />
-    </panel>
+      <navigator-theme-switcher @close="close" />
+    </shared-panel>
   </div>
 </template>
 

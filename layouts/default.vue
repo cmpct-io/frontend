@@ -3,12 +3,12 @@
     <navigator />
     <background />
 
-    <container>
+    <shared-container>
       <nuxt />
-    </container>
+    </shared-container>
 
-    <snackbar />
-    <metadata />
+    <shared-snackbar />
+    <shared-metadata />
   </div>
 </template>
 

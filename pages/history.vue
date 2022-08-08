@@ -16,7 +16,7 @@
     </div>
 
     <nuxt-link to="/">
-      <circle-button icon="times" />
+      <shared-circle-button icon="times" />
     </nuxt-link>
   </section>
 </template>

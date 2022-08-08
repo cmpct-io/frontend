@@ -3,12 +3,12 @@
     <links-group />
     <comments-viewer />
     <reports-viewer />
-    <image-viewer />
+    <shared-image-viewer />
 
-    <tabs>
+    <shared-tabs>
       <comments-tab />
       <reports-tab />
-    </tabs>
+    </shared-tabs>
   </section>
 </template>
 

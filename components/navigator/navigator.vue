@@ -1,9 +1,9 @@
 <template>
   <section class="navigator">
-    <logo />
+    <navigator-logo />
 
     <div class="links">
-      <share-panel />
+      <sharing-share-panel />
 
       <a href="https://github.com/cmpct-io" target="blank" class="u-hidden-mobile mr">
         <c-icon icon="code" class="mr-s" />
@@ -15,7 +15,7 @@
         <span v-text="$t('help')" />
       </router-link>
 
-      <language-switcher />
+      <navigator-language-switcher />
     </div>
   </section>
 </template>

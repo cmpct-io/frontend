@@ -1,15 +1,15 @@
 <template>
   <div class="help-section">
     <h4 v-text="$t('sectionTitle')" class="help-title mb-m" />
-    <spoiler :title="$t('q1.title')">
+    <shared-spoiler :title="$t('q1.title')">
       <p v-text="$t('q1.answer1')" />
-    </spoiler>
-    <spoiler :title="$t('q2.title')">
+    </shared-spoiler>
+    <shared-spoiler :title="$t('q2.title')">
       <p v-text="$t('q2.answer1')" />
       <p v-text="$t('q2.answer2')" />
       <p v-text="$t('q2.answer3')" />
       <p v-text="$t('q2.answer4')" />
-    </spoiler>
+    </shared-spoiler>
   </div>
 </template>
 

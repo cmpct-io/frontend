@@ -3,7 +3,7 @@
     <form
       v-on:submit.prevent="create"
       class="c-box u-flex-container u-border mb-m">
-      <group-button />
+      <generator-group-button />
 
       <input
         v-model="target"
@@ -11,11 +11,11 @@
         :aria-label="$t('placeholder')"
         required>
 
-      <paste-button @paste="paste" />
-      <submit-button />
+      <generator-paste-button @paste="paste" />
+      <generator-submit-button />
     </form>
 
-    <validation-warning />
+    <generator-validation-warning />
   </div>
 </template>
 

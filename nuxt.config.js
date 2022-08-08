@@ -18,13 +18,7 @@ export default {
     '@nuxt/components'
   ],
 
-  components: [
-    '~/components',
-    { path: '~/components/history/', prefix: 'history' },
-    { path: '~/components/comments/', prefix: 'comments' },
-    { path: '~/components/reports/', prefix: 'reports' },
-    { path: '~/components/links/', prefix: 'links' }
-  ],
+  components: true,
 
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css'

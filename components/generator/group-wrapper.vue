@@ -1,7 +1,7 @@
 <template>
   <div v-show="hasMultipleLinks">
     <div class="c-group u-border a-fadeIn">
-      <group-link
+      <generator-group-link
         v-for="(link, index) in links"
         :key="index"
         :link="link" />

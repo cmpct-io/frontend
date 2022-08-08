@@ -10,7 +10,7 @@
       class="mb-l" />
 
     <generator />
-    <group-wrapper />
+    <generator-group-wrapper />
     <history-trigger />
   </section>
 </template>

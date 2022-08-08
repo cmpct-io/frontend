@@ -1,21 +1,21 @@
 <template>
   <div class="help-section">
     <h4 v-text="$t('sectionTitle')" class="help-title mb-m" />
-    <spoiler :title="$t('q1.title')">
+    <shared-spoiler :title="$t('q1.title')">
       <p v-text="$t('q1.answer1')" />
       <p v-text="$t('q1.bullet1')" />
       <p v-text="$t('q1.bullet2')" />
       <p v-text="$t('q1.bullet3')" />
-    </spoiler>
-    <spoiler :title="$t('q2.title')">
+    </shared-spoiler>
+    <shared-spoiler :title="$t('q2.title')">
       <p v-text="$t('q2.answer1')" />
-    </spoiler>
-    <spoiler :title="$t('q3.title')">
+    </shared-spoiler>
+    <shared-spoiler :title="$t('q3.title')">
       <p v-text="$t('q3.answer1')" />
-    </spoiler>
-    <spoiler :title="$t('q4.title')">
+    </shared-spoiler>
+    <shared-spoiler :title="$t('q4.title')">
       <p v-text="$t('q4.answer1')" />
-    </spoiler>
+    </shared-spoiler>
   </div>
 </template>
 

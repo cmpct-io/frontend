@@ -4,10 +4,10 @@
       v-text="$t('pageTitle')"
       class="mb-l" />
 
-    <what />
-    <privacy />
-    <price />
-    <safety />
+    <help-what />
+    <help-privacy />
+    <help-price />
+    <help-safety />
   </section>
 </template>
 

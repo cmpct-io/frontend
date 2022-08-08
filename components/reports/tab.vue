@@ -18,7 +18,7 @@
       </p>
     </div>
 
-    <circle-button v-show="displayedPanel === 'reports'" @clicked="ACTIVE_ROUTE_SHOW_PANEL('target')" icon="times" />
+    <shared-circle-button v-show="displayedPanel === 'reports'" @clicked="ACTIVE_ROUTE_SHOW_PANEL('target')" icon="times" />
   </section>
 </template>
 
