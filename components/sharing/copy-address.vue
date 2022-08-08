@@ -1,12 +1,12 @@
 <template>
   <a
-    @click="copyToClipboard"
     v-show="show"
     :title="$t('hoverText')"
     href="#"
-    class="u-flex-container">
+    class="u-flex-container"
+    @click="copyToClipboard">
     <c-icon icon="copy" class="c-icon mr" />
-    <span v-text="$t('hoverText')" class="u-text-small" />
+    <span class="u-text-small" v-text="$t('hoverText')" />
   </a>
 </template>
 

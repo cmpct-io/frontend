@@ -7,9 +7,9 @@
         <span
           v-text="$t('wouldYouLikeTo')" />
         <span
+          class="u-text-link"
           @click="COMMENTS_SET_IS_COMMENTING(true)"
-          v-text="$t('addAComment')"
-          class="u-text-link" />
+          v-text="$t('addAComment')" />
       </p>
 
       <comments-item
@@ -24,9 +24,9 @@
       <span
         v-text="$t('nobodyHasLeftAComment')" />
       <span
+        class="u-text-link"
         @click="COMMENTS_SET_IS_COMMENTING(true)"
-        v-text="$t('beTheFirst')"
-        class="u-text-link" />
+        v-text="$t('beTheFirst')" />
     </p>
 
     <comments-poster v-show="isCommenting" />

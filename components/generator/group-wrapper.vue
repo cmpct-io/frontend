@@ -8,8 +8,8 @@
     </div>
 
     <button
-      @click.once="generateRoute"
-      class="u-pointer u-hover">
+      class="u-pointer u-hover"
+      @click.once="generateRoute">
       <c-icon
         v-show="isSubmitting"
         icon="spinner"

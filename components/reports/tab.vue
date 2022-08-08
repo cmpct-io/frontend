@@ -2,23 +2,23 @@
   <section class="u-inline-block">
     <div
       v-show="displayedPanel === 'target'"
-      @click="ACTIVE_ROUTE_SHOW_PANEL('reports')"
-      class="tab a-slideInUp">
-      <p v-bind:class="[{ 'u-text-warning': reports.length > 0 }]">
+      class="tab a-slideInUp"
+      @click="ACTIVE_ROUTE_SHOW_PANEL('reports')">
+      <p :class="[{ 'u-text-warning': reports.length > 0 }]">
         <c-icon
-          v-bind:class="[{ 'a-shake': reports.length > 0 }]"
+          :class="[{ 'a-shake': reports.length > 0 }]"
           icon="bell"
           class="mr-s" />
         <span
-          v-text="$t('reports')"
-          class="mr-s" />
+          class="mr-s"
+          v-text="$t('reports')" />
         <span
-          v-text="reports.length"
-          class="u-text-small" />
+          class="u-text-small"
+          v-text="reports.length" />
       </p>
     </div>
 
-    <shared-circle-button v-show="displayedPanel === 'reports'" @clicked="ACTIVE_ROUTE_SHOW_PANEL('target')" icon="times" />
+    <shared-circle-button v-show="displayedPanel === 'reports'" icon="times" @clicked="ACTIVE_ROUTE_SHOW_PANEL('target')" />
   </section>
 </template>
 

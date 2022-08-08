@@ -4,9 +4,9 @@
     <p v-text="$t('description')" />
 
     <nuxt-link
-      v-text="$t('link')"
       to="/"
-      class="square-button u-hover" />
+      class="square-button u-hover"
+      v-text="$t('link')" />
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
   <div>
     <form
-      v-on:submit.prevent="create"
-      class="c-box u-flex-container u-border mb-m">
+      class="c-box u-flex-container u-border mb-m"
+      @submit.prevent="create">
       <generator-group-button />
 
       <input

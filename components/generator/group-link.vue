@@ -1,13 +1,13 @@
 <template>
   <div class="c-link u-flex-container a-fadeIn">
     <p
-      v-text="link"
-      class="u-text-small u-flex-grow u-break-word mr" />
+      class="u-text-small u-flex-grow u-break-word mr"
+      v-text="link" />
 
     <c-icon
-      @click="GENERATOR_REMOVE_LINK(link)"
       icon="times"
-      class="u-text-small u-pointer" />
+      class="u-text-small u-pointer"
+      @click="GENERATOR_REMOVE_LINK(link)" />
   </div>
 </template>
 

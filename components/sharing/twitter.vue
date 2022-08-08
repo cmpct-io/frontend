@@ -8,7 +8,7 @@
     target="_blank"
     data-size="large">
     <c-icon :icon="['fab', 'twitter-square']" class="c-twitter-icon mr" />
-    <span v-text="$t('hoverText')" class="u-text-small" />
+    <span class="u-text-small" v-text="$t('hoverText')" />
   </a>
 </template>
 

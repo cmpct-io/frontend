@@ -2,22 +2,22 @@
   <section class="u-inline-block mr">
     <div
       v-show="showTarget"
-      @click="ACTIVE_ROUTE_SHOW_PANEL('comments')"
-      class="tab a-slideInUp">
+      class="tab a-slideInUp"
+      @click="ACTIVE_ROUTE_SHOW_PANEL('comments')">
       <p>
         <c-icon
           icon="comment-alt"
           class="mr-s" />
         <span
-          v-text="$t('comments')"
-          class="mr-s" />
+          class="mr-s"
+          v-text="$t('comments')" />
         <span
-          v-text="comments.length"
-          class="u-text-small" />
+          class="u-text-small"
+          v-text="comments.length" />
       </p>
     </div>
 
-    <shared-circle-button v-show="showComments" @clicked="ACTIVE_ROUTE_SHOW_PANEL('target')" icon="times" />
+    <shared-circle-button v-show="showComments" icon="times" @clicked="ACTIVE_ROUTE_SHOW_PANEL('target')" />
   </section>
 </template>
 

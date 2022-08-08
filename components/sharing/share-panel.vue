@@ -1,6 +1,6 @@
 <template>
   <div class="c-sharing-wrapper">
-    <a @click.prevent="toggle" href="#" class="mr">
+    <a href="#" class="mr" @click.prevent="toggle">
       <c-icon icon="share-alt" class="mr-s" />
       <span v-text="$t('share')" />
     </a>
@@ -8,12 +8,12 @@
     <shared-panel v-if="show">
       <div class="u-flex-container">
         <p
-          v-text="$t('title')"
-          class="mb-m u-flex-grow" />
+          class="mb-m u-flex-grow"
+          v-text="$t('title')" />
         <c-icon
-          @click="toggle"
           icon="times"
-          class="fa-fw u-pointer" />
+          class="fa-fw u-pointer"
+          @click="toggle" />
       </div>
 
       <div @click="toggle">

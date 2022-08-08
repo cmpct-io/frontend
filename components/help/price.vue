@@ -1,6 +1,6 @@
 <template>
   <div class="help-section">
-    <h4 v-text="$t('sectionTitle')" class="help-title mb-m" />
+    <h4 class="help-title mb-m" v-text="$t('sectionTitle')" />
     <shared-spoiler :title="$t('q1.title')">
       <p v-text="$t('q1.answer1')" />
     </shared-spoiler>

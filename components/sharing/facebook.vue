@@ -7,7 +7,7 @@
     rel="noopener"
     target="_blank">
     <c-icon :icon="['fab', 'facebook-square']" class="c-facebook-icon mr" />
-    <span v-text="$t('hoverText')" class="u-text-small" />
+    <span class="u-text-small" v-text="$t('hoverText')" />
   </a>
 </template>
 

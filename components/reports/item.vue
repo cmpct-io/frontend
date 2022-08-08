@@ -2,7 +2,7 @@
   <div class="report u-standard-width u-flex-container u-border mb-m">
     <c-icon icon="user-circle" class="fa-fw mr" />
     <div class="content u-flex-grow">
-      <p v-text="name" class="u-bold" />
+      <p class="u-bold" v-text="name" />
       <p v-text="reportTypeString" />
     </div>
   </div>

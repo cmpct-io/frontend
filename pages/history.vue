@@ -4,8 +4,8 @@
       <h1
         v-text="$t('history')" />
       <p
-        v-text="$t('description')"
-        class="mb-l" />
+        class="mb-l"
+        v-text="$t('description')" />
 
       <div class="c-history-items u-noScroll">
         <history-item
@@ -29,7 +29,7 @@ export default {
     return {
       title: this.$t('pageTitle'),
       meta: [
-        { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io/history/` }
+        { property: 'og:url', name: 'og:url', hid: 'og:url', content: 'https://cmpct.io/history/' }
       ]
     }
   },

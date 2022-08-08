@@ -1,10 +1,10 @@
 <template>
   <form
-    @submit.prevent="addComment"
-    class="u-standard-width a-fadeIn">
+    class="u-standard-width a-fadeIn"
+    @submit.prevent="addComment">
     <p
-      v-text="$t('description')"
-      class="mb-l" />
+      class="mb-l"
+      v-text="$t('description')" />
 
     <input
       v-model="name"
@@ -19,15 +19,15 @@
       required />
 
     <button
-      v-text="$t('add')"
       class="u-hover"
-      type="submit" />
+      type="submit"
+      v-text="$t('add')" />
 
     <button
-      @click="COMMENTS_SET_IS_COMMENTING(false)"
-      v-text="$t('cancel')"
       class="u-hover"
-      type="button" />
+      type="button"
+      @click="COMMENTS_SET_IS_COMMENTING(false)"
+      v-text="$t('cancel')" />
   </form>
 </template>
 

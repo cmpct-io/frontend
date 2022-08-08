@@ -1,6 +1,6 @@
 <template>
   <div class="language-switcher">
-    <div @click="toggle" class="u-pointer">
+    <div class="u-pointer" @click="toggle">
       <img
         :src="selectedLanguageIcon"
         class="flag"
@@ -10,27 +10,27 @@
     <shared-panel v-if="expanded">
       <div class="u-flex-container">
         <p
-          v-text="$t('title')"
-          class="mb-m u-flex-grow" />
+          class="mb-m u-flex-grow"
+          v-text="$t('title')" />
         <c-icon
-          @click="toggle"
           icon="times"
-          class="fa-fw u-pointer" />
+          class="fa-fw u-pointer"
+          @click="toggle" />
       </div>
 
       <div class="mb-l">
         <navigator-language
           :name="$t('english')"
-          @selected="change"
-          locale="en" />
+          locale="en"
+          @selected="change" />
         <navigator-language
           :name="$t('french')"
-          @selected="change"
-          locale="fr" />
+          locale="fr"
+          @selected="change" />
         <navigator-language
           :name="$t('spanish')"
-          @selected="change"
-          locale="es" />
+          locale="es"
+          @selected="change" />
       </div>
 
       <navigator-theme-switcher @close="close" />

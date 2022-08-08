@@ -11,9 +11,9 @@
         <span
           v-text="$t('ifYouThink')" />
         <span
+          class="u-text-link"
           @click="REPORTS_SET_IS_REPORTING(true)"
-          v-text="$t('pleaseReportIt')"
-          class="u-text-link" />
+          v-text="$t('pleaseReportIt')" />
       </p>
 
       <reports-item
@@ -26,9 +26,9 @@
       <span
         v-text="$t('nobodyHasReported')" />
       <span
+        class="u-text-link"
         @click="REPORTS_SET_IS_REPORTING(true)"
-        v-text="$t('pleaseReportIfYouThink')"
-        class="u-text-link" />
+        v-text="$t('pleaseReportIfYouThink')" />
     </p>
 
     <reports-poster v-show="isReporting" />

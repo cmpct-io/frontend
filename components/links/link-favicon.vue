@@ -4,8 +4,8 @@
       v-show="faviconUrl && hasFavicon"
       :src="faviconUrl"
       :alt="$t('altText')"
-      @error="hasFavicon = false"
-      class="a-bounceIn">
+      class="a-bounceIn"
+      @error="hasFavicon = false">
     <c-icon
       v-show="!hasFavicon"
       icon="globe"

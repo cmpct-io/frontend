@@ -1,8 +1,8 @@
 <template>
   <section class="c-help u-noScroll">
     <h1
-      v-text="$t('pageTitle')"
-      class="mb-l" />
+      class="mb-l"
+      v-text="$t('pageTitle')" />
 
     <help-what />
     <help-privacy />
@@ -17,7 +17,7 @@ export default {
     return {
       title: `cmpct.io | ${this.$t('pageTitle')}`,
       meta: [
-        { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io/help/` }
+        { property: 'og:url', name: 'og:url', hid: 'og:url', content: 'https://cmpct.io/help/' }
       ]
     }
   }

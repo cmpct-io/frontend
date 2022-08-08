@@ -4,15 +4,15 @@
       v-text="$t('title')" />
     <p
       v-show="processDate"
-      v-text="$t('description')"
-      class="mb-l" />
+      class="mb-l"
+      v-text="$t('description')" />
 
     <links-reloader />
 
     <div class="c-group-wrapper u-noScroll">
       <links-link
         v-for="(link, index) in links"
-        v-bind:key="index"
+        :key="index"
         v-bind="link"
         :new-page="links.length > 1" />
     </div>

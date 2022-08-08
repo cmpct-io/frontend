@@ -62,14 +62,14 @@ export default {
 
   plugins: [
     '~/plugins/fontawesome.plugin.js',
-    `~/plugins/statistics.client.js`
+    '~/plugins/statistics.client.js'
   ],
 
   pwa: {
     manifest: {
       name: 'cmpct.io',
       short_name: 'cmpct.io',
-      description: `Create shorter, safer & better links that you can share with cmpct - the free custom URL shortener that lets you see where you're going before you click.`,
+      description: 'Create shorter, safer & better links that you can share with cmpct - the free custom URL shortener that lets you see where you\'re going before you click.',
       lang: 'en',
       display: 'standalone',
       start_url: 'https://cmpct.io',

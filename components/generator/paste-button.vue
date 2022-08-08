@@ -1,10 +1,10 @@
 <template>
   <c-icon
     v-show="show"
-    @click="$emit('paste')"
     :title="$t('tooltipMessage')"
     icon="clipboard"
-    class="secondary" />
+    class="secondary"
+    @click="$emit('paste')" />
 </template>
 
 <script>

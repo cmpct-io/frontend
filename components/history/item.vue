@@ -3,9 +3,9 @@
     <nuxt-link
       :to="shortcut"
       class="c-item u-flex-container u-hover u-border">
-      <p v-text="title" class="u-flex-grow" />
+      <p class="u-flex-grow" v-text="title" />
 
-      <div @click.prevent="deleteItem" class="c-item-clear">
+      <div class="c-item-clear" @click.prevent="deleteItem">
         <c-icon
           icon="trash" />
       </div>

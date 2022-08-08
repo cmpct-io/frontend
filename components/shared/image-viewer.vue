@@ -1,11 +1,11 @@
 <template>
   <shared-container v-if="show" class="c-image-viewer">
     <div class="c-image-viewer-inner a-fadeIn">
-      <h3 v-text="pageTitle" class="header mb-s" />
+      <h3 class="header mb-s" v-text="pageTitle" />
       <img :src="imageUrl" class="u-border" alt="Screenshot">
     </div>
 
-    <shared-circle-button @clicked="IMAGE_VIEWER_HIDE()" icon="times" />
+    <shared-circle-button icon="times" @clicked="IMAGE_VIEWER_HIDE()" />
   </shared-container>
 </template>
 

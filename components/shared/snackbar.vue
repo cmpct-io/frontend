@@ -1,15 +1,15 @@
 <template>
   <div
     v-show="showSnackbar"
-    @click="SNACKBAR_HIDE()"
-    class="c-snackbar u-flex-container u-pointer a-slideInUp">
+    class="c-snackbar u-flex-container u-pointer a-slideInUp"
+    @click="SNACKBAR_HIDE()">
     <c-icon
       icon="bell"
       class="fa-fw mr" />
 
     <p
-      v-text="snackbarMessage"
-      class="u-flex-grow" />
+      class="u-flex-grow"
+      v-text="snackbarMessage" />
 
     <c-icon
       icon="times"

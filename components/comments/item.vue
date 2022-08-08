@@ -7,11 +7,11 @@
     <div class="u-flex-grow">
       <p class="u-bold mb">
         <span
-          v-text="name"
-          class="mr" />
+          class="mr"
+          v-text="name" />
         <span
-          v-text="timeSince"
-          class="u-text-small" />
+          class="u-text-small"
+          v-text="timeSince" />
       </p>
       <p v-text="text" />
     </div>

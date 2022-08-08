@@ -1,15 +1,15 @@
 const developmentConfiguration = {
-  'apiBaseUrI': 'https://cmpct-api.azurewebsites.net/api',
-  'cdnPath': '',
-  'storagePath': 'https://cmpct.blob.core.windows.net',
-  'publicPath': ''
+  apiBaseUrI: 'https://cmpct-api.azurewebsites.net/api',
+  cdnPath: '',
+  storagePath: 'https://cmpct.blob.core.windows.net',
+  publicPath: ''
 }
 
 const productionConfiguration = {
-  'apiBaseUrI': 'https://cmpct-api.azurewebsites.net/api',
-  'cdnPath': 'https://cdn.cmpct.io',
-  'storagePath': 'https://cmpct.blob.core.windows.net',
-  'publicPath': 'https://cdn.cmpct.io/_nuxt'
+  apiBaseUrI: 'https://cmpct-api.azurewebsites.net/api',
+  cdnPath: 'https://cdn.cmpct.io',
+  storagePath: 'https://cmpct.blob.core.windows.net',
+  publicPath: 'https://cdn.cmpct.io/_nuxt'
 }
 
 const isProduction = process.env.NODE_ENV === 'production'

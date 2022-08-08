@@ -3,11 +3,11 @@
     <h1
       v-text="$t('title')" />
     <p
-      v-text="$t('subtitle')"
-      class="mb" />
+      class="mb"
+      v-text="$t('subtitle')" />
     <p
-      v-text="$t('message')"
-      class="mb-l" />
+      class="mb-l"
+      v-text="$t('message')" />
 
     <generator />
     <generator-group-wrapper />
@@ -24,7 +24,7 @@ export default {
     return {
       title: this.$t('pageTitle'),
       meta: [
-        { property: 'og:url', name: 'og:url', hid: 'og:url', content: `https://cmpct.io/` }
+        { property: 'og:url', name: 'og:url', hid: 'og:url', content: 'https://cmpct.io/' }
       ]
     }
   },

@@ -7,4 +7,4 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 config.autoAddCss = false
 library.add(fas)
 library.add(fab)
-Vue.component('c-icon', FontAwesomeIcon)
+Vue.component('CIcon', FontAwesomeIcon)

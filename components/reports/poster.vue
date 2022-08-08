@@ -1,10 +1,10 @@
 <template>
   <form
-    @submit.prevent="addReport"
-    class="u-standard-width a-fadeIn">
+    class="u-standard-width a-fadeIn"
+    @submit.prevent="addReport">
     <p
-      v-text="$t('tellUsWhy')"
-      class="mb-l" />
+      class="mb-l"
+      v-text="$t('tellUsWhy')" />
     <input
       v-model="name"
       :placeholder="$t('yourNamePlaceholder')"
@@ -28,14 +28,14 @@
     </select>
 
     <button
-      v-text="$t('add')"
       class="u-hover"
-      type="submit" />
+      type="submit"
+      v-text="$t('add')" />
     <button
-      @click="REPORTS_SET_IS_REPORTING(false)"
-      v-text="$t('cancel')"
       class="u-hover"
-      type="button" />
+      type="button"
+      @click="REPORTS_SET_IS_REPORTING(false)"
+      v-text="$t('cancel')" />
   </form>
 </template>
 

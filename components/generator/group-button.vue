@@ -1,10 +1,10 @@
 <template>
   <c-icon
-    @click="GENERATOR_SET_IS_GROUP(!isGroup)"
     :title="tooltip"
-    v-bind:class="{ 'icon-selected' : isGroup }"
+    :class="{ 'icon-selected' : isGroup }"
     :icon="icon"
-    class="secondary icon" />
+    class="secondary icon"
+    @click="GENERATOR_SET_IS_GROUP(!isGroup)" />
 </template>
 
 <script>

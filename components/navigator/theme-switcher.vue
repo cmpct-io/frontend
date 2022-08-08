@@ -1,15 +1,15 @@
 <template>
   <div>
-    <p v-text="$t('title')" class="mb-m" />
+    <p class="mb-m" v-text="$t('title')" />
     <div class="u-flex-container">
-      <p @click="changeUIMode(true)" class="ui-option u-hover">
+      <p class="ui-option u-hover" @click="changeUIMode(true)">
         <c-icon
           icon="moon"
           class="fa-fw mr" />
         <span
           v-text="$t('dark')" />
       </p>
-      <p @click="changeUIMode(false)" class="ui-option u-hover">
+      <p class="ui-option u-hover" @click="changeUIMode(false)">
         <c-icon
           icon="lightbulb"
           class="fa-fw mr" />

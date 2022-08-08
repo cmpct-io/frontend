@@ -1,12 +1,12 @@
 <template>
   <div
-    @click.prevent="setOpenSpoilerText(title)"
-    v-bind:class="[{ 'open': show }]"
-    class="c-spoiler u-border u-pointer">
+    :class="[{ 'open': show }]"
+    class="c-spoiler u-border u-pointer"
+    @click.prevent="setOpenSpoilerText(title)">
     <div class="u-flex-container">
       <p
-        v-text="title"
-        class="u-flex-grow mb-0" />
+        class="u-flex-grow mb-0"
+        v-text="title" />
       <c-icon
         :icon="icon" />
     </div>

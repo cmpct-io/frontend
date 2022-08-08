@@ -5,7 +5,7 @@
     <c-icon
       :title="submitTitle"
       :icon="submitIcon"
-      v-bind:class="{ 'fa-spin' : isSubmitting }" />
+      :class="{ 'fa-spin' : isSubmitting }" />
   </button>
 </template>
 

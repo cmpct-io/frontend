@@ -8,17 +8,17 @@
     <div class="link-inner u-flex-grow">
       <p
         v-if="title"
-        v-text="title"
-        class="mb" />
+        class="mb"
+        v-text="title" />
       <p
-        v-text="target"
-        v-bind:class="{ 'u-text-small' : title }"
-        class="u-break-word" />
+        :class="{ 'u-text-small' : title }"
+        class="u-break-word"
+        v-text="target" />
     </div>
     <div
       v-if="screenshotImageUrl"
-      @click.prevent="showScreenshot"
-      :title="$t('viewSecurePicture')">
+      :title="$t('viewSecurePicture')"
+      @click.prevent="showScreenshot">
       <c-icon
         icon="image" />
     </div>
