@@ -8,7 +8,6 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
@@ -18,15 +17,15 @@
     "@fortawesome/vue-fontawesome": "0.1.10",
     "@nuxt/components": "1.2.2",
     "@nuxtjs/applicationinsights": "1.2.3",
-    "@nuxtjs/axios": "5.12.4",
+    "@nuxtjs/axios": "5.13.6",
     "@nuxtjs/pwa": "3.3.5",
-    "@nuxtjs/robots": "2.4.2",
+    "@nuxtjs/robots": "2.5.0",
     "@nuxtjs/sitemap": "2.4.0",
-    "cookie-universal-nuxt": "2.1.4",
-    "micro-stat": "0.7.0",
+    "cookie-universal-nuxt": "2.2.2",
+    "micro-stat": "0.8.0",
     "moment": "2.29.4",
     "nuxt": "2.14.12",
-    "nuxt-i18n": "6.13.2",
+    "nuxt-i18n": "6.28.1",
     "nuxt-webfontloader": "1.1.0",
     "shortid": "2.2.16",
     "url-regex": "5.0.0"
