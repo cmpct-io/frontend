@@ -72,6 +72,10 @@ button, .square-button {
   margin-right: 10px !important;
 }
 
+.mr-l {
+  margin-right: 20px !important;
+}
+
 .mb {
   margin-bottom: 5px !important;
 }
@@ -180,7 +184,7 @@ button, .square-button {
 
   &:hover {
     background-color: #604002;
-    
+
     .light & {
       background-color: pink;
     };

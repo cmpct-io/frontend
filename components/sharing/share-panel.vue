@@ -1,6 +1,6 @@
 <template>
   <div class="c-sharing-wrapper">
-    <a href="#" class="mr" @click.prevent="toggle">
+    <a href="#" class="mr-l" @click.prevent="toggle">
       <c-icon icon="share-alt" class="mr-s" />
       <span v-text="$t('share')" />
     </a>

@@ -9,6 +9,8 @@
 
     <shared-snackbar />
     <shared-metadata />
+
+    <navigator-repo-link />
   </div>
 </template>
 

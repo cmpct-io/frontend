@@ -5,12 +5,7 @@
     <div class="links">
       <sharing-share-panel />
 
-      <a href="https://github.com/cmpct-io" target="blank" class="u-hidden-mobile mr">
-        <c-icon icon="code" class="mr-s" />
-        <span v-text="$t('github')" />
-      </a>
-
-      <router-link to="help" class="mr">
+      <router-link to="help" class="mr-l">
         <c-icon icon="question" class="mr-s" />
         <span v-text="$t('help')" />
       </router-link>
