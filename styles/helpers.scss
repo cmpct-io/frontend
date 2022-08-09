@@ -28,7 +28,7 @@ body, a, button, input, textarea, select {
 h1 {
   font-size: 2rem;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 h4 {
@@ -97,10 +97,10 @@ button, .square-button {
   svg{
     cursor: pointer;
     font-size: 35px;
-    margin: 15px;
+    margin: 10px;
 
     @media (max-width: 768px) {
-      margin: 10px;
+      margin: 7px;
     }
 
     &.secondary{

@@ -41,6 +41,7 @@ export default {
   transition: all 0.2s ease-in-out;
   min-width: 35px;
   padding: 2px;
+  margin-right: 0;
 
   &.icon-selected {
     background-color: white;
