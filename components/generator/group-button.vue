@@ -25,7 +25,7 @@ export default {
 
     icon () {
       return this.isGroup
-        ? 'times'
+        ? 'xmark'
         : 'list-ol'
     }
   },

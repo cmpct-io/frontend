@@ -1,7 +1,7 @@
 <template>
   <div>
     <form
-      class="c-box u-flex-container u-border mb-m"
+      class="c-box u-flex-container u-border"
       @submit.prevent="create">
       <generator-group-button />
 

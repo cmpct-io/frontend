@@ -87,13 +87,9 @@ export default {
     width: 95%;
     max-width: 800px;
     border-bottom: 0;
-    border-bottom: 0;
+    border-top: 0;
     margin-bottom: 20px;
     text-align: left;
-
-    .light & {
-      border-bottom: 0;
-    }
   }
 </style>
 
@@ -101,15 +97,15 @@ export default {
 {
   "en": {
     "snackbarMessage": "copied to your clipboard",
-    "submitText": "Submit Group"
+    "submitText": "Create Group"
   },
   "fr": {
     "snackbarMessage": "copié dans votre presse-papiers",
-    "submitText": "Soumettre un groupe"
+    "submitText": "Créer un groupe"
   },
   "es": {
     "snackbarMessage": "copiado a su portapapeles",
-    "submitText": "Enviar grupo"
+    "submitText": "Crea un grupo"
   }
 }
 </i18n>

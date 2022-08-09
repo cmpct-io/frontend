@@ -21,6 +21,13 @@
       link="/history"
       target=""
       :title="$t('history')" />
+
+    <shared-corner-button
+      icon-set="fab"
+      icon="github"
+      link="https://github.com/cmpct-io"
+      target="_blank"
+      title="Github Repo" />
   </section>
 </template>
 
