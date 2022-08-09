@@ -11,7 +11,15 @@
 
     <generator />
     <generator-group-wrapper />
-    <history-trigger />
+
+    <shared-corner-button
+      link-element="nuxt-link"
+      icon-set="fas"
+      icon="history"
+      :is-right="false"
+      link="/history"
+      target=""
+      title="History Page" />
   </section>
 </template>
 
@@ -42,18 +50,21 @@ export default {
 <i18n>
 {
   "en": {
+    "history": "History",
     "pageTitle": "cmpct.io | Create & share safer, shorter links",
     "title": "Create & share safer, shorter links",
     "subtitle": "Create free shorter and safer links you can share.",
     "message": "Paste your link into the box below to get started."
   },
   "fr": {
+    "history": "Histoire",
     "pageTitle": "cmpct.io | Raccourcisseur d'URL personnalisé gratuit pour des liens plus sûrs et plus courts",
     "title": "Commencer",
     "subtitle": "Créez gratuitement des liens plus courts et plus sûrs que vous pouvez partager.",
     "message": "Collez votre lien dans la case ci-dessous pour commencer."
   },
   "es": {
+    "history": "Historia",
     "pageTitle": "cmpct.io | Acortador de URL personalizado gratuito para enlaces más seguros y cortos",
     "title": "Empezar",
     "subtitle": "Cree enlaces gratuitos más cortos y seguros que pueda compartir.",

@@ -10,7 +10,12 @@
     <shared-snackbar />
     <shared-metadata />
 
-    <navigator-repo-link />
+    <shared-corner-button
+      icon-set="fab"
+      icon="github"
+      link="https://github.com/cmpct-io"
+      target="_blank"
+      title="Github Repo" />
   </div>
 </template>
 
